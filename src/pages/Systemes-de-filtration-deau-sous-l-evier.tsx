@@ -808,7 +808,7 @@ const C = () => {
                                     variant="dark"
                                     className="w-full sm:w-auto h-16 px-12"
                                 >
-                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
+                                    <a href="/Analyses-et-Tests-d-eau">Demandez une analyse d'eau</a>
                                 </ProMaxButton>
               </div>
             </div>
@@ -817,7 +817,7 @@ const C = () => {
 
         {/* 7. Testimonials Section */}
         <TestimonialsSection
-          filterProduct="/systeme-de-filtration-deau-potable"
+          filterProduct="/filtration"
           title={
                             <h2 className="heading-pro-max tracking-tight leading-[1.1] mb-6 relative z-10">
                                 <span className="font-bold not-italic text-[#18448F] block text-center">L'eau de source,</span>

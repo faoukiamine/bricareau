@@ -5,25 +5,15 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieConsent from "./components/CookieConsent";
-import Home from "./pages/Home";
 import Industriel from "./pages/Industriel";
-import Services from "./pages/Adoucisseurs-portables";
 import ContactResidentiel from "./pages/ContactResidentiel";
 import ContactEntreprises from "./pages/ContactEntreprises";
 import ContactHub from "./pages/Contact";
 import TestsEau from "./pages/Tests-Eau";
 import FAQ from "./pages/FAQ";
 import Entreprises from "./pages/Entreprises";
-import CommercialIndustriel from "./pages/CommercialIndustriel";
-import Solutions from "./pages/Solutions";
-import Adoucisseurs from "./pages/Adoucissement";
-import AdoucisseurEauResidentiel from "./pages/Adoucisseur-eau-municipal";
-import AdoucisseursEauDePuits from "./pages/Adoucisseurs-eau-de-puits";
-import ConditionneursSansSel from "./pages/ConditionneursSansSel";
-import StationEauPotable from "./pages/Systeme-de-filtration-deau-potable";
-import TraitementEauDePuits from "./pages/Traitement-eau-de-puits";
 import Filtration from "./pages/Filtration";
-import Fontaines from "./pages/Fontaines";
+import Fontaines from "./pages/fontaines-d-eau-residentielles";
 import Blog from "./pages/Blog";
 import BlogCategory from "./pages/BlogCategory";
 import HivernisationProtegerFiltresDuGel from "./pages/Blog pages/Hivernisation-comment-proteger-vos-filtres-du-gel";
@@ -53,19 +43,12 @@ import EauPuitsOsmoseInverse from "./pages/Blog pages/Eau-du-puits-au-quebec-qua
 import OsmoseInverseEau100Pure from "./pages/Blog pages/Osmose-inverse-la-technologie-derriere-une-eau-100-pure";
 import EauEmbouteilleeDangers from "./pages/Blog pages/Eau-embouteillee-les-dangers-meconnus-pour-votre-sante-au-quotidien";
 import EauEmbouteilleeImpacts from "./pages/Blog pages/Eau-embouteillee-quels-impacts-sur-la-sante-et-la-planete";
-import Guides from "./pages/Guides";
-import Videos from "./pages/Videos";
 import Temoignages from "./pages/Temoignages";
 import ServicesTraitementEau from "./pages/Services-de-traitement-eau";
 
 import Pieces from "./pages/Pieces";
-import Manuels from "./pages/Manuels";
 import Promotions from "./pages/Promotions";
-import SpecializedFiltration from "./pages/Filtres-deau-de-puits";
-import FiltresPourTouteLaMaison from "./pages/Filtres-deau-pour-toute-la-maison";
-import FiltrationSousEvier from "./pages/Systemes-de-filtration-deau-sous-evier";
 import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
-import FiltreEauHauteEfficacite from "./pages/Filtre-eau-haute-efficacite";
 import Consultation from "./pages/page-consultation";
 import ContactForm from "./pages/Page-contact";
 import FiltresDeRemplacement from "./pages/Filtres-de-remplacement";
@@ -87,39 +70,25 @@ import Desabonnement from "./pages/Desabonnement";
 
 import NotFound from "./pages/NotFound";
 
-import RefroidisseursEauEntreprises from "./pages/Refroidisseurs-eau-entreprises";
-import EauPetillanteEntreprises from "./pages/Eau-petillante-entreprises";
-import MachinesAGlaceEntreprises from "./pages/Machines-a-glace-entreprises";
-import MachinesACafeEntreprises from "./pages/Machines-a-cafe-entreprises";
-
-import AdoucisseurSentinelle from "./pages/Adoucisseur-Sentinelle";
-
 import DesabonnementSucces from "./pages/DesabonnementSucces";
-
-import ResidentialServices from "./pages/ResidentialServices";
+import ResidentialServices from "./pages/residentiel";
 import HotellerieRestauration from "./pages/HotellerieRestauration";
 import FiltrationHotelsRestaurants from "./pages/FiltrationHotelsRestaurants";
 import Bureau from "./pages/Bureau";
-import A from "./pages/A";
-import B from "./pages/B";
-import B3 from "./pages/B3";
-import WhyChooseUs from "./pages/WhyChooseUs";
-import Sustainability from "./pages/Sustainability";
-import OurProcess from "./pages/OurProcess";
+import A from "./pages/Adoucisseurs-deau";
+import B from "./pages/Systemes-de-filtration-deau-specialises";
+import WhyChooseUs from "./pages/Pourquoi-choisir-bricareau";
+import Sustainability from "./pages/Durabilite";
+import OurProcess from "./pages/notre-processus";
 import Carrieres from "./pages/Carrieres";
-import Home1 from "./pages/Home1";
-import C from "./pages/C";
+import Home1 from "./pages/home";
+import C from "./pages/Systemes-de-filtration-deau-sous-l-evier";
 import FiltreEauMachineCafe from "./pages/FiltreEauMachineCafe";
-import AdoucisseurEauCommercial from "./pages/AdoucisseurEauCommercial";
-import FiltrationDeauPotable from "./pages/FiltrationDeauPotable";
 import FontainesDeauModernes from "./pages/FontainesDeauModernes";
 
 import SystemesCentralises from "./pages/SystemesCentralises";
 import SolutionsBrasseries from "./pages/SolutionsBrasseries";
 import FiltrationIndustrielle from "./pages/FiltrationIndustrielle";
-import AdoucisseurIndustriel from "./pages/AdoucisseurIndustriel";
-import OsmoseInverseIndustrielle from "./pages/OsmoseInverseIndustrielle";
-import DesinfectionUVIndustrielle from "./pages/DesinfectionUVIndustrielle";
 
 const queryClient = new QueryClient();
 
@@ -133,32 +102,17 @@ const App = () => (
         <CookieConsent />
         <Routes>
           <Route path="/" element={<Home1 />} />
-          <Route path="/v1" element={<Home />} />
-          <Route path="/adoucisseurs-portables" element={<Services />} />
-          <Route path="/residentiel" element={<ResidentialServices />} />
-          <Route path="/hotellerie-restauration" element={<HotellerieRestauration />} />
+          <Route path="/solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles" element={<ResidentialServices />} />
+          <Route path="/solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants" element={<HotellerieRestauration />} />
           <Route path="/filtration-hotels-restaurants" element={<FiltrationHotelsRestaurants />} />
-          <Route path="/bureau" element={<Bureau />} />
+          <Route path="/solutions-de-traitement-d-eau-pour-offices-et-bureaux" element={<Bureau />} />
           <Route path="/pourquoi-choisir-bricareau" element={<WhyChooseUs />} />
           <Route path="/durabilite" element={<Sustainability />} />
           <Route path="/notre-processus" element={<OurProcess />} />
           <Route path="/carrieres" element={<Carrieres />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/adoucissement" element={<Adoucisseurs />} />
-          <Route path="/adoucisseurs" element={<Adoucisseurs />} />
-          <Route path="/adoucisseur-eau-residentiel" element={<AdoucisseurEauResidentiel />} />
-          <Route path="/adoucisseur-sentinelle" element={<AdoucisseurSentinelle />} />
-          <Route path="/adoucisseurs-eau-de-puits" element={<AdoucisseursEauDePuits />} />
-          <Route path="/conditionneurs-sans-sel" element={<ConditionneursSansSel />} />
-          <Route path="/systeme-de-filtration-deau-potable" element={<StationEauPotable />} />
-          <Route path="/traitement-eau-de-puits" element={<TraitementEauDePuits />} />
           <Route path="/filtration" element={<Filtration />} />
-          <Route path="/filtres-deau" element={<SpecializedFiltration />} />
-          <Route path="/filtres-deau-pour-toute-la-maison" element={<FiltresPourTouteLaMaison />} />
-          <Route path="/systemes-de-filtration-deau-sous-evier" element={<FiltrationSousEvier />} />
           <Route path="/systemes-de-desinfection-uv" element={<DesinfectionUV />} />
-          <Route path="/filtre-eau-haute-efficacite" element={<FiltreEauHauteEfficacite />} />
-          <Route path="/fontaines" element={<Fontaines />} />
+          <Route path="/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche" element={<Fontaines />} />
           <Route path="/fontaines-deau-modernes" element={<FontainesDeauModernes />} />
 
           <Route path="/systemes-centralises" element={<SystemesCentralises />} />
@@ -192,8 +146,6 @@ const App = () => (
           <Route path="/osmose-inverse-la-technologie-derriere-une-eau-100-pure" element={<OsmoseInverseEau100Pure />} />
           <Route path="/eau-embouteillee-les-dangers-meconnus-pour-votre-sante-au-quotidien" element={<EauEmbouteilleeDangers />} />
           <Route path="/eau-embouteillee-quels-impacts-sur-la-sante-et-la-planete" element={<EauEmbouteilleeImpacts />} />
-          <Route path="/guides" element={<Guides />} />
-          <Route path="/videos" element={<Videos />} />
           <Route path="/temoignages" element={<Temoignages />} />
           <Route path="/consultation" element={<Consultation />} />
           <Route path="/contact" element={<ContactHub />} />
@@ -204,21 +156,18 @@ const App = () => (
           <Route path="/services-de-traitement-eau" element={<ServicesTraitementEau />} />
 
           <Route path="/pieces" element={<Pieces />} />
-          <Route path="/manuels" element={<Manuels />} />
-          <Route path="/tests-eau" element={<TestsEau />} />
+          <Route path="/Analyses-et-Tests-d-eau" element={<TestsEau />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/entreprises" element={<Entreprises />} />
-          <Route path="/commercial-industriel" element={<CommercialIndustriel />} />
           <Route path="/industriel" element={<Industriel />} />
           <Route path="/promotions" element={<Promotions />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/conditions-generales-utilisation" element={<ConditionsGeneralesUtilisation />} />
           <Route path="/desabonnement" element={<Desabonnement />} />
           <Route path="/desabonnement-succes" element={<DesabonnementSucces />} />
-          <Route path="/A" element={<A />} />
-          <Route path="/B" element={<B />} />
-          <Route path="/B3" element={<B3 />} />
-          <Route path="/C" element={<C />} />
+          <Route path="/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire" element={<A />} />
+          <Route path="/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison" element={<B />} />
+          <Route path="/Stations-d-eau-potables-sous-l-evier-de-la-cuisine" element={<C />} />
 
 
 
@@ -233,21 +182,12 @@ const App = () => (
           <Route path="/est-ce-securitaire-de-boire-de-leau-adoucie" element={<EstCeSecuritaireBoireEauAdoucie />} />
           <Route path="/gout-de-chlore-pourquoi-la-ville-en-ajoute-autant" element={<GoutDeChlorePourquoiLaVilleEnAjouteAutant />} />
 
-          <Route path="/filtres-de-remplacement" element={<FiltresDeRemplacement />} />
+          <Route path="/filtres-d-eau-de-remplacement" element={<FiltresDeRemplacement />} />
           <Route path="/diagnostic" element={<Diagnostic />} />
 
 
-          <Route path="/refroidisseurs-eau-entreprises" element={<RefroidisseursEauEntreprises />} />
-          <Route path="/eau-petillante-entreprises" element={<EauPetillanteEntreprises />} />
-          <Route path="/machines-a-glace-entreprises" element={<MachinesAGlaceEntreprises />} />
-          <Route path="/machines-a-cafe-entreprises" element={<MachinesACafeEntreprises />} />
           <Route path="/filtres-eau-machine-cafe" element={<FiltreEauMachineCafe />} />
-          <Route path="/adoucisseurs-eau-commerciaux" element={<AdoucisseurEauCommercial />} />
           <Route path="/filtration-industrielle" element={<FiltrationIndustrielle />} />
-          <Route path="/adoucisseurs-eau-industriel" element={<AdoucisseurIndustriel />} />
-          <Route path="/osmose-inverse-industrielle" element={<OsmoseInverseIndustrielle />} />
-          <Route path="/desinfection-uv-industrielle" element={<DesinfectionUVIndustrielle />} />
-          <Route path="/filtration-eau-potable" element={<FiltrationDeauPotable />} />
 
           <Route path="/search" element={<SearchPage />} />
           <Route path="*" element={<NotFound />} />

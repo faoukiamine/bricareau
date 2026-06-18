@@ -286,7 +286,7 @@ const Entreprises = () => {
                             className="relative bg-white hover:bg-[#18448F] hover:text-white text-[#0c1016] rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
                             asChild
                         >
-                            <a href="/guides">Calculer votre impact</a>
+                            <a href="/faq">Calculer votre impact</a>
                         </Button>
                     </div>
                 </div>

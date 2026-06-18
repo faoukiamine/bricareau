@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+﻿import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
 import adoucisseursImg from "@/assets/Adoucisseurs d'eau.webp";
@@ -14,19 +14,19 @@ const products = [
         name: "Filtres d'eau spécialisés",
         description: "Nos filtres sont brillamment conçus pour résoudre vos problèmes spécifiques en matière d'eau.",
         image: filtresSpecialisesImg,
-        link: "/filtres-deau"
+        link: "/filtration"
     },
     {
         name: "Adoucisseurs d'eau",
-        description: "Notre adoucisseur d'eau offrira à votre famille une grande quantité d'eau propre et douce à volonté.",
+        description: "Notre adoucisseur d'eau offrira à  votre famille une grande quantité d'eau propre et douce à  volonté.",
         image: adoucisseursImg,
-        link: "/adoucissement"
+        link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
     },
     {
         name: "Solutions d'eau potable",
-        description: "Profitez d'une eau plus propre avec notre système de purification d'eau à osmose inverse à 6 étapes.",
+        description: "Profitez d'une eau plus propre avec notre système de purification d'eau à  osmose inverse à  6 étapes.",
         image: solutionsPotableImg,
-        link: "/systeme-de-filtration-deau-potable"
+        link: "/filtration"
     },
 
     {
@@ -37,9 +37,9 @@ const products = [
     },
     {
         name: "Filtration d'eau de puits",
-        description: "Nos systèmes de filtration aident à fournir une eau de qualité en provenance d'un puits artésien ou de surface.",
+        description: "Nos systèmes de filtration aident à  fournir une eau de qualité en provenance d'un puits artésien ou de surface.",
         image: WellWaterEquipmentImg,
-        link: "/traitement-eau-de-puits"
+        link: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
     },
     {
         name: "Systèmes de désinfection UV",
@@ -63,7 +63,7 @@ const ProductsArray = () => {
                         <span className="font-bold text-[#18448F] block">de traitement de l'eau</span>
                     </h2>
                     <p className="max-w-3xl mx-auto text-slate-600 font-light text-lg md:text-xl leading-relaxed mt-8 text-justify lg:text-center">
-                        Découvrez une gamme complète de technologies de pointe conçues pour transformer la qualité de l'eau de votre foyer. De l'adoucissement haute efficacité à la purification par osmose inverse, nos solutions allient performance, durabilité et design pour offrir à votre famille une eau d'une pureté absolue, chaque jour.
+                        Découvrez une gamme complète de technologies de pointe conçues pour transformer la qualité de l'eau de votre foyer. De l'adoucissement haute efficacité à  la purification par osmose inverse, nos solutions allient performance, durabilité et design pour offrir à  votre famille une eau d'une pureté absolue, chaque jour.
                     </p>
                 </div>
 
@@ -116,3 +116,4 @@ const ProductsArray = () => {
 };
 
 export default ProductsArray;
+

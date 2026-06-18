@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+﻿import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Home, AlertCircle, Factory, Building2, Wrench, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
@@ -13,7 +13,7 @@ const NotFound = () => {
     document.title = "Page Introuvable | Bricareau Traitement d'Eau";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Désolé, la page que vous recherchez sur Bricareau.com n'existe pas ou a été déplacée. Retournez à l'accueil pour explorer nos solutions de traitement d'eau.");
+      metaDesc.setAttribute("content", "Désolé, la page que vous recherchez sur Bricareau.com n'existe pas ou a été déplacée. Retournez à  l'accueil pour explorer nos solutions de traitement d'eau.");
     }
     
     // Noindex for 404 pages is good practice
@@ -41,7 +41,7 @@ const NotFound = () => {
     Page introuvable <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">dans le circuit</span>.
 </h1>
               <p className="text-lg text-[#434655] leading-relaxed max-w-xl">
-                Il semble que le flux d'information ait été interrompu. Cette page a peut-être été filtrée lors d'une mise à jour technique ou déplacée vers une nouvelle section de notre infrastructure.
+                Il semble que le flux d'information ait été interrompu. Cette page a peut-être été filtrée lors d'une mise à  jour technique ou déplacée vers une nouvelle section de notre infrastructure.
               </p>
             </div>
 
@@ -52,7 +52,7 @@ const NotFound = () => {
                 to="/"
               >
                 <Home className="h-5 w-5" />
-                Retourner à la source (Accueil)
+                Retourner à  la source (Accueil)
               </Link>
               <Link
                 className="bg-[#dce9ff] text-[#264191] px-8 py-4 rounded-md font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 active:scale-95 transition-all w-full sm:w-auto"
@@ -102,12 +102,12 @@ const NotFound = () => {
           <Link className="bg-[#eff4ff] p-8 rounded-2xl hover:bg-[#d5e3fc] transition-colors group cursor-pointer" to="/commercial-industriel">
             <Factory className="text-[#004ac6] mb-4 h-8 w-8" />
             <h3 className="text-xl font-bold mb-2 text-[#0d1c2e]">Industrie</h3>
-            <p className="text-sm text-[#434655]">Traitements à haut débit pour les infrastructures industrielles complexes.</p>
+            <p className="text-sm text-[#434655]">Traitements à  haut débit pour les infrastructures industrielles complexes.</p>
             <div className="mt-6 flex items-center gap-2 text-[#004ac6] font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
               Explorer <ArrowRight className="h-4 w-4" />
             </div>
           </Link>
-          <Link className="bg-[#eff4ff] p-8 rounded-2xl hover:bg-[#d5e3fc] transition-colors group cursor-pointer" to="/adoucisseurs">
+          <Link className="bg-[#eff4ff] p-8 rounded-2xl hover:bg-[#d5e3fc] transition-colors group cursor-pointer" to="/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire">
             <Building2 className="text-[#004ac6] mb-4 h-8 w-8" />
             <h3 className="text-xl font-bold mb-2 text-[#0d1c2e]">Résidentiel</h3>
             <p className="text-sm text-[#434655]">Solutions d'adoucissement et de filtration pour le confort de l'habitat.</p>
@@ -132,3 +132,4 @@ const NotFound = () => {
 };
 
 export default NotFound;
+

@@ -1,4 +1,4 @@
-
+﻿
 export interface Testimonial {
     name: string;
     rating: number;
@@ -12,15 +12,15 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Recommande fortement. Très bien conseillé pour le bon produit selon mes besoins. Service professionnel, personnalisé et rapide.",
         paths: [
-            "/systemes-de-filtration-deau-sous-evier"
+            "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
         ]
     },
     {
         name: "Mariam C.",
         rating: 5,
-        text: "Excellent service. Système d'osmose installé depuis 2 ans qui fonctionne parfaitement. Connecté à mon réfrigérateur !",
+        text: "Excellent service. Système d'osmose installé depuis 2 ans qui fonctionne parfaitement. Connecté à  mon réfrigérateur !",
         paths: [
-            "/systeme-de-filtration-deau-potable"
+            "/filtration"
         ]
     },
     {
@@ -28,15 +28,15 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Service très rapide. Le technicien est passionné et m'a partagé son savoir et ses conseils. Je bois maintenant mon eau en toute confiance.",
         paths: [
-            "/systeme-de-filtration-deau-potable"
+            "/filtration"
         ]
     },
     {
         name: "Sylvie T.",
         rating: 5,
-        text: "Technicien extraordinaire, excellent service à la clientèle. Une eau fraîche et bonne pour la santé, même pour les animaux !",
+        text: "Technicien extraordinaire, excellent service à  la clientèle. Une eau fraîche et bonne pour la santé, même pour les animaux !",
         paths: [
-            "/systeme-de-filtration-deau-potable"
+            "/filtration"
         ]
     },
     {
@@ -44,7 +44,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Excellent service ! Professionnel, rapide et très compétent. Je recommande sans hésiter.",
         paths: [
-            "/systeme-de-filtration-deau-potable"
+            "/filtration"
         ]
     },
     {
@@ -68,25 +68,25 @@ export const allTestimonials: Testimonial[] = [
     {
         name: "Marc-André L.",
         rating: 5,
-        text: "Service exceptionnel. Connaissent vraiment leur domaine. Solution trouvée pour mon eau de puits là où d'autres ont échoué.",
+        text: "Service exceptionnel. Connaissent vraiment leur domaine. Solution trouvée pour mon eau de puits là  oà¹ d'autres ont échoué.",
         paths: [
-            "/traitement-eau-de-puits"
+            "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
         ]
     },
     {
         name: "Karine R.",
         rating: 5,
-        text: "Entreprise fiable et honnête. Pas de vente de pression, juste de bons conseils adaptés à mes besoins.",
+        text: "Entreprise fiable et honnête. Pas de vente de pression, juste de bons conseils adaptés à  mes besoins.",
         paths: [
-            "/traitement-eau-de-puits"
+            "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
         ]
     },
     {
         name: "Alain S.",
         rating: 5,
-        text: "Excellent service après-vente. Réponse rapide à une question technique après l'installation.",
+        text: "Excellent service après-vente. Réponse rapide à  une question technique après l'installation.",
         paths: [
-            "/traitement-eau-de-puits"
+            "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
         ]
     },
     {
@@ -94,7 +94,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Installation rapide et soignée. L'eau a maintenant un goût excellent.",
         paths: [
-            "/systeme-de-filtration-deau-potable"
+            "/filtration"
         ]
     },
     {
@@ -102,7 +102,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Très satisfait de l'expertise pour mon problème de fer dans l'eau de mon puits.",
         paths: [
-            "/filtres-deau"
+            "/filtration"
         ]
     },
     {
@@ -116,9 +116,9 @@ export const allTestimonials: Testimonial[] = [
     {
         name: "Sarah M.",
         rating: 5,
-        text: "Technicien ponctuel et très poli. Le travail est propre et le système de filtration fonctionne à merveille.",
+        text: "Technicien ponctuel et très poli. Le travail est propre et le système de filtration fonctionne à  merveille.",
         paths: [
-            "/traitement-eau-de-puits"
+            "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
         ]
     },
     {
@@ -126,7 +126,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Meilleur rapport qualité-prix pour un osmoseur après avoir comparé plusieurs entreprises.",
         paths: [
-            "/systeme-de-filtration-deau-potable"
+            "/filtration"
         ]
     },
     {
@@ -150,7 +150,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Installation rapide sous l'évier. Plus besoin d'acheter de bouteilles d'eau, c'est génial.",
         paths: [
-            "/systemes-de-filtration-deau-sous-evier"
+            "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
         ]
     },
     {
@@ -189,17 +189,17 @@ export const allTestimonials: Testimonial[] = [
     {
         name: "Pierre-Luc G.",
         rating: 5,
-        text: "Professionnalisme de A à Z. De l'analyse d'eau jusqu'à l'installation finale.",
+        text: "Professionnalisme de A à  Z. De l'analyse d'eau jusqu'à  l'installation finale.",
         paths: [
-            "/filtres-deau-pour-toute-la-maison"
+            "/filtration"
         ]
     },
     {
         name: "Isabelle M.",
         rating: 5,
-        text: "Bons conseils, ne cherchent pas à vendre le système le plus cher mais le plus adapté.",
+        text: "Bons conseils, ne cherchent pas à  vendre le système le plus cher mais le plus adapté.",
         paths: [
-            "/adoucissement"
+            "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
         ]
     },
     {
@@ -213,7 +213,7 @@ export const allTestimonials: Testimonial[] = [
     {
         name: "Nathalie D.",
         rating: 5,
-        text: "Équipe dynamique et très compétente. Je recommande Bricareau à tout mon entourage.",
+        text: "Équipe dynamique et très compétente. Je recommande Bricareau à  tout mon entourage.",
         paths: [
             "/adoucisseurs-portables"
         ]
@@ -223,7 +223,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Très bon service, rapide et efficace. L'eau osmosée est délicieuse.",
         paths: [
-            "/systeme-de-filtration-deau-potable"
+            "/filtration"
         ]
     },
     {
@@ -245,7 +245,7 @@ export const allTestimonials: Testimonial[] = [
     {
         name: "Mylène G.",
         rating: 5,
-        text: "Fini l'eau jaune ! Le filtre à fer fonctionne parfaitement. Merci Bricareau.",
+        text: "Fini l'eau jaune ! Le filtre à  fer fonctionne parfaitement. Merci Bricareau.",
         paths: [
             "/Filtres-deau"
         ]
@@ -255,14 +255,14 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Très professionnel, respectueux des délais. Un service comme on en voit rarement.",
         paths: [
-            "/adoucissement",
+            "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire",
             "/adoucisseurs-eau-de-puits"
         ]
     },
     {
         name: "Sophie C.",
         rating: 5,
-        text: "Je n'ai plus peur de boire l'eau de mon puits grâce à leur système UV.",
+        text: "Je n'ai plus peur de boire l'eau de mon puits grâce à  leur système UV.",
         paths: [
             "/Systemes-de-desinfection-UV"
         ]
@@ -272,7 +272,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Excellent rapport qualité-prix et service impeccable.",
         paths: [
-            "/filtres-deau-pour-toute-la-maison"
+            "/filtration"
         ]
     },
     {
@@ -294,7 +294,7 @@ export const allTestimonials: Testimonial[] = [
     {
         name: "Nicole L.",
         rating: 5,
-        text: "Entreprise de confiance. Service très courtois du début à la fin.",
+        text: "Entreprise de confiance. Service très courtois du début à  la fin.",
         paths: [
             "/adoucisseurs-portables",
             "index"
@@ -313,7 +313,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Je recommande Bricareau pour leur honnêteté et leur savoir-faire.",
         paths: [
-            "/filtres-deau-pour-toute-la-maison"
+            "/filtration"
         ]
     },
     {
@@ -352,7 +352,7 @@ export const allTestimonials: Testimonial[] = [
     {
         name: "Hugo P.",
         rating: 5,
-        text: "Technicien très compétent. A répondu à toutes mes questions avec patience.",
+        text: "Technicien très compétent. A répondu à  toutes mes questions avec patience.",
         paths: [
             "/Filtres-deau"
         ]
@@ -370,7 +370,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Entreprise sérieuse. Les résultats des tests d'eau après installation sont probants.",
         paths: [
-            "/traitement-eau-de-puits"
+            "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
         ]
     },
     {
@@ -386,14 +386,14 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Installation d'un système pour toute la maison. Différence marquée dès le premier jour.",
         paths: [
-            "/adoucissement",
+            "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire",
             "/adoucisseurs-eau-de-puits"
         ]
     },
     {
         name: "Louise H.",
         rating: 5,
-        text: "Prix honnête et travail de pro. Je n'hésiterai pas à les rappeler.",
+        text: "Prix honnête et travail de pro. Je n'hésiterai pas à  les rappeler.",
         paths: [
             "/conditionneurs-sans-sel"
         ]
@@ -403,7 +403,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Système d'osmose inverse au top. Fini les bouteilles d'eau du commerce.",
         paths: [
-            "/systeme-de-filtration-deau-potable"
+            "/filtration"
         ]
     },
     {
@@ -427,15 +427,15 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "L'installation a été faite rapidement et proprement. Très satisfaite.",
         paths: [
-            "/adoucissement"
+            "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
         ]
     },
     {
         name: "Alain B.",
         rating: 5,
-        text: "Excellent service de A à Z. Je recommande vivement Bricareau.",
+        text: "Excellent service de A à  Z. Je recommande vivement Bricareau.",
         paths: [
-            "/filtres-deau-pour-toute-la-maison"
+            "/filtration"
         ]
     },
     {
@@ -451,7 +451,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Très bon service de suivi. Entreprise qui se soucie de ses clients.",
         paths: [
-            "/adoucissement"
+            "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
         ]
     },
     {
@@ -459,7 +459,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Adoucisseur performant et discret. Installation professionnelle.",
         paths: [
-            "/adoucissement",
+            "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire",
             "index"
         ]
     },
@@ -476,7 +476,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Enfin une solution durable pour notre eau de puits. Service impeccable.",
         paths: [
-            "/traitement-eau-de-puits",
+            "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison",
             "/adoucisseurs-eau-de-puits"
         ]
     },
@@ -485,7 +485,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Je recommande pour le professionnalisme et la rapidité d'exécution.",
         paths: [
-            "/filtres-deau-pour-toute-la-maison"
+            "/filtration"
         ]
     },
     {
@@ -499,7 +499,7 @@ export const allTestimonials: Testimonial[] = [
     {
         name: "Guillaume R.",
         rating: 5,
-        text: "Un service 5 étoiles. Des pros de l'eau du début à la fin.",
+        text: "Un service 5 étoiles. Des pros de l'eau du début à  la fin.",
         paths: [
             "/adoucisseur-eau-residentiel"
         ]
@@ -507,17 +507,17 @@ export const allTestimonials: Testimonial[] = [
     {
         name: "Genevieve N.",
         rating: 5,
-        text: "Installation professionnelle de bonne qualité des filtres à eau pour notre maison.",
+        text: "Installation professionnelle de bonne qualité des filtres à  eau pour notre maison.",
         paths: [
-            "/systemes-de-filtration-deau-sous-evier"
+            "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
         ]
     },
     {
         name: "Adriel G.",
         rating: 5,
-        text: "Travail réalisé rapidement et avec un grand professionnalisme. Un système que je recommande à tous.",
+        text: "Travail réalisé rapidement et avec un grand professionnalisme. Un système que je recommande à  tous.",
         paths: [
-            "/systeme-de-filtration-deau-potable"
+            "/filtration"
         ]
     },
     {
@@ -531,15 +531,15 @@ export const allTestimonials: Testimonial[] = [
     {
         name: "Jose L.",
         rating: 5,
-        text: "Je suis très satisfait du service et de l'entretien.Je le recommanderai à tous mes amis. J'ai maintenant une eau de bonne qualité à la maison. Je n'ai plus à me soucier des métaux lourds et autres microbes indésirables dans mon eau.\nN'hésitez pas à l'installer chez vous.",
+        text: "Je suis très satisfait du service et de l'entretien.Je le recommanderai à  tous mes amis. J'ai maintenant une eau de bonne qualité à  la maison. Je n'ai plus à  me soucier des métaux lourds et autres microbes indésirables dans mon eau.\nN'hésitez pas à  l'installer chez vous.",
         paths: [
-            "/systeme-de-filtration-deau-potable"
+            "/filtration"
         ]
     },
     {
         name: "Puneet S.",
         rating: 5,
-        text: "Ils ont installé une excellente machine et ont fait un travail impeccable. Ils ont répondu à tous mes appels et à toutes mes questions. En plus, ils étaient moins chers que la plupart des grandes entreprises !",
+        text: "Ils ont installé une excellente machine et ont fait un travail impeccable. Ils ont répondu à  tous mes appels et à  toutes mes questions. En plus, ils étaient moins chers que la plupart des grandes entreprises !",
         paths: [
             "/filtration"
         ]
@@ -576,3 +576,4 @@ export const getTestimonialsByProduct = (path: string) => {
         t.paths.some(p => p.toLowerCase() === searchTerm)
     );
 };
+

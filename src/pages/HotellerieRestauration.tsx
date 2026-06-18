@@ -183,7 +183,7 @@ const HotellerieRestauration = () => {
                             {/* Card 1: Adoucissement (Tall) */}
                             <div 
                                 className="group relative bg-white lg:row-span-2 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/adoucisseurs-eau-commerciaux")}
+                                onClick={() => navigate("/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
                                     <img src={TechnicalRoomHotelImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Adoucissement Commercial - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />

@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ================================================ -->
+  <!--  PAGE PRINCIPALE                                 -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  PAGES SEGMENTS / MARCHÉS                        -->
+  <!-- ================================================ -->
+
+
+  <url>
+    <loc>https://www.bricareau.ca/solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/entreprises</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/solutions-de-traitement-d-eau-pour-offices-et-bureaux</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
+    <loc>https://www.bricareau.ca/industriel</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/bureau</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <!-- ================================================ -->
+  <!--  ADOUCISSEMENT D'EAU                             -->
+  <!-- ================================================ -->
+
+
+
+
+
+
+  <!-- ================================================ -->
+  <!--  ADOUCISSEMENT D'EAU                             -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  FILTRATION D'EAU                                -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/filtration</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/Stations-d-eau-potables-sous-l-evier-de-la-cuisine</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/filtres-d-eau-de-remplacement</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <url>
+    <loc>https://www.bricareau.ca/filtration-industrielle</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/filtration-hotels-restaurants</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/filtres-eau-machine-cafe</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/filtres-de-remplacement</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  TRAITEMENT EAU DE PUITS                         -->
+  <!-- ================================================ -->
+
+
+
+  <!-- ================================================ -->
+  <!--  DÉSINFECTION UV                                 -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/systemes-de-desinfection-uv</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+
+  <!-- ================================================ -->
+  <!--  OSMOSE INVERSE                                  -->
+  <!-- ================================================ -->
+
+
+  <!-- ================================================ -->
+  <!--  FONTAINES D'EAU                                 -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/fontaines-deau-modernes</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  PRODUITS ENTREPRISES                            -->
+  <!-- ================================================ -->
+
+
+
+
+
+  <url>
+    <loc>https://www.bricareau.ca/systemes-centralises</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/solutions-brasseries</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  SERVICES & SUPPORT                              -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/services-de-traitement-eau</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/tests-eau</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/diagnostic</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/pieces</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/Analyses-et-Tests-d-eau</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/promotions</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  ENTREPRISE / À PROPOS                           -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/pourquoi-choisir-bricareau</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/notre-processus</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/durabilite</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/carrieres</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/temoignages</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  RESSOURCES                                      -->
+  <!-- ================================================ -->
+
+
+  <url>
+    <loc>https://www.bricareau.ca/videos</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/faq</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  CONTACT & CONSULTATION                          -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/contact</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/contact-residentiel</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/contact-entreprises</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/contact-form</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/consultation</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  BLOG — HUB & CATÉGORIES                         -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/blog</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/blog/categorie/adoucissement</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/blog/categorie/filtration</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/blog/categorie/desinfection-uv</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/blog/categorie/eau-de-puits</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/blog/categorie/eau-embouteillee</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  BLOG — ARTICLES ADOUCISSEMENT                   -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/adoucisseur-deau-et-fosse-septique-mythes-et-realites</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/adoucisseur-deau-portable-pour-vr</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/adoucisseur-sans-sel-vs-avec-sel-verite-technique</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/comment-regler-durete-adoucisseur-eau</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/comment-un-adoucisseur-reduit-votre-facture-delectricite</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/consommation-deau-un-adoucisseur-est-il-ecologique</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/eau-dure-les-effets-caches-sur-vos-electromenagers</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/est-ce-securitaire-de-boire-de-leau-adoucie</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/gout-de-chlore-pourquoi-la-ville-en-ajoute-autant</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/hivernisation-comment-proteger-vos-filtres-du-gel</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/pourquoi-leau-de-votre-bac-a-sel-est-elle-sale</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/quel-sel-choisir-pour-votre-adoucisseur-pastilles-ou-cristaux</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  BLOG — ARTICLES FILTRATION & OSMOSE INVERSE     -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/aquarium-pourquoi-leau-osmosee-est-vitale-pour-vos-poissons</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/le-vrai-cout-de-leau-embouteillee-calculez-vos-economies</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/eau-et-bebes-faut-il-faire-bouillir-leau-filtree</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/le-fluor-dans-leau-faut-il-le-filtrer</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/le-plomb-dans-les-vieilles-maisons-comment-se-proteger</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/pourquoi-une-eau-pure-change-le-gout-du-cafe</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/pourquoi-leau-pure-ameliore-vos-patisseries</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/vivre-en-condo-les-solutions-de-filtration-compactes</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/osmose-inverse-et-sante-quelle-qualite-deau-obtenez-vous</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/eau-du-puits-au-quebec-quand-installer-un-systeme-dosmose-inverse</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/osmose-inverse-la-technologie-derriere-une-eau-100-pure</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  BLOG — ARTICLES DÉSINFECTION UV                 -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/comment-savoir-si-votre-lampe-uv-fonctionne-encore</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/les-risques-de-ne-pas-changer-sa-lampe-uv-apres-12-mois</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/quelle-frequence-dentretien-pour-un-systeme-uv-domestique</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  BLOG — ARTICLES EAU DE PUITS                   -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/bacteries-dans-le-puits-les-etapes-de-desinfection-choc</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/fer-ferreux-vs-fer-ferrique-quelle-difference-pour-le-filtre</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/filtre-a-cartouche-vs-filtre-a-lavage-a-contre-courant</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/injection-dair-comment-filtrer-le-fer-sans-produits-chimiques</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/les-nitrates-dans-leau-de-puits-dangers-et-solutions</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  BLOG — ARTICLES EAU EN BOUTEILLE                -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/eau-embouteillee-les-dangers-meconnus-pour-votre-sante-au-quotidien</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/eau-embouteillee-quels-impacts-sur-la-sante-et-la-planete</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ================================================ -->
+  <!--  LÉGAL                                           -->
+  <!-- ================================================ -->
+
+  <url>
+    <loc>https://www.bricareau.ca/politique-de-confidentialite</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bricareau.ca/conditions-generales-utilisation</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

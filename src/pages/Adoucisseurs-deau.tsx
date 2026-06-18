@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+﻿import { cn } from "@/lib/utils";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -37,6 +37,11 @@ import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp
 import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.webp";
 import hardWaterImg from "@/assets/58279.jpg";
 import applianceDamageImg from "@/assets/beautiful-shot-modern-house-kitchen.jpg";
+import energyCostImg from "@/assets/2148386945.jpg";
+import compteurImg from "@/assets/compteur.avif";
+import entretienMenagerImg from "@/assets/2147916568.jpg";
+import textileLingeImg from "@/assets/2149117085.jpg";
+import consommationImg from "@/assets/23981.jpg";
 import benefitsVisualImg from "@/assets/2150084031.jpg";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
@@ -85,7 +90,11 @@ import {
     CircleDollarSign,
     TrendingUp,
     Beaker,
-    ShieldCheck
+    ShieldCheck,
+    Search,
+    Lightbulb,
+    Leaf,
+    RefreshCw
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
@@ -167,7 +176,7 @@ const comparisonData: ComparisonItem[] = [
 
 const faqItems = [
     { 
-        q: "Pourquoi installer un adoucisseur si l'eau est déjà traitée par la municipalité ?", 
+        q: "Pourquoi installer un adoucisseur si l'eau est déjà  traitée par la municipalité ?", 
         a: "L'eau municipale est traitée pour être potable, pas pour être douce. Elle contient souvent beaucoup de calcaire qui endommage vos appareils, ternit votre robinetterie et assèche votre peau." 
     },
     { 
@@ -176,7 +185,7 @@ const faqItems = [
     },
     {
         q: "L'adoucisseur nécessite-t-il beaucoup d'entretien ?",
-        a: "Très peu. Il suffit d'ajouter du sel régulièrement et de procéder à un nettoyage annuel de la résine avec un produit spécialisé que nous fournissons. Nos techniciens peuvent également s'en charger lors d'une visite de routine."
+        a: "Très peu. Il suffit d'ajouter du sel régulièrement et de procéder à  un nettoyage annuel de la résine avec un produit spécialisé que nous fournissons. Nos techniciens peuvent également s'en charger lors d'une visite de routine."
     },
     { 
         q: "Est-ce que l'adoucisseur enlève le chlore de l'eau de ville ?", 
@@ -184,11 +193,11 @@ const faqItems = [
     },
     { 
         q: "Combien de sel un adoucisseur consomme-t-il par an ?", 
-        a: "Cela dépend de votre consommation d'eau et de la dureté initiale, mais en moyenne pour une famille de 4 personnes, nos modèles haute efficacité consomment environ 6 à 8 sacs de sel par an." 
+        a: "Cela dépend de votre consommation d'eau et de la dureté initiale, mais en moyenne pour une famille de 4 personnes, nos modèles haute efficacité consomment environ 6 à  8 sacs de sel par an." 
     },
     { 
         q: "L'adoucisseur augmente-t-il ma facture d'eau ?", 
-        a: "Très peu. La régénération utilise un volume d'eau négligeable par rapport à votre consommation totale. En revanche, il protège votre chauffe-eau et le rend plus efficace, réduisant votre facture énergétique." 
+        a: "Très peu. La régénération utilise un volume d'eau négligeable par rapport à  votre consommation totale. En revanche, il protège votre chauffe-eau et le rend plus efficace, réduisant votre facture énergétique." 
     },
     { 
         q: "Puis-je boire l'eau adoucie ?", 
@@ -204,11 +213,11 @@ const faqItems = [
     },
     { 
         q: "Quelle est la durée de vie d'un adoucisseur d'eau Bricareau ?", 
-        a: "Avec un entretien minimal, nos systèmes sont conçus pour durer de 15 à 20 ans. La résine de haute qualité à l'intérieur peut durer plus de 15 ans avant de nécessiter un remplacement." 
+        a: "Avec un entretien minimal, nos systèmes sont conçus pour durer de 15 à  20 ans. La résine de haute qualité à  l'intérieur peut durer plus de 15 ans avant de nécessiter un remplacement." 
     },
     { 
         q: "L'adoucisseur fait-il du bruit ?", 
-        a: "Il fonctionne silencieusement la plupart du temps. Vous n'entendrez un léger bruit d'eau que pendant la régénération, qui est programmée généralement la nuit (par exemple à 2h du matin) pour ne pas vous déranger." 
+        a: "Il fonctionne silencieusement la plupart du temps. Vous n'entendrez un léger bruit d'eau que pendant la régénération, qui est programmée généralement la nuit (par exemple à  2h du matin) pour ne pas vous déranger." 
     },
     { 
         q: "Est-ce que l'eau adoucie est bonne pour les plantes ?", 
@@ -220,7 +229,7 @@ const faqItems = [
     },
     { 
         q: "Dois-je utiliser un type de sel spécifique ?", 
-        a: "Nous recommandons du sel en pastilles de haute pureté pour éviter les résidus insolubles dans le bac. Certains sels contiennent aussi des nettoyants à résine pour maintenir l'efficacité du système." 
+        a: "Nous recommandons du sel en pastilles de haute pureté pour éviter les résidus insolubles dans le bac. Certains sels contiennent aussi des nettoyants à  résine pour maintenir l'efficacité du système." 
     },
     { 
         q: "Comment savoir si mon adoucisseur fonctionne correctement ?", 
@@ -228,7 +237,7 @@ const faqItems = [
     },
     { 
         q: "Un adoucisseur est-il compatible avec une fosse septique ?", 
-        a: "Oui, tout à fait. Les eaux de régénération rejetées sont sans danger et n'affectent pas le fonctionnement biologique d'une fosse septique standard correctement dimensionnée." 
+        a: "Oui, tout à  fait. Les eaux de régénération rejetées sont sans danger et n'affectent pas le fonctionnement biologique d'une fosse septique standard correctement dimensionnée." 
     },
     { 
         q: "Est-ce que l'adoucisseur réduit la pression d'eau ?", 
@@ -236,7 +245,7 @@ const faqItems = [
     }
 ];
 
-const B3 = () => {
+const A = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000, stopOnInteraction: false })]);
     const [selectedIndex, setSelectedIndex] = React.useState(0);
     const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
@@ -256,7 +265,15 @@ const B3 = () => {
     const [showAllHarms, setShowAllHarms] = useState(false);
     const [activeCol, setActiveCol] = useState(0);
     const [activeAdvantageImage, setActiveAdvantageImage] = useState(benefitsVisualImg);
+    const [activeTransitionStep, setActiveTransitionStep] = useState(0);
     const navigate = useNavigate();
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setActiveTransitionStep(prev => (prev + 1) % 4);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
     const resourcesRef = React.useRef<HTMLDivElement>(null);
 
     const scrollResources = (direction: 'left' | 'right') => {
@@ -295,7 +312,7 @@ const B3 = () => {
         const ogTitle = document.querySelector('meta[property="og:title"]');
         if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau au Québec : Solutions Anti-Calcaire | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Dites adieu à l'eau dure. Découvrez nos adoucisseurs résidentiels pour une eau soyeuse et protéger votre plomberie dans tout votre foyer.");
+        if (ogDesc) ogDesc.setAttribute("content", "Dites adieu à  l'eau dure. Découvrez nos adoucisseurs résidentiels pour une eau soyeuse et protéger votre plomberie dans tout votre foyer.");
         const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/adoucissement");
     }, []);
@@ -305,8 +322,8 @@ const B3 = () => {
             <main>
                 <Hero 
                     image={heroBath}
-                    highlightedTitle="Adoucisseurs d'eau,"
-                    mainTitle="éliminez le calcaire et l'eau dure."
+                    highlightedTitle={<span className="font-bold not-italic">Finis le calcaire et l'eau dure :</span>}
+                    mainTitle={<>offrez-vous le confort d'une <span className="text-[#8CC63F]">eau douce.</span></>}
                     subtitle="Redécouvrez l'expérience d'une eau soyeuse qui préserve votre peau, vos cheveux et vos investissements. Une technologie de pointe pour une protection durable de votre foyer."
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -318,12 +335,12 @@ const B3 = () => {
                     
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 DIAGNOSTIC L'EAU DURE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">L'impact silencieux du</span>
-                                <span className="font-bold text-[#18448F] block text-center">calcaire sur votre vie.</span>
+                                <span className="font-bold not-italic text-[#18448F] block">L'impact silencieux du</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center"><span className="text-[#8CC63F]">calcaire</span> sur votre vie.</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 text-center mx-auto max-w-2xl">
                                 Le calcaire n'est pas qu'un dépôt blanc ; c'est un agent d'érosion invisible qui dégrade votre confort, votre santé et vos finances au quotidien.
@@ -335,10 +352,10 @@ const B3 = () => {
                                 { 
                                     title: "Énergie & Coût", 
                                     impact: "+25% Facture", 
-                                    desc: "Le tartre isole vos résistances, forçant vos appareils à consommer massivement plus d'électricité pour chauffer l'eau.",
+                                    desc: "Le tartre isole vos résistances, forçant vos appareils à  consommer massivement plus d'électricité pour chauffer l'eau.",
                                     icon: <Zap className="w-6 h-6 text-blue-600" />,
                                     badge: "Impact Financier",
-                                    img: applianceDamageImg,
+                                    img: compteurImg,
                                     color: "bg-amber-500"
                                 },
                                 { 
@@ -356,7 +373,7 @@ const B3 = () => {
                                     desc: "Réduisez drastiquement la fréquence de remplacement de votre chauffe-eau, lave-linge et lave-vaisselle.",
                                     icon: <Shield className="w-6 h-6 text-emerald-600" />,
                                     badge: "Protection Actifs",
-                                    img: kitchenImg,
+                                    img: energyCostImg,
                                     color: "bg-emerald-600"
                                 },
                                 { 
@@ -365,7 +382,7 @@ const B3 = () => {
                                     desc: "Dites adieu aux traces de tartre sur la robinetterie et aux voiles blanchâtres sur votre vaisselle étincelante.",
                                     icon: <Sparkles className="w-6 h-6 text-cyan-500" />,
                                     badge: "Confort",
-                                    img: hardWaterSignsImg,
+                                    img: entretienMenagerImg,
                                     color: "bg-cyan-500"
                                 },
                                 { 
@@ -374,16 +391,16 @@ const B3 = () => {
                                     desc: "Les fibres deviennent rêches et les couleurs ternissent. Protégez la douceur de vos vêtements préférés.",
                                     icon: <Shirt className="w-6 h-6 text-indigo-500" />,
                                     badge: "Linge Doux",
-                                    img: laundryImg,
+                                    img: textileLingeImg,
                                     color: "bg-indigo-500"
                                 },
                                 { 
                                     title: "Consommation", 
                                     impact: "Savon x2", 
-                                    desc: "L'eau dure nécessite jusqu'à 50% de détergents et savons en plus pour obtenir une mousse efficace.",
+                                    desc: "L'eau dure nécessite jusqu'à  50% de détergents et savons en plus pour obtenir une mousse efficace.",
                                     icon: <HandCoins className="w-6 h-6 text-amber-500" />,
                                     badge: "Économie",
-                                    img: hardWaterImg,
+                                    img: consommationImg,
                                     color: "bg-amber-500"
                                 }
                             ].map((item, idx) => (
@@ -410,7 +427,7 @@ const B3 = () => {
                                                     {item.badge}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl font-bold text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
+                                            <h3 className="text-3xl font-medium text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
                                                 {item.title}
                                             </h3>
                                             <p className="text-slate-600 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-y-4 group-hover:translate-y-0 text-justify">
@@ -442,113 +459,6 @@ const B3 = () => {
                     </div>
                 </section>
 
-                {/* 3. Benefits Section - Redesigned based on mockup with original content */}
-                <section className="py-24 bg-white relative overflow-hidden">
-                    {/* Background vertical line */}
-                    <div className="absolute left-[10%] top-0 bottom-0 w-px bg-slate-200 hidden xl:block z-0" />
-
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="text-center mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                                L'INGÉNIERIE DU BIEN-ÊTRE
-                            </span>
-                             <h2 className="text-4xl md:text-5xl font-bold text-[#18448F] tracking-tight">
-                                Avantages de l'eau douce
-                            </h2>
-                        </div>
-
-                        <div className="relative max-w-6xl mx-auto">
-                            {/* Vertical text on the left */}
-                            <div className="absolute -left-16 top-1/2 -translate-y-1/2 hidden xl:block">
-                                <span className="inline-block [writing-mode:vertical-lr] rotate-180 text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 h-fit">
-                                    VOTRE SOLUTION UNIQUE
-                                </span>
-                            </div>
-
-                            <div className="flex flex-col lg:flex-row items-center gap-0 relative">
-                                {/* Left: Benefits Accordion in a Card */}
-                                <div className="w-full lg:w-[45%] z-20 mb-12 lg:mb-0">
-                                    <div className="bg-white rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.12)] p-8 md:p-12 border border-slate-50 lg:-mr-32 relative">
-                                        <Accordion 
-                                            type="single" 
-                                            defaultValue="item-0" 
-                                            className="w-full space-y-2"
-                                            onValueChange={(value) => {
-                                                const mapping: Record<string, string> = {
-                                                    "item-0": benefitsVisualImg,
-                                                    "item-1": applianceDamageImg,
-                                                    "item-2": laundryImg,
-                                                    "item-3": kitchenImg
-                                                };
-                                                if (value && mapping[value]) {
-                                                    setActiveAdvantageImage(mapping[value]);
-                                                }
-                                            }}
-                                        >
-                                            {[
-                                                {
-                                                    title: "Qualité supérieure",
-                                                    desc: "Offrez à votre corps le luxe qu'il mérite avec une eau soyeuse qui préserve l'hydratation naturelle de votre épiderme. Dès la première utilisation, vous ressentirez une différence notable : une peau moins irritée, des cheveux plus brillants et une sensation de bien-être pur à chaque douche quotidienne."
-                                                },
-                                                {
-                                                    title: "Protection totale",
-                                                    desc: "Le calcaire est l'ennemi invisible de votre maison, s'accumulant dans vos tuyaux et obstruant vos résistances. Nos solutions neutralisent les minéraux durs à la source, protégeant ainsi durablement votre chauffe-eau, votre lave-vaisselle et toute votre robinetterie contre la corrosion et les dépôts de tartre coûteux."
-                                                },
-                                                {
-                                                    title: "Linge plus doux",
-                                                    desc: "Redécouvrez la texture originelle de vos textiles préférés sans avoir recours à des produits chimiques agressifs. En éliminant la dureté de l'eau, les fibres de vos vêtements restent souples, les couleurs demeurent éclatantes plus longtemps et votre linge ressort de la machine avec une fraîcheur et une douceur incomparables."
-                                                },
-                                                {
-                                                    title: "Économies garanties",
-                                                    desc: "L'investissement dans un adoucisseur se rentabilise rapidement grâce à une efficacité énergétique accrue de vos appareils de chauffage. En plus de réduire vos factures d'électricité, vous consommerez jusqu'à 50% de savon et de détergent en moins pour un résultat de nettoyage supérieur, tout en évitant des réparations de plomberie imprévues."
-                                                }
-                                            ].map((item, idx) => (
-                                                <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-slate-100 last:border-none">
-                                                    <AccordionTrigger className="text-[#18448F] font-bold text-left text-lg hover:no-underline py-5 data-[state=open]:text-blue-600 transition-colors">
-                                                        {item.title}
-                                                    </AccordionTrigger>
-                                                    <AccordionContent className="text-slate-600 text-[15px] leading-relaxed pb-6 text-justify">
-                                                        {item.desc}
-                                                    </AccordionContent>
-                                                </AccordionItem>
-                                            ))}
-                                        </Accordion>
-                                    </div>
-                                </div>
-
-                                {/* Right: Image Section with Dot Pattern */}
-                                <div className="w-full lg:w-[65%] relative">
-                                    {/* Dot pattern background */}
-                                    <div className="absolute -top-12 -left-12 w-48 h-48 opacity-40 pointer-events-none z-0">
-                                        <div className="grid grid-cols-12 gap-3">
-                                            {Array.from({ length: 144 }).map((_, i) => (
-                                                <div key={i} className="w-1 h-1 bg-blue-500 rounded-full" />
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:h-[550px]">
-                                        <img 
-                                            key={activeAdvantageImage}
-                                            src={activeAdvantageImage} 
-                                            className="w-full h-full object-cover animate-in fade-in zoom-in duration-500"
-                                         alt="Bienfaits de l'eau adoucie sur la santé et le foyer" title="Systèmes d'eau sur mesure par Bricareau" />
-                                        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-transparent" />
-                                    </div>
-
-                                    {/* Another Dot pattern bottom right */}
-                                    <div className="absolute -bottom-16 -right-16 w-64 h-64 opacity-30 pointer-events-none z-0">
-                                        <div className="grid grid-cols-12 gap-4">
-                                            {Array.from({ length: 144 }).map((_, i) => (
-                                                <div key={i} className="w-1.5 h-1.5 bg-blue-600 rounded-full" />
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 {/* 4. Selection Guide: The Bridge - Copied from Adoucisseur-eau-municipal */}
                 <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
@@ -557,20 +467,20 @@ const B3 = () => {
                         <img 
                             src={panoramaBgImg} 
                             className="w-full h-full object-cover grayscale"
-                         alt="Image illustrant nos solutions - filtration Bricareau | traitement d'eau Québec" title="Filtration Bricareau par Bricareau" />
+                         alt="Image illustrant nos solutions - analyse d'eau professionnelle | traitement d'eau Québec" title="Analyse d'eau professionnelle par Bricareau" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center max-w-7xl mx-auto mb-20 lg:mb-24 px-6 md:px-0">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 GUIDE D'EXPERTISE RÉSIDENTIELLE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">L'expertise anticalcaire</span>
-                                <span className="font-bold text-[#18448F] block">adaptée à votre réseau domestique.</span>
+                                <span className="font-bold not-italic text-[#8CC63F] block">L'expertise anticalcaire</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">adaptée à  votre réseau domestique.</span>
                             </h2>
                             <p className="body-pro-max text-center max-w-4xl mx-auto px-4">
-                                Nos adoucisseurs d'eau résidentiels sont spécifiquement calibrés pour neutraliser la dureté urbaine tout en préservant l'intégrité de vos installations. Une synergie parfaite entre <span className="text-blue-600 font-bold">économie de ressources</span> et <span className="text-blue-600 font-bold">confort absolu</span>.
+                                Nos adoucisseurs d'eau résidentiels sont spécifiquement calibrés pour neutraliser la dureté de l'eau tout en préservant l'intégrité de vos installations. Une synergie parfaite entre <span className="text-blue-600 font-bold">économie de ressources</span> et <span className="text-blue-600 font-bold">confort absolu</span>.
                             </p>
                         </div>
 
@@ -583,14 +493,14 @@ const B3 = () => {
                                         if (p.name.includes("Sentinelle")) {
                                             window.open(SentinellePDF, '_blank');
                                         } else {
-                                            navigate(p.path || "/adoucisseurs");
+                                            navigate(p.path || "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire");
                                         }
                                     }}
                                 >
                                     <div className="relative h-80 overflow-hidden bg-slate-50/30 flex items-center justify-center p-12 overflow-hidden">
                                         {p.isRecommended && (
                                             <div className="absolute top-8 right-8 z-10">
-                                                <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-xl shadow-blue-500/30 animate-pulse">
+                                                <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-xl shadow-blue-500/30 animate-pulse">
                                                     LE CHOIX DES EXPERTS
                                                 </span>
                                             </div>
@@ -643,106 +553,174 @@ const B3 = () => {
                 </section>
 
                 {/* 3. TimeLine SÉRÉNITÉ */}
-                <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
-                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                                VOTRE EXPÉRIENCE CLIENT
-                            </span>
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Une transition fluide vers</span>
-                                <span className="font-bold text-[#18448F] block">une eau douce d'exception.</span>
-                            </h2>
-                            <p className="body-pro-max text-center max-w-3xl mx-auto">
-                                Le Parcours Bricareau : une expertise d'élite, depuis votre première analyse jusqu'à la douceur éternelle de votre eau.
-                            </p>
-                        </div>
+                <section className="pt-24 lg:pt-32 pb-16 lg:pb-32 bg-white relative overflow-hidden">
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative mb-24 lg:mb-32">
-                            {/* Connecting Line (Desktop) */}
-                            <div className="hidden lg:block absolute top-[48px] left-[10%] w-[80%] h-px bg-slate-100 z-0" />
-                            
-                            {[
-                                { 
-                                    step: "01",
-                                    title: "Diagnostic Précis", 
-                                    desc: "Analyse de la dureté et du chlore de votre eau.",
-                                    image: diagnosticStepImg,
-                                    color: "border-blue-100"
-                                },
-                                { 
-                                    step: "02",
-                                    title: "Solutions sur-mesure", 
-                                    desc: "Nous calibrons votre futur adoucisseur d'eau selon vos habitudes de consommation réelles.",
-                                    image: customStepImg,
-                                    color: "border-indigo-100"
-                                },
-                                { 
-                                    step: "03",
-                                    title: "Installation d'Élite", 
-                                    desc: "Mise en place rigoureuse par nos plombiers certifiés. Propreté et excellence garanties.",
-                                    image: installationStepImg,
-                                    color: "border-cyan-100"
-                                },
-                                { 
-                                    step: "04",
-                                    title: "Sérénité Totale", 
-                                    desc: "Bénéficiez d'une eau parfaite 24h/24 et d'un suivi proactif de nos experts.",
-                                    image: serenityStepImg,
-                                    color: "border-emerald-100"
-                                }
-                            ].map((item, idx) => (
-                                <div key={idx} className="relative z-10 group text-center">
-                                    <div className="mb-8 relative flex items-center justify-center">
-                                        <div className="relative w-fit mx-auto">
-                                            <div className={`w-32 h-32 rounded-[2.5rem] overflow-hidden border-2 ${item.color} shadow-xl shadow-slate-200/50 group-hover:scale-110 transition-transform duration-500 bg-white`}>
-                                                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                                            </div>
-                                            <div className="absolute -top-2 -left-2 lg:-left-auto lg:-top-2 lg:-right-2 w-10 h-10 bg-blue-600 lg:bg-[#18448F] text-white rounded-full flex items-center justify-center font-black text-xs shadow-lg border-2 border-white z-20">
-                                                {item.step}
-                                            </div>
-                                        </div>
+                     {/* Full-width container for the slider */}
+                     <div className="w-full relative z-0 mb-0 pb-0 overflow-visible mt-12 lg:mt-0">
+                         {/* Left Side: Circular Slider */}
+                         <div className="w-full lg:w-1/2 lg:absolute lg:left-0 lg:top-[-215px] xl:top-[-340px] 2xl:top-[-385px] relative flex justify-center lg:justify-start z-0 pointer-events-none">
+                                {/* Translated left to create a semi-circle effect stuck to the edge */}
+                                <div className="relative w-[340px] h-[340px] md:w-[600px] md:h-[600px] lg:w-[835px] lg:h-[835px] xl:w-[980px] xl:h-[980px] 2xl:w-[1080px] 2xl:h-[1080px] lg:translate-y-0 lg:-translate-x-1/3 xl:-translate-x-1/4 shrink-0 pointer-events-auto">
+                                    {/* The blue circle border (full circle, but styled to look like an arc via the svg) */}
+                                    <div className="absolute inset-4 rounded-full border-[2px] border-slate-100"></div>
+                                    {/* The active blue arc */}
+                                    <svg className="absolute inset-0 w-full h-full -rotate-[135deg] pointer-events-none" viewBox="0 0 100 100">
+                                        {/* Arc covering roughly the right side */}
+                                        <circle 
+                                            cx="50" cy="50" r="48" 
+                                            fill="none" 
+                                            stroke="#18448F" 
+                                            strokeWidth="1" 
+                                            strokeDasharray="301" 
+                                            strokeDashoffset="220" 
+                                            className="transition-all duration-700 opacity-80"
+                                        />
+                                        <circle 
+                                            cx="50" cy="50" r="48" 
+                                            fill="none" 
+                                            stroke="#18448F" 
+                                            strokeWidth="2" 
+                                            strokeDasharray="301" 
+                                            strokeDashoffset="250" 
+                                            className="transition-all duration-700"
+                                        />
+                                    </svg>
+                                    
+                                    {/* The image inside */}
+                                    <div className="absolute inset-8 rounded-full overflow-hidden shadow-2xl bg-slate-50">
+                                        <img 
+                                            src={[
+                                                benefitsVisualImg,
+                                                applianceDamageImg,
+                                                laundryImg,
+                                                kitchenImg
+                                            ][activeTransitionStep]} 
+                                            className="w-full h-full object-cover"
+                                         alt="Étape de transition - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                                     </div>
-                                    <h4 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-blue-600 transition-colors leading-tight">{item.title}</h4>
-                                    <p className="body-pro-max text-slate-500 text-center max-w-[220px] mx-auto">
-                                        {item.desc}
-                                    </p>
+
+                                    {/* Icons positioned on the edge */}
+                                    {[
+                                        { icon: <Droplets className="w-5 h-5" />, angle: -5 },
+                                        { icon: <ShieldCheck className="w-5 h-5" />, angle: 20 },
+                                        { icon: <Shirt className="w-5 h-5" />, angle: 45 },
+                                        { icon: <CircleDollarSign className="w-5 h-5" />, angle: 70 }
+                                    ].map((step, idx) => {
+                                        const radius = 50;
+                                        const x = 50 + radius * Math.cos(step.angle * Math.PI / 180);
+                                        const y = 50 + radius * Math.sin(step.angle * Math.PI / 180);
+                                        
+                                        return (
+                                            <button 
+                                                key={idx}
+                                                onClick={() => setActiveTransitionStep(idx)}
+                                                className={`absolute w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 z-10 border-[3px] shadow-lg ${activeTransitionStep === idx ? 'bg-[#18448F] text-white border-white scale-110' : 'bg-white text-[#18448F] border-[#18448F] hover:bg-blue-50'}`}
+                                                style={{ 
+                                                    left: `${x}%`, 
+                                                    top: `${y}%`, 
+                                                    transform: 'translate(-50%, -50%)' 
+                                                }}
+                                                aria-label={`Étape ${idx + 1}`}
+                                            >
+                                                {step.icon}
+                                            </button>
+                                        )
+                                    })}
                                 </div>
-                            ))}
-                        </div>
-                        
-                        {/* Featured Banner with generated image */}
-                        <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0">
-                            <img 
-                                src={installationSoftenerImg} 
-                                className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
-                             alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/70 via-[#18448F]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
-                                <div className="max-w-lg">
-                                    <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
-                                        <CheckCircle className="w-5 h-5" />
-                                        Engagement Certifié
+                            </div>
+
+                            {/* Right Side: Title and Content grouped to be vertically centered */}
+                            <div className="container mx-auto px-6 relative z-10 pointer-events-none">
+                                <div className="w-full lg:w-1/2 lg:ml-auto space-y-12 lg:space-y-20 lg:pl-8 lg:pr-12 xl:pr-24 max-w-3xl mt-12 lg:mt-0 pointer-events-auto">
+                                    
+                                    {/* Title Block */}
+                                    <div className="text-center lg:text-left mb-0">
+                                        <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+                                            LE PARCOURS BRICAREAU
+                                        </span>
+                                        <h2 className="heading-pro-max text-center lg:text-left mb-4 text-[#18448F]">
+                                            <span className="font-bold not-italic">Une transition fluide 360Â° vers une <span className="text-[#8CC63F]">eau douce d'exception.</span></span>
+                                        </h2>
+                                        <p className="body-pro-max text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
+                                            Le Parcours Bricareau : une expertise d'élite, depuis votre première analyse jusqu'à  la douceur éternelle de votre eau.
+                                        </p>
                                     </div>
-                                    <h3 className="text-white text-4xl font-bold mb-6 leading-tight">L'excellence Bricareau s'installe chez vous.</h3>
-                                    <p className="text-white text-lg mb-10 text-justify">
-                                        Chaque installation est une signature de qualité. Nos techniciens assurent une meilleure mise en place de vos systèmes, garantissant performance et esthétique.
-                                    </p>
+
+                                    {/* Steps Block */}
+                                    <div className="space-y-8">
+                                    {(() => {
+                                    const steps = [
+                                        { 
+                                            title: "Qualité supérieure", 
+                                            desc: "Offrez à  votre corps le luxe qu'il mérite avec une eau soyeuse qui préserve l'hydratation naturelle de votre épiderme. Dès la première utilisation, vous ressentirez une différence notable : une peau moins irritée, des cheveux plus brillants et une sensation de bien-être pur à  chaque douche quotidienne.",
+                                            icon: <Droplets className="w-6 h-6" />
+                                        },
+                                        { 
+                                            title: "Protection totale", 
+                                            desc: "Le calcaire est l'ennemi invisible de votre maison, s'accumulant dans vos tuyaux et obstruant vos résistances. Nos solutions neutralisent les minéraux durs à  la source, protégeant ainsi durablement votre chauffe-eau, votre lave-vaisselle et toute votre robinetterie contre la corrosion et les dépôts de tartre coûteux.",
+                                            icon: <ShieldCheck className="w-6 h-6" />
+                                        },
+                                        { 
+                                            title: "Linge plus doux", 
+                                            desc: "Redécouvrez la texture originelle de vos textiles préférés sans avoir recours à  des produits chimiques agressifs. En éliminant la dureté de l'eau, les fibres de vos vêtements restent souples, les couleurs demeurent éclatantes plus longtemps et votre linge ressort de la machine avec une fraîcheur et une douceur incomparables.",
+                                            icon: <Shirt className="w-6 h-6" />
+                                        },
+                                        { 
+                                            title: "Économies garanties", 
+                                            desc: "L'investissement dans un adoucisseur se rentabilise rapidement grâce à  une efficacité énergétique accrue de vos appareils de chauffage. En plus de réduire vos factures d'électricité, vous consommerez jusqu'à  50% de savon et de détergent en moins pour un résultat de nettoyage supérieur, tout en évitant des réparations de plomberie imprévues.",
+                                            icon: <CircleDollarSign className="w-6 h-6" />
+                                        }
+                                    ];
+                                    const activeData = steps[activeTransitionStep];
+                                    return (
+                                        <>
+                                            <div className="flex items-center gap-4 animate-in slide-in-from-right-4 fade-in duration-500" key={`title-${activeTransitionStep}`}>
+                                                <div className="w-14 h-14 rounded-full bg-[#18448F] flex items-center justify-center text-white shadow-lg shrink-0">
+                                                    {activeData.icon}
+                                                </div>
+                                                <h3 className="text-3xl lg:text-4xl font-bold text-[#18448F] leading-tight">{activeData.title}</h3>
+                                            </div>
+                                            
+                                            <p className="text-slate-600 text-lg leading-relaxed text-justify animate-in slide-in-from-right-8 fade-in duration-700" key={`desc-${activeTransitionStep}`}>
+                                                {activeData.desc}
+                                            </p>
+                                            
+
+                                        </>
+                                    );
+                                })()}
+
+                                {/* Carousel indicators & arrows */}
+                                <div className="flex items-center justify-between pt-8 border-t border-slate-100">
+                                    <div className="flex gap-3">
+                                        {[0, 1, 2, 3].map((idx) => (
+                                            <button 
+                                                key={idx}
+                                                onClick={() => setActiveTransitionStep(idx)}
+                                                className={`w-3 h-3 rounded-full transition-all duration-300 ${activeTransitionStep === idx ? 'bg-[#18448F] scale-125 ring-4 ring-blue-100' : 'bg-slate-300 hover:bg-slate-400'}`}
+                                                aria-label={`Aller à  l'étape ${idx + 1}`}
+                                            />
+                                        ))}
+                                    </div>
+
+                                </div>
                                 </div>
                             </div>
                         </div>
-                     </div>
+                    </div>
                 </section>
+
 
                 {/* 4. Comparative Analysis Section */}
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
                                 ANALYSE COMPARATIVE
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#18448F] block text-center">Identifiez la performance</span>
-                                <span className="font-bold text-[#18448F] block text-center">optimale pour votre foyer.</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">Identifiez la performance</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">optimale pour votre foyer.</span>
                             </h2>
                         </div>
 
@@ -835,9 +813,33 @@ const B3 = () => {
                     </div>
                 </section>
 
+                {/* Featured Banner */}
+                <section className="bg-white relative z-20 overflow-hidden py-16 lg:py-24">
+                    <div className="container mx-auto px-6 relative">
+                        <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-white/20 group relative -mx-6 lg:mx-0">
+                            <img 
+                                src={installationSoftenerImg} 
+                                className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.1] contrast-[1.05]"
+                             alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" title="Expert en eau par Bricareau" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/90 via-[#18448F]/60 to-transparent p-8 md:p-12 lg:p-20 flex items-center lg:pt-32">
+                                <div className="max-w-xl">
+                                    <div className="flex items-center gap-3 text-blue-200 font-bold text-xs tracking-widest uppercase mb-6">
+                                        <CheckCircle className="w-5 h-5" />
+                                        Engagement Certifié
+                                    </div>
+                                    <h3 className="text-white text-4xl lg:text-5xl font-bold mb-6 leading-tight">L'excellence Bricareau s'installe chez vous.</h3>
+                                    <p className="text-blue-50 text-lg lg:text-xl mb-10 text-justify">
+                                        Chaque installation est une signature de qualité. Nos techniciens assurent une meilleure mise en place de vos systèmes, garantissant performance et esthétique.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 6.Testimonials Grid Section */}
                 <TestimonialsSection
-                    filterProduct="/adoucissement"
+                    filterProduct="/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
                     limit={5}
                     title={
                         <>
@@ -854,7 +856,7 @@ const B3 = () => {
                         <img
                             src={waterTestingImg}
                             className="w-full h-auto object-contain"
-                         alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau" title="Traitement d'eau Québec par Bricareau" />
+                         alt="Analyse d'eau à  domicile pour détecter le calcaire et le chlore - Service Bricareau" title="Traitement d'eau Québec par Bricareau" />
                     </div>
 
                     {/* Desktop Background */}
@@ -862,7 +864,7 @@ const B3 = () => {
                         <img
                             src={waterTestingImg}
                             className="w-full h-full object-cover object-[75%_15%]"
-                         alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore" title="Systèmes d'eau sur mesure par Bricareau" />
+                         alt="Analyse d'eau à  domicile pour détecter le calcaire et le chlore" title="Traitement d'eau Québec par Bricareau" />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
@@ -884,7 +886,7 @@ const B3 = () => {
                                     asChild
                                     variant="primary"
                                 >
-                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
+                                    <a href="/Analyses-et-Tests-d-eau">Demandez une analyse d'eau</a>
                                 </ProMaxButton>
                             </div>
                         </div>
@@ -941,7 +943,7 @@ const B3 = () => {
                         <img
                             src={hardWaterFaucetImg}
                             className="w-full h-full object-cover grayscale brightness-150"
-                         alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
+                         alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
                         <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                     </div>
 
@@ -949,7 +951,7 @@ const B3 = () => {
                         <div className="max-w-5xl mx-auto text-center space-y-12">
                             <div className="space-y-6">
                                 <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
-                                    PRENEZ LE CONTRÔLE DE VOTRE EAU
+                                    PRENEZ LE CONTRà”LE DE VOTRE EAU
                                 </span>
                                 <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
                                     Libérez votre foyer <br />
@@ -968,7 +970,7 @@ const B3 = () => {
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
+                                        Parlez à  un expert
                                     </a>
                                 </ProMaxButton>
                                 <ProMaxButton
@@ -1058,4 +1060,5 @@ const B3 = () => {
     );
 };
 
-export default B3;
+export default A;
+

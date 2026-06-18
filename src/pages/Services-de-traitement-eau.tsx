@@ -589,7 +589,7 @@ const ServicesTraitementEau = () => {
                                 </div>
                                 <div className="pt-4">
                                     <ProMaxButton 
-                                        onClick={() => navigate('/tests-eau')}
+                                        onClick={() => navigate('/Analyses-et-Tests-d-eau')}
                                         variant="primary"
                                     >
                                         Voir toutes les analyses 

@@ -239,7 +239,7 @@ const ResidentialServices = () => {
                             {/* Card 5: Fontaines (Square) */}
                             <div 
                                 className="group relative bg-white md:col-span-2 lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/fontaines")}
+                                onClick={() => navigate("/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
                                     <img src={fountainImg} className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Fontaines - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
@@ -257,7 +257,7 @@ const ResidentialServices = () => {
                             {/* Card 6: Filtres de remplacement (Square) */}
                             <div 
                                 className="group relative bg-white lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/filtres-de-remplacement")}
+                                onClick={() => navigate("/filtres-d-eau-de-remplacement")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
                                     <img src={replacementFilterImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Filtres remplacement - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />

@@ -58,27 +58,27 @@ const Footer = () => {
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Résidentiel</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/tests-eau" className="text-white/80 hover:text-white transition-colors">
+                <a href="/Analyses-et-Tests-d-eau" className="text-white/80 hover:text-white transition-colors">
                   Analyses & Tests d'eau
                 </a>
               </li>
               <li>
-                <a href="/A" className="text-white/80 hover:text-white transition-colors">
+                <a href="/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire" className="text-white/80 hover:text-white transition-colors">
                   Adoucisseurs d'eau Résidentiels
                 </a>
               </li>
               <li>
-                <a href="/B" className="text-white/80 hover:text-white transition-colors">
+                <a href="/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison" className="text-white/80 hover:text-white transition-colors">
                   Filtres d'eau spécialisés
                 </a>
               </li>
               <li>
-                <a href="/filtres-de-remplacement" className="text-white/80 hover:text-white transition-colors">
+                <a href="/filtres-d-eau-de-remplacement" className="text-white/80 hover:text-white transition-colors">
                   Filtres de remplacement
                 </a>
               </li>
               <li>
-                <a href="/C" className="text-white/80 hover:text-white transition-colors">
+                <a href="/Stations-d-eau-potables-sous-l-evier-de-la-cuisine" className="text-white/80 hover:text-white transition-colors">
                   Systèmes de filtration sous évier
                 </a>
               </li>
@@ -88,7 +88,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/fontaines" className="text-white/80 hover:text-white transition-colors">
+                <a href="/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche" className="text-white/80 hover:text-white transition-colors">
                   Fontaines et refroidisseurs
                 </a>
               </li>
@@ -152,7 +152,7 @@ const Footer = () => {
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Hôtellerie et restauration</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/adoucisseurs-eau-commerciaux" className="text-white/80 hover:text-white transition-colors">
+                <a href="/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire" className="text-white/80 hover:text-white transition-colors">
                   Adoucisseur d'eau commercial
                 </a>
               </li>
@@ -184,17 +184,17 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/adoucisseurs-eau-industriel" className="text-white/80 hover:text-white transition-colors">
+                <a href="/industriel" className="text-white/80 hover:text-white transition-colors">
                   Adoucisseurs d'eau industriels
                 </a>
               </li>
               <li>
-                <a href="/osmose-inverse-industrielle" className="text-white/80 hover:text-white transition-colors">
+                <a href="/industriel" className="text-white/80 hover:text-white transition-colors">
                   Systèmes d'osmose inverse
                 </a>
               </li>
               <li>
-                <a href="/desinfection-uv-industrielle" className="text-white/80 hover:text-white transition-colors">
+                <a href="/systemes-de-desinfection-uv" className="text-white/80 hover:text-white transition-colors">
                   Systèmes de désinfection UV à haut débit
                 </a>
               </li>

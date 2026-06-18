@@ -54,13 +54,13 @@ const ChatWidget = () => {
                 text: "Merci pour votre message. Un de nos experts en traitement d'eau va vous répondre dans quelques instants. En attendant, saviez-vous que nous offrons des analyses d'eau gratuites ?" };
 
             if (text === "Analyse d'eau gratuite") {
-                navigate("/tests-eau");
+                navigate("/Analyses-et-Tests-d-eau");
                 setIsOpen(false);
                 return;
             }
 
             if (text === "Nos produits") {
-                navigate("/solutions");
+                navigate("/");
                 setIsOpen(false);
                 return;
             }

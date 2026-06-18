@@ -31,7 +31,7 @@ const FiltresDeRemplacement = () => {
         const ogDesc = document.querySelector('meta[property="og:description"]');
         if (ogDesc) ogDesc.setAttribute("content", "Trouvez les cartouches et filtres compatibles avec votre système de traitement d'eau. Qualité supérieure pour une filtration durable.");
         const ogUrl = document.querySelector('meta[property="og:url"]');
-        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/filtres-de-remplacement");
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/filtres-d-eau-de-remplacement");
     }, []);
     const partCategories = [
         {

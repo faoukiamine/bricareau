@@ -305,7 +305,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                                     className="bg-white text-blue-600 hover:bg-gray-50 rounded-full px-8 h-12 font-bold shadow-sm"
                                     asChild
                                 >
-                                    <a href="/tests-eau">Demander une analyse d'eau</a>
+                                    <a href="/Analyses-et-Tests-d-eau">Demander une analyse d'eau</a>
                                 </Button>
                                 <Button
                                     size="lg"

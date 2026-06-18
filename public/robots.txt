@@ -1,14 +1,63 @@
+# =====================================================
+#  robots.txt — Bricareau Water Specialist
+#  https://www.bricareau.ca
+# =====================================================
+
+# ----- Googlebot -----
 User-agent: Googlebot
 Allow: /
+Disallow: /A
+Disallow: /B
+Disallow: /B3
+Disallow: /C
+Disallow: /v1
+Disallow: /desabonnement
+Disallow: /desabonnement-succes
 
-User-agent: Bingbot
+# ----- Google Image Bot -----
+User-agent: Googlebot-Image
 Allow: /
 
+# ----- Bingbot -----
+User-agent: Bingbot
+Allow: /
+Disallow: /A
+Disallow: /B
+Disallow: /B3
+Disallow: /C
+Disallow: /v1
+Disallow: /desabonnement
+Disallow: /desabonnement-succes
+
+# ----- DuckDuckBot -----
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /A
+Disallow: /B
+Disallow: /B3
+Disallow: /C
+Disallow: /v1
+
+# ----- Social Media Crawlers -----
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+# ----- All other bots -----
 User-agent: *
 Allow: /
+Disallow: /A
+Disallow: /B
+Disallow: /B3
+Disallow: /C
+Disallow: /v1
+
+# =====================================================
+#  Sitemap
+# =====================================================
+Sitemap: https://www.bricareau.ca/sitemap.xml

@@ -741,7 +741,7 @@ const DesinfectionUV = () => {
                                         asChild
                                         className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
                                     >
-                                        <a href="/tests-eau">Demandez une analyse d'eau</a>
+                                        <a href="/Analyses-et-Tests-d-eau">Demandez une analyse d'eau</a>
                                     </Button>
                                 </div>
                             </div>

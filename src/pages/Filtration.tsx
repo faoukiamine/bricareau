@@ -119,7 +119,7 @@ const Filtration = () => {
         {
             title: "Nos systèmes de filtration d'eau sous évier : La solution ultime",
             img: undersinkSystemImg,
-            link: "/systemes-de-filtration-deau-sous-evier"
+            link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
         }
     ];
 
@@ -358,7 +358,7 @@ const Filtration = () => {
                                             asChild
                                             className="h-14 px-10 text-[11px]"
                                         >
-                                            <NavLink to="/filtres-deau-pour-toute-la-maison" className="flex items-center">
+                                            <NavLink to="/filtration" className="flex items-center">
                                                 Voir nos filtres d'eau
                                                 <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                                             </NavLink>
@@ -447,7 +447,7 @@ const Filtration = () => {
                                             asChild
                                             className="h-14 px-10 text-[11px]"
                                         >
-                                            <NavLink to="/systeme-de-filtration-deau-potable" className="flex items-center">
+                                            <NavLink to="/filtration" className="flex items-center">
                                                 Découvrir nos systèmes d'osmose inverse
                                                 <ChevronRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1" />
                                             </NavLink>
@@ -541,7 +541,7 @@ const Filtration = () => {
                                             asChild
                                             className="h-14 px-10 text-[11px]"
                                         >
-                                            <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="flex items-center">
+                                            <NavLink to="/Stations-d-eau-potables-sous-l-evier-de-la-cuisine" className="flex items-center">
                                                 Voir nos filtres sous-évier
                                                 <ChevronRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1" />
                                             </NavLink>
@@ -592,7 +592,7 @@ const Filtration = () => {
                                     variant="dark"
                                     className="h-14 px-10 text-[11px]"
                                 >
-                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
+                                    <a href="/Analyses-et-Tests-d-eau">Demandez une analyse d'eau</a>
                                 </ProMaxButton>
                             </div>
                         </div>

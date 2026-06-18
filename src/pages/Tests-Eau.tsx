@@ -86,7 +86,7 @@ const TestsEauPage = () => {
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute("content", "Protégez votre santé avec nos tests d'eau certifiés. Résultats rapides et diagnostics d'experts pour la potabilité de votre eau.");
     const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/tests-eau");
+    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/Analyses-et-Tests-d-eau");
   }, []);
 
   const [activeService, setActiveService] = useState(0);

@@ -67,7 +67,7 @@ export const mainNavMenuItems: MenuItem[] = [
                     },
                     { 
                         title: "Notre processus", 
-                        description: "De l'analyse à l'installation, explorez notre méthodologie d'ingénierie étape par étape.", 
+                        description: "De l'analyse à  l'installation, explorez notre méthodologie d'ingénierie étape par étape.", 
                         href: "/notre-processus" 
                     }
                 ]
@@ -88,7 +88,7 @@ export const mainNavMenuItems: MenuItem[] = [
             }
         ],
         promo: {
-            title: "Prêt à aimer votre eau?",
+            title: "Prêt à  aimer votre eau?",
             subtitle: "Communiquez dès aujourd’hui avec l'un de nos experts en eau ou appelez-nous au 855-264-9328.",
             image: promoQuiSommesNousImg,
             link: "/contact-form",
@@ -102,27 +102,27 @@ export const mainNavMenuItems: MenuItem[] = [
             {
                 title: "RÉSIDENTIEL",
                 image: promoImage3,
-                href: "/residentiel",
+                href: "/solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles",
                 links: [
                     { 
                         title: "Analyses & Tests d'eau", 
                         description: "Analysez et purifiez : une barrière infaillible contre les contaminants pour la sécurité de votre famille.", 
-                        href: "/tests-eau" 
+                        href: "/Analyses-et-Tests-d-eau" 
                     }, 
                     { 
                         title: "Adoucisseurs d'eau Résidentiels", 
                         description: "Éliminez le calcaire pour protéger vos électroménagers et retrouver une peau douce.", 
-                        href: "/A" 
+                        href: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire" 
                     },
                     { 
                         title: "Filtres d'eau spécialisés", 
                         description: "Des solutions sur mesure pour neutraliser le fer, le soufre et les sédiments tenaces.", 
-                        href: "/B" 
+                        href: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison" 
                     },
                     { 
                         title: "Systèmes de filtration d'eau sous évier", 
-                        description: "Une eau de qualité bouteille directement à votre robinet, sans les déchets plastiques.", 
-                        href: "/C" 
+                        description: "Une eau de qualité bouteille directement à  votre robinet, sans les déchets plastiques.", 
+                        href: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine" 
                     },
                     { 
                         title: "Systèmes de désinfection UV", 
@@ -131,24 +131,24 @@ export const mainNavMenuItems: MenuItem[] = [
                     },
                     { 
                         title: "Fontaines et refroidisseurs d'eau", 
-                        description: "L'hydratation parfaite à portée de main avec nos distributeurs élégants et performants.", 
-                        href: "/fontaines" 
+                        description: "L'hydratation parfaite à  portée de main avec nos distributeurs élégants et performants.", 
+                        href: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche" 
                     },
                     { 
                         title: "Filtres d'eau de remplacement", 
                         description: "Cartouches d'origine certifiées pour maintenir l'excellence de votre filtration.", 
-                        href: "/filtres-de-remplacement" 
+                        href: "/filtres-d-eau-de-remplacement" 
                     }
                 ]
             },
             {
                 title: "BUREAU",
                 image: promoImage4, 
-                href: "/bureau",
+                href: "/solutions-de-traitement-d-eau-pour-offices-et-bureaux",
                 links: [
                     { 
                         title: "Fontaines d'Eau Modernes", 
-                        description: "Design épuré et eau pure à volonté pour revitaliser vos équipes sans logistique de bouteilles.", 
+                        description: "Design épuré et eau pure à  volonté pour revitaliser vos équipes sans logistique de bouteilles.", 
                         href: "/fontaines-deau-modernes" 
                     },
                     { 
@@ -161,12 +161,12 @@ export const mainNavMenuItems: MenuItem[] = [
             {
                 title: "HÔTELLERIE ET RESTAURATION",
                 image: promoImage2,
-                href: "/hotellerie-restauration",
+                href: "/solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants",
                 links: [
                     { 
                         title: "Adoucisseur d'eau commercial", 
                         description: "Éradiquez le tartre pour prolonger la vie de vos équipements de cuisine et de buanderie.", 
-                        href: "/adoucisseurs-eau-commerciaux" 
+                        href: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire" 
                     }, 
                     { 
                         title: "Filtration d'eau", 
@@ -179,7 +179,7 @@ export const mainNavMenuItems: MenuItem[] = [
                         href: "/solutions-brasseries" 
                     },
                     { 
-                        title: "Filtres pour Machines à Café", 
+                        title: "Filtres pour Machines à  Café", 
                         description: "Révélez chaque arôme de vos grains et protégez vos machines espresso des pannes coûteuses.", 
                         href: "/filtres-eau-machine-cafe" 
                     }
@@ -198,17 +198,17 @@ export const mainNavMenuItems: MenuItem[] = [
                     { 
                         title: "Adoucisseurs d'eau industriel", 
                         description: "Adoucissement continu 24/7 pour sécuriser vos chaudières et tours de refroidissement.", 
-                        href: "/adoucisseurs-eau-industriel" 
+                        href: "/industriel" 
                     },
                     { 
                         title: "Systèmes d'osmose inverse", 
                         description: "Purification de grade moléculaire pour vos procédés de fabrication les plus stricts.", 
-                        href: "/osmose-inverse-industrielle" 
+                        href: "/industriel" 
                     },
                     { 
-                        title: "Systèmes de désinfection UV à haut débit", 
+                        title: "Systèmes de désinfection UV à  haut débit", 
                         description: "Biocontrôle absolu et stérilisation massive pour les applications critiques.", 
-                        href: "/desinfection-uv-industrielle" 
+                        href: "/systemes-de-desinfection-uv" 
                     }
                 ]
             }
@@ -224,7 +224,7 @@ export const mainNavMenuItems: MenuItem[] = [
                     { 
                         title: "Tests d'eau", 
                         description: "Réservez votre audit de qualité d'eau et obtenez un rapport détaillé de nos ingénieurs.", 
-                        href: "/tests-eau" 
+                        href: "/Analyses-et-Tests-d-eau" 
                     },
                     { 
                         title: "Nos Services", 
@@ -233,7 +233,7 @@ export const mainNavMenuItems: MenuItem[] = [
                     },
                     { 
                         title: "Diagnostic", 
-                        description: "Identifiez le système parfait pour votre besoin grâce à notre outil interactif en ligne.", 
+                        description: "Identifiez le système parfait pour votre besoin grâce à  notre outil interactif en ligne.", 
                         href: "/diagnostic" 
                     },
                                     ]
@@ -258,7 +258,7 @@ export const mainNavMenuItems: MenuItem[] = [
             title: "Analyse d'eau",
             subtitle: "Une eau parfaite commence par une analyse rigoureuse.",
             image: resourcesPromoImg,
-            link: "/tests-eau",
+            link: "/Analyses-et-Tests-d-eau",
             cta: "APPRENEZ-EN DAVANTAGE SUR LES TESTS D'EAU"
         }
     }
@@ -267,38 +267,38 @@ export const mainNavMenuItems: MenuItem[] = [
 export const productMenuItems: MenuItem[] = [
   {
     name: "Adoucissement d'eau",
-    href: "/adoucissement",
+    href: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire",
     hasMegamenu: true,
     megamenuCards: [
       {
         customIcon: WatersoftenericonImg,
         title: "Adoucisseurs d'eau",
         description: "Éliminez le calcaire, protégez vos électroménagers et profitez d'une peau et de cheveux plus sains avec une eau parfaitement douce.",
-        href: "/A"
+        href: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
       },
       {
         customIcon: saltfreeiconImg,
         title: "Conditionneurs d'eau sans sel",
         description: "La solution antitartre écologique : prévenez l'accumulation de calcaire sans sel, sans rejet d'eau et sans entretien.",
-        href: "/conditionneurs-sans-sel"
+        href: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
       },
       {
         customIcon: portablefiltericonImg,
         title: "Adoucisseurs d'eau portables",
         description: "La solution flexible pour une eau douce sans installation permanente. Idéal pour les VR et résidences secondaires.",
-        href: "/adoucisseurs-portables"
+        href: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
       },
       {
         customIcon: WatersoftenericonImg,
         title: "Adoucisseurs d'eau commerciaux",
         description: "Solutions haute performance pour entreprises, hôtels et industries. Protection maximale des équipements.",
-        href: "/adoucisseurs-eau-commerciaux"
+        href: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
       },
     ],
     promo: {
       title: "Une eau parfaite commence par une analyse rigoureuse.",
       image: promoImage2,
-      link: "/tests-eau"
+      link: "/Analyses-et-Tests-d-eau"
     }
   },
   {
@@ -310,103 +310,103 @@ export const productMenuItems: MenuItem[] = [
         customIcon: wholehousefiltericonImg,
         title: "Filtres d'eau pour toute la maison",
         description: "Protection complète de votre maison avec une filtration centralisée pour toute l'eau.",
-        href: "/filtres-deau-pour-toute-la-maison"
+        href: "/filtration"
       },
       {
         customIcon: pointofusefiltericonImg,
         title: "Stations d'eau potable",
         description: "Profitez d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
-        href: "/systeme-de-filtration-deau-potable"
+        href: "/filtration"
       },
       {
         customIcon: pointofusefiltericonImg,
         title: "Filtration d'eau Potable",
         description: "Découvrez nos solutions de filtration par osmose inverse pour une pureté inégalée.",
-        href: "/filtration-eau-potable"
+        href: "/filtration"
       },
       {
         customIcon: undersinkfiltericonImg,
         title: "Systèmes de filtration d'eau sous-évier",
         description: "Solutions compactes et efficaces pour une filtration optimale directement sous votre évier.",
-        href: "/systemes-de-filtration-deau-sous-evier"
+        href: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
       },
       {
         customIcon: replacementfiltericonImg,
         title: "Cartouches filtrantes de remplacement",
         description: "Maintenez la performance optimale de vos systèmes avec nos cartouches de qualité.",
-        href: "/filtres-de-remplacement"
+        href: "/filtres-d-eau-de-remplacement"
       },
     ],
     promo: {
-      title: "Protégez votre famille des contaminants invisibles qui peuvent avoir des effets à long terme",
+      title: "Protégez votre famille des contaminants invisibles qui peuvent avoir des effets à  long terme",
       image: promoImage3,
-      link: "/tests-eau"
+      link: "/Analyses-et-Tests-d-eau"
     }
   },
   {
     name: "Traitement de l'eau de puits",
-    href: "/traitement-eau-de-puits",
+    href: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison",
     hasMegamenu: true,
     megamenuCards: [
       {
         customIcon: watertestImg,
         title: "Analyses & Tests d'eau",
         description: "Tests complets pour identifier les contaminants et problèmes de qualité de votre eau de puits.",
-        href: "/tests-eau"
+        href: "/Analyses-et-Tests-d-eau"
       },
       {
         customIcon: wholehousefiltericonImg,
         title: "Systèmes de filtration d'eau spécialisés",
-        description: "Nos systèmes de filtration d’eau spécialisés pour toute la maison est la solution abordable et durable pour obtenir une eau de meilleure qualité à chaque robinet de votre maison.",
-        href: "/filtres-deau"
+        description: "Nos systèmes de filtration d’eau spécialisés pour toute la maison est la solution abordable et durable pour obtenir une eau de meilleure qualité à  chaque robinet de votre maison.",
+        href: "/filtration"
       },
       {
         customIcon: WatersoftenericonImg,
         title: "Adoucisseurs d'eau de puits",
         description: "Dites adieu aux problèmes de calcaire ! Nos adoucisseurs d’eau traitent durablement l’eau contre ses méfaits pour vous faire bénéficier d’une eau douce toute l’année.",
-        href: "/adoucisseurs-eau-de-puits"
+        href: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
       },
       {
         customIcon: ultravioletImg,
         title: "Systèmes de désinfection UV",
-        description: "Les systèmes de désinfection de l’eau à rayons ultraviolet stérilisent l’approvisionnement en eau de votre maison contre les micro-organismes nuisibles.",
+        description: "Les systèmes de désinfection de l’eau à  rayons ultraviolet stérilisent l’approvisionnement en eau de votre maison contre les micro-organismes nuisibles.",
         href: "/systemes-de-desinfection-uv"
       },
     ],
     promo: {
       title: "Des tests d'eau précis pour une tranquillité d'esprit totale.",
       image: promoImage4,
-      link: "/tests-eau"
+      link: "/Analyses-et-Tests-d-eau"
     }
   },
   {
     name: "Fontaines & distributeurs d'eau",
-    href: "/fontaines",
+    href: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche",
     hasMegamenu: false,
     megamenuCards: [
       {
         customIcon: drinkingwaterfountainiconImg,
         title: "Distributeurs d'eau de comptoir",
         description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
-        href: "/fontaines"
+        href: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
       },
       {
         customIcon: waterdispensericonImg,
         title: "Refroidisseurs d'eau sans bouteille",
-        description: "Eau fraîche et filtrée à la demande pour votre bureau ou votre maison.",
-        href: "/fontaines"
+        description: "Eau fraîche et filtrée à  la demande pour votre bureau ou votre maison.",
+        href: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
       },
       {
         customIcon: icemakericonImg,
-        title: "Machines à glaçons",
+        title: "Machines à  glaçons",
         description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
-        href: "/fontaines"
+        href: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
       },
     ],
     promo: {
       title: "Profitez d'une eau pure et revitalisante au quotidien",
       image: promoImage,
-      link: "/systeme-de-filtration-deau-potable"
+      link: "/filtration"
     }
   },
   {
@@ -422,7 +422,7 @@ export const productMenuItems: MenuItem[] = [
       {
         customIcon: faqiconImg,
         title: "Quiz",
-        description: "Trouvez le système de filtration d'eau parfait pour vos besoins en répondant à quelques questions simples.",
+        description: "Trouvez le système de filtration d'eau parfait pour vos besoins en répondant à  quelques questions simples.",
         href: "/diagnostic"
       },
       {
@@ -451,7 +451,7 @@ export const productMenuItems: MenuItem[] = [
       },
     ],
     promo: {
-      title: "Nous sommes là pour vous aider",
+      title: "Nous sommes là  pour vous aider",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=600\u0026auto=format\u0026fit=crop",
       link: "/contact"
     }
@@ -502,12 +502,12 @@ export const commercialProductMenuItems: MenuItem[] = [
         customIcon: watertestImg,
         title: "Analyses de Laboratoire",
         description: "Diagnostics certifiés et audits de qualité d'eau pour tous les secteurs industriels.",
-        href: "/tests-eau"
+        href: "/Analyses-et-Tests-d-eau"
       },
       {
         customIcon: serviceiconImg,
         title: "Ingénierie de Déploiement",
-        description: "Accompagnement complet de la conception à l'installation de vos systèmes complexes.",
+        description: "Accompagnement complet de la conception à  l'installation de vos systèmes complexes.",
         href: "/contact"
       },
       {
@@ -547,14 +547,14 @@ export const commercialProductMenuItems: MenuItem[] = [
       {
         customIcon: contacticonImg,
         title: "Expert Conseil",
-        description: "Parlez directement à un ingénieur spécialisé dans le traitement d'eau.",
+        description: "Parlez directement à  un ingénieur spécialisé dans le traitement d'eau.",
         href: "/contact"
       },
     ],
     promo: {
       title: "Consultez le centre de documentation technique.",
       image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=600&auto=format&fit=crop",
-      link: "/guides"
+      link: "/faq"
     }
   },
 ];
@@ -585,26 +585,26 @@ export const entreprisesProductMenuItems: MenuItem[] = [
     }
   },
   {
-    name: "Machines à glace",
-    href: "/machines-a-glace-entreprises",
+    name: "Machines à  glace",
+    href: "/entreprises",
     hasMegamenu: true,
     megamenuCards: [
       {
         customIcon: icemakericonImg,
         title: "Unités de Production de Glace",
         description: "Systèmes de glaçons haute performance pour vos réceptions d'affaires et salles de repos.",
-        href: "/machines-a-glace-entreprises"
+        href: "/entreprises"
       },
     ],
     promo: {
       title: "Une glace pure, une image de marque soignée.",
       image: promoImage4,
-      link: "/machines-a-glace-entreprises"
+      link: "/entreprises"
     }
   },
   {
-     name: "Machines à café",
-     href: "/machines-a-cafe-entreprises",
+     name: "Machines à  café",
+     href: "/entreprises",
      hasMegamenu: false
   },
   {
@@ -627,7 +627,7 @@ export const entreprisesProductMenuItems: MenuItem[] = [
     promo: {
       title: "Découvrez notre centre de ressources Business.",
       image: promoImage2,
-      link: "/guides"
+      link: "/faq"
     }
   },
   {
@@ -637,7 +637,7 @@ export const entreprisesProductMenuItems: MenuItem[] = [
       {
         customIcon: contacticonImg,
         title: "Équipe Expert Conseil",
-        description: "Parlez à un conseiller spécialisé dans les solutions d'eau pour entreprises.",
+        description: "Parlez à  un conseiller spécialisé dans les solutions d'eau pour entreprises.",
         href: "/contact"
       },
       {
@@ -654,3 +654,4 @@ export const entreprisesProductMenuItems: MenuItem[] = [
     }
   },
 ];
+
