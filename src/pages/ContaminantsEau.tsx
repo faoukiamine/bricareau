@@ -2,12 +2,92 @@ import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
-import heroImageImg from "@/assets/hero-image.jpg";
+import heroImageImg from "@/assets/Turbide-Water.webp";
 import Hero from "@/components/Hero";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { microBiologiques, chimiques, radiologiques } from "@/data/contaminants";
 import { ShieldCheck, HeartPulse, Droplets } from "lucide-react";
+
+const glossaryData = [
+  {
+    category: "Métaux et Métaux Lourds",
+    items: [
+      { name: "Plomb", desc: "S'infiltre souvent par les vieilles tuyauteries et soudures. Toxique même à faible dose, particulièrement dangereux pour le développement neurologique des enfants." },
+      { name: "Arsenic", desc: "Présent naturellement dans certaines roches, il peut contaminer l'eau de puits. C'est un cancérigène connu avec des effets graves sur la santé à long terme." },
+      { name: "Mercure", desc: "Métal lourd hautement toxique, souvent issu de rejets industriels ou de processus naturels. Peut causer de graves dommages au système nerveux et aux reins." },
+      { name: "Fer et Manganèse", desc: "Très fréquents dans les puits. Bien que peu dangereux pour la santé, ils causent des taches tenaces (rouille, noir), une eau trouble et un goût métallique désagréable." },
+      { name: "Cuivre", desc: "Provient généralement de la corrosion des tuyaux en cuivre. Peut causer des troubles gastro-intestinaux et endommager le foie à forte dose." },
+      { name: "Baryum", desc: "Élément naturel parfois présent dans l'eau souterraine. Une exposition prolongée peut entraîner des problèmes cardiovasculaires et une augmentation de la pression artérielle." },
+      { name: "Aluminium", desc: "Parfois présent suite au traitement municipal. Bien qu'essentiellement éliminé, des traces peuvent subsister." },
+      { name: "Zinc", desc: "Provient souvent de la corrosion des tuyaux galvanisés. Il affecte principalement l'apparence et le goût de l'eau." },
+      { name: "Cadmium", desc: "S'infiltre via la corrosion de tuyaux galvanisés ou les rejets industriels. S'accumule dans l'organisme et est très toxique pour les reins." },
+      { name: "Chrome (Total et Chrome VI)", desc: "Provient des rejets industriels (métallurgie, tanneries). Le chrome hexavalent (VI) est hautement cancérigène." },
+      { name: "Sélénium", desc: "Élément naturel ou issu de rejets miniers/agricoles. Utile en traces, mais toxique pour le système nerveux et la circulation à forte dose." },
+      { name: "Strontium", desc: "Minéral naturel. À de fortes concentrations, il peut s'accumuler dans les os et interférer avec le développement osseux, surtout chez les enfants." },
+      { name: "Antimoine", desc: "Utilisé dans les alliages et retardateurs de flamme. Une exposition prolongée peut affecter le cœur et le tractus gastro-intestinal." }
+    ]
+  },
+  {
+    category: "Micro-organismes et Pathogènes",
+    items: [
+      { name: "E. Coli et Coliformes fécaux", desc: "Indiquent une contamination récente par des matières fécales. Provoquent des maladies gastro-intestinales sévères et nécessitent une intervention immédiate (ébullition, traitement UV)." },
+      { name: "Coliformes totaux", desc: "Bactéries naturellement présentes dans l'environnement. Leur présence indique une vulnérabilité du système aux agents pathogènes." },
+      { name: "Giardia et Cryptosporidium", desc: "Des parasites microscopiques résistants au chlore, souvent présents dans les eaux de surface. Causent des troubles intestinaux graves." },
+      { name: "Bactéries ferreuses et sulfureuses", desc: "Bactéries non pathogènes mais qui créent des boues visqueuses dans la plomberie et peuvent générer des odeurs nauséabondes." },
+      { name: "Cyanobactéries (Algues bleues)", desc: "Prolifèrent dans les lacs et rivières en été. Produisent des toxines dangereuses pour le foie et le système nerveux." },
+      { name: "Virus entériques", desc: "Inclus des virus comme l'hépatite A ou le norovirus. Extrêmement petits, ils requièrent une désinfection ou filtration ultra-fine." }
+    ]
+  },
+  {
+    category: "Désinfectants et Sous-produits",
+    items: [
+      { name: "Chlore et Chloramines", desc: "Utilisés par les municipalités pour désinfecter l'eau. Peuvent donner un goût et une odeur désagréables à l'eau, et assécher la peau et les cheveux." },
+      { name: "Trihalométhanes (THM)", desc: "Sous-produits cancérigènes se formant lorsque le chlore réagit avec la matière organique." },
+      { name: "Acides Haloacétiques (AHA)", desc: "Autre classe de sous-produits de chloration. Toxiques pour le foie, les reins et potentiellement cancérigènes." },
+      { name: "Chlorite et Chlorate", desc: "Sous-produits formés lors de l'utilisation du dioxyde de chlore comme désinfectant." },
+      { name: "Bromate", desc: "Sous-produit cancérigène généré lors de la désinfection de l'eau à l'ozone." },
+      { name: "N-Nitrosodiméthylamine (NDMA)", desc: "Se forme lors du traitement de l'eau (souvent avec les chloramines). Très cancérigène." }
+    ]
+  },
+  {
+    category: "Produits Chimiques Industriels et COV",
+    items: [
+      { name: "PFAS (Produits chimiques éternels)", desc: "Substances perfluoroalkylées utilisées dans de nombreux produits industriels. S'accumulent dans l'environnement et l'organisme, causant divers cancers." },
+      { name: "Benzène, Toluène, Éthylbenzène, Xylènes (BTEX)", desc: "Solvants industriels et composants pétroliers. Souvent liés à des fuites de réservoirs souterrains. Neurotoxiques et cancérigènes." },
+      { name: "Tétrachloroéthylène et Trichloroéthylène", desc: "Solvants de nettoyage à sec et de dégraissage. Contaminants fréquents des nappes phréatiques, cancérigènes probables." },
+      { name: "1,4-Dioxane", desc: "Solvant industriel stabilisateur, extrêmement mobile dans l'eau souterraine. Cancérigène potentiel." },
+      { name: "Chlorure de vinyle", desc: "Composant des plastiques PVC, peut lixivier des tuyauteries anciennes. Fortement cancérigène." },
+      { name: "Formaldéhyde", desc: "Produit industriel ou sous-produit d'oxydation. Fortement irritant et cancérigène." },
+      { name: "Cyanure", desc: "Issu principalement de rejets industriels (mines, métallurgie). Extrêmement toxique à court terme." },
+      { name: "Amiante (Asbestos)", desc: "Lixivié par l'érosion de vieilles conduites d'eau en ciment-amiante. L'ingestion est liée à des polypes et cancers digestifs." }
+    ]
+  },
+  {
+    category: "Pesticides et Herbicides",
+    items: [
+      { name: "Atrazine et Glyphosate", desc: "Herbicides agricoles massivement utilisés, entraînés par le ruissellement. Potentiels perturbateurs endocriniens." },
+      { name: "2,4-D, MCPA, Dicamba", desc: "Herbicides sélectifs courants. Une exposition à long terme peut endommager le foie et les reins." },
+      { name: "Chlorpyrifos, Malathion, Diméthoate", desc: "Insecticides organophosphorés neurotoxiques qui peuvent contaminer les puits en zones agricoles." },
+      { name: "Pentachlorophénol", desc: "Fongicide historique utilisé pour traiter le bois (poteaux électriques). Hautement toxique et cancérigène." },
+      { name: "Diquat", desc: "Herbicide aquatique utilisé pour contrôler les algues. Peut causer des dommages oculaires et rénaux." }
+    ]
+  },
+  {
+    category: "Minéraux Naturels et Radiologiques",
+    items: [
+      { name: "Calcaire (Dureté de l'eau)", desc: "Constitué de calcium et de magnésium. Ne pose pas de risque pour la santé, mais entartre les chauffe-eau, détruit l'électroménager et obstrue la tuyauterie." },
+      { name: "Nitrates et Nitrites", desc: "Proviennent souvent des engrais agricoles ou des fosses septiques défectueuses. Très dangereux pour les nourrissons (syndrome du bébé bleu)." },
+      { name: "Sulfure d'hydrogène (H2S)", desc: "Gaz dissous qui donne une forte odeur d'œufs pourris à l'eau. Corrosif pour la plomberie." },
+      { name: "Sodium", desc: "Souvent ajouté par les adoucisseurs d'eau au sel traditionnels ou présent naturellement. À surveiller pour les personnes suivant un régime pauvre en sel." },
+      { name: "Sulfates", desc: "Donnent un goût amer à l'eau et peuvent avoir un effet laxatif temporaire chez les personnes non habituées." },
+      { name: "Uranium et Radon", desc: "Éléments radioactifs naturellement présents dans le roc canadien (Bouclier canadien). Présentent des risques de cancer ou dommages rénaux à long terme." },
+      { name: "Radium-226 et Radium-228", desc: "Isotopes radioactifs issus de la désintégration de l'uranium/thorium. Augmentent le risque de cancer des os." },
+      { name: "Plomb-210", desc: "Élément de la chaîne de désintégration radioactive, toxique par ses émissions radiologiques." }
+    ]
+  }
+];
 
 const ContaminantsEau = () => {
     useEffect(() => {
@@ -35,8 +115,9 @@ const ContaminantsEau = () => {
                 <section className="py-20 bg-white">
                     <div className="container mx-auto px-6 max-w-6xl">
                         <div className="text-center mb-16 max-w-3xl mx-auto">
-                            <h2 className="text-3xl lg:text-4xl font-bold text-[#18448F] mb-6">
-                                Pourquoi analyser et filtrer l'eau de votre résidence ?
+                            <h2 className="heading-pro-max mb-6">
+                                <span className="font-bold not-italic text-[#18448F] block">Pourquoi analyser et filtrer</span>
+                                <span className="font-bold text-[#8CC63F] block">l'eau de votre résidence ?</span>
                             </h2>
                             <p className="text-lg text-slate-600 leading-relaxed">
                                 L'eau qui coule de vos robinets, qu'elle provienne d'un puits privé ou d'un réseau municipal, parcourt un long trajet avant d'arriver chez vous. Tout au long de ce cheminement, elle peut se charger en divers éléments indésirables. Comprendre ce qui compose votre eau est la première étape vers une hydratation véritablement saine et sécuritaire pour votre famille.
@@ -74,11 +155,49 @@ const ContaminantsEau = () => {
                     </div>
                 </section>
 
+                {/* Glossary Section */}
+                <section className="py-20 bg-slate-50 border-t border-slate-200">
+                    <div className="container mx-auto px-6 max-w-4xl">
+                        <div className="text-center mb-12">
+                            <h2 className="heading-pro-max mb-4">
+                                <span className="font-bold not-italic text-[#18448F] block">Glossaire des</span>
+                                <span className="font-bold text-[#8CC63F] block">principaux contaminants</span>
+                            </h2>
+                            <p className="text-lg text-slate-600">
+                                Explorez les polluants les plus fréquents, classés par catégorie, pour comprendre leur origine et leur impact.
+                            </p>
+                        </div>
+
+                        <Accordion type="single" collapsible className="w-full space-y-4">
+                            {glossaryData.map((category, index) => (
+                                <AccordionItem key={index} value={`item-${index}`} className="bg-white border border-slate-200 rounded-xl px-6 shadow-sm overflow-hidden data-[state=open]:border-[#18448F]/30 data-[state=open]:shadow-md transition-all duration-300">
+                                    <AccordionTrigger className="text-xl font-bold text-[#18448F] hover:no-underline py-6">
+                                        {category.category}
+                                    </AccordionTrigger>
+                                    <AccordionContent className="pb-6">
+                                        <div className="grid gap-6">
+                                            {category.items.map((item, idx) => (
+                                                <div key={idx} className="bg-slate-50 p-5 rounded-lg border border-slate-100">
+                                                    <h4 className="text-lg font-bold text-slate-800 mb-2">{item.name}</h4>
+                                                    <p className="text-slate-600 leading-relaxed text-base">{item.desc}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
+                    </div>
+                </section>
+
                 {/* Sante Canada Data Section */}
-                <section className="py-16 bg-slate-50 relative border-t border-slate-200">
+                <section className="py-24 bg-white relative border-t border-slate-200">
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-[#18448F] mb-4">Recommandations de Santé Canada</h2>
+                            <h2 className="heading-pro-max mb-4">
+                                <span className="font-bold not-italic text-[#18448F] block">Recommandations de</span>
+                                <span className="font-bold text-[#8CC63F] block">Santé Canada</span>
+                            </h2>
                             <p className="text-slate-600 max-w-2xl mx-auto">
                                 Consultez la liste complète des recommandations pour la qualité de l'eau potable au Canada, incluant les paramètres microbiologiques, chimiques et radiologiques.
                             </p>
@@ -106,10 +225,10 @@ const ContaminantsEau = () => {
                                         <TableBody>
                                             {microBiologiques.map((item: any, idx: number) => (
                                                 <TableRow key={idx}>
-                                                    <TableCell className="font-semibold">{item.contaminant}</TableCell>
-                                                    <TableCell className="text-sm">{item.recommandation}</TableCell>
-                                                    <TableCell className="text-sm text-slate-600">{item.sources}</TableCell>
-                                                    <TableCell className="text-sm text-slate-600">{item.sante}</TableCell>
+                                                    <TableCell className="text-base font-semibold">{item.contaminant}</TableCell>
+                                                    <TableCell className="text-base">{item.recommandation}</TableCell>
+                                                    <TableCell className="text-base text-slate-600">{item.sources}</TableCell>
+                                                    <TableCell className="text-base text-slate-600">{item.sante}</TableCell>
                                                 </TableRow>
                                             ))}
                                         </TableBody>
@@ -135,10 +254,10 @@ const ContaminantsEau = () => {
                                         <TableBody>
                                             {chimiques.map((item: any, idx: number) => (
                                                 <TableRow key={idx}>
-                                                    <TableCell className="font-mono text-xs text-slate-500">{item.type}</TableCell>
-                                                    <TableCell className="font-semibold">{item.contaminant}</TableCell>
-                                                    <TableCell className="text-sm">{item.cma}</TableCell>
-                                                    <TableCell className="text-sm text-slate-600">{item.oe}</TableCell>
+                                                    <TableCell className="font-mono text-sm text-slate-500">{item.type}</TableCell>
+                                                    <TableCell className="text-base font-semibold">{item.contaminant}</TableCell>
+                                                    <TableCell className="text-base">{item.cma}</TableCell>
+                                                    <TableCell className="text-base text-slate-600">{item.oe}</TableCell>
                                                 </TableRow>
                                             ))}
                                         </TableBody>
@@ -161,10 +280,10 @@ const ContaminantsEau = () => {
                                         <TableBody>
                                             {radiologiques.map((item: any, idx: number) => (
                                                 <TableRow key={idx}>
-                                                    <TableCell className="font-semibold">{item.contaminant}</TableCell>
-                                                    <TableCell className="text-sm">{item.recommandation}</TableCell>
-                                                    <TableCell className="text-sm text-slate-600">{item.sources}</TableCell>
-                                                    <TableCell className="text-sm text-slate-600">{item.sante}</TableCell>
+                                                    <TableCell className="text-base font-semibold">{item.contaminant}</TableCell>
+                                                    <TableCell className="text-base">{item.recommandation}</TableCell>
+                                                    <TableCell className="text-base text-slate-600">{item.sources}</TableCell>
+                                                    <TableCell className="text-base text-slate-600">{item.sante}</TableCell>
                                                 </TableRow>
                                             ))}
                                         </TableBody>
