@@ -7,6 +7,7 @@ import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import {
   TestTube,
   Droplet,
@@ -72,6 +73,7 @@ import mortgageImg from "@/assets/2148895486.jpg";
 import tasteOdorImg from "@/assets/water-taste.jpg";
 
 const TestsEauPage = () => {
+  const [activeTestCard, setActiveTestCard] = useState(0);
   const [showAllFaqs, setShowAllFaqs] = useState(false);
   useEffect(() => {
     document.title = "Test d'eau et Analyse d'eau au Québec | Montréal, Rive Nord& Rive-Sud | Bricareau";
@@ -197,7 +199,7 @@ const TestsEauPage = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex flex-col lg:flex-row h-auto lg:h-[500px] gap-4 w-full">
               {[
                 { 
                   title: "Transaction Immobilière", 
@@ -241,61 +243,57 @@ const TestsEauPage = () => {
                   color: "bg-emerald-600",
                   img: forensicWaterImg
                 }
-              ].map((item, i) => (
+              ].map((item, i) => {
+                const isActive = activeTestCard === i;
+                return (
                 <div 
                   key={i} 
-                  className="group relative h-[380px] rounded-[3rem] overflow-hidden border border-slate-100 bg-white shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200 hover:-translate-y-2"
+                  onMouseEnter={() => setActiveTestCard(i)}
+                  className={cn(
+                    "relative flex-1 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-[2.5rem] overflow-hidden bg-slate-900 cursor-pointer min-h-[250px] lg:min-h-0 border border-transparent hover:border-white/20 shadow-lg",
+                    isActive ? "lg:flex-[3]" : ""
+                  )}
                   onClick={() => {
                     const el = document.getElementById('water-test');
                     el?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  {/* Background Image with Overlay */}
+                  {/* Background Image */}
                   <div className="absolute inset-0 z-0">
                     <img 
                       src={item.img} 
                       alt={item.title} 
-                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 group-hover:opacity-60"
+                      className={cn("w-full h-full object-cover transition-transform duration-1000 mix-blend-overlay", isActive ? "scale-110 opacity-80" : "opacity-50")}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-white via-white/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
                   </div>
 
-                  <div className="relative z-10 inset-0 p-10 h-full flex flex-col justify-between">
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-3">
-                        <div className={`w-3 h-3 rounded-full ${item.color} shadow-lg`} />
-                        <span className="text-[10px] font-black uppercase tracking-wider text-slate-500 group-hover:text-blue-600 transition-colors">
-                          Priorité : {item.benefit}
-                        </span>
-                      </div>
-                      <h3 className="text-3xl font-medium text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
-                        {item.title}
-                      </h3>
-                      <p className="body-pro-max text-sm leading-relaxed text-slate-600 opacity-80 group-hover:opacity-100 transition-opacity">
-                        {item.desc}
-                      </p>
+                  {/* Content Container */}
+                  <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                    <div className={cn("flex items-center gap-3 mb-3 transition-opacity duration-700 delay-100", isActive ? "opacity-100" : "lg:opacity-0")}>
+                      <div className={`w-3 h-3 rounded-full ${item.color} shadow-[0_0_15px_rgba(255,255,255,0.5)]`} />
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white">
+                        {item.benefit}
+                      </span>
                     </div>
 
-                    <div className="space-y-4">
-                      <div className="h-px w-12 bg-blue-200 group-hover:w-full transition-all duration-700" />
-                      <div className="inline-flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest">
-                        En savoir plus <ArrowRight className="w-4 h-4" />
+                    <h3 className={cn("text-xl md:text-2xl font-bold text-white mb-2 transition-all", isActive ? "whitespace-normal" : "lg:whitespace-nowrap lg:truncate")}>
+                      {item.title}
+                    </h3>
+                    
+                    <div className={cn("grid transition-all duration-700", isActive ? "grid-rows-[1fr]" : "lg:grid-rows-[0fr] grid-rows-[1fr]")}>
+                      <div className="overflow-hidden">
+                        <p className="text-sm text-slate-300 leading-relaxed mt-2 opacity-90">
+                          {item.desc}
+                        </p>
+                        <div className={cn("mt-4 flex items-center gap-2 text-[#8CC63F] font-bold text-[10px] uppercase tracking-widest transition-opacity duration-700 delay-200", isActive ? "opacity-100" : "lg:opacity-0")}>
+                          Planifier ce test <ArrowRight className="w-4 h-4" />
+                        </div>
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Hover Overlay CTA */}
-                  <div className="absolute inset-0 bg-[#18448F]/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 space-y-6 translate-y-full group-hover:translate-y-0 text-center">
-                    <div className="text-center">
-                      <p className="text-white/60 text-[10px] font-black uppercase tracking-[0.2em] mb-2 italic">Diagnostic Rapide</p>
-                      <h4 className="text-white text-2xl font-bold leading-tight px-6">Réserver cette analyse spécifique</h4>
-                    </div>
-                    <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-2xl border border-blue-400 group-hover:rotate-[360deg] transition-transform duration-1000">
-                      <TestTube className="w-6 h-6" />
                     </div>
                   </div>
                 </div>
-              ))}
+              )})}
             </div>
           </div>
         </section>
