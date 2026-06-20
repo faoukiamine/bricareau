@@ -67,7 +67,7 @@ const Sustainability = () => {
                             </h1>
                             
                             <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
-                                Parce que la durabilité est au cœur de notre démarche, nos systèmes sont conçus pour allier performance et respect de l'écologie. Pour votre domicile comme pour votre entreprise, Bricareau élimine votre dépendance aux bouteilles en plastique et vous offre une eau d'une qualité exceptionnelle, protégeant durablement la santé de tous et l'avenir de notre planète.
+                                Parce que la durabilité est au cœur de notre démarche, nos systèmes de filtration d'eau sont conçus pour allier performance et respect de l'écologie. Pour votre domicile comme pour votre entreprise, Bricareau élimine votre dépendance aux bouteilles en plastique et vous offre une eau d'une qualité exceptionnelle, protégeant durablement la santé de tous et l'avenir de notre planète.
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-start gap-6">
@@ -90,7 +90,7 @@ const Sustainability = () => {
 
                     <div className="relative z-10 container mx-auto px-6 text-center">
                         <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-10">Notre Engagement</span>
-                        <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-tight mb-12">
+                        <h2 className="heading-pro-max font-bold text-white mb-12">
                             Redéfinir le <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">standard écologique.</span>
                         </h2>
@@ -120,8 +120,8 @@ const Sustainability = () => {
                         <div className="flex flex-col lg:flex-row items-center gap-16 px-6">
                             <div className="lg:w-1/2 space-y-6">
                                 <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">01.</div>
-                                <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
-                                    Réduire le <span className="font-bold text-[#18448F]">gaspillage</span>
+                                <h3 className="text-2xl lg:text-3xl font-bold text-[#18448F] leading-tight">
+                                    Réduire le gaspillage
                                 </h3>
                                 <p className="text-slate-500 text-lg leading-relaxed font-light">
                                     La fabrication d'une seule bouteille d'eau nécessite environ trois litres d'eau gaspillée, plus une quantité considérable d'énergie. Autant de gaspillage qu'il est possible d'éviter en optant pour nos solutions de filtration.
@@ -141,8 +141,8 @@ const Sustainability = () => {
                             </div>
                             <div className="lg:w-1/2 space-y-6">
                                 <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">02.</div>
-                                <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
-                                    Moins de <span className="font-bold text-[#8CC63F]">CO<sub>2</sub></span>
+                                <h3 className="text-2xl lg:text-3xl font-bold text-[#18448F] leading-tight">
+                                    Moins de CO<sub>2</sub>
                                 </h3>
                                 <p className="text-slate-500 text-lg leading-relaxed font-light">
                                     Non seulement la production de bouteilles à usage unique engendre un gaspillage considérable, mais le transport et la distribution génèrent également une empreinte carbone inutile.
@@ -154,8 +154,8 @@ const Sustainability = () => {
                         <div className="flex flex-col lg:flex-row items-center gap-16 px-6">
                             <div className="lg:w-1/2 space-y-6">
                                 <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">03.</div>
-                                <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
-                                    Mode de vie <span className="font-bold text-[#18448F]">sain</span>
+                                <h3 className="text-2xl lg:text-3xl font-bold text-[#18448F] leading-tight">
+                                    Mode de vie sain
                                 </h3>
                                 <p className="text-slate-500 text-lg leading-relaxed font-light">
                                     En optant pour nos solutions durables, vous donnez un véritable modèle en matière de développement durable. Découvrez à quel point l'utilisation d'eau filtrée est simple et pratique.

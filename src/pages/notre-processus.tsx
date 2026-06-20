@@ -46,7 +46,7 @@ const processSteps = [
         id: "01",
         title: "Les analyses de la qualité de l'eau",
         subtitle: "Le fondement de toute perfection.",
-        desc: "Nous réalisons une analyse exhaustive de votre eau. Nos protocoles de diagnostic identifient avec précision les contaminants, le profil minéral et l'équilibre microbiologique. Ces données scientifiques rigoureuses constituent le socle de notre proposition technique.",
+        desc: "Nous réalisons une analyse exhaustive de votre eau. Nos protocoles de diagnostic identifient avec précision les contaminants, les profils minéral et microbiologique. Ces résultats précis nous permettent de concevoir une solution de traitement parfaitement adaptée à votre eau.",
         icon: FlaskConical,
         image: waterTestLabImg,
         details: ["Profil minéral", "Spectrométrie des métaux", "Profil microbiologique", "Analyse TDS"]
@@ -63,7 +63,7 @@ const processSteps = [
     {
         id: "03",
         title: "Installation professionnelle",
-        subtitle: "L'exécution avec une précision horlogère.",
+        subtitle: "L'excellence dans chaque détail de l'installation.",
         desc: "Nos techniciens certifiés orchestrent l'installation avec une rigueur absolue. De l'intégration mécanique à la calibration électronique, chaque composant est testé pour garantir une performance sans faille.",
         icon: Settings,
         image: installationNewImg,
@@ -147,7 +147,7 @@ const OurProcess = () => {
                     <div className="container mx-auto px-6 relative z-30">
                         <div className="max-w-3xl flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
                             <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
-                                Notre savoir-faire d'expert.<br/> <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">Pour une eau absolument parfaite.</span>
+                                Notre savoir-faire d'expert <br/> <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">pour une eau absolument parfaite.</span>
                             </h1>
                             
                             <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
@@ -183,10 +183,12 @@ const OurProcess = () => {
                                 <div key={step.id} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16 px-6`}>
                                     <div className="lg:w-1/2 space-y-6">
                                         <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">{step.id}.</div>
-                                        <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
-                                            {step.title.split(' ')[0]} <span className="font-bold text-[#18448F]">{step.title.split(' ').slice(1).join(' ')}</span>
-                                        </h3>
-                                        <p className="text-[#18448F] font-light italic text-xl mb-4">{step.subtitle}</p>
+                                        <div className="flex flex-col gap-1">
+                                            <h3 className="text-2xl lg:text-3xl font-bold text-[#18448F] leading-tight">
+                                                {step.title}
+                                            </h3>
+                                            <p className="text-[#18448F] font-light italic text-xl">{step.subtitle}</p>
+                                        </div>
                                         <p className="text-slate-500 text-lg leading-relaxed font-light">
                                             {step.desc}
                                         </p>
@@ -227,7 +229,10 @@ const OurProcess = () => {
                     <div className="relative z-10 container mx-auto px-6">
                         <div className="text-center mb-24">
                             <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-10">L'Exigence Bricareau</span>
-                            <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-tight mb-12">
+                            <h2 
+                                className="font-bold text-white tracking-tighter mb-12"
+                                style={{ fontSize: '48px', lineHeight: '48px' }}
+                            >
                                 Redéfinir le <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">standard de qualité.</span>
                             </h2>
@@ -261,7 +266,7 @@ const OurProcess = () => {
                                     <Crown className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-2xl font-bold text-white">Composants premium</h3>
-                                <p className="text-slate-400 leading-relaxed font-light">Nous n'utilisons que des matériaux nobles et des valves de grade industriel pour une durabilité inégalée.</p>
+                                <p className="text-slate-400 leading-relaxed font-light">Nous sélectionnons rigoureusement des matériaux nobles pour garantir une durabilité inégalée.</p>
                             </div>
 
                             {/* Engagement 4 */}

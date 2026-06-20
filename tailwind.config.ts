@@ -122,6 +122,10 @@ export default {
           "0%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(-50%)" },
         },
+        shine: {
+          from: { backgroundPosition: "200% center" },
+          to: { backgroundPosition: "-200% center" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -129,6 +133,7 @@ export default {
         "pulse-fast": "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "color-pulse": "color-pulse 1s ease-in-out infinite",
         "scroll-y": "scroll-y 30s linear infinite",
+        shine: "shine 6s linear infinite",
       },
     },
   },

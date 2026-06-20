@@ -92,7 +92,7 @@ const WhyChooseUs = () => {
                             </h1>
                             
                             <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
-                                Forts de 25 années d'expertise dans le traitement de l'eau, nous concevons des systèmes de filtration répondant aux standards de qualité les plus exigeants. Notre savoir-faire technique assure à votre foyer ou votre entreprise une eau pure, saine et sécuritaire en tout temps.
+                                Forts de 25 années d'expertise dans le traitement de l'eau, nous concevons des systèmes de filtration d'eau répondant aux standards de qualité les plus exigeants. Notre savoir-faire technique assure à votre foyer ou votre entreprise une eau pure, saine et sécuritaire en tout temps.
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-start gap-6">
@@ -160,9 +160,17 @@ const WhyChooseUs = () => {
 
                     <div className="relative z-10 container mx-auto px-6 text-center">
                         <span className="inline-block py-1 px-4 border border-[#8CC63F] rounded-full text-[#8CC63F] font-bold tracking-[0.2em] uppercase text-xs mb-10">Notre Vision</span>
-                        <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-tight mb-12">
-                            Redéfinir le <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">standard de pureté.</span>
+                        <h2 
+                            className="text-white mb-12"
+                            style={{
+                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                fontWeight: 300,
+                                fontSize: '48px',
+                                lineHeight: '48px'
+                            }}
+                        >
+                            <span style={{ fontWeight: 700 }}>Redéfinir le</span> <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic">standard de pureté.</span>
                         </h2>
                         <p className="text-slate-300 text-xl md:text-3xl font-light leading-relaxed max-w-4xl mx-auto">
                             Nous croyons que chaque foyer et entreprise québécoise mérite un accès inconditionnel à une eau parfaite, alliant santé humaine et préservation écologique. L'eau n'est pas qu'une ressource, c'est le fondement de notre avenir.
@@ -174,7 +182,10 @@ const WhyChooseUs = () => {
                 <section className="min-h-screen flex items-center py-40 bg-white relative overflow-hidden" id="notre-mission">
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <span className="inline-block py-1 px-4 border border-[#18448F]/20 rounded-full text-[#18448F] font-bold tracking-[0.2em] uppercase text-xs mb-10">Notre Mission</span>
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-light text-slate-900 leading-[1.1] md:leading-[1.2] tracking-tighter max-w-5xl mx-auto">
+                        <h2 
+                            className="font-light text-slate-900 tracking-tighter max-w-5xl mx-auto"
+                            style={{ fontSize: '48px', lineHeight: '48px' }}
+                        >
                             Protéger la santé des <span className="font-bold text-[#18448F]">foyers</span> et optimiser la performance des <span className="font-bold text-[#18448F]">entreprises</span> en offrant des solutions d'eau d'une <span className="italic font-serif text-[#8CC63F]">pureté absolue</span>.
                         </h2>
                     </div>
@@ -203,7 +214,7 @@ const WhyChooseUs = () => {
                                 </li>
                                 <li className="flex gap-4 items-start">
                                     <div className="w-2 h-2 rounded-full bg-[#8CC63F] mt-2 shrink-0" />
-                                    <span>Nous nous engageons à sourcer les meilleures technologies de filtration mondiales pour vous offrir des procédés optimaux, sans jamais sacrifier la qualité de votre eau.</span>
+                                    <span>Nous nous engageons à sourcer les meilleures technologies de filtration et de purification d'eau mondiales pour vous offrir des procédés optimaux, sans jamais sacrifier la qualité de votre eau.</span>
                                 </li>
                             </ul>
                         </div>
@@ -328,15 +339,19 @@ const WhyChooseUs = () => {
                     
                     <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 relative z-10">
                         <div className="md:col-span-10 md:col-start-2 lg:col-span-6 lg:col-start-7 space-y-8 lg:space-y-10 text-center lg:text-left md:px-0 lg:pl-12">
-                            <div className="inline-flex mx-auto lg:mx-0 items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-xs font-black text-[#8CC63F] uppercase tracking-[0.2em] shadow-sm">
-                                <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] animate-pulse" />
-                                Le Moment est Venu
-                            </div>
-                            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                                L'Excellence <br /><span className="text-[#8CC63F] italic font-light">n'attend pas.</span>
+                            <h2 
+                                className="text-white"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontWeight: 300,
+                                    fontSize: '48px',
+                                    lineHeight: '52px'
+                                }}
+                            >
+                                <span className="text-[#8CC63F]" style={{ fontWeight: 700 }}>L'Excellence</span> <br /><span>n'attend pas.</span>
                             </h2>
                             <p className="text-slate-300 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                                Passez à l'étape supérieure et ne faites plus aucun compromis sur la qualité de votre eau. Échangez avec nos spécialistes pour analyser vos besoins et entamer votre transition vers la pureté absolue.
+                                Passez à l'étape supérieure et ne faites plus aucun compromis sur la qualité de votre eau. Échangez avec nos spécialistes d'eau pour analyser vos besoins et entamer votre transition vers une eau filtrée, pure et saine.
                             </p>
                             <div className="flex justify-center lg:justify-start">
                                 <ProMaxButton variant="white" className="px-12 h-16 shadow-[0_0_40px_rgba(255,255,255,0.2)] text-[#18448F] font-bold" onClick={() => navigate("/consultation")}>Contactez-nous</ProMaxButton>
