@@ -168,6 +168,20 @@ const AdoucisseurEauCommercial = () => {
     }, [emblaApi, setScrollSnaps, onSelect]);
     const [showAllFaqs, setShowAllFaqs] = useState(false);
     const [showAllHarms, setShowAllHarms] = useState(false);
+
+    const [impactEmblaRef, impactEmblaApi] = useEmblaCarousel({ 
+        loop: true, 
+        align: 'center',
+        slidesToScroll: 1,
+    });
+
+    const scrollImpactPrev = React.useCallback(() => {
+        if (impactEmblaApi) impactEmblaApi.scrollPrev()
+    }, [impactEmblaApi])
+
+    const scrollImpactNext = React.useCallback(() => {
+        if (impactEmblaApi) impactEmblaApi.scrollNext()
+    }, [impactEmblaApi])
     const [activeAdvantageImage, setActiveAdvantageImage] = useState(benefitsVisualImg);
     const navigate = useNavigate();
     const resourcesRef = React.useRef<HTMLDivElement>(null);
@@ -220,7 +234,7 @@ const AdoucisseurEauCommercial = () => {
                     image={heroImg}
                     highlightedTitle={<span className="font-bold not-italic text-[#8CC63F]">L'excellence de l'eau douce, </span>}
                     mainTitle="la signature de prestige des Hôtels & Restaurants."
-                    subtitle="Sublimez votre service, protégez vos équipements de haute précision et offrez à vos clients une expérience sensorielle inégalée. L'expertise anticalcaire dédiée aux standards de l'hôtellerie d'exception."
+                    subtitle="Sublimez votre service et protégez vos équipements professionnels grâce à nos adoucisseurs d'eau commerciaux haut de gamme. Notre expertise en traitement de l'eau et protection anticalcaire est spécialement conçue pour les standards des hôtels et des restaurants, garantissant une expérience client inégalée."
                     showPhone={true}
                     showBreadcrumbs={true}
                 />
@@ -243,9 +257,11 @@ const AdoucisseurEauCommercial = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {[
-                                { 
+                        <div className="relative group/carousel lg:-mx-12 px-4 lg:px-12">
+                            <div className="overflow-hidden" ref={impactEmblaRef}>
+                                <div className="flex -ml-8">
+                                    {[
+                                        { 
                                     title: "Équipements Pro", 
                                     impact: "Pannes Critiques", 
                                     desc: "Protégez vos fours combinés, lave-vaisselle industriels et machines à glace des pannes coûteuses liées à l'accumulation de calcaire.",
@@ -300,19 +316,19 @@ const AdoucisseurEauCommercial = () => {
                                     color: "bg-orange-700"
                                 }
                             ].map((item, idx) => (
-                                <div 
-                                    key={idx} 
-                                    className="group relative h-[420px] rounded-[3rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200 hover:-translate-y-2"
-                                    onClick={() => navigate("/consultation")}
-                                >
+                                <div key={idx} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 pl-8">
+                                    <div 
+                                        className="group relative h-[420px] rounded-[3rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200 hover:-translate-y-2 lg:-translate-x-1/2"
+                                        onClick={() => navigate("/consultation")}
+                                    >
                                     {/* Background Image with Overlay */}
                                     <div className="absolute inset-0 z-0">
                                         <img 
                                             src={item.img} 
                                             alt={item.title} 
-                                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 group-hover:opacity-60"
+                                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-90"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-br from-white via-white/80 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-br from-white/50 via-white/40 to-transparent" />
                                     </div>
 
                                     <div className="relative z-10 inset-0 p-10 h-full flex flex-col justify-between">
@@ -339,18 +355,35 @@ const AdoucisseurEauCommercial = () => {
                                         </div>
                                     </div>
 
-                                    {/* Hover Overlay CTA */}
-                                    <div className="absolute inset-0 bg-blue-600/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 space-y-6 translate-y-full group-hover:translate-y-0 text-center">
-                                        <div className="text-center">
-                                            <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-2 italic">Résoudre ce problème</p>
-                                            <h4 className="text-white text-2xl font-bold leading-tight px-6">Expertise gratuite pour cette solution</h4>
-                                        </div>
-                                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white border border-white/20 group-hover:rotate-45 transition-transform duration-700">
-                                            <ArrowRight className="w-6 h-6" />
+                                        {/* Hover Overlay CTA */}
+                                        <div className="absolute inset-0 bg-blue-600/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 space-y-6 translate-y-full group-hover:translate-y-0 text-center">
+                                            <div className="text-center">
+                                                <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-2 italic">Résoudre ce problème</p>
+                                                <h4 className="text-white text-2xl font-bold leading-tight px-6">Expertise gratuite pour cette solution</h4>
+                                            </div>
+                                            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white border border-white/20 group-hover:rotate-45 transition-transform duration-700">
+                                                <ArrowRight className="w-6 h-6" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             ))}
+                                </div>
+                            </div>
+                            
+                            {/* Navigation Arrows */}
+                            <button
+                                onClick={scrollImpactPrev}
+                                className="hidden md:flex absolute left-0 lg:left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 text-[#18448F] hover:bg-[#18448F] hover:text-white transition-all md:opacity-0 group-hover/carousel:opacity-100 disabled:opacity-0 z-20"
+                            >
+                                <ChevronLeft className="w-6 h-6" />
+                            </button>
+                            <button
+                                onClick={scrollImpactNext}
+                                className="hidden md:flex absolute right-0 lg:right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 text-[#18448F] hover:bg-[#18448F] hover:text-white transition-all md:opacity-0 group-hover/carousel:opacity-100 disabled:opacity-0 z-20"
+                            >
+                                <ChevronRight className="w-6 h-6" />
+                            </button>
                         </div>
                     </div>
                 </section>
