@@ -325,8 +325,8 @@ const Bureau = () => {
                 <div className="border-t border-slate-100">
                     <ExpertTrustSection 
                         title="L'expertise au service du corporatif, "
-                        highlight="la performance dans chaque goutte."
-                        description="Garantissez le bien-être de vos collaborateurs et la longévité de vos infrastructures. Chez Bricareau, nous transformons chaque analyse en un levier stratégique pour la qualité de vie au travail et l'excellence opérationnelle de votre organisation."
+                        highlight="la performance dans chaque goutte d'eau."
+                        description="Garantissez le bien-être de vos collaborateurs et la longévité de vos infrastructures. Chez Bricareau, nous transformons chaque analyse de la qualité d'eau en un levier stratégique pour la qualité de vie au travail et l'excellence opérationnelle de votre organisation."
                         buttonText="Demandez une consultation corporative"
                         buttonLink="/consultation"
                         image={corporateExpertImg}
