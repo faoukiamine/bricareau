@@ -21,9 +21,9 @@ import heroImg from "@/assets/23568974.png";
 import drinkWaterImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
 import softenerImg from "@/assets/Adoucisseur_d_eau.png";
 import familyWellbeingImg from "@/assets/1713.jpg";
-import filtrationImg from "@/assets/Sérénité Direct-Flow installation.png";
+import filtrationImg from "@/assets/2237.jpeg";
 import wholeHouseImg from "@/assets/Filtration-eau-de-puits.webp";
-import uvImg from "@/assets/VH200-F10-265x300.jpg";
+import uvImg from "@/assets/Viqua UV System.png";
 import fountainImg from "@/assets/Fontaines d'eau.webp";
 import waterTestImg from "@/assets/water-test.jpg";
 import replacementFilterImg from "@/assets/2148728698.jpg";
@@ -190,7 +190,7 @@ const ResidentialServices = () => {
                                     img: filtrationImg,
                                     link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine",
                                     className: "",
-                                    imgClass: "object-contain p-6 mix-blend-multiply bg-blue-50/30"
+                                    imgClass: "object-cover opacity-50"
                                 },
                                 {
                                     title: "Systèmes de désinfection\nUV",
@@ -199,7 +199,7 @@ const ResidentialServices = () => {
                                     img: uvImg,
                                     link: "/systemes-de-desinfection-uv",
                                     className: "",
-                                    imgClass: "object-contain p-10 mix-blend-multiply bg-slate-50"
+                                    imgClass: "object-contain p-10 opacity-50"
                                 },
                                 {
                                     title: "Fontaines\nd'Eau",
