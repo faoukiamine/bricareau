@@ -419,6 +419,7 @@ const ResidentialServices = () => {
                                         fontStyle: 'normal',
                                         fontWeight: 700,
                                         fontSize: '48px',
+                                        lineHeight: '52px',
                                     }}
                                 >
                                     <span className="block text-blue-600">Une famille satisfaite</span>
