@@ -179,77 +179,84 @@ const HotellerieRestauration = () => {
                             </p>
                         </div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
-                            {/* Card 1: Adoucissement (Tall) */}
-                            <div 
-                                className="group relative bg-white lg:row-span-2 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire")}
-                            >
-                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={TechnicalRoomHotelImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Adoucissement Commercial - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
-                                </div>
-                                <div className="relative z-10 space-y-4">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">PROTECTION ABSOLUE</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 uppercase tracking-tight">Adoucissement<br/>d'eau</h3>
-                                    <p className="text-slate-500 text-sm font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-4 group-hover:translate-y-0">
-                                        Protégez vos investissements onéreux et garantissez une verrerie étincelante, sans la moindre trace.
-                                    </p>
-                                </div>
-                            </div>
+                        {(() => {
+                            const hospitalityCards = [
+                                {
+                                    title: "Adoucissement\nd'eau",
+                                    subtitle: "PROTECTION ABSOLUE",
+                                    desc: "Protégez vos investissements onéreux et garantissez une verrerie étincelante, sans la moindre trace.",
+                                    img: TechnicalRoomHotelImg,
+                                    link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire",
+                                    className: "lg:row-span-2 min-h-[400px]",
+                                    imgClass: "object-cover"
+                                },
+                                {
+                                    title: "Filtration\nd'eau",
+                                    subtitle: "EXCELLENCE GUSTATIVE",
+                                    desc: "Une eau cristalline, sans goût ni odeur, pour sublimer la saveur authentique de vos créations culinaires et surprendre vos convives.",
+                                    img: CommercialfiltrationImg,
+                                    link: "/filtration-hotels-restaurants",
+                                    className: "md:col-span-2",
+                                    imgClass: "object-contain p-6 opacity-80"
+                                },
+                                {
+                                    title: "Espace\nBrasserie",
+                                    subtitle: "SERVICE PRESTIGE",
+                                    desc: "L'élégance d'une eau filtrée sur mesure, plate ou finement pétillante. Une expérience de service fluide, raffinée et totalement libérée de la contrainte des bouteilles.",
+                                    img: brasserieBgImg,
+                                    link: "/solutions-brasseries",
+                                    className: "",
+                                    imgClass: "object-cover"
+                                },
+                                {
+                                    title: "L'Art\ndu Café",
+                                    subtitle: "PRÉCISION BARISTA",
+                                    desc: "L'eau secrète des baristas pour révéler les arômes les plus subtils de vos grains.",
+                                    img: FilterImg1,
+                                    link: "/filtres-eau-machine-cafe",
+                                    className: "",
+                                    imgClass: "object-contain p-6 opacity-80"
+                                }
+                            ];
 
-                            {/* Card 2: Filtration (Wide) */}
-                            <div 
-                                className="group relative bg-white md:col-span-2 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-center p-8 lg:p-12"
-                                onClick={() => navigate("/filtration-hotels-restaurants")}
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <div className="relative z-10 max-w-md space-y-4">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">EXCELLENCE GUSTATIVE</span>
-                                    <h3 className="text-3xl font-bold text-slate-900 uppercase tracking-tight">Filtration<br/>Gastronomique</h3>
-                                    <p className="text-slate-500 text-sm font-light leading-relaxed">
-                                        Une eau cristalline, sans goût ni odeur, pour sublimer la saveur authentique de vos créations culinaires et surprendre vos convives.
-                                    </p>
+                            return (
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px]">
+                                    {hospitalityCards.map((card, index) => (
+                                        <div 
+                                            key={index}
+                                            className={`group relative rounded-[2rem] overflow-hidden cursor-pointer flex flex-col justify-end p-8 ${card.className}`}
+                                            onClick={() => navigate(card.link)}
+                                        >
+                                            {/* Image Background */}
+                                            <div className="absolute inset-0 bg-slate-900">
+                                                <img 
+                                                    src={card.img} 
+                                                    className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${card.imgClass || 'object-cover'}`} 
+                                                    alt={card.title.replace('\n', ' ')} 
+                                                />
+                                                {/* Gradient Overlay for Text Readability */}
+                                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-500" />
+                                            </div>
+                                            
+                                            {/* Content */}
+                                            <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <span className="text-[#8CC63F] text-sm font-bold tracking-wider">{card.subtitle}</span>
+                                                </div>
+                                                <h3 className="text-2xl font-bold text-white mb-3 leading-tight">
+                                                    {card.title.split('\n').map((line, i) => (
+                                                        <span key={i} className="block">{line}</span>
+                                                    ))}
+                                                </h3>
+                                                <p className="text-slate-300 font-light leading-relaxed opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-[150px] transition-all duration-500 overflow-hidden">
+                                                    {card.desc}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                                <img src={CommercialfiltrationImg} className="absolute right-0 bottom-0 h-[80%] object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply z-0"  alt="Filtration - filtration d'eau commerciale" title="Filtration d'eau commerciale par Bricareau" />
-                            </div>
-
-                            {/* Card 3: Brasserie (Square) */}
-                            <div 
-                                className="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/solutions-brasseries")}
-                            >
-                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={brasserieBgImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Espace Brasserie - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
-                                </div>
-                                <div className="relative z-10 space-y-2 mt-auto">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">SERVICE PRESTIGE</span>
-                                    <h3 className="text-xl font-bold text-slate-900 uppercase tracking-tight">Espace<br/>Brasserie</h3>
-                                    <p className="text-slate-500 text-xs font-light leading-relaxed">
-                                        L'élégance d'une eau filtrée sur mesure, plate ou finement pétillante. Une expérience de service fluide, raffinée et totalement libérée de la contrainte des bouteilles.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Card 4: Café (Square) */}
-                            <div 
-                                className="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-between p-8"
-                                onClick={() => navigate("/filtres-eau-machine-cafe")}
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-tl from-amber-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <div className="flex justify-between items-start relative z-10">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">PRÉCISION BARISTA</span>
-                                </div>
-                                <div className="space-y-2 relative z-10 w-[70%]">
-                                    <h3 className="text-xl font-bold text-slate-900 uppercase tracking-tight">L'Art<br/>du Café</h3>
-                                    <p className="text-slate-500 text-xs font-light leading-relaxed">
-                                        L'eau secrète des baristas pour révéler les arômes les plus subtils de vos grains.
-                                    </p>
-                                </div>
-                                <img src={FilterImg1} className="absolute right-0 top-0 h-[65%] object-contain transition-all duration-500 group-hover:scale-105 mix-blend-multiply z-0"  alt="Filtre Café - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
-                            </div>
-                        </div>
+                            );
+                        })()}
                     </div>
                 </section>
 
@@ -281,19 +288,19 @@ const HotellerieRestauration = () => {
                                     </span>
                                 </h2>
                                 <p className="text-slate-500 text-lg md:text-xl font-light leading-relaxed max-w-lg">
-                                    Nous maîtrisons les défis des très grands services : pics de fréquentation, normes d'hygiène draconiennes et tolérance zéro pour les pannes.
+                                    Nous maîtrisons les défis des très grands services : pics de fréquentation, normes d'hygiène rigoureuses et tolérance zéro pour les pannes.
                                 </p>
                             </div>
                             
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 border-y sm:border-y-0 sm:border-x border-slate-200">
                                 {[
-                                    { title: "Normes HACCP", desc: "Conformité absolue aux exigences sanitaires les plus strictes de la restauration professionnelle.", icon: ShieldCheck },
-                                    { title: "Performance Continue", desc: "Des systèmes de filtration d'eau conçus pour encaisser les services intensifs sans baisse de pression.", icon: Timer },
-                                    { title: "Gants Blancs", desc: "Maintenance préventive et intervention VIP pour garantir une disponibilité à 100%.", icon: HandPlatter }
+                                    { title: "Normes HACCP", desc: "Nous assurons une conformité absolue aux exigences sanitaires les plus strictes. Chaque système est pensé pour éliminer tout risque bactériologique, garantissant une hygiène irréprochable et sécurisant vos opérations quotidiennes.", icon: ShieldCheck },
+                                    { title: "Performance Continue", desc: "Nos équipements sont ingénierés pour absorber les pics de fréquentation les plus intenses. Ils maintiennent un débit constant et une pression optimale, vous assurant un service fluide et ininterrompu, même aux heures d'affluence.", icon: Timer },
+                                    { title: "Gants Blancs", desc: "Bénéficiez d'un accompagnement sur mesure avec notre service de maintenance proactive. Nos techniciens interviennent en toute discrétion avant la moindre anomalie, vous garantissant une disponibilité totale de vos installations.", icon: HandPlatter }
                                 ].map((feature, idx) => (
                                     <div key={idx} className="group p-10 border-b sm:border-b-0 border-slate-200 last:border-b-0 sm:border-r sm:last:border-r-0 hover:bg-slate-50 transition-colors duration-500">
                                         <feature.icon className="w-8 h-8 text-slate-300 mb-6 group-hover:text-blue-600 transition-colors" />
-                                        <h3 className="text-xl font-bold mb-4 uppercase tracking-tight text-slate-900">{feature.title}</h3>
+                                        <h3 className="text-xl font-bold mb-4 tracking-tight text-slate-900">{feature.title}</h3>
                                         <p className="text-slate-500 text-sm font-light leading-relaxed">
                                             {feature.desc}
                                         </p>
@@ -346,8 +353,8 @@ const HotellerieRestauration = () => {
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
                                     <div className="flex items-center gap-6">
-                                        <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-                                            <Wallet className="w-8 h-8 text-blue-600" />
+                                        <div className="w-16 h-16 rounded-full bg-[#8CC63F]/10 flex items-center justify-center shrink-0">
+                                            <Wallet className="w-8 h-8 text-[#8CC63F]" />
                                         </div>
                                         <h3 className="text-3xl font-medium tracking-tight text-slate-900">Maîtrise absolue des coûts.</h3>
                                     </div>
