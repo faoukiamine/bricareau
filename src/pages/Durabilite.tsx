@@ -197,8 +197,16 @@ const Sustainability = () => {
                     <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 relative z-10">
                         <div className="md:col-span-10 md:col-start-2 lg:col-span-6 lg:col-start-7 space-y-8 lg:space-y-10 text-center lg:text-left md:px-0 lg:pl-12">
 
-                            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                                Rejoignez <br /><span className="text-[#8CC63F] italic font-light">le mouvement.</span>
+                            <h2 
+                                className="text-white tracking-tighter mb-6"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontWeight: 300,
+                                    fontSize: '48px',
+                                    lineHeight: '48px'
+                                }}
+                            >
+                                <span className="text-[#8CC63F]" style={{ fontWeight: 700 }}>Rejoignez</span> <br /><span>le mouvement.</span>
                             </h2>
                             <p className="text-slate-300 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                                 Rejoignez les milliers de Québécois qui ont dit non aux bouteilles en plastique. Nos experts en durabilité sont à votre disposition pour vous conseiller sur les meilleures pratiques de gestion de l'eau.

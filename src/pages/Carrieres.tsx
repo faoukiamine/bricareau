@@ -102,7 +102,7 @@ export default function Carrieres() {
 
                     <div className="relative z-10 container mx-auto px-6 text-center">
                         <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-10 shadow-sm">Notre Mission de l'employeur</span>
-                        <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-[#18448F] tracking-tighter leading-tight mb-12">
+                        <h2 className="heading-pro-max font-bold text-[#18448F] mb-12">
                             L'excellence par <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">l'humain.</span>
                         </h2>
@@ -121,7 +121,7 @@ export default function Carrieres() {
                 <section className="py-32 bg-slate-50 relative overflow-hidden" id="nos-piliers">
                     <div className="container mx-auto px-6 mb-24 text-center">
                         <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-6">Pourquoi Bricareau ?</span>
-                        <h2 className="text-4xl md:text-6xl font-sans font-bold text-[#18448F] tracking-tight mb-8">
+                        <h2 className="heading-pro-max font-sans font-bold text-[#18448F] mb-8">
                             Votre carrière, <br />
                             <span className="text-[#8CC63F]">notre priorité.</span>
                         </h2>
@@ -135,8 +135,8 @@ export default function Carrieres() {
                         <div className="flex flex-col lg:flex-row items-center gap-16 px-6">
                             <div className="lg:w-1/2 space-y-6">
                                 <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">01.</div>
-                                <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
-                                    Impact <span className="font-bold text-[#18448F]">Environnemental</span>
+                                <h3 className="text-2xl lg:text-3xl font-bold text-[#18448F] leading-tight">
+                                    Impact Environnemental
                                 </h3>
                                 <p className="text-slate-500 text-lg leading-relaxed font-light">
                                     Donnez du sens à votre travail. Chaque système que vous installez ou vendez contribue directement à réduire la pollution plastique et à améliorer la santé des Québécois.
@@ -156,8 +156,8 @@ export default function Carrieres() {
                             </div>
                             <div className="lg:w-1/2 space-y-6">
                                 <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">02.</div>
-                                <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
-                                    Développement <span className="font-bold text-[#8CC63F]">Continu</span>
+                                <h3 className="text-2xl lg:text-3xl font-bold text-[#18448F] leading-tight">
+                                    Développement Continu
                                 </h3>
                                 <p className="text-slate-500 text-lg leading-relaxed font-light">
                                     L'ingénierie évolue, nous aussi. Nous investissons massivement dans la formation continue de nos équipes pour maintenir notre standard d'expertise au plus haut niveau.
@@ -169,8 +169,8 @@ export default function Carrieres() {
                         <div className="flex flex-col lg:flex-row items-center gap-16 px-6">
                             <div className="lg:w-1/2 space-y-6">
                                 <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">03.</div>
-                                <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
-                                    Équipe <span className="font-bold text-[#18448F]">d'Experts</span>
+                                <h3 className="text-2xl lg:text-3xl font-bold text-[#18448F] leading-tight">
+                                    Équipe d'Experts
                                 </h3>
                                 <p className="text-slate-500 text-lg leading-relaxed font-light">
                                     Évoluez aux côtés des meilleurs. Notre culture d'entreprise valorise le mentorat, le partage de connaissances et la rigueur technique dans un environnement convivial.

@@ -31,7 +31,7 @@ import waterTestImg from "@/assets/Water-test_15395190.png";
 import installationImg from "@/assets/Water-Softener-installation.jpg";
 import serviceImg from "@/assets/RO service.png";
 import ctaImg from "@/assets/2148858959.jpg";
-import waterTestLabImg from "@/assets/2242.jpg";
+import waterTestLabImg from "@/assets/2240.jpg";
 import serviceNewImg from "@/assets/cae3c0a4-5b4d-4b0e-8bc3-3550a714f7bb.jpg";
 import installationNewImg from "@/assets/2235.jpg";
 
