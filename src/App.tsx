@@ -82,7 +82,7 @@ import WhyChooseUs from "./pages/Pourquoi-choisir-bricareau";
 import Sustainability from "./pages/Durabilite";
 import OurProcess from "./pages/notre-processus";
 import Carrieres from "./pages/Carrieres";
-import Home1 from "./pages/home";
+import Home1 from "./pages/Home";
 import C from "./pages/Systemes-de-filtration-deau-sous-l-evier";
 import FiltreEauMachineCafe from "./pages/FiltreEauMachineCafe";
 import FontainesDeauModernes from "./pages/FontainesDeauModernes";

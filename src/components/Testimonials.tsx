@@ -4,6 +4,7 @@ import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { type EmblaCarouselType } from "embla-carousel";
+import { testimonials } from "@/data/testimonials";
 
 const Testimonials = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
