@@ -416,7 +416,7 @@ const A = () => {
                                             alt={item.title} 
                                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 group-hover:opacity-60"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-br from-white via-white/80 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-br from-white via-white/40 to-transparent" />
                                     </div>
 
                                     <div className="relative z-10 inset-0 p-10 h-full flex flex-col justify-between">

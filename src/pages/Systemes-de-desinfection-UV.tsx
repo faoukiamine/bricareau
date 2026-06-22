@@ -415,7 +415,8 @@ const DesinfectionUV = () => {
                                     solution: "Stérilisateur UV Select",
                                     color: "from-red-500 to-rose-700",
                                     icon: <Biohazard className="w-8 h-8" />,
-                                    img: waterTestingImg
+                                    img: waterTestingImg,
+                                    desc: "Un test positif révèle une contamination bactériologique. L'éradication immédiate par UV est essentielle pour prévenir les risques d'infections sévères pour votre famille."
                                 },
                                 { 
                                     problem: "Virus Entériques", 
@@ -423,7 +424,8 @@ const DesinfectionUV = () => {
                                     solution: "UV Haute-Performance",
                                     icon: <ShieldAlert className="w-8 h-8" />,
                                     color: "from-purple-500 to-indigo-700",
-                                    img: virusEnteriqueImg
+                                    img: virusEnteriqueImg,
+                                    desc: "Ces pathogènes microscopiques traversent souvent les filtres standards. Seule une dose précise de lumière UV-C peut détruire leur ADN de façon permanente."
                                 },
                                 { 
                                     problem: "Kystes & Parasites", 
@@ -431,7 +433,8 @@ const DesinfectionUV = () => {
                                     solution: "Filtration 1 Micron + UV",
                                     color: "from-amber-500 to-orange-700",
                                     icon: <Microscope className="w-8 h-8" />,
-                                    img: sterileWaterImg
+                                    img: sterileWaterImg,
+                                    desc: "Extrêmement résistants au chlore municipal, ces parasites provoquent des maladies digestives. Nos systèmes UV les neutralisent de façon naturelle."
                                 },
                                 { 
                                     problem: "Post-Orage / Fontes", 
@@ -439,7 +442,8 @@ const DesinfectionUV = () => {
                                     solution: "Système UV-IHS",
                                     color: "from-indigo-600 to-blue-900",
                                     icon: <CloudLightning className="w-8 h-8" />,
-                                    img: stormVisualImg
+                                    img: stormVisualImg,
+                                    desc: "Les fortes pluies entraînent souvent des polluants vers les nappes phréatiques. Une protection UV active garantit une eau sûre face à toutes les intempéries."
                                 },
                                 { 
                                     problem: "Puits de Surface", 
@@ -447,7 +451,8 @@ const DesinfectionUV = () => {
                                     solution: "Série VH Bricareau",
                                     color: "from-emerald-500 to-teal-700",
                                     icon: <DropletsIcon className="w-8 h-8" />,
-                                    img: puitsDeSurfaceImg
+                                    img: puitsDeSurfaceImg,
+                                    desc: "Peu profonds, ces puits sont directement exposés aux contaminants extérieurs. La désinfection UV agit comme un bouclier infranchissable pour votre foyer."
                                 },
                                 { 
                                     problem: "Avis d'Ébullition", 
@@ -455,7 +460,8 @@ const DesinfectionUV = () => {
                                     solution: "Protection 24/7 Bricareau",
                                     color: "from-blue-400 to-cyan-600",
                                     icon: <ShieldCheck className="w-8 h-8" />,
-                                    img: avisEbullitionImg
+                                    img: avisEbullitionImg,
+                                    desc: "Ne dépendez plus des alertes municipales tardives. Avec un système UV Bricareau, vous bénéficiez d'une eau pure 24h/24, sans faire bouillir une seule goutte."
                                 }
                             ].map((s, i) => (
                                 <div 
@@ -470,7 +476,7 @@ const DesinfectionUV = () => {
                                             alt={s.problem} 
                                             className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 opacity-40 group-hover:opacity-60 grayscale-[0.5] group-hover:grayscale-0"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-blue-50/40" />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/40 to-blue-50/40" />
                                     </div>
 
                                     <div className="relative z-10 p-10 h-full flex flex-col">
@@ -491,7 +497,7 @@ const DesinfectionUV = () => {
                                                 {s.problem}
                                             </h3>
                                             <p className="text-sm font-light text-slate-600 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
-                                                Les micro-organismes ne préviennent pas. Protégez votre famille contre les menaces invisibles présentes dans votre eau de puits.
+                                                {s.desc}
                                             </p>
                                         </div>
 

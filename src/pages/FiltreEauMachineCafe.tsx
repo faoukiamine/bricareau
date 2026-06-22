@@ -99,7 +99,7 @@ const FiltreEauMachineCafe = () => {
                             src={heroImg} 
                             className="w-full h-full object-cover opacity-90" 
                          alt="Solutions de Filtration Café - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent" />
                         <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                     </div>
 

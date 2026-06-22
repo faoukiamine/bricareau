@@ -331,7 +331,7 @@ const B = () => {
                                             alt={item.title} 
                                             className="w-full h-full object-cover opacity-1 group-hover:opacity-40 transition-opacity grayscale group-hover:grayscale-0" 
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
                                     </div>
 
                                     <div className="relative z-10 p-10 flex flex-col h-full justify-between">
@@ -439,7 +439,7 @@ const B = () => {
                                             alt={s.problem} 
                                             className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 opacity-40 group-hover:opacity-60 grayscale-[0.5] group-hover:grayscale-0"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-blue-50/40" />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/40 to-blue-50/40" />
                                     </div>
 
                                     <div className="relative z-10 p-10 h-full flex flex-col">

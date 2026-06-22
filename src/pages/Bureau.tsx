@@ -50,7 +50,7 @@ const Bureau = () => {
                         {/* Mobile Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
                         {/* Desktop Gradient: fade over the text area */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10 hidden lg:block w-[50%]"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-[50%]"></div>
                         
                         <div className="absolute right-0 top-0 w-full h-full lg:w-[65%]">
                             {/* Inner gradient to blend the hard edge on desktop */}
@@ -195,7 +195,7 @@ const Bureau = () => {
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
                                     <img src={drinkWaterImg} className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Fontaines d'Eau Modernes - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
                                 </div>
                                 <div className="relative z-10 space-y-4 mt-auto">
                                     <span className="text-[10px] font-black text-[#8CC63F] uppercase tracking-widest">EAU FRAÎCHE & CHAUDE</span>

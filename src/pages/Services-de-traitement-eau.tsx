@@ -157,7 +157,7 @@ const ServicesTraitementEau = () => {
                         {/* Mobile Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
                         {/* Desktop Gradient: fade over the text area */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10 hidden lg:block w-[50%]"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-[50%]"></div>
                         
                         <div className="absolute right-0 top-0 w-full h-full lg:w-[65%]">
                             {/* Inner gradient to blend the hard edge on desktop */}

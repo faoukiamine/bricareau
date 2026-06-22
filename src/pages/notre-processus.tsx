@@ -286,7 +286,7 @@ const OurProcess = () => {
                     {/* Background Image Full Width */}
                     <div className="absolute inset-0 z-0">
                         <img src={ctaImg} className="w-full h-full object-cover object-center"  alt="Contactez Bricareau" title="Traitement d'eau Québec par Bricareau" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-white/95" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-white/95" />
                     </div>
                     
                     <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 relative z-10">

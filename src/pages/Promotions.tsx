@@ -78,7 +78,7 @@ const Promotions = () => {
                             src={promotionsHero}
                             className="w-full h-full object-cover object-[center_35%] group-hover:scale-105 transition-transform duration-[3s]"
                          alt="Nos Promotions Bricareau - Offres exceptionnelles sur le traitement d'eau" title="Traitement d'eau Québec par Bricareau" />
-                        <div className="absolute inset-0 z-10 bg-gradient-to-b from-white/40 via-white/80 to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/40 35% to-transparent" />
+                        <div className="absolute inset-0 z-10 bg-gradient-to-b from-white/40 via-white/40 to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/40 35% to-transparent" />
                     </div>
 
                     <div className="container relative z-20 mx-auto px-6 h-full flex items-center justify-center">

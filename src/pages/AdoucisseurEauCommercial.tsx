@@ -318,7 +318,7 @@ const AdoucisseurEauCommercial = () => {
                             ].map((item, idx) => (
                                 <div key={idx} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 pl-8">
                                     <div 
-                                        className="group relative h-[420px] rounded-[3rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200 hover:-translate-y-2 lg:-translate-x-1/2"
+                                        className="group relative h-[420px] rounded-[3rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200 hover:-translate-y-2 "
                                         onClick={() => navigate("/consultation")}
                                     >
                                     {/* Background Image with Overlay */}
