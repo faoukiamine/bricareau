@@ -530,8 +530,8 @@ const Home1 = () => {
                             <div className="w-12 h-0.5 bg-[#8CC63F]"></div>
                         </div>
                         <h2 className="heading-pro-max">
-                            <span className="font-bold not-italic text-[#18448F] block">L'excellence reconnue par</span>
-                            <span className="font-bold not-italic text-[#8CC63F] block">ceux qui nous font <span className="text-[#18448F]">confiance.</span></span>
+                            <span className="font-bold not-italic text-[#18448F] block">Que disent ceux qui</span>
+                            <span className="font-bold not-italic text-[#8CC63F] block">nous font <span className="text-[#18448F]">confiance ?</span></span>
                         </h2>
                     </div>
                     <div className="flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
