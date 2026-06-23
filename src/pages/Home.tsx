@@ -38,7 +38,7 @@ import { allTestimonials } from "@/data/testimonials";
 // Assets
 import heroImg from "@/assets/family-preparing-dinner-together.jpg";
 import partnerImg from "@/assets/skids-sur-mesure.jpg";
-import resImg from "@/assets/21425.png";
+import resImg from "@/assets/552.jpg";
 import comImg from "@/assets/bureau-megamenu.jpg";
 import officeSlideImg from "@/assets/2148496250.jpg";
 import industrialSlideImg from "@/assets/43.jpg";
@@ -544,7 +544,7 @@ const Home1 = () => {
                             <div className="mb-6 flex gap-1">
                                 {[...Array(caseStudyTestimonials[testiIndex]?.rating || 5)].map((_, i) => (<Star key={i} className="w-5 h-5 fill-[#8CC63F] text-[#8CC63F]" />))}
                             </div>
-                            <h4 key={`testi-${testiIndex}`} className="text-3xl text-[#18448F] font-medium leading-relaxed mb-8">
+                            <h4 key={`testi-${testiIndex}`} className="text-2xl text-black font-normal leading-tight mb-8">
                                 « {caseStudyTestimonials[testiIndex]?.text} »
                             </h4>
                             <div className="flex items-center justify-between">
