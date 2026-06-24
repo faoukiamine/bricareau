@@ -1,4 +1,4 @@
-﻿import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -323,7 +323,7 @@ const A = () => {
                 <Hero 
                     image={heroBath}
                     highlightedTitle={<span className="font-bold not-italic">Finis le calcaire et l'eau dure :</span>}
-                    mainTitle={<>offrez-vous le confort d'une <span className="text-[#8CC63F]">eau douce.</span></>}
+                    mainTitle={<>offrez-vous <span className="text-[#8CC63F]">le confort d'une eau douce.</span></>}
                     subtitle="Redécouvrez l'expérience d'une eau soyeuse qui préserve votre peau, vos cheveux et vos investissements. Une technologie de pointe pour une protection durable de votre foyer."
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -352,7 +352,7 @@ const A = () => {
                                 { 
                                     title: "Énergie & Coût", 
                                     impact: "+25% Facture", 
-                                    desc: "Le tartre isole vos résistances, forçant vos appareils à  consommer massivement plus d'électricité pour chauffer l'eau.",
+                                    desc: "L'accumulation de calcaire liée à l'eau dure diminue l'efficacité énergétique de votre chauffe-eau. Un adoucisseur d'eau performant élimine le tartre, réduisant ainsi vos factures d'énergie.",
                                     icon: <Zap className="w-6 h-6 text-blue-600" />,
                                     badge: "Impact Financier",
                                     img: compteurImg,
@@ -361,7 +361,7 @@ const A = () => {
                                 { 
                                     title: "Peau & Dermatite", 
                                     impact: "Irritations", 
-                                    desc: "L'eau dure assèche l'épiderme et peut aggraver l'eczéma. Retrouvez une peau soyeuse et des cheveux éclatants.",
+                                    desc: "Les minéraux de l'eau dure assèchent l'épiderme et aggravent l'eczéma. L'installation d'un adoucisseur d'eau garantit une eau douce, idéale pour retrouver une peau soyeuse et apaiser les irritations.",
                                     icon: <Heart className="w-6 h-6 text-rose-500" />,
                                     badge: "Soin Personnel",
                                     img: womansufferingfromHardWaterImg,
@@ -370,7 +370,7 @@ const A = () => {
                                 { 
                                     title: "Électroménagers", 
                                     impact: "Vie /2", 
-                                    desc: "Réduisez drastiquement la fréquence de remplacement de votre chauffe-eau, lave-linge et lave-vaisselle.",
+                                    desc: "Les dépôts calcaires réduisent de moitié la durée de vie de vos électroménagers. Protégez votre plomberie et votre lave-vaisselle avec nos systèmes de traitement de l'eau anti-calcaire.",
                                     icon: <Shield className="w-6 h-6 text-emerald-600" />,
                                     badge: "Protection Actifs",
                                     img: energyCostImg,
@@ -379,7 +379,7 @@ const A = () => {
                                 { 
                                     title: "Entretien Ménager", 
                                     impact: "Double effort", 
-                                    desc: "Dites adieu aux traces de tartre sur la robinetterie et aux voiles blanchâtres sur votre vaisselle étincelante.",
+                                    desc: "Finies les traces de tartre tenaces sur la robinetterie et la paroi de douche. Une eau adoucie facilite grandement l'entretien ménager et laisse votre vaisselle éclatante, sans résidus.",
                                     icon: <Sparkles className="w-6 h-6 text-cyan-500" />,
                                     badge: "Confort",
                                     img: entretienMenagerImg,
@@ -388,7 +388,7 @@ const A = () => {
                                 { 
                                     title: "Textiles & Linge", 
                                     impact: "Usure Précoce", 
-                                    desc: "Les fibres deviennent rêches et les couleurs ternissent. Protégez la douceur de vos vêtements préférés.",
+                                    desc: "L'eau dure rend les fibres rêches et ternit les couleurs. Laver votre linge avec de l'eau douce préserve la qualité des textiles et prolonge considérablement la durée de vie de vos vêtements.",
                                     icon: <Shirt className="w-6 h-6 text-indigo-500" />,
                                     badge: "Linge Doux",
                                     img: textileLingeImg,
@@ -397,7 +397,7 @@ const A = () => {
                                 { 
                                     title: "Consommation", 
                                     impact: "Savon x2", 
-                                    desc: "L'eau dure nécessite jusqu'à  50% de détergents et savons en plus pour obtenir une mousse efficace.",
+                                    desc: "En neutralisant la dureté de l'eau, un adoucisseur réduit jusqu'à 50% votre consommation de savons et détergents. Une solution écologique et très économique au quotidien.",
                                     icon: <HandCoins className="w-6 h-6 text-amber-500" />,
                                     badge: "Économie",
                                     img: consommationImg,
@@ -430,7 +430,7 @@ const A = () => {
                                             <h3 className="text-3xl font-medium text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
                                                 {item.title}
                                             </h3>
-                                            <p className="text-slate-600 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-y-4 group-hover:translate-y-0 text-justify">
+                                            <p className="text-slate-600 text-sm leading-relaxed transition-all duration-1000 text-justify">
                                                 {item.desc}
                                             </p>
                                         </div>
@@ -639,7 +639,7 @@ const A = () => {
                                             LE PARCOURS BRICAREAU
                                         </span>
                                         <h2 className="heading-pro-max text-center lg:text-left mb-4 text-[#18448F]">
-                                            <span className="font-bold not-italic">Une transition fluide 360Â° vers une <span className="text-[#8CC63F]">eau douce d'exception.</span></span>
+                                            <span className="font-bold not-italic">Une transition fluide 360° vers une <span className="text-[#8CC63F]">eau douce d'exception.</span></span>
                                         </h2>
                                         <p className="body-pro-max text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
                                             Le Parcours Bricareau : une expertise d'élite, depuis votre première analyse jusqu'à  la douceur éternelle de votre eau.

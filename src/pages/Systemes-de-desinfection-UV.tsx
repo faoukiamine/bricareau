@@ -105,6 +105,14 @@ const DesinfectionUV = () => {
     const [activeCol, setActiveCol] = React.useState(1);
 
     const resourcesRef = React.useRef<HTMLDivElement>(null);
+    const uvCarouselRef = React.useRef<HTMLDivElement>(null);
+
+    const scrollUvCarousel = (direction: 'left' | 'right') => {
+        if (uvCarouselRef.current) {
+            const scrollAmount = 380 + 24; // card width + gap
+            uvCarouselRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+        }
+    };
 
     const scrollResources = (direction: 'left' | 'right') => {
         if (resourcesRef.current) {
@@ -406,9 +414,14 @@ const DesinfectionUV = () => {
                                 <span className="font-bold text-[#18448F] block text-center"><span className="text-[#8CC63F]">s'infiltrent</span> dans votre eau ?</span>
                             </h2>
                         </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
-                            {[
+                    </div>
+                    <div className="w-full max-w-[1402px] mx-auto relative overflow-hidden z-10 mt-12 group">
+                        <div 
+                            ref={uvCarouselRef}
+                            className="flex gap-6 overflow-x-auto scroll-smooth pb-12 pt-4 snap-x snap-mandatory no-scrollbar px-4 lg:px-0"
+                            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                        >
+                                {[
                                 { 
                                     problem: "Test Coliformes Positif", 
                                     cause: "Infiltration de bactéries", 
@@ -466,7 +479,7 @@ const DesinfectionUV = () => {
                             ].map((s, i) => (
                                 <div 
                                     key={i} 
-                                    className="group relative h-[420px] rounded-[3.5rem] overflow-hidden border border-white/40 bg-white/5 backdrop-blur-md cursor-pointer transition-all duration-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(30,58,138,0.15)] hover:-translate-y-3"
+                                    className="w-[80vw] md:w-[380px] shrink-0 snap-center group relative h-[420px] rounded-[3.5rem] overflow-hidden border border-white/40 bg-white/5 backdrop-blur-md cursor-pointer transition-all duration-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(30,58,138,0.15)] hover:-translate-y-3"
                                     onClick={() => navigate("/consultation")}
                                 >
                                     {/* Background Image with Cinematic Overlay */}
@@ -520,6 +533,25 @@ const DesinfectionUV = () => {
                                     <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/30 to-white/0 -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-[1.5s] ease-in-out pointer-events-none" />
                                 </div>
                             ))}
+                        </div>
+                        {/* Navigation Arrows */}
+                        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <Button 
+                                variant="outline" 
+                                size="icon"
+                                className="w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border-slate-200 shadow-xl pointer-events-auto hover:bg-white hover:scale-105 transition-all text-[#18448F]"
+                                onClick={() => scrollUvCarousel('left')}
+                            >
+                                <ChevronLeft className="w-6 h-6" />
+                            </Button>
+                            <Button 
+                                variant="outline" 
+                                size="icon"
+                                className="w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border-slate-200 shadow-xl pointer-events-auto hover:bg-white hover:scale-105 transition-all text-[#18448F]"
+                                onClick={() => scrollUvCarousel('right')}
+                            >
+                                <ChevronRight className="w-6 h-6" />
+                            </Button>
                         </div>
                     </div>
                 </section>

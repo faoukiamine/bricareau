@@ -182,7 +182,7 @@ const FiltresDeRemplacement = () => {
                                         {/* Card Info */}
                                         <div className="space-y-3 flex-grow">
                                             <h4 className="text-xl font-bold text-slate-900">{card.name}</h4>
-                                            <p className="text-slate-500 text-xs font-light leading-relaxed text-justify line-clamp-6">
+                                            <p className="text-slate-500 text-[14px] leading-[23px] font-light text-justify line-clamp-6">
                                                 {card.desc}
                                             </p>
                                         </div>

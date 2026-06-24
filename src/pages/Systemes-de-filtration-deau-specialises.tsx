@@ -172,7 +172,16 @@ const B = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const [activeCol, setActiveCol] = React.useState(0);
     const [resourceIndex, setResourceIndex] = React.useState(1);
+    const [showAllProducts, setShowAllProducts] = React.useState(false);
     const resourcesRef = React.useRef<HTMLDivElement>(null);
+    const symptomCarouselRef = React.useRef<HTMLDivElement>(null);
+
+    const scrollSymptomCarousel = (direction: 'left' | 'right') => {
+        if (symptomCarouselRef.current) {
+            const scrollAmount = 380 + 24; // card width + gap
+            symptomCarouselRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+        }
+    };
 
     const handleScrollRessources = () => {
         if (resourcesRef.current) {
@@ -255,7 +264,7 @@ const B = () => {
                 <Hero 
                     image={heroFiltration}
                     highlightedTitle={<span className="font-bold not-italic">Protégez votre santé</span>}
-                    mainTitle={<> avec une filtration d'eau <span className="text-[#8CC63F] font-bold not-italic">d'excellence.</span></>}
+                    mainTitle={<> avec <span className="text-[#8CC63F] font-bold not-italic">une filtration d'eau d'excellence.</span></>}
                     subtitle="Ne laissez plus les contaminants couler de vos robinets. Nos systèmes de filtration d'eau avancés constituent un bouclier durable pour votre maison, vous garantissant une eau d'une pureté irréprochable pour toute votre famille au Canada."
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -277,7 +286,7 @@ const B = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                             {[
                                 {
                                     title: "Réseaux Vétustes",
@@ -375,8 +384,13 @@ const B = () => {
                                 <span className="font-bold text-[#18448F] block text-center">vivez-vous au quotidien ?</span>
                             </h2>
                         </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+                    </div>
+                    <div className="w-full max-w-[1402px] mx-auto relative overflow-hidden z-10 mt-12 group">
+                        <div 
+                            ref={symptomCarouselRef}
+                            className="flex gap-6 overflow-x-auto scroll-smooth pb-12 pt-4 snap-x snap-mandatory no-scrollbar px-4 lg:px-0"
+                            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                        >
                             {[
                                 { 
                                     problem: "Sable & Sédiments", 
@@ -429,7 +443,7 @@ const B = () => {
                             ].map((s, i) => (
                                 <div 
                                     key={i} 
-                                    className="group relative h-[420px] rounded-[3.5rem] overflow-hidden border border-white/40 bg-white/5 backdrop-blur-md cursor-pointer transition-all duration-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(30,58,138,0.15)] hover:-translate-y-3"
+                                    className="w-[80vw] md:w-[380px] shrink-0 snap-center group relative h-[420px] rounded-[3.5rem] overflow-hidden border border-white/40 bg-white/5 backdrop-blur-md cursor-pointer transition-all duration-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(30,58,138,0.15)] hover:-translate-y-3"
                                     onClick={() => navigate("/consultation")}
                                 >
                                     {/* Background Image with Cinematic Overlay */}
@@ -480,8 +494,25 @@ const B = () => {
                                 </div>
                             ))}
                         </div>
-
-
+                        {/* Navigation Arrows */}
+                        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <Button 
+                                variant="outline" 
+                                size="icon"
+                                className="w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border-slate-200 shadow-xl pointer-events-auto hover:bg-white hover:scale-105 transition-all text-[#18448F]"
+                                onClick={() => scrollSymptomCarousel('left')}
+                            >
+                                <ChevronLeft className="w-6 h-6" />
+                            </Button>
+                            <Button 
+                                variant="outline" 
+                                size="icon"
+                                className="w-12 h-12 rounded-full bg-white/80 backdrop-blur-md border-slate-200 shadow-xl pointer-events-auto hover:bg-white hover:scale-105 transition-all text-[#18448F]"
+                                onClick={() => scrollSymptomCarousel('right')}
+                            >
+                                <ChevronRight className="w-6 h-6" />
+                            </Button>
+                        </div>
                     </div>
                 </section>
 
@@ -499,7 +530,7 @@ const B = () => {
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {products.map((p, i) => (
+                            {(showAllProducts ? products : products.slice(0, 6)).map((p, i) => (
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
@@ -529,6 +560,16 @@ const B = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        <div className="mt-12 flex justify-center">
+                            <Button
+                                variant="outline"
+                                className="rounded-full px-8 py-6 text-sm font-bold border-slate-200 text-[#18448F] hover:bg-slate-50 transition-all hover:scale-105"
+                                onClick={() => setShowAllProducts(!showAllProducts)}
+                            >
+                                {showAllProducts ? "Voir moins de filtres" : "Voir tous les filtres"}
+                            </Button>
                         </div>
 
                         <div className="mt-20 p-8 rounded-[2.5rem] bg-[#18448F] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl animate-in fade-in slide-in-from-bottom-8">

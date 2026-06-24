@@ -173,9 +173,9 @@ const C = () => {
        <main>
                 <Hero 
                     image={heroDrink}
-                    highlightedTitle={<><span className="text-[#8CC63F] font-bold not-italic">La pureté de l'eau</span> <span className="font-bold not-italic">sous l'évier,</span></>}
-                    mainTitle={<><span className="text-[#8CC63F] font-bold not-italic">l'excellence</span> dans chaque goutte.</>}
-                    subtitle="Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille."
+                    highlightedTitle={<><span className="text-[#18448F] font-bold not-italic">Prêt à découvrir</span> <span className="text-[#8CC63F] font-bold not-italic">l'excellence de l'eau pure</span></>}
+                    mainTitle={<><span className="text-[#18448F] font-bold not-italic">directement sous votre évier ?</span></>}
+                    subtitle="Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration d'eau sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille."
                     ctaText="Planifiez une consultation gratuite"
                     ctaLink="/consultation"
                     showPhone={true}
@@ -191,14 +191,13 @@ const C = () => {
                 L'INVISIBLE DANS VOTRE VERRE
               </span>
                <h2 className="mb-8 heading-pro-max text-center">
-                  <span className="font-bold not-italic text-[#18448F] block">Comment obtenir une eau de source sans</span>
-                  <span className="font-bold text-[#18448F] block text-center">contaminants chimiques ?</span>
+                  <span className="font-bold not-italic text-[#18448F] block">Quelles menaces invisibles se cachent</span>
+                  <span className="font-bold text-[#8CC63F] block text-center">dans votre eau du robinet ?</span>
               </h2>
               <p className="body-pro-max text-slate-500 text-center mx-auto">
                 Le chlore n'est que la pointe de l'iceberg. Votre eau municipale peut abriter des micro-polluants invisibles qui s'accumulent silencieusement dans votre organisme.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
               {[
                 { 
