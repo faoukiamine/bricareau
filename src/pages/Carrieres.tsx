@@ -11,7 +11,7 @@ import { MapPin, Briefcase, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/2148192458.jpg"; 
 import imgTeam from "@/assets/2148826999.jpg"; 
 import imgFormation from "@/assets/2243.jpg";
-import imgImpact from "@/assets/2232.jpg";
+import imgImpact from "@/assets/impact_no_rainbow.png";
 import imgCTA from "@/assets/2149008937.jpg";
 
 const jobs = [
