@@ -204,7 +204,7 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                 <img 
                     src={item.img} 
                     alt={item.title} 
-                    className="w-full h-full object-contain object-bottom transition-transform duration-700 scale-100 group-hover:scale-110" 
+                    className={`w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 mix-blend-multiply ${item.title.includes('Avalanche') ? 'scale-[1.3] object-center' : 'scale-100 object-bottom'}`} 
                 />
             </div>
 
@@ -474,7 +474,7 @@ const Fontaines = () => {
                                 {[
                                     {
                                         title: "Distributeur d'eau de comptoir - Avalanche",
-                                        desc: "L'Avalanche est conçu pour s'intégrer harmonieusement sur n'importe quel comptoir. Ce distributeur d'eau allie un design compact à une technologie de refroidissement performante, fournissant une eau pure et rafraîchissante au quotidien.",
+                                        desc: "L'Avalanche est conçu pour s'intégrer harmonieusement sur n'importe quel comptoir. Ce distributeur d'eau allie un design compact à une technologie de refroidissement performante.",
                                         img: countertopFountainImg,
                                         features: ["Sortie d'eau chaude, froide et tiède", "Boutons tactiles électroniques", "Comprend le premier jeu de filtres et le kit d'installation", "Homologué UL", "Double filtration certifiée NSF", "Garantie d'un an"]
                                     },
