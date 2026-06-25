@@ -38,6 +38,7 @@ import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.we
 import hardWaterImg from "@/assets/58279.jpg";
 import applianceDamageImg from "@/assets/beautiful-shot-modern-house-kitchen.jpg";
 import energyCostImg from "@/assets/2148386945.jpg";
+import laveVaisselleEncrasséImg from "@/assets/lave-vaisselle encrassé par le calcaire.webp";
 import compteurImg from "@/assets/compteur.avif";
 import entretienMenagerImg from "@/assets/2147916568.jpg";
 import textileLingeImg from "@/assets/2149117085.jpg";
@@ -268,6 +269,10 @@ const A = () => {
     const [activeTransitionStep, setActiveTransitionStep] = useState(0);
     const navigate = useNavigate();
 
+    const [diagnosticEmblaRef, diagnosticEmblaApi] = useEmblaCarousel({ loop: false, align: 'start' });
+    const scrollPrevDiagnostic = React.useCallback(() => { if (diagnosticEmblaApi) diagnosticEmblaApi.scrollPrev(); }, [diagnosticEmblaApi]);
+    const scrollNextDiagnostic = React.useCallback(() => { if (diagnosticEmblaApi) diagnosticEmblaApi.scrollNext(); }, [diagnosticEmblaApi]);
+
     React.useEffect(() => {
         const timer = setInterval(() => {
             setActiveTransitionStep(prev => (prev + 1) % 4);
@@ -330,26 +335,6 @@ const A = () => {
                 />
 
                 {/* AEO TARGET PARAGRAPH (Featured Snippets & Voice Search) */}
-                <section className="py-16 bg-slate-50 border-b border-slate-200" id="aeo-adoucisseur">
-                    <div className="container mx-auto px-6 max-w-4xl">
-                        <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-2 h-full bg-[#18448F]"></div>
-                            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                                Qu'est-ce qu'un adoucisseur d'eau ?
-                            </h2>
-                            <p className="text-slate-600 text-lg leading-relaxed mb-6 font-medium">
-                                Un adoucisseur d'eau est un système de filtration résidentiel conçu pour éliminer le calcium et le magnésium, les minéraux responsables de la dureté de l'eau. Il protège votre plomberie du tartre, prolonge la durée de vie de vos électroménagers et vous offre une peau plus douce.
-                            </p>
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-600 font-light">
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Élimination du calcaire</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Peau et cheveux hydratés</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Réduction de 50% du savon</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Protection du chauffe-eau</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
                 {/* 2. Diagnostic Impact - Bento Grid */}
                 <section className="py-24 lg:py-32 bg-slate-50/50 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_30%,_rgba(37,99,235,0.05)_0%,_transparent_50%)] pointer-events-none" />
@@ -368,118 +353,155 @@ const A = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {[
-                                { 
-                                    title: "Énergie & Coût", 
-                                    impact: "+25% Facture", 
-                                    desc: "L'accumulation de calcaire liée à l'eau dure diminue l'efficacité énergétique de votre chauffe-eau. Un adoucisseur d'eau performant élimine le tartre, réduisant ainsi vos factures d'énergie.",
-                                    icon: <Zap className="w-6 h-6 text-blue-600" />,
-                                    badge: "Impact Financier",
-                                    img: compteurImg,
-                                    color: "bg-amber-500"
-                                },
-                                { 
-                                    title: "Peau & Dermatite", 
-                                    impact: "Irritations", 
-                                    desc: "Les minéraux de l'eau dure assèchent l'épiderme et aggravent l'eczéma. L'installation d'un adoucisseur d'eau garantit une eau douce, idéale pour retrouver une peau soyeuse et apaiser les irritations.",
-                                    icon: <Heart className="w-6 h-6 text-rose-500" />,
-                                    badge: "Soin Personnel",
-                                    img: womansufferingfromHardWaterImg,
-                                    color: "bg-rose-500"
-                                },
-                                { 
-                                    title: "Électroménagers", 
-                                    impact: "Vie /2", 
-                                    desc: "Les dépôts calcaires réduisent de moitié la durée de vie de vos électroménagers. Protégez votre plomberie et votre lave-vaisselle avec nos systèmes de traitement de l'eau anti-calcaire.",
-                                    icon: <Shield className="w-6 h-6 text-emerald-600" />,
-                                    badge: "Protection Actifs",
-                                    img: energyCostImg,
-                                    color: "bg-emerald-600"
-                                },
-                                { 
-                                    title: "Entretien Ménager", 
-                                    impact: "Double effort", 
-                                    desc: "Finies les traces de tartre tenaces sur la robinetterie et la paroi de douche. Une eau adoucie facilite grandement l'entretien ménager et laisse votre vaisselle éclatante, sans résidus.",
-                                    icon: <Sparkles className="w-6 h-6 text-cyan-500" />,
-                                    badge: "Confort",
-                                    img: entretienMenagerImg,
-                                    color: "bg-cyan-500"
-                                },
-                                { 
-                                    title: "Textiles & Linge", 
-                                    impact: "Usure Précoce", 
-                                    desc: "L'eau dure rend les fibres rêches et ternit les couleurs. Laver votre linge avec de l'eau douce préserve la qualité des textiles et prolonge considérablement la durée de vie de vos vêtements.",
-                                    icon: <Shirt className="w-6 h-6 text-indigo-500" />,
-                                    badge: "Linge Doux",
-                                    img: textileLingeImg,
-                                    color: "bg-indigo-500"
-                                },
-                                { 
-                                    title: "Consommation", 
-                                    impact: "Savon x2", 
-                                    desc: "En neutralisant la dureté de l'eau, un adoucisseur réduit jusqu'à 50% votre consommation de savons et détergents. Une solution écologique et très économique au quotidien.",
-                                    icon: <HandCoins className="w-6 h-6 text-amber-500" />,
-                                    badge: "Économie",
-                                    img: consommationImg,
-                                    color: "bg-amber-500"
-                                }
-                            ].map((item, idx) => (
-                                <div 
-                                    key={idx} 
-                                    className="group relative h-[420px] rounded-[3rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200 hover:-translate-y-2"
-                                    onClick={() => navigate("/consultation")}
-                                >
-                                    {/* Background Image with Overlay */}
-                                    <div className="absolute inset-0 z-0">
-                                        <img 
-                                            src={item.img} 
-                                            alt={item.title} 
-                                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 group-hover:opacity-60"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-br from-white via-white/40 to-transparent" />
-                                    </div>
-
-                                    <div className="relative z-10 inset-0 p-10 h-full flex flex-col justify-between">
-                                        <div className="space-y-4">
-                                            <div className="flex items-center gap-3">
-                                                <div className={`w-3 h-3 rounded-full ${item.color} shadow-lg`} />
-                                                <span className="text-[10px] font-black uppercase tracking-wider text-slate-500 group-hover:text-blue-600 transition-colors">
-                                                    {item.badge}
-                                                </span>
+                        <div className="relative">
+                            <div className="overflow-hidden px-4 md:px-0" ref={diagnosticEmblaRef}>
+                                <div className="flex gap-6 py-4">
+                                    {[
+                                        { 
+                                            title: "Énergie & Coût", 
+                                            impact: "+25% Facture", 
+                                            desc: "L'accumulation de calcaire liée à l'eau dure diminue l'efficacité énergétique de votre chauffe-eau. Un adoucisseur d'eau performant élimine le tartre, réduisant ainsi vos factures d'énergie.",
+                                            icon: <Zap className="w-5 h-5 text-blue-500" />,
+                                            badge: "Impact Financier",
+                                            img: compteurImg
+                                        },
+                                        { 
+                                            title: "Peau & Dermatite", 
+                                            impact: "Irritations", 
+                                            desc: "Les minéraux de l'eau dure assèchent l'épiderme et aggravent l'eczéma. L'installation d'un adoucisseur d'eau garantit une eau douce, idéale pour retrouver une peau soyeuse et apaiser les irritations.",
+                                            icon: <Heart className="w-5 h-5 text-rose-500" />,
+                                            badge: "Soin Personnel",
+                                            img: womansufferingfromHardWaterImg
+                                        },
+                                        { 
+                                            title: "Électroménagers", 
+                                            impact: "Vie /2", 
+                                            desc: "Les dépôts calcaires réduisent de moitié la durée de vie de vos électroménagers. Protégez votre plomberie et votre lave-vaisselle avec nos systèmes de traitement de l'eau anti-calcaire.",
+                                            icon: <Shield className="w-5 h-5 text-emerald-500" />,
+                                            badge: "Protection Actifs",
+                                            img: laveVaisselleEncrasséImg
+                                        },
+                                        { 
+                                            title: "Entretien Ménager", 
+                                            impact: "Double effort", 
+                                            desc: "Finies les traces de tartre tenaces sur la robinetterie et la paroi de douche. Une eau adoucie facilite grandement l'entretien ménager et laisse votre vaisselle éclatante, sans résidus.",
+                                            icon: <Sparkles className="w-5 h-5 text-cyan-500" />,
+                                            badge: "Confort",
+                                            img: entretienMenagerImg
+                                        },
+                                        { 
+                                            title: "Textiles & Linge", 
+                                            impact: "Usure Précoce", 
+                                            desc: "L'eau dure rend les fibres rêches et ternit les couleurs. Laver votre linge avec de l'eau douce préserve la qualité des textiles et prolonge considérablement la durée de vie de vos vêtements.",
+                                            icon: <Shirt className="w-5 h-5 text-indigo-500" />,
+                                            badge: "Linge Doux",
+                                            img: textileLingeImg
+                                        },
+                                        { 
+                                            title: "Consommation", 
+                                            impact: "Savon x2", 
+                                            desc: "En neutralisant la dureté de l'eau, un adoucisseur réduit jusqu'à 50% votre consommation de savons et détergents. Une solution écologique et très économique au quotidien.",
+                                            icon: <HandCoins className="w-5 h-5 text-amber-500" />,
+                                            badge: "Économie",
+                                            img: consommationImg
+                                        }
+                                    ].map((item, idx) => (
+                                        <div 
+                                            key={idx} 
+                                            className="flex-[0_0_100%] md:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0 shrink-0 group relative bg-[#F8FAFC] rounded-[2.5rem] p-4 border border-slate-100/50 hover:bg-white transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(30,58,138,0.1)] overflow-hidden cursor-pointer flex flex-col"
+                                            onClick={() => navigate("/consultation")}
+                                        >
+                                            <div className="relative h-64 shrink-0 overflow-hidden rounded-[2rem] mb-8">
+                                                <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110" />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                                <div className="absolute top-4 left-4 z-20">
+                                                    <div className="bg-white/90 backdrop-blur-xl px-4 py-1.5 rounded-full flex items-center gap-2 shadow-sm">
+                                                        {item.icon}
+                                                        <span className="text-[10px] font-black text-slate-900 uppercase tracking-widest">{item.badge}</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <h3 className="text-3xl font-medium text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
-                                                {item.title}
-                                            </h3>
-                                            <p className="text-slate-600 text-sm leading-relaxed transition-all duration-1000 text-justify">
-                                                {item.desc}
-                                            </p>
-                                        </div>
-
-                                        <div className="space-y-4">
-                                            <div className="h-px w-12 bg-blue-200 group-hover:w-full transition-all duration-700" />
-                                            <div className="text-xs font-light text-slate-600 group-hover:text-blue-800 transition-all italic">
-                                                Impact : <span className="font-bold border-b border-transparent group-hover:border-blue-600">{item.impact}</span>
+                                            <div className="px-4 pb-4 space-y-4 flex flex-col flex-grow">
+                                                <div className="space-y-1">
+                                                    <span className="text-[10px] font-black text-[#8CC63F] uppercase tracking-widest">Impact: {item.impact}</span>
+                                                    <h3 className="text-xl font-bold text-[#18448F] leading-tight group-hover:text-blue-600 transition-colors">{item.title}</h3>
+                                                </div>
+                                                <p className="text-slate-500 text-sm leading-relaxed font-light text-justify flex-grow">{item.desc}</p>
+                                                <div className="pt-4 flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
+                                                    La Solution <ArrowRight className="w-4 h-4" />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    {/* Hover Overlay CTA */}
-                                    <div className="absolute inset-0 bg-blue-600/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 space-y-6 translate-y-full group-hover:translate-y-0 text-center">
-                                        <div className="text-center">
-                                            <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-2 italic">Résoudre ce problème</p>
-                                            <h4 className="text-white text-2xl font-bold leading-tight px-6">Expertise gratuite pour cette solution</h4>
-                                        </div>
-                                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white border border-white/20 group-hover:rotate-45 transition-transform duration-700">
-                                            <ArrowRight className="w-6 h-6" />
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
-                            ))}
+                            </div>
+                            
+                            {/* Navigation Arrows */}
+                            <div className="flex items-center justify-center gap-4 mt-8">
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="rounded-full bg-white shadow-sm hover:bg-slate-50 border-slate-200 h-12 w-12" 
+                                    onClick={scrollPrevDiagnostic}
+                                >
+                                    <ChevronLeft className="h-6 w-6 text-[#18448F]" />
+                                </Button>
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="rounded-full bg-white shadow-sm hover:bg-slate-50 border-slate-200 h-12 w-12" 
+                                    onClick={scrollNextDiagnostic}
+                                >
+                                    <ChevronRight className="h-6 w-6 text-[#18448F]" />
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>
 
+
+                {/* Qu'est-ce qu'un adoucisseur d'eau ? - Premium Redesign */}
+                <section className="py-24 relative overflow-visible bg-[#0A1A3A] z-20" id="aeo-adoucisseur">
+                    {/* Background Gradients */}
+                    <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-600/30 via-[#0A1A3A]/0 to-[#0A1A3A]/0 pointer-events-none"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-emerald-600/20 via-[#0A1A3A]/0 to-[#0A1A3A]/0 pointer-events-none"></div>
+                    
+                    {/* Floating decorative elements */}
+                    <div className="absolute top-20 right-[15%] w-32 h-32 bg-blue-500/20 rounded-full blur-[60px]"></div>
+                    <div className="absolute bottom-20 left-[10%] w-40 h-40 bg-emerald-500/20 rounded-full blur-[80px]"></div>
+
+                    <div className="container mx-auto px-6 max-w-6xl relative z-10">
+                        <div className="flex flex-col lg:flex-row gap-16 items-center">
+                            
+                            {/* Left Content: Text */}
+                            <div className="lg:w-5/12 space-y-8">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-blue-200 text-xs font-bold tracking-[0.2em] uppercase">
+                                    Technologie Essentielle
+                                </div>
+                                <h2 className="text-3xl lg:text-5xl font-bold text-white leading-tight">
+                                    Qu'est-ce qu'un <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-400 italic font-bold">adoucisseur d'eau ?</span>
+                                </h2>
+                                <p className="text-blue-100/70 text-lg leading-relaxed font-light">
+                                    C'est le gardien de votre maison. Ce système de filtration spécialisé élimine à la source le calcium et le magnésium—les minéraux responsables de l'eau dure. En transformant cette eau agressive en une eau douce et soyeuse, il protège durablement vos équipements, votre peau et votre budget.
+                                </p>
+                            </div>
+
+                            {/* Right Content: Illuminated Softener Image */}
+                            <div className="lg:w-7/12 w-full relative flex justify-center items-center mt-12 lg:mt-0 z-20">
+                                {/* Ambient Glow Behind the Image */}
+                                <div className="absolute inset-0 bg-blue-500/30 blur-[120px] rounded-full transform scale-150 pointer-events-none"></div>
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+                                
+                                <img 
+                                    src={SentinelWaterSoftenerImg} 
+                                    alt="Adoucisseur d'eau Sentinelle" 
+                                    className="relative z-10 w-full max-w-sm lg:max-w-md h-auto object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.3)] transform scale-[1.25] lg:scale-[1.4]" 
+                                />
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
 
                 {/* 4. Selection Guide: The Bridge - Copied from Adoucisseur-eau-municipal */}
                 <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
@@ -652,7 +674,7 @@ const A = () => {
 
                             {/* Right Side: Title and Content grouped to be vertically centered */}
                             <div className="container mx-auto px-6 relative z-10 pointer-events-none">
-                                <div className="w-full lg:w-1/2 lg:ml-auto space-y-12 lg:space-y-20 lg:pl-8 lg:pr-12 xl:pr-24 max-w-3xl mt-12 lg:mt-0 pointer-events-auto">
+                                <div className="w-full lg:w-1/2 lg:ml-auto space-y-6 lg:space-y-8 lg:pl-8 lg:pr-12 xl:pr-24 max-w-3xl mt-12 lg:mt-0 pointer-events-auto">
                                     
                                     {/* Title Block */}
                                     <div className="text-center lg:text-left mb-0">
@@ -696,10 +718,7 @@ const A = () => {
                                     return (
                                         <>
                                             <div className="flex items-center gap-4 animate-in slide-in-from-right-4 fade-in duration-500" key={`title-${activeTransitionStep}`}>
-                                                <div className="w-14 h-14 rounded-full bg-[#18448F] flex items-center justify-center text-white shadow-lg shrink-0">
-                                                    {activeData.icon}
-                                                </div>
-                                                <h3 className="text-3xl lg:text-4xl font-bold text-[#18448F] leading-tight">{activeData.title}</h3>
+                                                <h3 className="text-xl lg:text-2xl font-semibold text-[#18448F] leading-tight">{activeData.title}</h3>
                                             </div>
                                             
                                             <p className="text-slate-600 text-lg leading-relaxed text-justify animate-in slide-in-from-right-8 fade-in duration-700" key={`desc-${activeTransitionStep}`}>
@@ -718,8 +737,8 @@ const A = () => {
                                             <button 
                                                 key={idx}
                                                 onClick={() => setActiveTransitionStep(idx)}
-                                                className={`w-3 h-3 rounded-full transition-all duration-300 ${activeTransitionStep === idx ? 'bg-[#18448F] scale-125 ring-4 ring-blue-100' : 'bg-slate-300 hover:bg-slate-400'}`}
-                                                aria-label={`Aller à  l'étape ${idx + 1}`}
+                                                className={`w-2 h-2 rounded-full transition-all duration-300 ${activeTransitionStep === idx ? 'bg-[#18448F] scale-125 ring-2 ring-blue-100' : 'bg-slate-300 hover:bg-slate-400'}`}
+                                                aria-label={`Aller à l'étape ${idx + 1}`}
                                             />
                                         ))}
                                     </div>
@@ -731,6 +750,10 @@ const A = () => {
                     </div>
                 </section>
 
+                {/* Section Spacer */}
+                <div className="w-full bg-white py-12 lg:py-20 flex justify-center items-center">
+                    <div className="w-32 h-1 bg-gradient-to-r from-[#18448F] to-[#8CC63F] rounded-full opacity-30"></div>
+                </div>
 
                 {/* 4. Comparative Analysis Section */}
                 <section className="py-24 bg-white relative overflow-hidden">

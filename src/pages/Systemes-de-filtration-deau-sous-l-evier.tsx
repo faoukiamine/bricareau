@@ -273,8 +273,7 @@ const C = () => {
                         
                         {/* AEO Intro (Centered) */}
                         <div className="max-w-4xl mx-auto text-center mb-20 lg:mb-32">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-[#18448F] text-xs font-bold tracking-[0.2em] uppercase mb-8">
-                                <Sparkles className="w-4 h-4 text-emerald-500" />
+                            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#18448F] border border-blue-800 text-white text-xs font-bold tracking-[0.2em] uppercase mb-8">
                                 Technologie de pointe
                             </div>
                             <h2 className="mb-8 heading-pro-max text-center">
