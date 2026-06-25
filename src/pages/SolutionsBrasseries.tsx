@@ -58,7 +58,7 @@ const SolutionsBrasseries = () => {
                 <Hero 
                     className="min-h-0 justify-start lg:min-h-[100vh] lg:justify-center"
                     image={heroImg}
-                    highlightedTitle={<span className="font-bold not-italic text-[#18448F]">L'effervescence <span className="text-[#8CC63F]">pure</span></span>}
+                    highlightedTitle={<span className="font-bold not-italic text-[#18448F]">L'effervescence <span className="text-[#8CC63F]">de l'eau pure</span></span>}
                     mainTitle="pour votre brasserie."
                     subtitle="Sublimez le profil de vos bières grâce à une eau parfaitement maîtrisée. Nos solutions de filtration de pointe vous permettent d'ajuster votre profil minéral avec une régularité absolue, tout en optimisant le rendement de vos brassins et en réduisant votre empreinte écologique."
                     ctaText="Planifier une consultation"

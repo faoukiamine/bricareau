@@ -1,7 +1,7 @@
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import guideExpertImg from "@/assets/discover_expert.jpg";
+import guideExpertImg from "@/assets/2147765046.jpg";
 
 const WaterDiagnosis = () => {
     return (
