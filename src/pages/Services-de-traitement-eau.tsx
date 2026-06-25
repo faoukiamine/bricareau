@@ -23,10 +23,11 @@ import { Button } from "@/components/ui/button";
 import { useNavigate, Link } from "react-router-dom";
 import servicesHero from "@/assets/SERVICES.jpg";
 import bricareauCareImg from "@/assets/cae3c0a4-5b4d-4b0e-8bc3-3550a714f7bb.jpg";
-import waterSoftenerInstallImg from "@/assets/Water-Softener-installation.jpg";
+import waterSoftenerInstallImg from "@/assets/2240.jpeg";
+import entretienPreventifImg from "@/assets/Water softener installation to remove hard water.png";
 import roServiceImg from "@/assets/RO service.png";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
-import diagnosticImg from "@/assets/step-diagnostic.png";
+import diagnosticImg from "@/assets/13600.jpg";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -290,9 +291,9 @@ const ServicesTraitementEau = () => {
                                                         ))}
                                                     </ul>
                                                 </div>
-                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-12 relative">
+                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-24 relative">
                                                     <img 
-                                                        src={waterSoftenerInstallImg} 
+                                                        src={entretienPreventifImg} 
                                                         className="w-full h-full object-cover"
                                                      alt="Entretien de système d'eau" title="Traitement d'eau Québec par Bricareau" />
                                                 </div>

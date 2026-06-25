@@ -8,7 +8,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ExpertTrustSection from "@/components/ExpertTrustSection";
 import WaterDiagnosis from "@/components/water_diagnosis";
 import { Heart, Wallet, Leaf } from "lucide-react";
-import heroImg from "@/assets/family-preparing-dinner-together.jpg";
+import heroImg from "@/assets/undersink_filtration_header.jpg";
 
 import softenerImg from "@/assets/Adoucisseur_d_eau.png";
 import autoSystemImg from "@/assets/clack-water-softener.webp";

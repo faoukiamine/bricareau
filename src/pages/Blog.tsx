@@ -8,7 +8,7 @@ import { categories } from "@/data/blogCategories";
 import React, { useState, useEffect } from "react";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 
-import blogHero from "@/assets/wave-banner.jpg";
+import blogHero from "@/assets/139709.jpg";
 
 const Blog = () => {
     useEffect(() => {
