@@ -43,7 +43,8 @@ import countertopFountainImg2 from "@/assets/A9_no_bg.png";
 import countertopFountainImg3 from "@/assets/A12_no_bg.png";
 import bottlelessFountainImg1 from "@/assets/A13_no_bg.png";
 import bottlelessFountainImg2 from "@/assets/A7_no_bg.png";
-import bottlelessFountainImg3 from "@/assets/4rlkbv4rlkbv4rlk.png";
+import bottlelessFountainImg3 from "@/assets/Atlas dans une salle de réunion.png";
+import atlasImg from "@/assets/Atlas.png";
 import iceMachineImg from "@/assets/Machine+à+glaçons+de+comptoir+auto-nettoyante+de+26+lb+R.W.FLAME-78609293.webp";
 import ecoImpactImg4 from "@/assets/water-dispenser in office.jpg";
 import ecoImpactImg5 from "@/assets/water-dispenser in kitchen.jpg";
@@ -128,7 +129,7 @@ const FontainesDeauModernes = () => {
                     mainTitle={<span className="font-bold not-italic">intelligente et durable.</span>}
                     subtitle="Offrez à vos collaborateurs une eau filtrée d'exception, fraîche, chaude ou pétillante, directement raccordée à votre réseau. Une solution écologique, économique et sans logistique de bonbonnes."
                     ctaText="PLANIFIER UNE CONSULTATION GRATUITE"
-                    ctaLink="/contact-entreprises"
+                    ctaLink="/consultation"
                     showPhone={false}
                     showBreadcrumbs={true}
                     breadcrumbVariant="light"
@@ -213,7 +214,7 @@ const FontainesDeauModernes = () => {
                                         className={cn(
                                             "md:col-span-7 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
                                             activeFeature === 0 
-                                                ? "bg-[#18448F] border-transparent text-white shadow-[0_20px_50px_rgba(24,68,143,0.15)] translate-x-1"
+                                                ? "bg-slate-900 border-transparent text-white shadow-[0_20px_50px_rgba(15,23,42,0.2)] translate-x-1"
                                                 : "bg-white/80 backdrop-blur-md border-slate-100 hover:border-slate-200 text-slate-800 shadow-sm hover:shadow-md hover:translate-x-0.5"
                                         )}
                                     >
@@ -254,7 +255,7 @@ const FontainesDeauModernes = () => {
                                         className={cn(
                                             "md:col-span-5 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
                                             activeFeature === 1 
-                                                ? "bg-[#18448F] border-transparent text-white shadow-[0_20px_50px_rgba(24,68,143,0.15)] translate-x-1"
+                                                ? "bg-slate-900 border-transparent text-white shadow-[0_20px_50px_rgba(15,23,42,0.2)] translate-x-1"
                                                 : "bg-white/80 backdrop-blur-md border-slate-100 hover:border-slate-200 text-slate-800 shadow-sm hover:shadow-md hover:translate-x-0.5"
                                         )}
                                     >
@@ -313,7 +314,7 @@ const FontainesDeauModernes = () => {
                                         className={cn(
                                             "md:col-span-5 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
                                             activeFeature === 2 
-                                                ? "bg-[#18448F] border-transparent text-white shadow-[0_20px_50px_rgba(24,68,143,0.15)] translate-x-1"
+                                                ? "bg-slate-900 border-transparent text-white shadow-[0_20px_50px_rgba(15,23,42,0.2)] translate-x-1"
                                                 : "bg-white/80 backdrop-blur-md border-slate-100 hover:border-slate-200 text-slate-800 shadow-sm hover:shadow-md hover:translate-x-0.5"
                                         )}
                                     >
@@ -356,7 +357,7 @@ const FontainesDeauModernes = () => {
                                         className={cn(
                                             "md:col-span-7 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
                                             activeFeature === 3 
-                                                ? "bg-[#18448F] border-transparent text-white shadow-[0_20px_50px_rgba(24,68,143,0.15)] translate-x-1"
+                                                ? "bg-slate-900 border-transparent text-white shadow-[0_20px_50px_rgba(15,23,42,0.2)] translate-x-1"
                                                 : "bg-white/80 backdrop-blur-md border-slate-100 hover:border-slate-200 text-slate-800 shadow-sm hover:shadow-md hover:translate-x-0.5"
                                         )}
                                     >
@@ -419,14 +420,7 @@ const FontainesDeauModernes = () => {
                                 {/* Interactive Frame with Glassmorphic Overlay */}
                                 <div className="w-full relative max-w-[480px]">
                                     
-                                    {/* Dot pattern decorative element */}
-                                    <div className="absolute -top-8 -left-8 w-32 h-32 opacity-30 pointer-events-none z-0">
-                                        <div className="grid grid-cols-8 gap-3">
-                                            {Array.from({ length: 64 }).map((_, i) => (
-                                                <div key={i} className="w-1 h-1 bg-blue-500 rounded-full" />
-                                            ))}
-                                        </div>
-                                    </div>
+
 
                                     {/* Main Glass Frame Container */}
                                     <div className="bg-white rounded-[2.5rem] border border-slate-100/80 shadow-[0_45px_90px_-25px_rgba(0,0,0,0.08)] relative z-10 overflow-hidden flex items-center justify-center aspect-square sm:aspect-square">
@@ -443,13 +437,7 @@ const FontainesDeauModernes = () => {
                                             className="relative z-10 w-full h-full object-cover drop-shadow-2xl animate-in fade-in zoom-in-95 duration-700"
                                          alt="Solutions d'hydratation écologiques et design pour le bureau Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
 
-                                        {/* Floating Badge */}
-                                        <div className="absolute bottom-6 right-6 z-20 bg-white/70 backdrop-blur-md border border-slate-100 py-2 px-4 rounded-full shadow-sm flex items-center gap-2">
-                                            <Sparkles className="w-3.5 h-3.5 text-blue-600 animate-pulse" />
-                                            <span className="text-[9px] font-black uppercase tracking-widest text-[#18448F]">
-                                                Pureté & Design Bricareau
-                                            </span>
-                                        </div>
+
                                     </div>
 
                                     {/* Outer Decorative Rings */}
@@ -487,7 +475,7 @@ const FontainesDeauModernes = () => {
                      <div className="aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-md">
                         <img 
                             src={bottlelessFountainImg3} 
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" 
+                            className="w-full h-full object-cover object-right hover:scale-105 transition-transform duration-1000" 
                          alt="Remplissage d'une bouteille d'eau filtrée pure" title="Systèmes d'eau sur mesure par Bricareau" />
                     </div>
                 </section>
@@ -560,29 +548,29 @@ const FontainesDeauModernes = () => {
                             >
                                 {[
                                     {
-                                        title: "Bluedrop Ice",
-                                        desc: "La fontaine avec machine à glaçons intégrée Bluedrop Ice vous propose de l'eau filtrée et des glaçons purs au gré de vos envies. Son système de filtration en 5 étapes offre une barrière de protection totale et vous rafraîchit en continu. Cette plateforme d'hydratation tout-en-un s'intègre aussi bien dans les réceptions que dans les cafétérias.",
+                                        title: "Ice",
+                                        desc: "La fontaine Bricareau Ice avec machine à glaçons intégrée vous propose de l'eau filtrée et des glaçons purs au gré de vos envies. Son système de filtration en 5 étapes offre une barrière de protection totale et vous rafraîchit en continu. Cette plateforme d'hydratation tout-en-un s'intègre aussi bien dans les réceptions que dans les cafétérias.",
                                         img: countertopFountainImg3
                                     },
                                     {
-                                        title: "Ravello",
-                                        desc: "La fontaine à eau Bluedrop Ravello vous propose de l'eau filtrée plate, gazeuse, à température ambiante et chaude pour votre bureau. Grâce à ses dimensions incroyablement compactes, elle s'intègre harmonieusement à tous les environnements vous offrant toute l'eau dont vous avez besoin et répondant à vos besoins d'hydratation avec élégance et praticité.",
+                                        title: "Makalu",
+                                        desc: "Fatigué de l'eau du robinet au goût fade ? Il est temps de redécouvrir le plaisir de l'eau. La fontaine de comptoir réseau Makalu vous offre une hydratation revitalisante grâce à notre système breveté de double filtration. Délectez-vous de gorgées vivifiantes d'eau fraîche, ou savourez la chaleur apaisante d'une tasse d'eau fumante. Cette machine élégante et compacte vous désaltère d'une simple pression. Avec la Makalu, profitez d'une eau parfaite, à chaque fois.",
                                         img: countertopFountainImg1
                                     },
                                     {
-                                        title: "B3",
-                                        desc: "La fontaine à eau de bureau Bluedrop B3 fournit de l'eau chaude et froide filtrée à la demande. Son système de filtration intégré en 3 étapes garantit un approvisionnement continu en eau savoureuse pour votre bureau. Disponible en version sur pied (B4) et à poser (B3), elle offre un design élégant et moderne qui s'intègre à tous les environnements.",
+                                        title: "Fuji",
+                                        desc: "L'eau potable est essentielle à votre santé, il est donc primordial de ne consommer que le meilleur. La fontaine Fuji vous offre des options d'eau chaude, tempérée et froide, ainsi qu'une fonction d'auto-nettoyage aux UV pour une purification antibactérienne optimale. Notre puissant système de double filtration garantit une eau sûre et délicieuse à chaque instant. Et comme pour tout achat d'une fontaine réseau Bricareau, votre premier ensemble de filtres est offert !",
                                         img: countertopFountainImg2 // B3 Countertop asset
                                     },
                                     {
-                                        title: "B4",
-                                        desc: "La fontaine à eau de bureau Bluedrop B4 fournit de l'eau chaude et froide filtrée à la demande. Son système de filtration intégré en 3 étapes garantit un approvisionnement continu en eau savoureuse pour votre bureau. Disponible en version sur pied ou à poser, elle offre un design élégant et moderne qui s'intègre à tous les environnements. Grâce à son débit rapide et à la stérilisation automatique du réservoir, s'hydrater n'a jamais été aussi simple.",
+                                        title: "Everest",
+                                        desc: "Offrez à votre bureau cette fontaine sur pied et proposez-leur l'eau la plus savoureuse qu'ils aient jamais goûtée. L'installation est simple et chaque unité est couverte par notre garantie satisfait ou remboursé de 30 jours, vous donnant une totale confiance en votre nouvelle station d'hydratation. Le design à la fois simple et élégant de l'Everest, avec ses boutons électroniques, vous fournit de l'eau chaude fumante ou glacée à la demande. Chaque goutte traverse un système de filtration à 2 étapes pour que vos employés se désaltèrent avec une eau parfaite, à chaque fois.",
                                         img: bottlelessFountainImg1
                                     },
                                      {
-                                        title: "B4",
-                                        desc: "La fontaine à eau de bureau Bluedrop B4 fournit de l'eau chaude et froide filtrée à la demande. Son système de filtration intégré en 3 étapes garantit un approvisionnement continu en eau savoureuse pour votre bureau. Disponible en version sur pied ou à poser, elle offre un design élégant et moderne qui s'intègre à tous les environnements. Grâce à son débit rapide et à la stérilisation automatique du réservoir, s'hydrater n'a jamais été aussi simple.",
-                                        img: bottlelessFountainImg2
+                                        title: "Atlas",
+                                        desc: "Offrez à votre bureau cette fontaine sur pied et proposez-leur l'eau la plus savoureuse qu'ils aient jamais goûtée. L'installation est simple et chaque unité est couverte par notre garantie satisfait ou remboursé de 30 jours, vous donnant une totale confiance en votre nouvelle station d'hydratation. Le design à la fois simple et élégant de l'Atlas, avec ses leviers de distribution par pression, vous fournit de l'eau chaude fumante ou glacée à la demande. Chaque goutte traverse un système de filtration à 2 étapes pour que vos employés se désaltèrent avec une eau parfaite, à chaque fois.",
+                                        img: atlasImg
                                     }
                                 ].map((card, idx) => (
                                     <div 
@@ -609,7 +597,7 @@ const FontainesDeauModernes = () => {
                                         {/* Details Button */}
                                         <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                                             <NavLink 
-                                                to="/contact-entreprises" 
+                                                to="/contact-form" 
                                                 className="inline-flex items-center gap-2 text-[10px] font-black text-slate-800 uppercase tracking-widest hover:text-blue-600 transition-colors group"
                                             >
                                                 Voir les détails <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-blue-600" />

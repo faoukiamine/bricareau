@@ -164,7 +164,7 @@ export const mainNavMenuItems: MenuItem[] = [
                 href: "/solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants",
                 links: [
                     { 
-                        title: "Adoucisseur d'eau commercial", 
+                        title: "Adoucisseurs d'eau commerciaux", 
                         description: "Éradiquez le tartre pour prolonger la vie de vos équipements de cuisine et de buanderie.", 
                         href: "/adoucisseurs-eau-commerciaux" 
                     }, 
