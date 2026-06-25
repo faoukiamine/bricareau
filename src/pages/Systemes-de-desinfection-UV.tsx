@@ -191,238 +191,6 @@ const DesinfectionUV = () => {
                     singleLineTitle={false}
                 />
 
-                {/* AEO TARGET PARAGRAPH (Featured Snippets & Voice Search) */}
-                <section className="py-16 bg-slate-50 border-b border-slate-200" id="aeo-uv">
-                    <div className="container mx-auto px-6 max-w-4xl">
-                        <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-2 h-full bg-[#18448F]"></div>
-                            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                                Qu'est-ce qu'un système de désinfection UV pour l'eau ?
-                            </h2>
-                            <p className="text-slate-600 text-lg leading-relaxed mb-6 font-medium">
-                                Un système de désinfection UV utilise la lumière ultraviolette (UV-C) pour détruire 99,99 % des micro-organismes nocifs présents dans l'eau. C'est la méthode la plus efficace et écologique pour éliminer les bactéries (comme E. coli), les virus et les parasites sans ajouter de produits chimiques à votre eau.
-                            </p>
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-600 font-light">
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Élimination de 99,99% des bactéries</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Zéro produit chimique ajouté</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Conserve le goût naturel de l'eau</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Protection microbiologique 24h/24</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 3. Why choose UV disinfection? - Technical/Swiss Design Precision Grid with Integrated Background */}
-                <section className="py-24 lg:py-32 relative bg-white">
-                    {/* Integrated background image harmonizing with UV water tech */}
-                    <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
-                        <img 
-                            src={sterileWaterImg} 
-                            className="w-full h-full object-cover opacity-50 grayscale mix-blend-multiply" 
-                         alt="Eau stérile sous rayon UV - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
-                        {/* Soft white overlay to ensure perfect text readability and preserve the "sterile" technical look */}
-                        <div className="absolute inset-0 bg-white/85 backdrop-blur-[1px]"></div>
-                        
-                        {/* Gradient mask to fade smoothly into the next/previous sections */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/40 to-white opacity-90"></div>
-                    </div>
-
-                    <div className="container mx-auto px-6 max-w-7xl relative z-10">
-                        <div className="max-w-4xl mb-24">
-
-                             <h2 className="mb-8 heading-pro-max text-left">
-                                 <span className="italic font-light text-[#18448F] block">Pourquoi la</span>
-                                 <span className="font-bold text-[#18448F] block">Désinfection UV ?</span>
-                             </h2>
-                             <p className="text-lg text-slate-500 max-w-2xl font-light leading-relaxed text-justify lg:text-left">
-                                 Une ingénierie de précision paramétrée pour éradiquer 99,99% des micro-organismes sans aucun additif chimique.
-                             </p>
-                        </div>
-
-                        {/* Architectural Grid (Swiss Style) */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-slate-200">
-                            {[
-                                { 
-                                    icon: Leaf, title: "100% Naturel", 
-                                    desc: "Purification physique sans additifs chimiques. La minéralité de l'eau est intégralement préservée.",
-                                },
-                                { 
-                                    icon: Zap, title: "Action Instantanée", 
-                                    desc: "Éradication immédiate des pathogènes lors du passage à travers le sas de rayonnement UV-C.",
-                                },
-                                { 
-                                    icon: Award, title: "Qualité Clinique", 
-                                    desc: "Efficacité prouvée en laboratoire : neutralisation totale de l'ADN des micro-organismes.",
-                                },
-                                {
-                                    iconSrc: personShieldSvg, isSvg: true, title: "Tolérance Zéro", 
-                                    desc: "Barrière infranchissable certifiée contre les bactéries, virus et kystes parasitoïdes exclus.",
-                                },
-                                { 
-                                    icon: CupSoda, title: "Goût Inaltéré", 
-                                    desc: "Sans composés chlorés, l'eau conserve son intégrité gustative et sa fraîcheur pure.",
-                                },
-                                { 
-                                    icon: ShieldCheck, title: "Zéro Particule Nocive", 
-                                    desc: "Aucun stockage, aucune manipulation de substances toxiques n'est requise. Sécurité intégrale.",
-                                },
-                                { 
-                                    icon: HighEfficiencyIcon, title: "Haut Rendement", 
-                                    desc: "Fonctionnement passif 24h/24 dont la consommation énergétique équivaut à celle d'une simple ampoule LED.",
-                                },
-                                {
-                                    iconSrc: resetWrenchSvg, isSvg: true, title: "Maintenance Réduite", 
-                                    desc: "Cycle d'entretien optimisé : remplacement unique de la lampe ultraviolette une fois par annuité.",
-                                },
-                            ].map((benefit, i) => (
-                                <div
-                                    key={i}
-                                    className="group relative p-10 border-b border-r border-slate-200 bg-white/40 backdrop-blur-sm hover:bg-white transition-all duration-500 flex flex-col h-full overflow-hidden"
-                                >
-                                    
-                                    <div className="w-12 h-12 mb-10 flex items-center justify-center text-slate-800 group-hover:text-blue-600 transition-colors duration-300 relative z-10">
-                                        {benefit.isSvg ? (
-                                            <div
-                                                className="w-7 h-7 bg-current shrink-0"
-                                                style={{
-                                                    maskImage: `url("${benefit.iconSrc}")`,
-                                                    WebkitMaskImage: `url("${benefit.iconSrc}")`,
-                                                    maskRepeat: 'no-repeat',
-                                                    WebkitMaskRepeat: 'no-repeat',
-                                                    maskPosition: 'center',
-                                                    WebkitMaskPosition: 'center',
-                                                    maskSize: 'contain',
-                                                    WebkitMaskSize: 'contain'
-                                                }}
-                                            />
-                                        ) : (
-                                            <benefit.icon className="h-7 w-7 stroke-[1.5] shrink-0" />
-                                        )}
-                                    </div>
-                                    
-                                    <div className="relative z-10 flex flex-col flex-grow mt-auto">
-                                        <h3 className="text-lg font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-700 transition-colors">
-                                            {benefit.title}
-                                        </h3>
-                                        <p className="font-normal leading-relaxed text-slate-500 text-[14px]">
-                                            {benefit.desc}
-                                        </p>
-                                    </div>
-
-                                    {/* Precision corner accent */}
-                                    <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 group-hover:w-full transition-all duration-500 ease-out" />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* 3.5. Pathogen Neutralization - Redesigned section */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-slate-950">
-                    {/* Cinematic Background */}
-                    <div className="absolute inset-0 z-0">
-                        <img 
-                            src={stormVisualImg} 
-                            className="w-full h-full object-cover opacity-40 animate-pulse-slow"
-                         alt="Force énergétique UV - Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(37,99,235,0.05)_0%,transparent_50%)]" />
-                        
-                        {/* Abstract procedural rays */}
-                        <div className="absolute inset-0 overflow-hidden mix-blend-screen opacity-20">
-                            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-blue-400 rotate-12 blur-md" />
-                            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-indigo-500 -rotate-12 blur-md" />
-                        </div>
-                    </div>
-
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-                            {/* Content Column */}
-                            <div className="space-y-10 order-1">
-                                <div className="space-y-6">
-                                    <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
-                                        Éliminez l'invisible : <br />
-                                        <span className="text-[#8CC63F] font-bold font-serif whitespace-nowrap">Protection contre 99,99%.</span>
-                                    </h2>
-                                    <p className="text-lg text-slate-300 font-light leading-relaxed max-w-xl text-justify lg:text-left">
-                                        Votre eau peut sembler cristalline tout en abritant des micro-organismes nocifs. Nos rayons UV-C ciblent le cœur des contaminants pour les rendre inoffensifs en une fraction de seconde, sans produits chimiques.
-                                    </p>
-                                </div>
-
-                                {/* Pathogens Grid */}
-                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                                    {[
-                                        { name: "E. Coli", level: "99.99%" },
-                                        { name: "Giardia", level: "99.99%" },
-                                        { name: "Salmonelle", level: "99.99%" },
-                                        { name: "Légionelle", level: "99.99%" },
-                                        { name: "Hépatite A", level: "99.99%" },
-                                        { name: "Cryptosporidium", level: "99.99%" }
-                                    ].map((p, i) => (
-                                        <div key={i} className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group hover:bg-white/10 hover:border-blue-500/50 transition-all duration-500">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)]" />
-                                            <div>
-                                                <div className="text-[12px] font-bold text-white group-hover:text-blue-400 transition-colors uppercase tracking-wider">{p.name}</div>
-                                                <div className="text-[9px] font-black tracking-widest text-blue-400/60 uppercase">{p.level}</div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* Mobile/Tablet only Barrière Active block */}
-                                <div className="lg:hidden p-8 rounded-[2.5rem] bg-gradient-to-br from-blue-600/20 to-indigo-900/30 border border-white/10 backdrop-blur-xl">
-                                    <div className="flex flex-col items-center text-center space-y-6">
-                                        <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center shadow-xl">
-                                            <ShieldCheck className="w-8 h-8 text-white" />
-                                        </div>
-                                        <div>
-                                            <div className="text-3xl font-black text-white tracking-tighter mb-2 italic uppercase">BARRIÈRE ACTIVE</div>
-                                            <p className="text-blue-100/60 font-light leading-relaxed text-sm italic">
-                                                "Une puissance de rayonnement UV-C certifiée pour garantir une eau sécuritaire à chaque litre consommé, protégeant votre famille des menaces invisibles."
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="pt-6 flex flex-col sm:flex-row gap-8 items-center border-t border-white/10">
-                                    <div className="relative inline-block w-full sm:w-auto group">
-                                        <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                        <Button 
-                                            asChild 
-                                            className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
-                                        >
-                                            <a href="/consultation">Évaluer la sécurité de mon eau</a>
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Impact Column (Desktop only) */}
-                            <div className="hidden lg:block lg:pl-12 order-2">
-                                <div className="relative p-12 rounded-[4rem] bg-gradient-to-br from-blue-600/20 to-indigo-900/30 border border-white/10 backdrop-blur-xl shadow-2xl overflow-hidden group">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[60px]" />
-                                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-indigo-500/10 blur-[60px]" />
-                                    
-                                    <div className="relative z-10 space-y-8 text-center lg:text-left">
-                                        <div className="w-20 h-20 rounded-3xl bg-blue-600 flex items-center justify-center mx-auto lg:mx-0 rotate-3 group-hover:rotate-6 transition-transform duration-700 shadow-2xl">
-                                            <ShieldCheck className="w-10 h-10 text-white" />
-                                        </div>
-                                        <div>
-                                            <div className="text-5xl font-black text-white tracking-tighter mb-2 italic">BARRIÈRE ACTIVE</div>
-                                            <p className="text-blue-100/60 font-light leading-relaxed text-lg italic">
-                                                "Une puissance de rayonnement UV-C certifiée pour garantir une eau sécuritaire à chaque litre consommé, protégeant votre famille des menaces invisibles."
-                                            </p>
-                                        </div>
-                                        <div className="flex justify-center lg:justify-start gap-2 h-1 bg-white/5 rounded-full overflow-hidden">
-                                            <div className="w-1/3 bg-blue-500 animate-[loading_2s_ease-in-out_infinite]" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* 2.5. Symptom Diagnostic Grid - UV Focused */}
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6 font-sans">
@@ -574,6 +342,168 @@ const DesinfectionUV = () => {
                                 <ChevronRight className="w-6 h-6" />
                             </Button>
                         </div>
+                    </div>
+                </section>
+
+                \n                {/* AEO TARGET PARAGRAPH (Featured Snippets & Voice Search) */}
+                <section className="py-16 relative overflow-hidden bg-[#0A1A3A] z-20" id="aeo-uv">
+                    {/* Cinematic Background for the entire section */}
+                    <div className="absolute inset-0 z-0 pointer-events-none">
+                        <img 
+                            src={stormVisualImg} 
+                            className="w-full h-full object-cover opacity-10 animate-[pulse_8s_ease-in-out_infinite] mix-blend-screen"
+                         alt="Force énergétique UV - Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0A1A3A] via-[#0A1A3A]/60 to-[#0A1A3A]" />
+                        
+                        {/* Abstract procedural rays */}
+                        <div className="absolute inset-0 overflow-hidden mix-blend-screen opacity-20">
+                            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-emerald-400 rotate-12 blur-md" />
+                            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-blue-500 -rotate-12 blur-md" />
+                        </div>
+                    </div>
+
+                    {/* Background Gradients */}
+                    <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-600/30 via-[#0A1A3A]/0 to-[#0A1A3A]/0 pointer-events-none z-0"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-emerald-600/20 via-[#0A1A3A]/0 to-[#0A1A3A]/0 pointer-events-none z-0"></div>
+                    
+                    {/* Floating decorative elements */}
+                    <div className="absolute top-20 right-[15%] w-32 h-32 bg-blue-500/20 rounded-full blur-[60px] z-0"></div>
+                    <div className="absolute bottom-20 left-[10%] w-40 h-40 bg-emerald-500/20 rounded-full blur-[80px] z-0"></div>
+
+                    <div className="container mx-auto px-4 max-w-[90rem] relative z-10">
+                        <div className="flex flex-col gap-10 items-center w-full">
+                            
+                            {/* Content: Text & Pathogens */}
+                            <div className="w-full lg:w-11/12 mx-auto space-y-8 text-center flex flex-col items-center">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-blue-200 text-xs font-bold tracking-[0.2em] uppercase">
+                                    Technologie Essentielle
+                                </div>
+                                <h2 className="text-3xl lg:text-5xl font-bold text-white leading-tight">
+                                    Qu'est-ce qu'un <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-400 italic font-bold">système de désinfection UV ?</span>
+                                </h2>
+                                <div className="text-white text-[20px] leading-[28px] font-light font-sans max-w-6xl flex flex-col items-center space-y-8">
+                                    <p>
+                                        Un système de désinfection UV utilise la lumière ultraviolette (UV-C) pour détruire 99,99 % des micro-organismes nocifs présents dans l'eau. C'est la méthode la plus efficace et écologique pour éliminer les bactéries, les virus et les parasites sans ajouter de produits chimiques à votre eau.
+                                    </p>
+
+                                    {/* Compact Pathogens Horizontal List */}
+                                    <div className="flex flex-wrap justify-center gap-3 w-full max-w-6xl">
+                                        {[
+                                            { name: "E. Coli", level: "99.99%" },
+                                            { name: "Giardia", level: "99.99%" },
+                                            { name: "Salmonelle", level: "99.99%" },
+                                            { name: "Légionelle", level: "99.99%" },
+                                            { name: "Hépatite A", level: "99.99%" },
+                                            { name: "Cryptosporidium", level: "99.99%" }
+                                        ].map((p, i) => (
+                                            <div key={i} className="flex items-center gap-2 px-4 py-2 group transition-all duration-300">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+                                                <span className="text-[11px] font-bold text-white group-hover:text-emerald-400 transition-colors uppercase tracking-wider">{p.name}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <p>
+                                        Votre eau peut sembler cristalline tout en abritant des micro-organismes nocifs. Nos rayons UV-C ciblent le cœur des contaminants pour les rendre inoffensifs en une fraction de seconde, sans produits chimiques.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {/* Compact Horizontal Cards Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-10 w-full max-w-5xl mx-auto">
+                            {[
+                                { 
+                                    icon: Leaf, title: "100% Naturel", 
+                                    desc: "Purification physique sans additifs chimiques. Minéralité préservée.",
+                                },
+                                { 
+                                    icon: Zap, title: "Instantané", 
+                                    desc: "Éradication immédiate lors du passage dans le sas de rayonnement.",
+                                },
+                                { 
+                                    icon: Award, title: "Clinique", 
+                                    desc: "Efficacité prouvée en laboratoire : neutralisation totale de l'ADN.",
+                                },
+                                {
+                                    iconSrc: personShieldSvg, isSvg: true, title: "Tolérance Zéro", 
+                                    desc: "Barrière certifiée contre bactéries, virus et kystes parasitoïdes exclus.",
+                                },
+                                { 
+                                    icon: CupSoda, title: "Goût Inaltéré", 
+                                    desc: "Sans chlore, l'eau conserve son intégrité gustative et sa pureté.",
+                                },
+                                { 
+                                    icon: ShieldCheck, title: "Zéro Risque", 
+                                    desc: "Aucune manipulation de substances toxiques n'est requise.",
+                                },
+                                { 
+                                    icon: HighEfficiencyIcon, title: "Haut Rendement", 
+                                    desc: "Fonctionnement 24h/24 dont la consommation équivaut à une LED.",
+                                },
+                                {
+                                    iconSrc: resetWrenchSvg, isSvg: true, title: "Maintenance", 
+                                    desc: "Remplacement unique de la lampe ultraviolette une fois par annuité.",
+                                },
+                            ].map((benefit, i) => (
+                                <div
+                                    key={i}
+                                    className="group relative p-6 rounded-[1.5rem] bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg hover:bg-white/10 hover:-translate-y-1 hover:border-emerald-500/30 transition-all duration-300 flex flex-col overflow-hidden"
+                                >
+                                    {/* Glowing Background Glow on Hover */}
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/0 blur-[50px] group-hover:bg-emerald-500/10 transition-colors duration-500 rounded-full pointer-events-none" />
+                                    
+                                    <div className="flex items-center gap-3 mb-3 relative z-10">
+                                        <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-blue-200 group-hover:text-emerald-400 group-hover:bg-emerald-500/10 transition-all duration-300 shrink-0">
+                                            {benefit.isSvg ? (
+                                                <div
+                                                    className="w-5 h-5 bg-current shrink-0"
+                                                    style={{
+                                                        maskImage: `url("${benefit.iconSrc}")`,
+                                                        WebkitMaskImage: `url("${benefit.iconSrc}")`,
+                                                        maskRepeat: 'no-repeat',
+                                                        WebkitMaskRepeat: 'no-repeat',
+                                                        maskPosition: 'center',
+                                                        WebkitMaskPosition: 'center',
+                                                        maskSize: 'contain',
+                                                        WebkitMaskSize: 'contain'
+                                                    }}
+                                                />
+                                            ) : (
+                                                <benefit.icon className="h-5 w-5 stroke-[1.5] shrink-0" />
+                                            )}
+                                        </div>
+                                        <h3 className="text-[16px] font-bold text-white tracking-tight group-hover:text-emerald-400 transition-colors leading-tight">
+                                            {benefit.title}
+                                        </h3>
+                                    </div>
+                                    
+                                    <div className="relative z-10">
+                                        <p className="font-light leading-snug text-blue-100/70 text-[13px]">
+                                            {benefit.desc}
+                                        </p>
+                                    </div>
+
+                                    {/* Precision bottom line accent */}
+                                    <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-emerald-400 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
+                                </div>
+                            ))}
+                        </div>
+                        
+                        {/* CTA Button placed at the end of the main section */}
+                        <div className="mt-10 flex justify-center w-full relative z-10">
+                            <div className="relative inline-block group">
+                                <div className="absolute inset-0 border border-blue-400 rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                <Button 
+                                    asChild 
+                                    className="relative bg-white hover:bg-blue-600 text-[#0A1A3A] hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-[14px] transition-all border-none"
+                                >
+                                    <a href="/consultation">Évaluer la sécurité de mon eau</a>
+                                </Button>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 

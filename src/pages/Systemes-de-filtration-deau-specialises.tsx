@@ -34,7 +34,7 @@ import {
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import bathroomImg from "@/assets/premium_bathroom_protection_1774493901305.png";
-import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import specializedFiltersImg from "@/assets/Filtres_specialises_transparent.png";
 import process1 from "@/assets/2148563485.jpg";
 import waterTestingImg1 from "@/assets/342800.jpg";
 import waterTasteImg from "@/assets/water-taste.jpg";
@@ -282,7 +282,7 @@ const B = () => {
                                 <span className="font-bold text-[#8CC63F] block"><span className="text-[#18448F]">Pourquoi</span> filtrer votre eau ?</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 mt-6 mx-auto max-w-2xl px-4">
-                                L'eau municipale traverse des kilomètres de tuyauteries vétustes avant d'arriver chez vous. Chaque verre peut contenir des traces de l'imparfait.
+                                L'eau municipale traverse des kilomètres de tuyauteries vétustes, tandis que l'eau de puits ou de surface est exposée aux éléments naturels avant d'arriver chez vous. Chaque verre peut ainsi contenir des traces de l'imparfait.
                             </p>
                         </div>
 
@@ -368,27 +368,6 @@ const B = () => {
                                     <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-400/20 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                                 </div>
                             ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* AEO TARGET PARAGRAPH (Featured Snippets & Voice Search) */}
-                <section className="py-16 bg-slate-50 border-t border-slate-200" id="aeo-puits">
-                    <div className="container mx-auto px-6 max-w-4xl">
-                        <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-2 h-full bg-[#18448F]"></div>
-                            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                                Qu'est-ce qu'un système de filtration pour eau de puits ?
-                            </h2>
-                            <p className="text-slate-600 text-lg leading-relaxed mb-6 font-medium">
-                                Un système de filtration pour eau de puits est une solution de traitement spécialisée conçue pour éliminer les contaminants spécifiques aux eaux souterraines, tels que le fer, le soufre (odeur d'œufs pourris), le manganèse et les bactéries. Il garantit une eau pure et sécuritaire pour toute la maison.
-                            </p>
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-600 font-light">
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Élimination des taches de rouille</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Neutralisation des mauvaises odeurs</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Protection de la plomberie</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Purification microbiologique</li>
-                            </ul>
                         </div>
                     </div>
                 </section>
@@ -533,6 +512,49 @@ const B = () => {
                             >
                                 <ChevronRight className="w-6 h-6" />
                             </Button>
+                        </div>
+                    </div>
+                </section>
+
+                {/* AEO TARGET PARAGRAPH (Featured Snippets & Voice Search) */}
+                <section className="py-24 relative overflow-visible bg-[#0A1A3A] z-20" id="aeo-puits">
+                    {/* Background Gradients */}
+                    <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-600/30 via-[#0A1A3A]/0 to-[#0A1A3A]/0 pointer-events-none"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-emerald-600/20 via-[#0A1A3A]/0 to-[#0A1A3A]/0 pointer-events-none"></div>
+                    
+                    {/* Floating decorative elements */}
+                    <div className="absolute top-20 right-[15%] w-32 h-32 bg-blue-500/20 rounded-full blur-[60px]"></div>
+                    <div className="absolute bottom-20 left-[10%] w-40 h-40 bg-emerald-500/20 rounded-full blur-[80px]"></div>
+
+                    <div className="container mx-auto px-6 max-w-6xl relative z-10">
+                        <div className="flex flex-col lg:flex-row gap-16 items-center">
+                            
+                            {/* Left Content: Text */}
+                            <div className="lg:w-1/2 space-y-8">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-blue-200 text-xs font-bold tracking-[0.2em] uppercase">
+                                    Technologie Essentielle
+                                </div>
+                                <h2 className="text-3xl lg:text-5xl font-bold text-white leading-tight">
+                                    Qu'est-ce qu'un <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-400 italic font-bold">système de filtration d'eau spécialisé ?</span>
+                                </h2>
+                                <p className="text-blue-100/70 text-lg leading-relaxed font-light">
+                                    Un système de filtration d'eau spécialisé est une solution de traitement conçue pour éliminer les contaminants spécifiques aux eaux souterraines et à l'eau municipale, tels que le chlore, le fer, le soufre (odeur d'œufs pourris), le manganèse, les tanins et l'arsenic. Il garantit une eau pure et sécuritaire pour toute la maison.
+                                </p>
+                            </div>
+
+                            {/* Right Content: Illuminated Image */}
+                            <div className="lg:w-1/2 w-full relative flex justify-center items-center mt-12 lg:mt-0 z-20">
+                                {/* Ambient Glow Behind the Image */}
+                                <div className="absolute inset-0 bg-blue-500/30 blur-[120px] rounded-full transform scale-150 pointer-events-none"></div>
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+                                
+                                <img 
+                                    src={specializedFiltersImg} 
+                                    alt="Système de filtration d'eau spécialisé" 
+                                    className="relative z-10 w-full max-w-sm lg:max-w-md h-auto object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.3)] transform scale-[1.25] lg:scale-[1.4]" 
+                                />
+                            </div>
+
                         </div>
                     </div>
                 </section>

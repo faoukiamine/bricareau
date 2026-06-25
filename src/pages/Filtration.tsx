@@ -188,7 +188,7 @@ const Filtration = () => {
                                 <span className="font-bold text-[#18448F] block leading-tight">Pourquoi filtrer votre eau ?</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 mt-6 mx-auto max-w-2xl px-4">
-                                L'eau municipale traverse des kilomètres de tuyauteries vétustes avant d'arriver chez vous. Chaque verre peut contenir des traces de l'imparfait.
+                                L'eau municipale traverse des kilomètres de tuyauteries vétustes, tandis que l'eau de puits ou de surface est exposée aux éléments naturels avant d'arriver chez vous. Chaque verre peut ainsi contenir des traces de l'imparfait.
                             </p>
                         </div>
 
