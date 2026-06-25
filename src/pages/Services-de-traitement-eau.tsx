@@ -69,7 +69,7 @@ const formSchema = z.object({
     phone: z.string().min(10, "Numéro de téléphone invalide"),
     interest: z.string({
         required_error: "Veuillez choisir un service"
-    }),
+    }).min(1, "Veuillez choisir un service"),
     message: z.string().optional(),
     legal_consent: z.boolean().refine(val => val === true, {
         message: "Champs Obligatoire"
@@ -119,6 +119,10 @@ const ServicesTraitementEau = () => {
                     phone: values.phone,
                     interest: values.interest,
                     message: values.message,
+                    address: "Non spécifié",
+                    ville: "Non spécifié",
+                    province: "QC",
+                    code_postal: "00000",
                     appointment_time: now,
                     type: "Service Request"
                 });
@@ -141,7 +145,7 @@ const ServicesTraitementEau = () => {
             setIsSuccess(true);
         } catch (error) {
             console.error("Error:", error);
-            toast.error("Erreur lors de l'envoi.");
+            toast.error(error instanceof Error ? error.message : ((error as any)?.message || "Erreur lors de l'envoi."));
         } finally {
             setIsSubmitting(false);
         }

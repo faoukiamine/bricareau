@@ -301,8 +301,8 @@ const ResidentialServices = () => {
                         </div>
 
                         <div className="space-y-32">
-                            {/* Pilier 1 : Image Left, Text Right */}
-                            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-24">
+                            {/* Pilier 1 : Text Left, Image Right */}
+                            <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-24">
                                 <div className="flex lg:hidden items-center gap-6 w-full">
                                     <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
                                         <Wallet className="w-8 h-8 text-blue-600" />
@@ -332,8 +332,8 @@ const ResidentialServices = () => {
                                 </div>
                             </div>
 
-                            {/* Pilier 2 : Text Left, Image Right */}
-                            <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-24">
+                            {/* Pilier 2 : Image Left, Text Right */}
+                            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-24">
                                 <div className="flex lg:hidden items-center gap-6 w-full">
                                     <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
                                         <Heart className="w-8 h-8 text-blue-600" />
@@ -363,8 +363,8 @@ const ResidentialServices = () => {
                                 </div>
                             </div>
 
-                            {/* Pilier 3 : Image Left, Text Right */}
-                            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-24">
+                            {/* Pilier 3 : Text Left, Image Right */}
+                            <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-24">
                                 <div className="flex lg:hidden items-center gap-6 w-full">
                                     <div className="w-16 h-16 rounded-full bg-[#8CC63F]/10 flex items-center justify-center shrink-0">
                                         <Leaf className="w-8 h-8 text-[#8CC63F]" />

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { useParams, Navigate, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import ConsultationFormSection from "@/components/ConsultationFormSection";
+
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExpertTrustSection from "@/components/ExpertTrustSection";
 import WaterDiagnosis from "@/components/water_diagnosis";
