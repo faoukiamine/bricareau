@@ -89,7 +89,7 @@ const HotellerieRestauration = () => {
                         <div className="max-w-3xl flex flex-col justify-center">
                             <div className="mb-8">
                                 <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
-                                    L'excellence <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">pure,</span><br/> à la table des plus grands.
+                                    L'excellence de <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">l'eau pure,</span><br/> à la table des plus grands.
                                 </h1>
                                 
                                 <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
