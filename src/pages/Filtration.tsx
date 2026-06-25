@@ -143,7 +143,7 @@ const Filtration = () => {
         const ogTitle = document.querySelector('meta[property="og:title"]');
         if (ogTitle) ogTitle.setAttribute("content", "Filtration d'eau au Québec : Pureté et Santé | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Obtenez une eau cristalline à chaque robinet. Découvrez nos technologies de filtration avancées pour la santé de votre foyer.");
+        if (ogDesc) ogDesc.setAttribute("content", "Obtenir une eau cristalline à chaque robinet. Découvrir nos technologies de filtration avancées pour la santé de votre foyer.");
         const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/filtration");
     }, []);
@@ -416,7 +416,7 @@ const Filtration = () => {
                                             <span className="italic font-light text-[#18448F] block">Votre source d'eau cristalline, sans compromis.</span>
                                         </h2>
                                         <p className="body-pro-max text-justify lg:text-left max-w-xl lg:ml-0">
-                                            Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Une eau légère et saine à portée de main.
+                                            Découvrir comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Une eau légère et saine à portée de main.
                                         </p>
                                     </div>
 
@@ -584,7 +584,7 @@ const Filtration = () => {
                                 <span className="text-[#18448F] lg:text-white italic font-bold font-serif"> notre priorité.</span>
                             </h2>
                             <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
-                                Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
+                                Ne laissez plus le doute couler de votre robinet. Demander votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
                             </p>
                             <div className="flex gap-4">
                                 <ProMaxButton
@@ -592,7 +592,7 @@ const Filtration = () => {
                                     variant="dark"
                                     className="h-14 px-10 text-[11px]"
                                 >
-                                    <a href="/Analyses-et-Tests-d-eau">Demandez une analyse d'eau</a>
+                                    <a href="/Analyses-et-Tests-d-eau">Demander une analyse d'eau</a>
                                 </ProMaxButton>
                             </div>
                         </div>
@@ -742,7 +742,7 @@ const Filtration = () => {
                             <span className="text-white italic font-bold font-serif">de filtration d'eau résidentielle.</span>
                         </h2>
                         <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
-                            Vous n’êtes pas certain de savoir si vous avez besoin d’un filtre d'eau pour toute la maison, d’un système sous évier ou d’une station d’osmose inverse ? Contactez‑nous pour accompagnement personnalisé pour vous guider vers le système adapté à votre réalité et votre budget.
+                            Vous n’êtes pas certain de savoir si vous avez besoin d’un filtre d'eau pour toute la maison, d’un système sous évier ou d’une station d’osmose inverse ? Contacter‑nous pour accompagnement personnalisé pour vous guider vers le système adapté à votre réalité et votre budget.
                         </p>
                     </div>
 
@@ -754,7 +754,7 @@ const Filtration = () => {
                         >
                             <a href="tel:18552649328" className="flex items-center gap-3">
                                 <Phone className="h-5 w-5 animate-bounce" />
-                                Parlez à un expert
+                                Parler à un expert
                             </a>
                         </ProMaxButton>
                         <ProMaxButton
@@ -762,7 +762,7 @@ const Filtration = () => {
                             variant="outline-white"
                             className="h-14 px-10 text-[11px]"
                         >
-                            <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                            <NavLink to="/consultation">Planifier une consultation</NavLink>
                         </ProMaxButton>
                     </div>
 
@@ -950,7 +950,7 @@ const Filtration = () => {
                     >
                       <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
                         <span className="font-medium text-sm tracking-wider whitespace-nowrap text-center">
-                          Réservez votre <br />consultation gratuite
+                          Réserver votre <br />consultation gratuite
                         </span>
                         <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-all">
                           <ArrowRight className="w-5 h-5" />

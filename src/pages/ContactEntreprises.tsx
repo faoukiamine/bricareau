@@ -17,14 +17,14 @@ const ContactEntreprises = () => {
     document.title = "Contact Entreprises | Solutions d'Eau de Bureau au Québec | Bricareau";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Contactez nos experts pour des solutions de fontaines à eau et traitement d'eau pour entreprise au Québec. Analyse gratuite et service professionnel.");
+      metaDesc.setAttribute("content", "Contacter nos experts pour des solutions de fontaines à eau et traitement d'eau pour entreprise au Québec. Analyse gratuite et service professionnel.");
     }
 
     // OG Tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute("content", "Solutions d'Eau pour Entreprises | Contact Bricareau");
     const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute("content", "Optimisez la qualité de l'eau dans vos bureaux. Contactez-nous pour une consultation personnalisée.");
+    if (ogDesc) ogDesc.setAttribute("content", "Optimisez la qualité de l'eau dans vos bureaux. Nous contacter pour une consultation personnalisée.");
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/contact-entreprises");
   }, []);
@@ -75,7 +75,7 @@ const ContactEntreprises = () => {
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="max-w-3xl mx-auto text-center py-12 lg:py-0 w-full">
               <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
-    Contactez-nous pour des solutions de l'eau de <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">bureau</span>
+    Nous contacter pour des solutions de l'eau de <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">bureau</span>
 </h1>
               <p className="text-muted-foreground font-light text-justify max-w-xl mx-auto">
                 Vous souhaitez une eau plus fraîche et plus savoureuse sur votre lieu de travail ? Remplissez le formulaire pour être contacté par notre expert et obtenir des solutions pratiques de fontaines à eau adaptées aux besoins de votre entreprise.

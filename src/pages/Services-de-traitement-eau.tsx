@@ -428,7 +428,7 @@ const ServicesTraitementEau = () => {
                                     >
                                         <a href="tel:18552649328" className="flex items-center gap-2">
                                             <Phone className="w-5 h-5 transition-transform group-hover:rotate-12" />
-                                            Parlez avec un conseiller
+                                            Parler avec un conseiller
                                         </a>
                                     </ProMaxButton>
                                 </div>
@@ -485,7 +485,7 @@ const ServicesTraitementEau = () => {
                                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
                                         variant="primary"
                                     >
-                                        Planifiez un service
+                                        Planifier un service
                                         <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
                                     </ProMaxButton>
                                 </div>
@@ -539,7 +539,7 @@ const ServicesTraitementEau = () => {
                                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
                                         variant="primary"
                                     >
-                                        Réservez votre entretien
+                                        Réserver votre entretien
                                         <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
                                     </ProMaxButton>
                                 </div>
@@ -632,7 +632,7 @@ const ServicesTraitementEau = () => {
                             <>
                                 <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
                                     <h2 className="heading-pro-max">
-                                        <span className="font-bold not-italic text-[#18448F] block">Planifiez votre</span>
+                                        <span className="font-bold not-italic text-[#18448F] block">Planifier votre</span>
                                         <span className="font-bold text-[#8CC63F] block">rendez-vous de service.</span>
                                     </h2>
                                     <p className="body-pro-max max-w-2xl mx-auto">

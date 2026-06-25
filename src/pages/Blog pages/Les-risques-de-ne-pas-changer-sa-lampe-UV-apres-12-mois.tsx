@@ -7,7 +7,7 @@ const RisquesLampeUV12Mois = () => {
         document.title = "Les risques de ne pas changer sa lampe UV après 12 mois | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez pourquoi le remplacement annuel de votre lampe UV est essentiel pour garantir une désinfection efficace et protéger votre santé.");
+            metaDesc.setAttribute("content", "Découvrir pourquoi le remplacement annuel de votre lampe UV est essentiel pour garantir une désinfection efficace et protéger votre santé.");
         }
     }, []);
 

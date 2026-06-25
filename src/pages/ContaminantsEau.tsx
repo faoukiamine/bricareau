@@ -114,9 +114,9 @@ const ContaminantsEau = () => {
                     badge="Qualité de l'eau"
                     highlightedTitle="Comprendre les"
                     mainTitle="contaminants de l'eau"
-                    subtitle="Découvrez les polluants les plus fréquents dans l'eau potable au Québec et comment nos systèmes peuvent vous en protéger."
+                    subtitle="Découvrir les polluants les plus fréquents dans l'eau potable au Québec et comment nos systèmes peuvent vous en protéger."
                     image={heroImageImg}
-                    ctaText="Explorez les contaminants"
+                    ctaText="Explorer les contaminants"
                     ctaLink="#explorez"
                     showPhone={false}
                     showBreadcrumbs={true}
@@ -177,7 +177,7 @@ const ContaminantsEau = () => {
                                 <span className="font-bold text-[#8CC63F] block">contaminants de l'eau</span>
                             </h2>
                             <p className="text-lg text-slate-600">
-                                Explorez les polluants les plus fréquents, classés par catégorie, pour comprendre leur origine et leur impact.
+                                Explorer les polluants les plus fréquents, classés par catégorie, pour comprendre leur origine et leur impact.
                             </p>
                         </div>
 
@@ -266,7 +266,7 @@ const ContaminantsEau = () => {
                                 <span className="font-bold text-[#8CC63F] block">Santé Canada</span>
                             </h2>
                             <p className="text-slate-600 max-w-2xl mx-auto">
-                                Consultez la liste complète des recommandations pour la qualité de l'eau potable au Canada, incluant les paramètres microbiologiques, chimiques et radiologiques.
+                                Consulter la liste complète des recommandations pour la qualité de l'eau potable au Canada, incluant les paramètres microbiologiques, chimiques et radiologiques.
                             </p>
                         </div>
 

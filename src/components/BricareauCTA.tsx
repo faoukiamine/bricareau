@@ -10,7 +10,7 @@ const IdealBricareauCTA = () => {
                         <span className="font-bold font-serif">pour votre maison</span>
                     </h2>
                     <p className="text-white/90">
-                        Découvrez comment nos systèmes de traitement d'eau peuvent transformer votre quotidien
+                        Découvrir comment nos systèmes de traitement d'eau peuvent transformer votre quotidien
                     </p>
                     <Button
                         size="lg"

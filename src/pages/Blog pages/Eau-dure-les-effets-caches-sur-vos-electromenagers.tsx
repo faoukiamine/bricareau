@@ -7,7 +7,7 @@ const EffetsCachesEauDureElectromenagers = () => {
         document.title = "Eau dure : Les effets cachés sur vos électroménagers | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez comment l'eau dure et le calcaire endommagent silencieusement vos électroménagers, augmentent vos factures et comment y remédier avec un adoucisseur.");
+            metaDesc.setAttribute("content", "Découvrir comment l'eau dure et le calcaire endommagent silencieusement vos électroménagers, augmentent vos factures et comment y remédier avec un adoucisseur.");
         }
     }, []);
 

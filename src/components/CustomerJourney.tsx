@@ -32,7 +32,7 @@ const steps = [
     {
         number: "04",
         title: "Tranquillité totale",
-        desc: "Notre engagement ne s'arrête pas après la pose. Profitez d'un suivi proactif et d'un support technique d'exception.",
+        desc: "Notre engagement ne s'arrête pas après la pose. Profiter d'un suivi proactif et d'un support technique d'exception.",
         img: serenityStepImg,
     }
 ];
@@ -102,7 +102,7 @@ const CustomerJourney = () => {
                 <div className="mt-24 flex justify-center">
                     <ProMaxButton asChild>
                         <a href="/consultation">
-                            Planifiez une consultation gratuite
+                            Planifier une consultation gratuite
                         </a>
                     </ProMaxButton>
                 </div>

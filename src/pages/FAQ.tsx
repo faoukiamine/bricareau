@@ -266,7 +266,7 @@ const FAQ = () => {
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
+                                        Parler à un expert
                                     </a>
                                 </ProMaxButton>
 
@@ -274,7 +274,7 @@ const FAQ = () => {
                                     variant="outline-white"
                                     asChild
                                 >
-                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                                    <NavLink to="/consultation">Planifier une consultation</NavLink>
                                 </ProMaxButton>
                             </div>
                         </div>

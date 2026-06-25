@@ -312,7 +312,7 @@ const A = () => {
         const ogTitle = document.querySelector('meta[property="og:title"]');
         if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau au Québec : Solutions Anti-Calcaire | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Dites adieu à  l'eau dure. Découvrez nos adoucisseurs résidentiels pour une eau soyeuse et protéger votre plomberie dans tout votre foyer.");
+        if (ogDesc) ogDesc.setAttribute("content", "Dites adieu à  l'eau dure. Découvrir nos adoucisseurs résidentiels pour une eau soyeuse et protéger votre plomberie dans tout votre foyer.");
         const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/adoucissement");
     }, []);
@@ -328,6 +328,27 @@ const A = () => {
                     showPhone={true}
                     showBreadcrumbs={true}
                 />
+
+                {/* AEO TARGET PARAGRAPH (Featured Snippets & Voice Search) */}
+                <section className="py-16 bg-slate-50 border-b border-slate-200" id="aeo-adoucisseur">
+                    <div className="container mx-auto px-6 max-w-4xl">
+                        <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-2 h-full bg-[#18448F]"></div>
+                            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                                Qu'est-ce qu'un adoucisseur d'eau ?
+                            </h2>
+                            <p className="text-slate-600 text-lg leading-relaxed mb-6 font-medium">
+                                Un adoucisseur d'eau est un système de filtration résidentiel conçu pour éliminer le calcium et le magnésium, les minéraux responsables de la dureté de l'eau. Il protège votre plomberie du tartre, prolonge la durée de vie de vos électroménagers et vous offre une peau plus douce.
+                            </p>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-600 font-light">
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Élimination du calcaire</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Peau et cheveux hydratés</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Réduction de 50% du savon</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Protection du chauffe-eau</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
                 {/* 2. Diagnostic Impact - Bento Grid */}
                 <section className="py-24 lg:py-32 bg-slate-50/50 relative overflow-hidden">
@@ -886,7 +907,7 @@ const A = () => {
                                     asChild
                                     variant="primary"
                                 >
-                                    <a href="/Analyses-et-Tests-d-eau">Demandez une analyse d'eau</a>
+                                    <a href="/Analyses-et-Tests-d-eau">Demander une analyse d'eau</a>
                                 </ProMaxButton>
                             </div>
                         </div>
@@ -970,14 +991,14 @@ const A = () => {
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à  un expert
+                                        Parler à  un expert
                                     </a>
                                 </ProMaxButton>
                                 <ProMaxButton
                                     variant="outline-white"
                                     asChild
                                 >
-                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                                    <NavLink to="/consultation">Planifier une consultation</NavLink>
                                 </ProMaxButton>
                             </div>
 

@@ -7,7 +7,7 @@ const EstCeSecuritaireBoireEauAdoucie = () => {
         document.title = "Est-ce sécuritaire de boire de l'eau adoucie ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Est-ce dangereux de boire de l'eau adoucie ? Découvrez l'impact du sodium, la sécurité du procédé et les recommandations pour remplacer le calcaire en toute tranquillité.");
+            metaDesc.setAttribute("content", "Est-ce dangereux de boire de l'eau adoucie ? Découvrir l'impact du sodium, la sécurité du procédé et les recommandations pour remplacer le calcaire en toute tranquillité.");
         }
     }, []);
 

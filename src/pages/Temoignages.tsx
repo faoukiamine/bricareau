@@ -10,7 +10,7 @@ const Temoignages = () => {
         document.title = "Témoignages Clients & Avis Bricareau | Satisfaction Garantie";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez pourquoi nos clients au Québec nous font confiance. Lisez les avis certifiés sur nos services de traitement d'eau et adoucisseurs.");
+            metaDesc.setAttribute("content", "Découvrir pourquoi nos clients au Québec nous font confiance. Lisez les avis certifiés sur nos services de traitement d'eau et adoucisseurs.");
         }
 
         // OG Tags
@@ -57,7 +57,7 @@ const Temoignages = () => {
     <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Témoignages</span> Clients
 </h1>
                                 <p className="text-slate-600 font-light max-w-xl mx-auto">
-                                    Découvrez ce que nos clients disent de leur expérience avec Bricareau. Leur satisfaction est notre plus grande fierté.
+                                    Découvrir ce que nos clients disent de leur expérience avec Bricareau. Leur satisfaction est notre plus grande fierté.
                                 </p>
                                 <div className="hidden lg:flex items-center justify-center gap-2">
                                     <div className="flex text-yellow-400">
@@ -91,7 +91,7 @@ const Temoignages = () => {
                                 Rejoignez nos clients satisfaits
                             </h2>
                             <p className="text-base md:text-lg text-muted-foreground">
-                                Découvrez comment nous pouvons améliorer la qualité de votre eau.
+                                Découvrir comment nous pouvons améliorer la qualité de votre eau.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
@@ -104,7 +104,7 @@ const Temoignages = () => {
                                     href="tel:18552649328"
                                     className="inline-flex items-center justify-center px-6 py-3 bg-white border-2 border-[#0052ff] text-[#0052ff] font-medium rounded-full hover:bg-[#0052ff] hover:text-white transition-colors"
                                 >
-                                    Appelez-nous : 1 855 264 9328
+                                    Nous appeler : 1 855 264 9328
                                 </a>
                             </div>
                         </div>

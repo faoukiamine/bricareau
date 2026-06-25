@@ -146,7 +146,7 @@ const FiltrationHotelsRestaurants = () => {
                         <div className="mt-16 text-center">
                             <ProMaxButton asChild>
                                 <a href="/contact" className="inline-flex items-center justify-center gap-2">
-                                    Contactez-nous
+                                    Nous contacter
                                     <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
                                 </a>
                             </ProMaxButton>
@@ -548,14 +548,14 @@ const FiltrationHotelsRestaurants = () => {
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
+                                        Parler à un expert
                                     </a>
                                 </ProMaxButton>
                                 <ProMaxButton
                                     variant="outline-white"
                                     asChild
                                 >
-                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                                    <NavLink to="/consultation">Planifier une consultation</NavLink>
                                 </ProMaxButton>
                             </div>
 

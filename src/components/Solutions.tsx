@@ -11,7 +11,7 @@ const solutions = [
   {
     icon: Sparkles,
     title: "Solutions d'eau potable",
-    description: "Profitez d'une eau plus propre avec notre système de purification d'eau à osmose inverse à 6 étapes.",
+    description: "Profiter d'une eau plus propre avec notre système de purification d'eau à osmose inverse à 6 étapes.",
     href: "#" },
   {
     icon: Filter,

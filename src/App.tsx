@@ -92,6 +92,8 @@ import SolutionsBrasseries from "./pages/SolutionsBrasseries";
 import FiltrationIndustrielle from "./pages/FiltrationIndustrielle";
 import ContaminantsEau from "./pages/ContaminantsEau";
 
+import TraitementEauVille from "./pages/TraitementEauVille";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -193,6 +195,7 @@ const App = () => (
           <Route path="/filtres-eau-machine-cafe" element={<FiltreEauMachineCafe />} />
           <Route path="/filtration-industrielle" element={<FiltrationIndustrielle />} />
 
+          <Route path="/traitement-eau/:ville" element={<TraitementEauVille />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

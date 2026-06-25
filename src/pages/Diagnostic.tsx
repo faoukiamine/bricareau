@@ -40,7 +40,7 @@ const Diagnostic = () => {
                                 lineHeight: '55px'
                             }}
                         >
-                            Découvrez la <span style={{ color: '#8CC63F' }}>solution parfaite</span>
+                            Découvrir la <span style={{ color: '#8CC63F' }}>solution parfaite</span>
                             <span className="block">pour votre eau.</span>
                         </h1>
 
@@ -51,7 +51,7 @@ const Diagnostic = () => {
                                 fontStyle: 'normal'
                             }}
                         >
-                            Quelques questions rapides pour transformer la qualité de votre quotidien. Obtenez votre prescription d'eau personnalisée en moins de 2 minutes.
+                            Quelques questions rapides pour transformer la qualité de votre quotidien. Obtenir votre prescription d'eau personnalisée en moins de 2 minutes.
                         </p>
                     </div>
 

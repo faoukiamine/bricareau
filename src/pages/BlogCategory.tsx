@@ -48,7 +48,7 @@ const BlogCategory = () => {
 </h1>
                         <div className="w-24 h-1.5 bg-blue-600 rounded-full mb-6"></div>
                         <p className="text-slate-600 max-w-3xl">
-                            Découvrez tous nos articles et guides complets concernant {category.title.toLowerCase()}.
+                            Découvrir tous nos articles et guides complets concernant {category.title.toLowerCase()}.
                         </p>
                     </div>
                 </div>

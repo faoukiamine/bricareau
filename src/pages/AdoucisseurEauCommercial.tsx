@@ -222,7 +222,7 @@ const AdoucisseurEauCommercial = () => {
         const ogTitle = document.querySelector('meta[property="og:title"]');
         if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau Commercial Québec : Excellence Opérationnelle | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Sublimez votre établissement. Découvrez nos solutions d'adoucissement d'eau pour l'hôtellerie et la restauration. Performance et prestige garantis.");
+        if (ogDesc) ogDesc.setAttribute("content", "Sublimez votre établissement. Découvrir nos solutions d'adoucissement d'eau pour l'hôtellerie et la restauration. Performance et prestige garantis.");
         const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/adoucisseurs-eau-commerciaux");
     }, []);
@@ -517,7 +517,7 @@ const AdoucisseurEauCommercial = () => {
                                         onClick={() => navigate("/consultation")}
                                         className="bg-white text-[#18448F] hover:bg-[#18448F] hover:text-white"
                                     >
-                                        Demandez une consultation gratuite.
+                                        Demander une consultation gratuite.
                                     </ProMaxButton>
                                 </div>
                             </div>
@@ -574,7 +574,7 @@ En restauration et en hôtellerie, chaque détail compte. Assurez la conformité
                                     asChild
                                     variant="primary"
                                 >
-                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
+                                    <a href="/tests-eau">Demander une analyse d'eau</a>
                                 </ProMaxButton>
                             </div>
                         </div>
@@ -658,14 +658,14 @@ En restauration et en hôtellerie, chaque détail compte. Assurez la conformité
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
+                                        Parler à un expert
                                     </a>
                                 </ProMaxButton>
                                 <ProMaxButton
                                     variant="outline-white"
                                     asChild
                                 >
-                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                                    <NavLink to="/consultation">Planifier une consultation</NavLink>
                                 </ProMaxButton>
                             </div>
 

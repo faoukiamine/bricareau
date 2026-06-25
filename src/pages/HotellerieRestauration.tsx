@@ -104,7 +104,7 @@ const HotellerieRestauration = () => {
                                         className="relative flex items-center justify-center w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
                                         onClick={() => navigate("/consultation")}
                                     >
-                                        Planifiez une consultation gratuite
+                                        Planifier une consultation gratuite
                                     </button>
                                 </div>
                             </div>
@@ -175,7 +175,7 @@ const HotellerieRestauration = () => {
                                 </span>
                             </h2>
                             <p className="mt-6 text-slate-500 text-lg font-light leading-relaxed w-full text-justify">
-                                Découvrez nos systèmes avancés de <strong>traitement et d'adoucissement d'eau</strong> conçus sur mesure pour le secteur <strong>HORECA (Hôtellerie, Restauration, Cafés)</strong>. De la protection anticalcaire de vos machines à espresso professionnelles jusqu'à la filtration gastronomique pour vos cuisines étoilées, Bricareau garantit une qualité d'eau irréprochable. Préservez la durée de vie de votre équipement CHR, sublimez les arômes de vos préparations culinaires et offrez à votre clientèle une eau purifiée au service exclusif de l'excellence.
+                                Découvrir nos systèmes avancés de <strong>traitement et d'adoucissement d'eau</strong> conçus sur mesure pour le secteur <strong>HORECA (Hôtellerie, Restauration, Cafés)</strong>. De la protection anticalcaire de vos machines à espresso professionnelles jusqu'à la filtration gastronomique pour vos cuisines étoilées, Bricareau garantit une qualité d'eau irréprochable. Préservez la durée de vie de votre équipement CHR, sublimez les arômes de vos préparations culinaires et offrez à votre clientèle une eau purifiée au service exclusif de l'excellence.
                             </p>
                         </div>
                         
@@ -442,7 +442,7 @@ const HotellerieRestauration = () => {
                     <ExpertTrustSection 
                         title="Une consultation gratuite pour "
                         highlight="optimiser votre rentabilité."
-                        description="Découvrez comment nos systèmes de filtration d'eau peuvent réduire vos coûts opérationnels, éliminer les plastiques à usage unique et prolonger la durée de vie de vos équipements et réduire leur entretien."
+                        description="Découvrir comment nos systèmes de filtration d'eau peuvent réduire vos coûts opérationnels, éliminer les plastiques à usage unique et prolonger la durée de vie de vos équipements et réduire leur entretien."
                         buttonText="Rentabiliser mon business"
                         buttonLink="/consultation"
                         image={rentabiliteImg}

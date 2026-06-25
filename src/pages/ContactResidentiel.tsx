@@ -16,14 +16,14 @@ const ContactResidentiel = () => {
     document.title = "Contact Résidentiel | Solutions d'Eau pour la Maison au Québec | Bricareau";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Besoin d'un adoucisseur ou d'un système de filtration ? Contactez Bricareau pour une analyse d'eau gratuite à domicile partout au Québec.");
+      metaDesc.setAttribute("content", "Besoin d'un adoucisseur ou d'un système de filtration ? Contacter Bricareau pour une analyse d'eau gratuite à domicile partout au Québec.");
     }
 
     // OG Tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute("content", "Contact Résidentiel | Bricareau Traitement d'Eau");
     const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute("content", "Parlez à un expert pour vos besoins en traitement d'eau résidentiel. Service rapide et courtois.");
+    if (ogDesc) ogDesc.setAttribute("content", "Parler à un expert pour vos besoins en traitement d'eau résidentiel. Service rapide et courtois.");
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/contact-residentiel");
   }, []);
@@ -72,7 +72,7 @@ const ContactResidentiel = () => {
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="max-w-3xl mx-auto text-center py-12 lg:py-0 w-full">
               <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
-    Contactez-nous pour des solutions de traitement d'eau <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">résidentiel</span>
+    Nous contacter pour des solutions de traitement d'eau <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">résidentiel</span>
 </h1>
               <p className="text-muted-foreground font-light text-justify max-w-xl mx-auto">
                 Vous souhaitez une eau plus fraîche et plus savoureuse à votre domicile ? Remplissez le formulaire pour être contacté par notre expert et obtenir des solutions d'eau adaptées à vos besoins spécifiques.

@@ -7,7 +7,7 @@ const EauPurePatisseries = () => {
         document.title = "Pourquoi l'eau pure améliore vos pâtisseries | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez comment l'eau pure et filtrée transforme vos recettes de pâtisserie, améliore la levée des pâtes et révèle les arômes délicats pour des résultats professionnels.");
+            metaDesc.setAttribute("content", "Découvrir comment l'eau pure et filtrée transforme vos recettes de pâtisserie, améliore la levée des pâtes et révèle les arômes délicats pour des résultats professionnels.");
         }
     }, []);
 

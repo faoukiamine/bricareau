@@ -7,7 +7,7 @@ const CommentSavoirSiVotreLampeUVFonctionneEncore = () => {
         document.title = "Comment savoir si votre lampe UV fonctionne encore ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez les signes pour savoir si votre lampe UV de traitement d'eau fonctionne encore et apprenez quand il est nécessaire de la remplacer pour assurer une désinfection efficace.");
+            metaDesc.setAttribute("content", "Découvrir les signes pour savoir si votre lampe UV de traitement d'eau fonctionne encore et apprenez quand il est nécessaire de la remplacer pour assurer une désinfection efficace.");
         }
     }, []);
 

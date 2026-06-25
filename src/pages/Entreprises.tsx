@@ -426,7 +426,7 @@ const Entreprises = () => {
                         <span className="font-bold font-serif">Réinventez la pause eau.</span>
                     </h2>
                     <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto opacity-90 leading-relaxed">
-                        Nos consultants sont spécialisés dans l'aménagement d'espaces d'hydratation haute performance. Profitez d'un essai gratuit de 7 jours pour votre équipe.
+                        Nos consultants sont spécialisés dans l'aménagement d'espaces d'hydratation haute performance. Profiter d'un essai gratuit de 7 jours pour votre équipe.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
                         <div className="relative inline-block group">

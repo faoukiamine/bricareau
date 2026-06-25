@@ -158,7 +158,7 @@ const Sustainability = () => {
                                     Mode de vie sain
                                 </h3>
                                 <p className="text-slate-500 text-lg leading-relaxed font-light">
-                                    En optant pour nos solutions durables, vous donnez un véritable modèle en matière de développement durable. Découvrez à quel point l'utilisation d'eau filtrée est simple et pratique.
+                                    En optant pour nos solutions durables, vous donnez un véritable modèle en matière de développement durable. Découvrir à quel point l'utilisation d'eau filtrée est simple et pratique.
                                 </p>
                             </div>
                             <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">

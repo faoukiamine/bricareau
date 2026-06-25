@@ -32,7 +32,7 @@ const BentoExperience = () => {
                     <div className="flex justify-center">
                         <Button asChild>
                             <a href="/consultation" className="flex items-center gap-2">
-                                Planifiez une consultation gratuite
+                                Planifier une consultation gratuite
                             </a>
                         </Button>
                     </div>
@@ -108,7 +108,7 @@ const BentoExperience = () => {
                             <span className="text-4xl font-black text-white/10 mb-2 block leading-none">04</span>
                             <h3 className="text-white font-bold text-xl mb-4 leading-tight">Tranquillité totale</h3>
                             <p className="text-white/60 text-[11px] font-light leading-snug">
-                                Notre engagement ne s'arrête pas après la pose. Profitez d'un suivi proactif et d'un support technique d'exception.
+                                Notre engagement ne s'arrête pas après la pose. Profiter d'un suivi proactif et d'un support technique d'exception.
                             </p>
                         </div>
                     </div>

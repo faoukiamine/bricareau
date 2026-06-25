@@ -74,7 +74,7 @@ const Contact = () => {
     });
 
     useEffect(() => {
-        document.title = "Contactez Bricareau | Service & Support d'Eau au Québec";
+        document.title = "Contacter Bricareau | Service & Support d'Eau au Québec";
     }, []);
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {

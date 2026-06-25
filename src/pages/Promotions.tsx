@@ -13,14 +13,14 @@ const Promotions = () => {
         document.title = "Promotions et Offres Spéciales | Traitement d'Eau Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Économisez sur votre système de traitement d'eau au Québec. Découvrez nos promotions exclusives sur les adoucisseurs et filtres à eau. Offres à durée limitée !");
+            metaDesc.setAttribute("content", "Économisez sur votre système de traitement d'eau au Québec. Découvrir nos promotions exclusives sur les adoucisseurs et filtres à eau. Offres à durée limitée !");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
         if (ogTitle) ogTitle.setAttribute("content", "Promotions Bricareau : Économisez sur la Qualité de votre Eau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Profitez de rabais exceptionnels sur l'installation et l'entretien de vos systèmes d'eau résidentiels et commerciaux.");
+        if (ogDesc) ogDesc.setAttribute("content", "Profiter de rabais exceptionnels sur l'installation et l'entretien de vos systèmes d'eau résidentiels et commerciaux.");
         const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/promotions");
     }, []);
@@ -38,7 +38,7 @@ const Promotions = () => {
         },
         {
             title: "Système de Filtration d'eau Complet",
-            description: "Profitez de 20% de rabais sur nos systèmes de filtration pour toute la maison",
+            description: "Profiter de 20% de rabais sur nos systèmes de filtration pour toute la maison",
             validUntil: "15 avril 2026",
             image: filtrationPromoImg,
             features: [
@@ -93,7 +93,7 @@ const Promotions = () => {
                                 <span className="font-black text-[#18448F]">en Cours.</span>
 </h1>
                             <p className="text-slate-700 font-light text-center max-w-xl mx-auto text-[18px] md:text-[20px] leading-relaxed">
-                                Profitez de nos offres exceptionnelles sur nos systèmes de traitement d'eau pour transformer votre quotidien.
+                                Profiter de nos offres exceptionnelles sur nos systèmes de traitement d'eau pour transformer votre quotidien.
                             </p>
                         </div>
                     </div>
@@ -174,7 +174,7 @@ const Promotions = () => {
                                     • Installation professionnelle requise pour certains produits.
                                 </p>
                                 <p>
-                                    • Contactez-nous pour plus de détails sur les conditions d'éligibilité.
+                                    • Nous contacter pour plus de détails sur les conditions d'éligibilité.
                                 </p>
                             </div>
                         </div>

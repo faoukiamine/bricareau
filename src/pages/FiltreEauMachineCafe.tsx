@@ -123,7 +123,7 @@ const FiltreEauMachineCafe = () => {
 
                             <div className="flex flex-col sm:flex-row gap-6 pt-8">
                                 <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => { document.getElementById('explore-filters')?.scrollIntoView({ behavior: 'smooth' }) }}>
-                                    Explorez nos filtres
+                                    Explorer nos filtres
                                 </ProMaxButton>
                                 <a href="tel:18552649328" className="flex items-center gap-4 group">
                                     <div className="w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:border-blue-500/50 group-hover:bg-white transition-all">

@@ -7,7 +7,7 @@ const EauPureGoutCafe = () => {
         document.title = "Pourquoi une eau pure change le goût du café ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez pourquoi l'utilisation d'une eau pure, filtrée et équilibrée est le secret pour révéler tout l'arôme de votre café, protéger votre machine et vivre une expérience gustative raffinée.");
+            metaDesc.setAttribute("content", "Découvrir pourquoi l'utilisation d'une eau pure, filtrée et équilibrée est le secret pour révéler tout l'arôme de votre café, protéger votre machine et vivre une expérience gustative raffinée.");
         }
     }, []);
 

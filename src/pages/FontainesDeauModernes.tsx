@@ -127,7 +127,7 @@ const FontainesDeauModernes = () => {
                     highlightedTitle={<span className="font-bold not-italic">Optez pour <span className="text-[#8CC63F]">une hydratation</span> </span>}
                     mainTitle={<span className="font-bold not-italic">intelligente et durable.</span>}
                     subtitle="Offrez à vos collaborateurs une eau filtrée d'exception, fraîche, chaude ou pétillante, directement raccordée à votre réseau. Une solution écologique, économique et sans logistique de bonbonnes."
-                    ctaText="OBTENIR MON ESSAI GRATUIT"
+                    ctaText="PLANIFIER UNE CONSULTATION GRATUITE"
                     ctaLink="/contact-entreprises"
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -632,7 +632,7 @@ const FontainesDeauModernes = () => {
                                     asChild
                                 >
                                     <NavLink to="/consultation">
-                                        Demandez une consultation
+                                        Demander une consultation
                                     </NavLink>
                                 </Button>
                             </div>
@@ -709,7 +709,7 @@ const FontainesDeauModernes = () => {
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un conseiller pro
+                                        Parler à un conseiller pro
                                     </a>
                                 </ProMaxButton>
                             </div>

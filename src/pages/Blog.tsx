@@ -15,7 +15,7 @@ const Blog = () => {
         document.title = "Blog & Ressources sur le Traitement d'Eau | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez nos articles, guides et conseils d'experts pour améliorer la qualité de votre eau au Québec. Tout sur l'adoucissement, la filtration et les tests d'eau.");
+            metaDesc.setAttribute("content", "Découvrir nos articles, guides et conseils d'experts pour améliorer la qualité de votre eau au Québec. Tout sur l'adoucissement, la filtration et les tests d'eau.");
         }
 
         // OG Tags
@@ -100,7 +100,7 @@ const Blog = () => {
                                 </h1>
                                 
                                 <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
-                                    Découvrez nos derniers articles, guides et conseils d'experts pour une eau de meilleure qualité au quotidien.
+                                    Découvrir nos derniers articles, guides et conseils d'experts pour une eau de meilleure qualité au quotidien.
                                 </p>
                             </div>
                         </div>
@@ -324,7 +324,7 @@ const Blog = () => {
                                     PRÊT À TRANSFORMER VOTRE EAU ?
                                 </span>
                                 <h2 className="font-light block leading-tight lg:leading-[52px] text-white text-3xl md:text-5xl">
-                                    Obtenez des conseils <br />
+                                    Obtenir des conseils <br />
                                     <span className="text-white italic font-bold font-serif">personnalisés d'un expert.</span>
                                 </h2>
                                 <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">

@@ -47,7 +47,7 @@ const FiltrationIndustrielle = () => {
         document.title = "Filtres d'eau industriels | Multimédia, Charbon, Catalytique | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez nos solutions de filtration industrielle : filtres multimédias, à charbon actif, catalytiques et à sable vert pour une eau de process ultra-pure.");
+            metaDesc.setAttribute("content", "Découvrir nos solutions de filtration industrielle : filtres multimédias, à charbon actif, catalytiques et à sable vert pour une eau de process ultra-pure.");
         }
         window.scrollTo(0, 0);
     }, []);
@@ -436,7 +436,7 @@ const FiltrationIndustrielle = () => {
                                 <span className="font-bold text-[#1e3a8a] block text-center">de l'analyse à l'exploitation.</span>
                             </h2>
                             <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-center font-light leading-relaxed">
-                                Nous ne vendons pas de simples filtres, nous concevons des solutions complètes. Découvrez notre approche d'ingénierie étape par étape pour sécuriser votre investissement.
+                                Nous ne vendons pas de simples filtres, nous concevons des solutions complètes. Découvrir notre approche d'ingénierie étape par étape pour sécuriser votre investissement.
                             </p>
                         </div>
 
@@ -496,7 +496,7 @@ const FiltrationIndustrielle = () => {
                                         DIVISION INGÉNIERIE
                                     </span>
                                     <h2 className="text-4xl md:text-5xl font-bold text-white leading-[1.1] tracking-tighter">
-                                        Demandez votre <br />
+                                        Demander votre <br />
                                         <span className="text-white italic font-light font-serif">étude technique.</span>
                                     </h2>
                                     <p className="text-lg text-blue-100/80 font-light leading-relaxed">

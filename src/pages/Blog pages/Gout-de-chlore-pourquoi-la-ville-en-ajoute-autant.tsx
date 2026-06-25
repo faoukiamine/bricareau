@@ -7,7 +7,7 @@ const GoutDeChlorePourquoiLaVilleEnAjouteAutant = () => {
         document.title = "Goût de chlore : Pourquoi la ville en ajoute autant ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Pourquoi l'eau de la ville sent-elle le chlore ? Découvrez son rôle essentiel pour la désinfection et les solutions simples pour obtenir une eau au goût parfait.");
+            metaDesc.setAttribute("content", "Pourquoi l'eau de la ville sent-elle le chlore ? Découvrir son rôle essentiel pour la désinfection et les solutions simples pour obtenir une eau au goût parfait.");
         }
     }, []);
 

@@ -7,7 +7,7 @@ const AquariumEauOsmoseePoissons = () => {
         document.title = "Aquarium : Pourquoi l'eau osmosée est vitale pour vos poissons | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez pourquoi l'eau osmosée est le choix parfait pour offrir à vos poissons d'aquarium (eau douce ou mer) un environnement pur, stable et sain dans la durée.");
+            metaDesc.setAttribute("content", "Découvrir pourquoi l'eau osmosée est le choix parfait pour offrir à vos poissons d'aquarium (eau douce ou mer) un environnement pur, stable et sain dans la durée.");
         }
     }, []);
 

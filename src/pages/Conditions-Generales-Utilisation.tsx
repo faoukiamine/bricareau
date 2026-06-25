@@ -8,7 +8,7 @@ const ConditionsGeneralesUtilisation = () => {
         document.title = "Conditions Générales d'Utilisation | Bricareau Water Specialist";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Consultez les conditions générales d'utilisation du site Bricareau.com. Informations sur nos services de traitement d'eau au Québec et modalités d'utilisation.");
+            metaDesc.setAttribute("content", "Consulter les conditions générales d'utilisation du site Bricareau.com. Informations sur nos services de traitement d'eau au Québec et modalités d'utilisation.");
         }
 
         // OG Tags

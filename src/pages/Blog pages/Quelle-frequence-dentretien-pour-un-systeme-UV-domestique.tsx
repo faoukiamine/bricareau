@@ -7,7 +7,7 @@ const FrequenceEntretienSystemeUV = () => {
         document.title = "Quelle fréquence d’entretien pour un système UV domestique ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez la fréquence d'entretien idéale pour votre système UV domestique : remplacement de lampe, nettoyage du quartz et entretien des préfiltres.");
+            metaDesc.setAttribute("content", "Découvrir la fréquence d'entretien idéale pour votre système UV domestique : remplacement de lampe, nettoyage du quartz et entretien des préfiltres.");
         }
     }, []);
 

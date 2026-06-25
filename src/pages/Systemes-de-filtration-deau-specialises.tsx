@@ -372,6 +372,27 @@ const B = () => {
                     </div>
                 </section>
 
+                {/* AEO TARGET PARAGRAPH (Featured Snippets & Voice Search) */}
+                <section className="py-16 bg-slate-50 border-t border-slate-200" id="aeo-puits">
+                    <div className="container mx-auto px-6 max-w-4xl">
+                        <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-2 h-full bg-[#18448F]"></div>
+                            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                                Qu'est-ce qu'un système de filtration pour eau de puits ?
+                            </h2>
+                            <p className="text-slate-600 text-lg leading-relaxed mb-6 font-medium">
+                                Un système de filtration pour eau de puits est une solution de traitement spécialisée conçue pour éliminer les contaminants spécifiques aux eaux souterraines, tels que le fer, le soufre (odeur d'œufs pourris), le manganèse et les bactéries. Il garantit une eau pure et sécuritaire pour toute la maison.
+                            </p>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-600 font-light">
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Élimination des taches de rouille</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Neutralisation des mauvaises odeurs</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Protection de la plomberie</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Purification microbiologique</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 2.5. Symptom Diagnostic Grid */}
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
@@ -526,7 +547,7 @@ const B = () => {
                             </h2>
                             <div className="w-24 h-1 bg-[#18448F]"></div>
                             <p className="body-pro-max mt-8 text-justify w-full">
-                                Découvrez notre gamme complète de filtres spécialisés, conçus pour répondre aux défis uniques du réseau d'eau municipale et des puits privés artésiens ou de surface. Que vous fassiez face à des taches de fer tenaces, des odeurs de soufre incommodantes, une eau acide corrosive ou la présence de contaminants invisibles comme l'arsenic, nos systèmes offrent une solution ciblée et performante. Chaque unité est dotée d'une technologie de pointe pour assurer une filtration maximale tout en préservant l'intégrité de votre plomberie et de vos appareils électroménagers. En investissant dans l'une de nos solutions Vortex, Iron Shield, Zen-pH, ou autres, vous choisissez une tranquillité d'esprit durable et une qualité d'eau irréprochable pour toute votre famille. Nos experts vous accompagnent dans le diagnostic et l'installation pour garantir que chaque goutte d'eau qui coule de votre robinet soit pure, sûre et limpide.
+                                Découvrir notre gamme complète de filtres spécialisés, conçus pour répondre aux défis uniques du réseau d'eau municipale et des puits privés artésiens ou de surface. Que vous fassiez face à des taches de fer tenaces, des odeurs de soufre incommodantes, une eau acide corrosive ou la présence de contaminants invisibles comme l'arsenic, nos systèmes offrent une solution ciblée et performante. Chaque unité est dotée d'une technologie de pointe pour assurer une filtration maximale tout en préservant l'intégrité de votre plomberie et de vos appareils électroménagers. En investissant dans l'une de nos solutions Vortex, Iron Shield, Zen-pH, ou autres, vous choisissez une tranquillité d'esprit durable et une qualité d'eau irréprochable pour toute votre famille. Nos experts vous accompagnent dans le diagnostic et l'installation pour garantir que chaque goutte d'eau qui coule de votre robinet soit pure, sûre et limpide.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -913,7 +934,7 @@ const B = () => {
                             </p>
                             <div className="flex gap-4">
                                 <ProMaxButton asChild variant="primary" offsetColor="border-white" className="w-full sm:w-auto !bg-[#18448F] !text-white hover:!bg-white hover:!text-[#18448F]">
-                                    <a href="/Analyses-et-Tests-d-eau">Demandez une analyse d'eau</a>
+                                    <a href="/Analyses-et-Tests-d-eau">Demander une analyse d'eau</a>
                                 </ProMaxButton>
                             </div>
                         </div>
@@ -936,7 +957,7 @@ const B = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-[#18448F] block text-center">Découvrez les produits associés</span>
+                                <span className="font-bold text-[#18448F] block text-center">Découvrir les produits associés</span>
                             </h2>
                              <p className="body-pro-max text-gray-500 text-center mx-auto">
                                  Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
@@ -1024,18 +1045,18 @@ const B = () => {
                           <span className="text-white italic font-bold font-serif">à une source de pureté.</span>
                         </h2>
                         <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
-                          Prêt à éliminer définitivement le fer, le soufre ou le chlore de votre foyer ? Profitez de l'accompagnement d'un spécialiste pour choisir l'équipement parfaitement adapté à votre réalité. Demandez votre consultation gratuite dès aujourd'hui et redécouvrez le plaisir d'une eau saine à chaque robinet.                        </p>
+                          Prêt à éliminer définitivement le fer, le soufre ou le chlore de votre foyer ? Profiter de l'accompagnement d'un spécialiste pour choisir l'équipement parfaitement adapté à votre réalité. Demander votre consultation gratuite dès aujourd'hui et redécouvrez le plaisir d'une eau saine à chaque robinet.                        </p>
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-4">
                         <ProMaxButton asChild variant="primary" offsetColor="border-white" className="w-full sm:w-auto !bg-[#18448F] !text-white hover:!bg-white hover:!text-[#18448F]">
                           <a href="tel:18552649328" className="flex items-center gap-3">
                             <Phone className="h-5 w-5 animate-bounce" />
-                            Parlez à un expert
+                            Parler à un expert
                           </a>
                         </ProMaxButton>
                         <ProMaxButton asChild variant="outline-white" className="w-full sm:w-auto">
-                          <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                          <NavLink to="/consultation">Planifier une consultation</NavLink>
                         </ProMaxButton>
                       </div>
 

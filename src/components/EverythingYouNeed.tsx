@@ -4,7 +4,7 @@ const features = [
     {
         icon: Droplet,
         title: "Eau de qualité supérieure",
-        description: "Profitez d'une eau pure et saine pour toute votre famille"
+        description: "Profiter d'une eau pure et saine pour toute votre famille"
     },
     {
         icon: Truck,

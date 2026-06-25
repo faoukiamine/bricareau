@@ -7,7 +7,7 @@ const FiltreDoucheBienfaits = () => {
         document.title = "Adoucisseur d'eau portable pour VR : confort et protection en voyage | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez comment un adoucisseur d'eau portable protège votre VR, améliore le confort et prolonge la durée de vie de vos équipements en voyage.");
+            metaDesc.setAttribute("content", "Découvrir comment un adoucisseur d'eau portable protège votre VR, améliore le confort et prolonge la durée de vie de vos équipements en voyage.");
         }
     }, []);
 

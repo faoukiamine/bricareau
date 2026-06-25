@@ -193,7 +193,7 @@ export default function Carrieres() {
                                 Nos offres d'emploi
                             </h2>
                             <p className="text-lg text-slate-600 font-light leading-relaxed">
-                                Découvrez nos postes ouverts et faites le premier pas vers une carrière florissante.
+                                Découvrir nos postes ouverts et faites le premier pas vers une carrière florissante.
                             </p>
                         </div>
 

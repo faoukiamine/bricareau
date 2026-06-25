@@ -66,7 +66,7 @@ export const breadcrumbLabels: Record<string, string> = {
     "Temoignages": "Témoignages",
     "services-de-traitement-eau": "Nos Services",
     "page-consultation": "Diagnostic",
-    "contact-form": "Contactez-nous",
+    "contact-form": "Nous contacter",
     "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles": "Résidentiel",
     "solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants": "Hôtellerie et restauration",
     "solutions-de-traitement-d-eau-pour-offices-et-bureaux": "Bureaux & Entreprises"

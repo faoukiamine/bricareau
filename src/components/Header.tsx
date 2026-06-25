@@ -170,14 +170,14 @@ const Header = () => {
                     className="px-8 h-12 text-[10px]"
                     onClick={() => navigate("/consultation")}
                 >
-                    Contactez-nous
+                    Nous contacter
                 </ProMaxButton>
                 <ProMaxButton 
                     variant={isScrolled ? "white" : "primary"} 
                     className="px-8 h-12 text-[10px]"
                     onClick={() => navigate("/contact-form")}
                 >
-                    Demandez un service
+                    Demander un service
                 </ProMaxButton>
               </div>
             </div>
@@ -497,7 +497,7 @@ const Header = () => {
                                 navigate("/consultation");
                             }}
                         >
-                            Contactez-nous
+                            Nous contacter
                         </ProMaxButton>
                         <a href="tel:18552649328" className="flex items-center justify-center gap-2 font-black text-slate-800 py-4">
                             <Phone className="w-5 h-5 text-[#0052ff]" strokeWidth={2.5} />

@@ -12,17 +12,17 @@ import contactHero from "@/assets/118022.jpg";
 
 const Contact = () => {
   useEffect(() => {
-    document.title = "Contactez Bricareau | Service Client Traitement d'Eau au Québec";
+    document.title = "Contacter Bricareau | Service Client Traitement d'Eau au Québec";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Besoin d'aide pour votre eau ? Contactez l'équipe Bricareau par téléphone, courriel ou via notre formulaire. Experts en traitement d'eau à votre service partout au Québec.");
+      metaDesc.setAttribute("content", "Besoin d'aide pour votre eau ? Contacter l'équipe Bricareau par téléphone, courriel ou via notre formulaire. Experts en traitement d'eau à votre service partout au Québec.");
     }
 
     // OG Tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute("content", "Contactez Bricareau : Votre Expert Eau au Québec");
+    if (ogTitle) ogTitle.setAttribute("content", "Contacter Bricareau : Votre Expert Eau au Québec");
     const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute("content", "Une question ? Un projet ? Notre service client est là pour vous accompagner. Contactez-nous pour une eau plus pure dès aujourd'hui.");
+    if (ogDesc) ogDesc.setAttribute("content", "Une question ? Un projet ? Notre service client est là pour vous accompagner. Nous contacter pour une eau plus pure dès aujourd'hui.");
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/contact");
   }, []);
@@ -48,7 +48,7 @@ const Contact = () => {
           <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
             <div className="max-w-2xl text-left py-12 lg:py-0">
               <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-[#18448F] mb-6 tracking-tight">
-    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Contactez-nous.</span>
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Nous contacter.</span>
                 <span className="font-bold text-[#18448F] block">Notre équipe est à votre écoute.</span>
 </h1>
               <p className="font-light text-slate-600 mb-8 max-w-xl text-lg leading-relaxed">
@@ -58,7 +58,7 @@ const Contact = () => {
                 <ProMaxButton asChild className="w-fit">
                   <a href="tel:18552649328" className="flex items-center gap-2">
                     <Phone className="w-4 h-4" />
-                    Appelez au 1 855 264 9328
+                    Appeler au 1 855 264 9328
                   </a>
                 </ProMaxButton>
                 <div className="flex items-center gap-2 text-slate-500 text-sm font-light">
@@ -96,11 +96,11 @@ const Contact = () => {
                   Foire aux questions
                 </h3>
                 <p className="body-pro-max text-sm mb-8 flex-grow text-slate-500 leading-relaxed font-light">
-                  Vous n'avez pas envie de nous contacter, ou vous pensez que nous avons déjà répondu à votre question ? Consultez notre FAQ exhaustive.
+                  Vous n'avez pas envie de nous contacter, ou vous pensez que nous avons déjà répondu à votre question ? Consulter notre FAQ exhaustive.
                 </p>
                 <div className="pt-2">
                   <ProMaxButton variant="outline" className="px-8 pointer-events-none">
-                    Consultez la FAQ <ChevronRight className="w-4 h-4 ml-2" />
+                    Consulter la FAQ <ChevronRight className="w-4 h-4 ml-2" />
                   </ProMaxButton>
                 </div>
               </NavLink>
@@ -122,7 +122,7 @@ const Contact = () => {
                 </p>
                 <div className="pt-2">
                   <ProMaxButton variant="outline" className="px-8 pointer-events-none">
-                    Planifiez une consultation <ChevronRight className="w-4 h-4 ml-2" />
+                    Planifier une consultation <ChevronRight className="w-4 h-4 ml-2" />
                   </ProMaxButton>
                 </div>
               </NavLink>

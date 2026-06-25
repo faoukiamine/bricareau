@@ -15,6 +15,66 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Lovable" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- JSON-LD SEO/GEO/AEO Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "HomeAndConstructionBusiness",
+          "name": "Bricareau Spécialiste de l'Eau",
+          "image": "https://bricareau.com/logo.png",
+          "@id": "https://bricareau.com",
+          "url": "https://bricareau.com",
+          "telephone": "+1-855-264-9328",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Montréal",
+            "addressRegion": "QC",
+            "addressCountry": "CA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.5017,
+            "longitude": -73.5673
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          "areaServed": ["Laval", "Rive-Nord", "Rive-Sud", "Laurentides", "Lanaudière", "Montérégie"]
+        },
+        {
+          "@type": "Person",
+          "name": "Saïd Oussara",
+          "jobTitle": "Expert en traitement de l'eau et Fondateur",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Bricareau Spécialiste de l'Eau"
+          },
+          "description": "Expert cumulant plus de 25 ans d'expérience dans le traitement et la filtration d'eau résidentielle et commerciale au Québec.",
+          "url": "https://bricareau.com/a-propos"
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Installation d'adoucisseur d'eau",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Bricareau Spécialiste de l'Eau"
+          },
+          "areaServed": {
+            "@type": "State",
+            "name": "Québec"
+          },
+          "description": "Installation, entretien et réparation d'adoucisseurs d'eau résidentiels et commerciaux pour éliminer le calcaire de votre eau."
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>

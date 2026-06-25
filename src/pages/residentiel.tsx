@@ -86,7 +86,7 @@ const ResidentialServices = () => {
                                         className="relative flex items-center justify-center w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
                                         onClick={() => navigate("/consultation")}
                                     >
-                                        Planifiez une consultation gratuite
+                                        Planifier une consultation gratuite
                                     </button>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@ const ResidentialServices = () => {
                                 </span>
                             </h2>
                             <p className="mt-6 text-slate-500 text-lg font-light leading-relaxed w-full max-w-3xl text-center">
-                                Découvrez nos systèmes avancés conçus spécifiquement pour la maison. De l'adoucisseur protégeant votre plomberie à la station d'eau potable ultra-pure pour votre cuisine, Bricareau garantit une qualité irréprochable à chaque robinet.
+                                Découvrir nos systèmes avancés conçus spécifiquement pour la maison. De l'adoucisseur protégeant votre plomberie à la station d'eau potable ultra-pure pour votre cuisine, Bricareau garantit une qualité irréprochable à chaque robinet.
                             </p>
                         </div>
                         

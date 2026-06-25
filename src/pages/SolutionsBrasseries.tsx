@@ -61,7 +61,7 @@ const SolutionsBrasseries = () => {
                     highlightedTitle={<span className="font-bold not-italic text-[#18448F]">L'effervescence <span className="text-[#8CC63F]">pure</span></span>}
                     mainTitle="pour votre brasserie."
                     subtitle="Sublimez le profil de vos bières grâce à une eau parfaitement maîtrisée. Nos solutions de filtration de pointe vous permettent d'ajuster votre profil minéral avec une régularité absolue, tout en optimisant le rendement de vos brassins et en réduisant votre empreinte écologique."
-                    ctaText="Planifiez une consultation"
+                    ctaText="Planifier une consultation"
                     ctaLink="/consultation"
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -328,14 +328,14 @@ const SolutionsBrasseries = () => {
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
+                                        Parler à un expert
                                     </a>
                                 </ProMaxButton>
                                 <ProMaxButton
                                     variant="outline-white"
                                     asChild
                                 >
-                                    <NavLink to="/contact-entreprises">Planifiez une consultation gratuite</NavLink>
+                                    <NavLink to="/contact-entreprises">Planifier une consultation gratuite</NavLink>
                                 </ProMaxButton>
                             </div>
 
@@ -369,7 +369,7 @@ const SolutionsBrasseries = () => {
                                 {
                                     cat: "Étude de cas : Microbrasserie",
                                     title: "Profilage minéral complet d'une microbrasserie à Montréal.",
-                                    desc: "Découvrez comment notre solution d'osmose inverse couplée à une minéralisation précise a stabilisé le goût des IPA et éliminé les variations saisonnières d'eau."
+                                    desc: "Découvrir comment notre solution d'osmose inverse couplée à une minéralisation précise a stabilisé le goût des IPA et éliminé les variations saisonnières d'eau."
                                 },
                                 {
                                     cat: "Étude de cas : Brasserie de Débit",

@@ -8,7 +8,7 @@ const TraitementUVBacteriaNaturel = () => {
         document.title = "Adoucisseur d'eau et fosse septique : compatible ou non ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "L'adoucisseur d'eau est-il compatible avec une fosse septique ? Découvrez les mythes, les faits et les bonnes pratiques pour une cohabitation réussie au Québec.");
+            metaDesc.setAttribute("content", "L'adoucisseur d'eau est-il compatible avec une fosse septique ? Découvrir les mythes, les faits et les bonnes pratiques pour une cohabitation réussie au Québec.");
         }
     }, []);
 

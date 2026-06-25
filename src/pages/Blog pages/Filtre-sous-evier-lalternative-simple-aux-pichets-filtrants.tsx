@@ -8,7 +8,7 @@ const FiltreSousEvierPichetAlternative = () => {
         document.title = "Filtre sous évier : L'alternative aux pichets filtrants | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez pourquoi le filtre sous évier est une solution pratique, écologique et plus performante pour remplacer vos pichets filtrants à la maison.");
+            metaDesc.setAttribute("content", "Découvrir pourquoi le filtre sous évier est une solution pratique, écologique et plus performante pour remplacer vos pichets filtrants à la maison.");
         }
     }, []);
 

@@ -39,9 +39,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#18448F] text-white py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-x-8 gap-y-8 mb-12">
           {/* Logo and tagline */}
-          <div className="space-y-4 lg:col-span-2">
+          <div className="space-y-4 lg:col-span-3">
             <div className="flex items-center gap-2">
               <img
                 src={logoBricareau}
@@ -49,12 +49,12 @@ const Footer = () => {
                alt="Bricareau Water Specialist - Spécialiste du traitement d'eau au Canada" title="Équipement de filtration Bricareau par Bricareau" />
             </div>
             <p className="text-sm text-white/80 leading-relaxed">
-              Bricareau est votre expert en traitement d'eau et filtration au Québec depuis plus de 20 ans. Que ce soit pour l'installation d'un adoucisseur d'eau, d'un système d'osmose inverse, de la filtration de l'eau de puits ou de la désinfection UV, nous offrons des solutions complètes adaptées aux besoins résidentiels, commerciaux et industriels. Faites confiance à nos spécialistes certifiés pour une eau pure, saine et de qualité supérieure partout au Québec.
+              Bricareau est votre expert en traitement d'eau et filtration au Québec depuis plus de 25 ans. Que ce soit pour l'installation d'un adoucisseur d'eau, d'un système d'osmose inverse, de la filtration de l'eau de puits ou de la désinfection UV, nous offrons des solutions complètes adaptées aux besoins résidentiels, commerciaux et industriels. Faites confiance à nos spécialistes certifiés pour une eau pure, saine et de qualité supérieure partout au Québec.
             </p>
           </div>
 
           {/* Col 2: Résidentiel */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">
               <a href="/solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles" className="hover:text-white/80 transition-colors">Résidentiel</a>
             </h3>
@@ -81,7 +81,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/Stations-d-eau-potables-sous-l-evier-de-la-cuisine" className="text-white/80 hover:text-white transition-colors">
-                  Systèmes de filtration sous évier
+                  Systèmes de filtration sous évier d'eau
                 </a>
               </li>
               <li>
@@ -91,14 +91,14 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche" className="text-white/80 hover:text-white transition-colors">
-                  Fontaines et refroidisseurs
+                  Fontaines et refroidisseurs d'eau
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Col 3: Bureaux & Entreprises */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">
               <a href="/solutions-de-traitement-d-eau-pour-offices-et-bureaux" className="hover:text-white/80 transition-colors">BUREAUX & ENTREPRISES</a>
             </h3>
@@ -117,19 +117,19 @@ const Footer = () => {
           </div>
 
           {/* Col 4: Hôtellerie */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">
               <a href="/solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants" className="hover:text-white/80 transition-colors">Hôtellerie et restauration</a>
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/adoucisseurs-eau-commerciaux" className="text-white/80 hover:text-white transition-colors">
-                  Adoucisseur d'eau commercial
+                  Adoucisseurs d'eau
                 </a>
               </li>
               <li>
                 <a href="/filtration-hotels-restaurants" className="text-white/80 hover:text-white transition-colors">
-                  Filtration d'eau pour hôtels et restaurants
+                  Systèmes de filtration d'eau
                 </a>
               </li>
               <li>
@@ -139,14 +139,14 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/filtres-eau-machine-cafe" className="text-white/80 hover:text-white transition-colors">
-                  Filtres pour Machines à Café
+                  Filtres pour machines à café
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Col 4: Restez informé */}
-          <div>
+          {/* Col 5: Restez informé */}
+          <div className="lg:col-span-3">
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Restez informé</h3>
             <div className="h-fit">
               <p className="text-sm text-white/80 mb-6 leading-relaxed">
@@ -160,14 +160,14 @@ const Footer = () => {
                     placeholder="Votre email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus-visible:ring-white/50 h-12 rounded-lg flex-1 w-full"
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus-visible:ring-white/50 h-10 rounded-lg flex-1 w-full"
                     disabled={isLoading}
                     required
                   />
                   <Button
                     type="submit"
                     size="icon"
-                    className="bg-white text-[#18448F] hover:bg-slate-100 shrink-0 h-12 w-12 rounded-full shadow-lg shadow-black/20"
+                    className="bg-white text-[#18448F] hover:bg-slate-100 shrink-0 h-10 w-10 rounded-full shadow-lg shadow-black/20"
                     disabled={isLoading}
                   >
                     {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Mail className="h-5 w-5" />}

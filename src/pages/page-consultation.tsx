@@ -36,7 +36,7 @@ const PageConsultation = () => {
         document.title = "Consultation Gratuite sur l'Eau au Québec | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Obtenez une évaluation gratuite de la qualité de votre eau. Planifiez une consultation téléphonique sans engagement pour trouver la solution de traitement idéale.");
+            metaDesc.setAttribute("content", "Obtenir une évaluation gratuite de la qualité de votre eau. Planifier une consultation téléphonique sans engagement pour trouver la solution de traitement idéale.");
         }
 
         // OG Tags

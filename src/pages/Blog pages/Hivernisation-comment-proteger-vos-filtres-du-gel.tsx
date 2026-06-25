@@ -7,7 +7,7 @@ const HivernisationProtegerFiltresDuGel = () => {
         document.title = "Hivernisation : Comment protéger vos filtres du gel | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez les étapes essentielles de l'hivernisation pour protéger vos systèmes de filtration et adoucisseurs d'eau du gel pendant l'hiver québécois.");
+            metaDesc.setAttribute("content", "Découvrir les étapes essentielles de l'hivernisation pour protéger vos systèmes de filtration et adoucisseurs d'eau du gel pendant l'hiver québécois.");
         }
     }, []);
 
@@ -53,7 +53,7 @@ const HivernisationProtegerFiltresDuGel = () => {
             {/* Section 5 */}
             <h2 id="section-5" className="text-black mt-16 mb-6 scroll-mt-24">L'occasion parfaite pour un entretien complet</h2>
             <p className="text-gray-700 mb-6 text-justify">
-                L'hivernisation, c'est aussi le moment idéal pour entretenir et vérifier l'état général du système. Profitez de la mise hors service temporaire pour nettoyer les cuves, remplacer les joints usés et inspecter la tête de filtre. Ce travail de maintenance préventive permet de repartir avec un système propre et performant lorsque la saison froide prend fin. De plus, certaines entreprises offrent un service clé en main : inspection annuelle, nettoyage, vidange et remise en route au printemps. Cela garantit une performance optimale sans tracas pour les propriétaires.
+                L'hivernisation, c'est aussi le moment idéal pour entretenir et vérifier l'état général du système. Profiter de la mise hors service temporaire pour nettoyer les cuves, remplacer les joints usés et inspecter la tête de filtre. Ce travail de maintenance préventive permet de repartir avec un système propre et performant lorsque la saison froide prend fin. De plus, certaines entreprises offrent un service clé en main : inspection annuelle, nettoyage, vidange et remise en route au printemps. Cela garantit une performance optimale sans tracas pour les propriétaires.
             </p>
 
             {/* Section 6 */}

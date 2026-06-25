@@ -380,7 +380,7 @@ export const faqCategories: FAQCategory[] = [
       },
       {
         "q": "Les filtres éliminent-ils le fluorure de l'eau municipale ?",
-        "a": "Les filtres standard au charbon actif réduisent partiellement le fluorure. Pour une élimination complète, un système d'osmose inverse au point d'utilisation est plus efficace. Consultez nos experts pour déterminer la meilleure solution selon vos besoins."
+        "a": "Les filtres standard au charbon actif réduisent partiellement le fluorure. Pour une élimination complète, un système d'osmose inverse au point d'utilisation est plus efficace. Consulter nos experts pour déterminer la meilleure solution selon vos besoins."
       },
       {
         "q": "Quelle garantie offrez-vous sur vos systèmes de filtration ?",

@@ -7,7 +7,7 @@ const FluorDansEauFiltrer = () => {
         document.title = "Le fluor dans l'eau : Faut-il le filtrer ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez si le fluor présent dans l'eau de votre robinet ou puits nécessite d'être filtré et quelles sont les meilleures options de filtration.");
+            metaDesc.setAttribute("content", "Découvrir si le fluor présent dans l'eau de votre robinet ou puits nécessite d'être filtré et quelles sont les meilleures options de filtration.");
         }
     }, []);
 

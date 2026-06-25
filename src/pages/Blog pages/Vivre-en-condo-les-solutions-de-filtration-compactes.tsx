@@ -7,7 +7,7 @@ const VivreCondoFiltrationCompacte = () => {
         document.title = "Vivre en condo : Les solutions de filtration compactes | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez comment les solutions de filtration compactes, comme les filtres sous évier, offrent une eau saine et pure en condo sans travaux majeurs.");
+            metaDesc.setAttribute("content", "Découvrir comment les solutions de filtration compactes, comme les filtres sous évier, offrent une eau saine et pure en condo sans travaux majeurs.");
         }
     }, []);
 

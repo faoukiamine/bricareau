@@ -151,7 +151,7 @@ const OurProcess = () => {
                             </h1>
                             
                             <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
-                                Découvrez un processus rigoureux en quatre étapes. De l'analyse de la qualité de l'eau à l'entretien et suivi régulier, nous ne laissons aucune place au hasard pour garantir la perfection de votre eau.
+                                Découvrir un processus rigoureux en quatre étapes. De l'analyse de la qualité de l'eau à l'entretien et suivi régulier, nous ne laissons aucune place au hasard pour garantir la perfection de votre eau.
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-start gap-6">
@@ -172,7 +172,7 @@ const OurProcess = () => {
                             <span className="font-bold text-[#8CC63F] block">notre méthodologie.</span>
                         </h2>
                         <p className="max-w-3xl mx-auto mt-8 text-slate-600 text-lg md:text-xl leading-relaxed">
-                            Découvrez notre approche d'expert en <strong>traitement de l'eau</strong>. De l'<strong>analyse de la qualité de l'eau</strong> à l'installation d'<strong>adoucisseurs d'eau</strong> et de systèmes de <strong>filtration par osmose inverse</strong>, notre processus élimine rigoureusement le calcaire, le fer et les contaminants. Assurez à votre résidence, commerce ou industrie une <strong>eau pure et adoucie</strong> pour un confort absolu, une performance accrue et une protection optimale de vos installations.
+                            Découvrir notre approche d'expert en <strong>traitement de l'eau</strong>. De l'<strong>analyse de la qualité de l'eau</strong> à l'installation d'<strong>adoucisseurs d'eau</strong> et de systèmes de <strong>filtration par osmose inverse</strong>, notre processus élimine rigoureusement le calcaire, le fer et les contaminants. Assurez à votre résidence, commerce ou industrie une <strong>eau pure et adoucie</strong> pour un confort absolu, une performance accrue et une protection optimale de vos installations.
                         </p>
                     </div>
 
@@ -285,7 +285,7 @@ const OurProcess = () => {
                 <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen lg:min-h-[80vh] flex items-center py-32">
                     {/* Background Image Full Width */}
                     <div className="absolute inset-0 z-0">
-                        <img src={ctaImg} className="w-full h-full object-cover object-center"  alt="Contactez Bricareau" title="Traitement d'eau Québec par Bricareau" />
+                        <img src={ctaImg} className="w-full h-full object-cover object-center"  alt="Contacter Bricareau" title="Traitement d'eau Québec par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-white/95" />
                     </div>
                     

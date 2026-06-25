@@ -305,7 +305,7 @@ const Pieces = () => {
                             <div className="lg:w-3/4 space-y-12">
                                 <div className="flex flex-col items-start gap-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
                                      <h2 className="heading-pro-max text-left">
-                                        <span className="italic font-light text-[#18448F] block">Explorez nos</span>
+                                        <span className="italic font-light text-[#18448F] block">Explorer nos</span>
                                         <span className="font-bold text-[#18448F] block uppercase">composantes d'origine.</span>
                                     </h2>
                                     <p className="body-pro-max text-slate-500 max-w-2xl text-left font-light">

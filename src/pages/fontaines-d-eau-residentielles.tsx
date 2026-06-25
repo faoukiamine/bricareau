@@ -273,7 +273,7 @@ const Fontaines = () => {
         document.title = "Fontaines d'Eau et Refroidisseurs | Solutions de Pureté au Québec | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez notre gamme de fontaines d'eau sans bouteille et refroidisseurs pour maison ou bureau au Québec. Technologie de filtration avancée pour une eau pure.");
+            metaDesc.setAttribute("content", "Découvrir notre gamme de fontaines d'eau sans bouteille et refroidisseurs pour maison ou bureau au Québec. Technologie de filtration avancée pour une eau pure.");
         }
 
         // OG Tags
@@ -343,7 +343,7 @@ const Fontaines = () => {
                                     <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                     <Button asChild className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none">
                                         <a href="/consultation" className="inline-flex items-center gap-2">
-                                            Planifiez une consultation
+                                            Planifier une consultation
                                             <ArrowRight className="ml-1 w-5 h-5 transition-transform group-hover:translate-x-1" />
                                         </a>
                                     </Button>
@@ -486,7 +486,7 @@ const Fontaines = () => {
                                     },
                                     {
                                         title: "Fontaine d'eau sans bouteille - Glacier",
-                                        desc: "Le modèle Glacier se distingue par son élégance classique et sa fiabilité. Profitez d'une eau limpide à la température de votre choix, grâce à un système conçu pour allier durabilité et efficacité énergétique.",
+                                        desc: "Le modèle Glacier se distingue par son élégance classique et sa fiabilité. Profiter d'une eau limpide à la température de votre choix, grâce à un système conçu pour allier durabilité et efficacité énergétique.",
                                         img: distributeur2,
                                         features: ["Production 26lb/jour", "Auto-nettoyante", "Indicateur de niveau", "Glaçons cristallins"]
                                     },
@@ -522,7 +522,7 @@ const Fontaines = () => {
                                     asChild
                                 >
                                     <NavLink to="/consultation">
-                                        Demandez une consultation
+                                        Demander une consultation
                                     </NavLink>
                                 </Button>
                             </div>
@@ -578,7 +578,7 @@ const Fontaines = () => {
                                     </div>
                                     <h3 className="text-3xl lg:text-4xl font-bold text-[#18448F] lg:text-white tracking-tight">Art de Vivre</h3>
                                     <p className="text-slate-700 lg:text-white text-[18px] lg:text-[20px] leading-relaxed italic border-l-2 border-blue-500 pl-6 text-justify lg:text-left">
-                                        Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé, où chaque gorgée est une signature de qualité.
+                                        Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrir l'équilibre parfait entre esthétique et santé, où chaque gorgée est une signature de qualité.
                                     </p>
                                 </div>
                             </div>
@@ -632,7 +632,7 @@ const Fontaines = () => {
                                         fontStyle: 'normal'
                                     }}
                                 >
-                                    Découvrez comment nos fontaines et refroidisseurs d'eau s'intègrent harmonieusement dans tous les espaces, alliant esthétique moderne et fonctionnalité.
+                                    Découvrir comment nos fontaines et refroidisseurs d'eau s'intègrent harmonieusement dans tous les espaces, alliant esthétique moderne et fonctionnalité.
                                 </p>
                             </div>
                         </div>
@@ -709,7 +709,7 @@ const Fontaines = () => {
                           >
                             <a href="tel:18552649328" className="flex items-center gap-3">
                               <Phone className="h-5 w-5 animate-bounce" />
-                              Parlez à un expert
+                              Parler à un expert
                             </a>
                           </Button>
                         </div>
@@ -720,7 +720,7 @@ const Fontaines = () => {
                             asChild
                             className="relative w-full sm:w-auto bg-transparent border border-white/30 text-white hover:bg-white hover:text-[#18448F] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all"
                           >
-                            <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                            <NavLink to="/consultation">Planifier une consultation</NavLink>
                           </Button>
                         </div>
                       </div>
@@ -777,11 +777,11 @@ const Fontaines = () => {
                                     <div className="relative z-10 flex flex-col items-center">
                                         <Recycle className="w-6 h-6 lg:w-8 lg:h-8 text-white/80 mb-2 lg:mb-4" />
                                         <span className="text-3xl lg:text-5xl font-black text-white leading-none tracking-tighter mb-1 lg:mb-2 group-hover:scale-110 transition-transform duration-500">
-                                            -2920
+                                            -4380
                                         </span>
                                         <div className="w-8 lg:w-10 h-1 bg-white/30 rounded-full my-2 lg:my-3" />
                                         <span className="text-[9px] lg:text-xs font-bold text-emerald-50 uppercase tracking-[0.2em] leading-relaxed">
-                                            Bouteilles évitées par an<br/>pour un couple
+                                            Bouteilles évitées par an<br/>pour cette famille
                                         </span>
                                     </div>
                                 </div>
@@ -794,7 +794,7 @@ const Fontaines = () => {
                                         className="relative bg-white hover:bg-[#8CC63F] text-[#18448F] hover:text-white rounded-[1.5rem] lg:rounded-[2rem] h-12 lg:h-14 w-full font-black uppercase tracking-widest text-[9px] lg:text-xs transition-all border-none shadow-xl px-2"
                                     >
                                         <NavLink to="/consultation" className="flex items-center justify-center gap-3">
-                                            Planifiez votre impact
+                                            Planifier votre impact
                                             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                                         </NavLink>
                                     </Button>

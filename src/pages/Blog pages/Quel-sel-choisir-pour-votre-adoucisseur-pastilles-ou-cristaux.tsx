@@ -7,7 +7,7 @@ const QuelSelChoisirPastillesOuCristaux = () => {
         document.title = "Quel sel choisir pour votre adoucisseur : Pastilles ou cristaux ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez comment choisir le meilleur sel pour votre adoucisseur d'eau au Québec. Pastilles ou cristaux ? Avantages et inconvénients pour un système performant.");
+            metaDesc.setAttribute("content", "Découvrir comment choisir le meilleur sel pour votre adoucisseur d'eau au Québec. Pastilles ou cristaux ? Avantages et inconvénients pour un système performant.");
         }
     }, []);
 

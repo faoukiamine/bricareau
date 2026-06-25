@@ -8,7 +8,7 @@ const BacteriesPuitsDesinfectionChoc = () => {
         document.title = "Bactéries dans le puits : Les étapes de désinfection choc | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Votre analyse d'eau révèle des bactéries ? Découvrez les étapes cruciales d'une désinfection choc efficace pour retrouver une eau potable et sécuritaire.");
+            metaDesc.setAttribute("content", "Votre analyse d'eau révèle des bactéries ? Découvrir les étapes cruciales d'une désinfection choc efficace pour retrouver une eau potable et sécuritaire.");
         }
     }, []);
 

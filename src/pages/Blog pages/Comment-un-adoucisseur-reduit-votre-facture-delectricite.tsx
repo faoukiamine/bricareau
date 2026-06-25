@@ -8,7 +8,7 @@ const CommentAdoucisseurReduitFacture = () => {
         document.title = "Comment un adoucisseur réduit votre facture d'électricité ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez comment un adoucisseur d'eau élimine le calcaire, optimise vos appareils et réduit votre consommation d'électricité pour des économies durables.");
+            metaDesc.setAttribute("content", "Découvrir comment un adoucisseur d'eau élimine le calcaire, optimise vos appareils et réduit votre consommation d'électricité pour des économies durables.");
         }
     }, []);
 

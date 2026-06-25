@@ -79,7 +79,7 @@ const TestsEauPage = () => {
     document.title = "Test d'eau et Analyse d'eau au Québec | Montréal, Rive Nord& Rive-Sud | Bricareau";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Obtenez une analyse d'eau complète et précise au Québec. Tests de laboratoire certifiés pour puits et réseaux municipaux à Montréal, Laval, Rive-Sud et Rive-Nord.");
+      metaDesc.setAttribute("content", "Obtenir une analyse d'eau complète et précise au Québec. Tests de laboratoire certifiés pour puits et réseaux municipaux à Montréal, Laval, Rive-Sud et Rive-Nord.");
     }
 
     // OG Tags
@@ -166,7 +166,7 @@ const TestsEauPage = () => {
                                         className="relative flex items-center justify-center w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
                                         onClick={() => { document.getElementById('water-test')?.scrollIntoView({ behavior: 'smooth' }) }}
                                     >
-                                        Planifiez un test d'eau
+                                        Planifier un test d'eau
                                     </button>
                                 </div>
                                 <div className="relative inline-block w-full sm:w-auto group">
@@ -456,7 +456,7 @@ const TestsEauPage = () => {
                   >
                     <a href="tel:18552649328" className="flex items-center gap-3">
                       <Phone className="h-5 w-5 animate-bounce" />
-                      Parlez à un expert
+                      Parler à un expert
                     </a>
                   </ProMaxButton>
 
@@ -464,7 +464,7 @@ const TestsEauPage = () => {
                     variant="outline-white"
                     asChild
                   >
-                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                    <NavLink to="/consultation">Planifier une consultation</NavLink>
                   </ProMaxButton>
               </div>
 

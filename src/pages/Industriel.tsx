@@ -90,7 +90,7 @@ const Industriel = () => {
                                         className="relative flex items-center justify-center w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
                                         onClick={() => navigate("/consultation")}
                                     >
-                                        Demandez une consultation
+                                        Demander une consultation
                                     </button>
                                 </div>
                             </div>
@@ -305,7 +305,7 @@ const Industriel = () => {
                         {/* Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { tag: "Microbrasserie", title: "Profilage minéral complet d'une microbrasserie à Montréal.", desc: "Découvrez comment notre solution d'osmose inverse couplée à une minéralisation précise a stabilisé le goût des IPA." },
+                                { tag: "Microbrasserie", title: "Profilage minéral complet d'une microbrasserie à Montréal.", desc: "Découvrir comment notre solution d'osmose inverse couplée à une minéralisation précise a stabilisé le goût des IPA." },
                                 { tag: "Brasserie de débit", title: "Déchloration complète et filtration à Sherbrooke.", desc: "Élimination absolue de tout composé phénolique et microbiologique grâce à un système d'ultrafiltration industrielle." },
                                 { tag: "Économie circulaire", title: "Réutilisation d'eau et optimisation CIP.", desc: "Une solution de filtration innovante permettant de recycler plus de 30% de l'eau de lavage et de rinçage chaud des cuves." }
                             ].map((study, idx) => (

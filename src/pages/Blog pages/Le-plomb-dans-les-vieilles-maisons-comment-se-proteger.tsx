@@ -8,7 +8,7 @@ const PlombVieillesMaisonsProteger = () => {
         document.title = "Le plomb dans les vieilles maisons : Comment se protéger ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez comment identifier, analyser et éliminer le plomb dans l'eau de votre vieille maison grâce à des méthodes efficaces et des systèmes de filtration adaptés.");
+            metaDesc.setAttribute("content", "Découvrir comment identifier, analyser et éliminer le plomb dans l'eau de votre vieille maison grâce à des méthodes efficaces et des systèmes de filtration adaptés.");
         }
     }, []);
 

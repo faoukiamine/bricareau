@@ -329,6 +329,59 @@ const WhyChooseUs = () => {
                     </div>
                 </section>
 
+                {/* 5.5 NOTRE EXPERT (GEO / E-E-A-T) */}
+                <section className="py-24 bg-slate-50 border-t border-slate-200" id="notre-expert">
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        <div className="flex flex-col lg:flex-row items-center gap-16">
+                            <div className="lg:w-1/3 relative">
+                                <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl relative bg-slate-200">
+                                    <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10"></div>
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" 
+                                        alt="Saïd Oussara - Expert en traitement d'eau" 
+                                        className="w-full h-full object-cover grayscale-[20%]"
+                                    />
+                                </div>
+                                <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 hidden md:block">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 rounded-full bg-[#8CC63F]/20 flex items-center justify-center text-[#8CC63F]">
+                                            <ShieldCheck className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <p className="text-xl font-bold text-slate-900">25+ ans</p>
+                                            <p className="text-sm font-medium text-slate-500">d'expertise reconnue</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="lg:w-2/3 space-y-6">
+                                <span className="inline-block py-1 px-4 border border-[#18448F]/20 rounded-full text-[#18448F] font-bold tracking-[0.2em] uppercase text-xs">L'Expertise Humaine</span>
+                                <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 leading-tight">
+                                    L'engagement de <span className="text-[#18448F]">Saïd Oussara</span>
+                                </h2>
+                                <h3 className="text-xl text-[#8CC63F] font-medium italic">Fondateur & Maître Technicien en Traitement de l'Eau</h3>
+                                <p className="text-slate-600 text-lg leading-relaxed font-light">
+                                    Fort de plus de 25 années d'expérience sur le terrain au Québec, Saïd Oussara a bâti Bricareau sur une conviction profonde : la qualité de l'eau ne souffre d'aucun compromis. Son expertise pointue en hydraulique, en chimie de l'eau et en ingénierie de filtration a permis de résoudre les cas de contamination les plus complexes.
+                                </p>
+                                <ul className="space-y-4 pt-4 text-slate-600">
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle2 className="w-6 h-6 text-[#18448F] shrink-0" />
+                                        <span>Spécialiste accrédité en systèmes d'osmose inverse et désinfection UV.</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle2 className="w-6 h-6 text-[#18448F] shrink-0" />
+                                        <span>Consultant privilégié pour des installations industrielles majeures (Coréalis Pharma, Google).</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <CheckCircle2 className="w-6 h-6 text-[#18448F] shrink-0" />
+                                        <span>Garant de la norme de qualité Bricareau sur chaque projet déployé.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 6. REDESIGNED CTA: Éditorial Aligné à Droite avec Image Full Width (Dark Mode) */}
                 <section className="relative overflow-hidden min-h-[80vh] flex items-center py-32">
                     {/* Background Image Full Width */}
@@ -354,7 +407,7 @@ const WhyChooseUs = () => {
                                 Passez à l'étape supérieure et ne faites plus aucun compromis sur la qualité de votre eau. Échangez avec nos spécialistes d'eau pour analyser vos besoins et entamer votre transition vers une eau filtrée, pure et saine.
                             </p>
                             <div className="flex justify-center lg:justify-start">
-                                <ProMaxButton variant="white" className="px-12 h-16 shadow-[0_0_40px_rgba(255,255,255,0.2)] text-[#18448F] font-bold" onClick={() => navigate("/consultation")}>Contactez-nous</ProMaxButton>
+                                <ProMaxButton variant="white" className="px-12 h-16 shadow-[0_0_40px_rgba(255,255,255,0.2)] text-[#18448F] font-bold" onClick={() => navigate("/consultation")}>Nous contacter</ProMaxButton>
                             </div>
                         </div>
                     </div>

@@ -7,7 +7,7 @@ const PourquoiEauBacSelSale = () => {
         document.title = "Pourquoi l'eau de votre bac à sel est-elle sale ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez pourquoi l'eau du bac à sel de votre adoucisseur peut devenir sale, trouble ou colorée, et apprenez comment régler efficacement ce problème.");
+            metaDesc.setAttribute("content", "Découvrir pourquoi l'eau du bac à sel de votre adoucisseur peut devenir sale, trouble ou colorée, et apprenez comment régler efficacement ce problème.");
         }
     }, []);
 

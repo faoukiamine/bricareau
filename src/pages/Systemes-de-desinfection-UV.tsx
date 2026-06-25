@@ -191,6 +191,27 @@ const DesinfectionUV = () => {
                     singleLineTitle={false}
                 />
 
+                {/* AEO TARGET PARAGRAPH (Featured Snippets & Voice Search) */}
+                <section className="py-16 bg-slate-50 border-b border-slate-200" id="aeo-uv">
+                    <div className="container mx-auto px-6 max-w-4xl">
+                        <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-2 h-full bg-[#18448F]"></div>
+                            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                                Qu'est-ce qu'un système de désinfection UV pour l'eau ?
+                            </h2>
+                            <p className="text-slate-600 text-lg leading-relaxed mb-6 font-medium">
+                                Un système de désinfection UV utilise la lumière ultraviolette (UV-C) pour détruire 99,99 % des micro-organismes nocifs présents dans l'eau. C'est la méthode la plus efficace et écologique pour éliminer les bactéries (comme E. coli), les virus et les parasites sans ajouter de produits chimiques à votre eau.
+                            </p>
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-600 font-light">
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Élimination de 99,99% des bactéries</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Zéro produit chimique ajouté</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Conserve le goût naturel de l'eau</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-[#8CC63F]" /> Protection microbiologique 24h/24</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 3. Why choose UV disinfection? - Technical/Swiss Design Precision Grid with Integrated Background */}
                 <section className="py-24 lg:py-32 relative bg-white">
                     {/* Integrated background image harmonizing with UV water tech */}
@@ -779,7 +800,7 @@ const DesinfectionUV = () => {
                                         asChild
                                         className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
                                     >
-                                        <a href="/Analyses-et-Tests-d-eau">Demandez une analyse d'eau</a>
+                                        <a href="/Analyses-et-Tests-d-eau">Demander une analyse d'eau</a>
                                     </Button>
                                 </div>
                             </div>
@@ -802,7 +823,7 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-[#18448F] block text-center">Découvrez les produits associés.</span>
+                                <span className="font-bold text-[#18448F] block text-center">Découvrir les produits associés.</span>
                             </h2>
                             <p className="body-pro-max text-gray-500 max-w-2xl mx-auto text-center">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
@@ -1052,7 +1073,7 @@ const DesinfectionUV = () => {
                           >
                             <a href="tel:18552649328" className="flex items-center gap-3">
                               <Phone className="h-5 w-5 animate-bounce" />
-                              Parlez à un expert
+                              Parler à un expert
                             </a>
                           </Button>
                         </div>
@@ -1064,7 +1085,7 @@ const DesinfectionUV = () => {
                             asChild
                             className="relative w-full sm:w-auto bg-transparent border-none text-white hover:bg-white hover:text-blue-600 rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all"
                           >
-                            <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                            <NavLink to="/consultation">Planifier une consultation</NavLink>
                           </Button>
                         </div>
                       </div>

@@ -7,7 +7,7 @@ const EauBebesBouillirEauFiltree = () => {
         document.title = "Eau et bébés : Faut-il faire bouillir l'eau filtrée ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez pourquoi il est recommandé de faire bouillir l'eau filtrée avant de la donner à un nourrisson et comment assurer une sécurité optimale avec votre système de traitement d'eau.");
+            metaDesc.setAttribute("content", "Découvrir pourquoi il est recommandé de faire bouillir l'eau filtrée avant de la donner à un nourrisson et comment assurer une sécurité optimale avec votre système de traitement d'eau.");
         }
     }, []);
 

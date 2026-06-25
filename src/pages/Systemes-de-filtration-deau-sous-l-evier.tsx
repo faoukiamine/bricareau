@@ -176,14 +176,14 @@ const C = () => {
                     highlightedTitle={<><span className="text-[#18448F] font-bold not-italic">Prêt à découvrir</span> <span className="text-[#8CC63F] font-bold not-italic">l'excellence de l'eau pure</span></>}
                     mainTitle={<><span className="text-[#18448F] font-bold not-italic">directement sous votre évier ?</span></>}
                     subtitle="Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration d'eau sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille."
-                    ctaText="Planifiez une consultation gratuite"
+                    ctaText="Planifier une consultation gratuite"
                     ctaLink="/consultation"
                     showPhone={true}
                     showBreadcrumbs={true}
                     singleLineTitle={true}
                 />
 
-        {/* 3. Menaces Invisibles - Symptom-Logic Bento Grid */}
+                {/* 3. Menaces Invisibles - Symptom-Logic Bento Grid */}
         <section className="relative py-32 bg-white overflow-hidden">
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center mb-24">
@@ -263,25 +263,34 @@ const C = () => {
           </div>
         </section>
 
-                {/* 2. L'EAU DE SOURCE, SANS LA BOUTEILLE - Editorial Impact Redesign */}
-                <section className="py-24 lg:py-40 bg-white relative overflow-hidden">
+                {/* FUSION: AEO TARGET PARAGRAPH & L'EAU DE SOURCE */}
+                <section className="py-24 lg:py-40 bg-white relative overflow-hidden" id="aeo-osmose">
                     {/* Immersive Background Decor */}
                     <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 translate-x-1/4 pointer-events-none" />
                     <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-50/30 rounded-full blur-[100px] -translate-x-1/2 pointer-events-none" />
 
                     <div className="container mx-auto px-6 relative z-10">
+                        
+                        {/* AEO Intro (Centered) */}
+                        <div className="max-w-4xl mx-auto text-center mb-20 lg:mb-32">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-[#18448F] text-xs font-bold tracking-[0.2em] uppercase mb-8">
+                                <Sparkles className="w-4 h-4 text-emerald-500" />
+                                Technologie de pointe
+                            </div>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="font-bold not-italic text-[#18448F]">Qu'est-ce qu'un système de filtration </span>
+                                <span className="font-bold not-italic text-[#8CC63F]">sous évier ?</span>
+                            </h2>
+                        </div>
+
+                        {/* L'EAU DE SOURCE Core Content */}
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-x-24 lg:gap-y-8 items-start">
                             
                             {/* 1. Header Column (Mobile: 1st, Desktop: Top Right) */}
                             <div className="lg:col-span-7 lg:col-start-6 space-y-8">
                                 <div className="space-y-8">
-
-                                    <h2 className="heading-pro-max text-left !leading-[1.1]">
-                                        <span className="font-bold not-italic text-[#18448F] block">L'eau de source,</span>
-                                        <span className="font-bold not-italic text-[#18448F] block"><span className="text-[#8CC63F]">sans</span> la bouteille de plastique.</span>
-                                    </h2>
                                     <p className="body-pro-max text-slate-500 max-w-2xl text-justify">
-                                        Ne faites plus aucun compromis. Transformez votre robinet en une source de pureté gastronomique. Nos systèmes filtrent l'indésirable pour ne laisser couler que l'essentiel : une eau fraîche, saine et libérée des contraintes du plastique.
+                                        Une solution d'avant-garde (osmose inverse ou ultrafiltration) qui s'intègre de manière invisible sous votre comptoir. Elle élimine jusqu'à 99 % des contaminants—chlore, plomb, PFAS et microplastiques—pour vous offrir une eau pure, cristalline et sécuritaire à chaque utilisation. Ne faites plus aucun compromis. Transformez votre robinet en une source de pureté gastronomique. Nos systèmes filtrent l'indésirable pour ne laisser couler que l'essentiel : une eau fraîche, saine et libérée des contraintes du plastique.
                                     </p>
                                 </div>
                             </div>
@@ -327,9 +336,9 @@ const C = () => {
                                         },
                                         { 
                                             title: "Science", 
-                                            benefit: "Ultrafiltration", 
-                                            desc: "Technologie 0.01 micron bloquant 99.9% des micro-organismes sans aucun ajout chimique.",
-                                            icon: <Microscope className="w-5 h-5 text-emerald-600" />
+                                            benefit: "Technologies Multiples", 
+                                            desc: "Sédiments, charbon actif, ultrafiltration (UF) et osmose inverse (RO). Un arsenal complet et modulable selon vos besoins.",
+                                            icon: <Microscope className="w-5 h-5 text-blue-600" />
                                         },
                                         { 
                                             title: "Écologie", 
@@ -862,7 +871,7 @@ const C = () => {
                                  >
                                      <a href="tel:18552649328" className="flex items-center gap-3">
                                          <Phone className="h-5 w-5 animate-bounce" />
-                                         Parlez à un expert
+                                         Parler à un expert
                                      </a>
                                  </ProMaxButton>
                                  <ProMaxButton
@@ -870,7 +879,7 @@ const C = () => {
                                      variant="outline-white"
                                      className="w-full sm:w-auto h-16 px-12"
                                  >
-                                     <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                                     <NavLink to="/consultation">Planifier une consultation</NavLink>
                                  </ProMaxButton>
                             </div>
 

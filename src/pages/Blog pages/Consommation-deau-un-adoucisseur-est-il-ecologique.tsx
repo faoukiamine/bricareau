@@ -7,7 +7,7 @@ const ConsommationEauAdoucisseurEcologique = () => {
         document.title = "Consommation d'eau : Un adoucisseur est-il écologique ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Un adoucisseur d'eau est-il écologique ? Découvrez comment un appareil bien réglé réduit votre consommation d'énergie, de produits ménagers et prolonge la vie de vos équipements.");
+            metaDesc.setAttribute("content", "Un adoucisseur d'eau est-il écologique ? Découvrir comment un appareil bien réglé réduit votre consommation d'énergie, de produits ménagers et prolonge la vie de vos équipements.");
         }
     }, []);
 

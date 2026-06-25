@@ -8,7 +8,7 @@ const EauDeVilleBesoinFiltration = () => {
         document.title = "Pourquoi même l'eau de ville a besoin d'être filtrée ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez pourquoi l'eau de ville, bien que potable, nécessite souvent une filtration pour éliminer le chlore, les métaux lourds et améliorer son goût.");
+            metaDesc.setAttribute("content", "Découvrir pourquoi l'eau de ville, bien que potable, nécessite souvent une filtration pour éliminer le chlore, les métaux lourds et améliorer son goût.");
         }
     }, []);
 

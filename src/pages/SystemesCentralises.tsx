@@ -101,7 +101,7 @@ const SystemesCentralises = () => {
                                 </div>
                                 <div className="pt-6">
                                     <a href="/consultation" className="inline-flex items-center gap-2 text-white bg-[#18448F] hover:bg-blue-700 px-6 py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all shadow-md hover:shadow-lg group">
-                                        Planifiez une consultation <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                        Planifier une consultation <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </a>
                                 </div>
                             </div>
@@ -369,7 +369,7 @@ const SystemesCentralises = () => {
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un ingénieur-conseil
+                                        Parler à un ingénieur-conseil
                                     </a>
                                 </ProMaxButton>
                                 <ProMaxButton
@@ -415,7 +415,7 @@ const SystemesCentralises = () => {
                                 {
                                     cat: "Étude de cas : Campus",
                                     title: "Filtration et traitement d'un campus universitaire complet à Québec.",
-                                    desc: "Découvrez comment nos filtres centralisés ont réduit les coûts de maintenance de 35% tout en assurant une eau d'une pureté absolue pour 15 000 étudiants."
+                                    desc: "Découvrir comment nos filtres centralisés ont réduit les coûts de maintenance de 35% tout en assurant une eau d'une pureté absolue pour 15 000 étudiants."
                                 },
                                 {
                                     cat: "Étude de cas : Hôpital",

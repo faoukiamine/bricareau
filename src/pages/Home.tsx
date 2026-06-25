@@ -115,7 +115,7 @@ const Home1 = () => {
         {
             icon: SupportAgentIcon,
             title: "Support Premium & Réactif",
-            description: "Profitez d'une tranquillité d'esprit absolue grâce à notre assistance ultra-réactive et nos programmes d'entretien préventif."
+            description: "Profiter d'une tranquillité d'esprit absolue grâce à notre assistance ultra-réactive et nos programmes d'entretien préventif."
         },
         {
             icon: TrendingUp,
@@ -171,6 +171,7 @@ const Home1 = () => {
     return (
         <div className="min-h-screen bg-white">
             <Header />
+            <h1 className="sr-only">Traitement d'eau résidentiel et commercial au Québec | Bricareau</h1>
 
             <section className="relative bg-white overflow-hidden min-h-[85vh] md:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
                 <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
@@ -202,9 +203,9 @@ const Home1 = () => {
                                     className={`col-start-1 row-start-1 transition-all duration-700 ease-in-out flex flex-col justify-start ${currentSlide === index ? 'opacity-100 translate-y-0 pointer-events-auto z-10' : 'opacity-0 translate-y-4 pointer-events-none z-0 invisible'}`}
                                 >
 
-                                    <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
+                                    <h2 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
                                         {slide.title1} <span className={`${slide.titleAccentColor} font-sans font-bold drop-shadow-sm`}>{slide.titleAccent}</span><br/> {slide.title2}
-                                    </h1>
+                                    </h2>
                                     
                                     <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
                                         {slide.desc}
@@ -220,7 +221,7 @@ const Home1 = () => {
                                     className="relative w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
                                     onClick={() => navigate("/consultation")}
                                 >
-                                    Planifiez une consultation gratuite
+                                    Planifier une consultation gratuite
                                 </Button>
                             </div>
 
@@ -488,9 +489,9 @@ const Home1 = () => {
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="text-center mb-16">
                         <span className="text-[#18448F] text-xs font-bold uppercase tracking-[0.15em] mb-4 block">Notre Expertise</span>
-                        <h2 className="heading-pro-max text-[#18448F] mb-6">Découvrez la différence <span className="text-[#8CC63F]">Bricareau</span></h2>
+                        <h2 className="heading-pro-max text-[#18448F] mb-6">Découvrir la différence <span className="text-[#8CC63F]">Bricareau</span></h2>
                         <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mx-auto">
-                            Découvrez une fusion unique entre technologie de pointe et expertise humaine.
+                            Découvrir une fusion unique entre technologie de pointe et expertise humaine.
                             Nous concevons des écosystèmes hydriques intelligents pour protéger votre santé
                             et garantir une pureté absolue à chaque goutte, pour aujourd'hui et pour demain.
                         </p>
@@ -606,7 +607,7 @@ const Home1 = () => {
                             </h2>
                             
                             <p className="text-lg text-slate-600 leading-relaxed mb-10">
-                                Fini les doutes sur la qualité de votre eau. Obtenez un diagnostic sur-mesure et découvrez le système de traitement parfait pour vos besoins.
+                                Fini les doutes sur la qualité de votre eau. Obtenir un diagnostic sur-mesure et découvrez le système de traitement parfait pour vos besoins.
                             </p>
                             
                             <div>

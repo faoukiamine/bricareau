@@ -62,7 +62,7 @@ export const mainNavMenuItems: MenuItem[] = [
                 items: [
                      { 
                         title: "Notre compagnie", 
-                        description: "Découvrez notre histoire, notre vision et pourquoi nous sommes la référence au Québec ?", 
+                        description: "Découvrir notre histoire, notre vision et pourquoi nous sommes la référence au Québec ?", 
                         href: "/pourquoi-choisir-bricareau" 
                     },
                     { 
@@ -76,7 +76,7 @@ export const mainNavMenuItems: MenuItem[] = [
                 items: [
                     { 
                         title: "Durabilité", 
-                        description: "Découvrez nos engagements écologiques et notre mission pour réduire l'empreinte plastique.", 
+                        description: "Découvrir nos engagements écologiques et notre mission pour réduire l'empreinte plastique.", 
                         href: "/durabilite" 
                     },
                     { 
@@ -223,7 +223,7 @@ export const mainNavMenuItems: MenuItem[] = [
                 items: [
                     { 
                         title: "Analyses & Tests d'eau", 
-                        description: "Réservez votre audit de qualité d'eau et obtenez un rapport détaillé de nos ingénieurs.", 
+                        description: "Réserver votre audit de qualité d'eau et obtenez un rapport détaillé de nos ingénieurs.", 
                         href: "/Analyses-et-Tests-d-eau?ref=ressources" 
                     },
                     { 
@@ -242,7 +242,7 @@ export const mainNavMenuItems: MenuItem[] = [
                 items: [
                     { 
                         title: "Contaminants de l'eau", 
-                        description: "Découvrez les principaux polluants de l'eau et comment nos systèmes vous en protègent.", 
+                        description: "Découvrir les principaux polluants de l'eau et comment nos systèmes vous en protègent.", 
                         href: "/contaminants-de-l-eau" 
                     },
                     { 
@@ -320,13 +320,13 @@ export const productMenuItems: MenuItem[] = [
       {
         customIcon: pointofusefiltericonImg,
         title: "Stations d'eau potable",
-        description: "Profitez d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
+        description: "Profiter d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
         href: "/filtration"
       },
       {
         customIcon: pointofusefiltericonImg,
         title: "Filtration d'eau Potable",
-        description: "Découvrez nos solutions de filtration par osmose inverse pour une pureté inégalée.",
+        description: "Découvrir nos solutions de filtration par osmose inverse pour une pureté inégalée.",
         href: "/filtration"
       },
       {
@@ -409,7 +409,7 @@ export const productMenuItems: MenuItem[] = [
       },
     ],
     promo: {
-      title: "Profitez d'une eau pure et revitalisante au quotidien",
+      title: "Profiter d'une eau pure et revitalisante au quotidien",
       image: promoImage,
       link: "/filtration"
     }
@@ -433,7 +433,7 @@ export const productMenuItems: MenuItem[] = [
       {
         customIcon: serviceiconImg,
         title: "Service",
-        description: "Planifiez un entretien ou une réparation avec nos techniciens certifiés.",
+        description: "Planifier un entretien ou une réparation avec nos techniciens certifiés.",
         href: "/service"
       },
       {
@@ -451,7 +451,7 @@ export const productMenuItems: MenuItem[] = [
       {
         customIcon: contacticonImg,
         title: "Contact",
-        description: "Contactez notre équipe d'experts pour toute question ou demande d'information.",
+        description: "Contacter notre équipe d'experts pour toute question ou demande d'information.",
         href: "/contact"
       },
     ],
@@ -518,13 +518,13 @@ export const commercialProductMenuItems: MenuItem[] = [
       {
         customIcon: documenticonImg,
         title: "Cahier Technique & Devis",
-        description: "Demandez une étude personnalisée et des spécifications techniques pour votre projet.",
+        description: "Demander une étude personnalisée et des spécifications techniques pour votre projet.",
         href: "/contact"
       },
       {
         customIcon: blogiconImg,
         title: "Études de Cas Pro",
-        description: "Découvrez nos réalisations et l'impact de nos solutions sur la performance industrielle.",
+        description: "Découvrir nos réalisations et l'impact de nos solutions sur la performance industrielle.",
         href: "/blog"
       },
     ],
@@ -552,12 +552,12 @@ export const commercialProductMenuItems: MenuItem[] = [
       {
         customIcon: contacticonImg,
         title: "Expert Conseil",
-        description: "Parlez directement à  un ingénieur spécialisé dans le traitement d'eau.",
+        description: "Parler directement à  un ingénieur spécialisé dans le traitement d'eau.",
         href: "/contact"
       },
     ],
     promo: {
-      title: "Consultez le centre de documentation technique.",
+      title: "Consulter le centre de documentation technique.",
       image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=600&auto=format&fit=crop",
       link: "/faq"
     }
@@ -630,7 +630,7 @@ export const entreprisesProductMenuItems: MenuItem[] = [
       },
     ],
     promo: {
-      title: "Découvrez notre centre de ressources Business.",
+      title: "Découvrir notre centre de ressources Business.",
       image: promoImage2,
       link: "/faq"
     }
@@ -642,13 +642,13 @@ export const entreprisesProductMenuItems: MenuItem[] = [
       {
         customIcon: contacticonImg,
         title: "Équipe Expert Conseil",
-        description: "Parlez à  un conseiller spécialisé dans les solutions d'eau pour entreprises.",
+        description: "Parler à  un conseiller spécialisé dans les solutions d'eau pour entreprises.",
         href: "/contact"
       },
       {
         customIcon: serviceiconImg,
         title: "Installation & Maintenance",
-        description: "Planifiez votre entretien proactif ou demandez une réparation urgente.",
+        description: "Planifier votre entretien proactif ou demandez une réparation urgente.",
         href: "/service"
       },
     ],

@@ -7,7 +7,7 @@ const VraiCoutEauEmbouteillee = () => {
         document.title = "Le vrai coût de l'eau embouteillée : Calculez vos économies | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez pourquoi abandonner l'eau embouteillée au profit d'un système de traitement d'eau domestique est un choix pratique, économique et écologique pour votre famille.");
+            metaDesc.setAttribute("content", "Découvrir pourquoi abandonner l'eau embouteillée au profit d'un système de traitement d'eau domestique est un choix pratique, économique et écologique pour votre famille.");
         }
     }, []);
 
