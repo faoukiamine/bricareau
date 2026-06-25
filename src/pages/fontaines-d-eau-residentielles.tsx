@@ -348,15 +348,7 @@ const Fontaines = () => {
                                         </a>
                                     </Button>
                                 </div>
-                                <div className="relative inline-block group">
-                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                    <Button variant="outline" asChild className="relative bg-transparent border border-[#18448F]/30 hover:bg-[#18448F] hover:text-white text-[#18448F] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all">
-                                        <a href="tel:18552649328" className="inline-flex items-center gap-2">
-                                            <Phone className="w-5 h-5" />
-                                            1-855-264-9328
-                                        </a>
-                                    </Button>
-                                </div>
+
                             </div>
 
                             {/* Aligned Trust Row Section - Desktop Only */}

@@ -63,7 +63,7 @@ const SolutionsBrasseries = () => {
                     subtitle="Sublimez le profil de vos bières grâce à une eau parfaitement maîtrisée. Nos solutions de filtration de pointe vous permettent d'ajuster votre profil minéral avec une régularité absolue, tout en optimisant le rendement de vos brassins et en réduisant votre empreinte écologique."
                     ctaText="Planifier une consultation"
                     ctaLink="/consultation"
-                    showPhone={true}
+                    showPhone={false}
                     showBreadcrumbs={true}
                     breadcrumbVariant="light"
                     singleLineTitle={true}

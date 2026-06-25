@@ -129,7 +129,7 @@ const FontainesDeauModernes = () => {
                     subtitle="Offrez à vos collaborateurs une eau filtrée d'exception, fraîche, chaude ou pétillante, directement raccordée à votre réseau. Une solution écologique, économique et sans logistique de bonbonnes."
                     ctaText="PLANIFIER UNE CONSULTATION GRATUITE"
                     ctaLink="/contact-entreprises"
-                    showPhone={true}
+                    showPhone={false}
                     showBreadcrumbs={true}
                     breadcrumbVariant="light"
                     homeVariant={false}

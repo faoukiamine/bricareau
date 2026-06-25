@@ -178,7 +178,7 @@ const C = () => {
                     subtitle="Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration d'eau sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille."
                     ctaText="Planifier une consultation gratuite"
                     ctaLink="/consultation"
-                    showPhone={true}
+                    showPhone={false}
                     showBreadcrumbs={true}
                     singleLineTitle={true}
                 />

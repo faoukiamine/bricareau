@@ -169,13 +169,7 @@ const TestsEauPage = () => {
                                         Planifier un test d'eau
                                     </button>
                                 </div>
-                                <div className="relative inline-block w-full sm:w-auto group">
-                                    <div className="absolute inset-0 border border-slate-200 rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                    <a href="tel:18552649328" className="relative flex items-center justify-center w-full sm:w-auto bg-white text-[#18448F] border border-slate-200 rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all gap-2">
-                                        <Phone className="w-4 h-4" />
-                                        1-855-264-9328
-                                    </a>
-                                </div>
+
                             </div>
                         </div>
                     </div>

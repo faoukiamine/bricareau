@@ -101,7 +101,7 @@ const FiltrationHotelsRestaurants = () => {
                     subtitle="Dans la restauration, l'eau est votre ingrédient principal et l'alliée silencieuse de vos équipements. De la perfection d'un espresso à l'éclat de votre verrerie, découvrez nos systèmes de filtration dédiés aux professionnels."
                     ctaText="PLANIFIER UNE CONSULTATION"
                     ctaLink="/contact-entreprises"
-                    showPhone={true}
+                    showPhone={false}
                     showBreadcrumbs={true}
                     breadcrumbVariant="light"
                     homeVariant={false}

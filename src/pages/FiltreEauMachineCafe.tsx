@@ -125,15 +125,7 @@ const FiltreEauMachineCafe = () => {
                                 <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => { document.getElementById('explore-filters')?.scrollIntoView({ behavior: 'smooth' }) }}>
                                     Explorer nos filtres
                                 </ProMaxButton>
-                                <a href="tel:18552649328" className="flex items-center gap-4 group">
-                                    <div className="w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:border-blue-500/50 group-hover:bg-white transition-all">
-                                        <Phone className="w-5 h-5 text-[#18448F]" />
-                                    </div>
-                                    <div className="text-left">
-                                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Ligne Prioritaire</div>
-                                        <div className="text-xl font-bold tracking-tight text-[#18448F]">1-855-264-9328</div>
-                                    </div>
-                                </a>
+
                             </div>
                         </div>
                     </div>

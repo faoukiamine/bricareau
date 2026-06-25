@@ -330,7 +330,7 @@ const A = () => {
                     highlightedTitle={<span className="font-bold not-italic">Finis le calcaire et l'eau dure :</span>}
                     mainTitle={<>offrez-vous <span className="text-[#8CC63F]">le confort d'une eau douce.</span></>}
                     subtitle="Redécouvrez l'expérience d'une eau soyeuse qui préserve votre peau, vos cheveux et vos investissements. Une technologie de pointe pour une protection durable de votre foyer."
-                    showPhone={true}
+                    showPhone={false}
                     showBreadcrumbs={true}
                 />
 

@@ -186,7 +186,7 @@ const HotellerieRestauration = () => {
                                     subtitle: "PROTECTION ABSOLUE",
                                     desc: "Protégez vos investissements onéreux et garantissez une verrerie étincelante, sans la moindre trace.",
                                     img: TechnicalRoomHotelImg,
-                                    link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire",
+                                    link: "/adoucisseurs-eau-commerciaux",
                                     className: "lg:row-span-2 min-h-[400px]",
                                     imgClass: "object-cover"
                                 },

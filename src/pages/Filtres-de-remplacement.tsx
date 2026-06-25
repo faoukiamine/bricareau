@@ -91,7 +91,7 @@ const FiltresDeRemplacement = () => {
                     subtitle="Trouvez facilement le filtre d'eau de remplacement idéal pour votre système de filtration résidentiel, commercial ou industriel."
                     ctaText="Trouver mon filtre"
                     ctaLink="#solutions-catalog"
-                    showPhone={true}
+                    showPhone={false}
                     showBreadcrumbs={true}
                     singleLineTitle={false}
                 />

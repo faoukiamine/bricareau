@@ -72,7 +72,7 @@ const SystemesCentralises = () => {
                     subtitle="Protégez l'ensemble des installations de votre bâtiment avec une filtration industrielle et commerciale centralisée de premier ordre. Une solution sur mesure pour éliminer le calcaire, le chlore et les contaminants."
                     ctaText="DEMANDER UNE ÉTUDE SUR MESURE"
                     ctaLink="/contact-entreprises"
-                    showPhone={true}
+                    showPhone={false}
                     showBreadcrumbs={true}
                     breadcrumbVariant="light"
                     homeVariant={false}

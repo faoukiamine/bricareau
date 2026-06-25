@@ -266,7 +266,7 @@ const B = () => {
                     highlightedTitle={<span className="font-bold not-italic">Protégez votre santé</span>}
                     mainTitle={<> avec <span className="text-[#8CC63F] font-bold not-italic">une filtration d'eau d'excellence.</span></>}
                     subtitle="Ne laissez plus les contaminants couler de vos robinets. Nos systèmes de filtration d'eau avancés constituent un bouclier durable pour votre maison, vous garantissant une eau d'une pureté irréprochable pour toute votre famille au Canada."
-                    showPhone={true}
+                    showPhone={false}
                     showBreadcrumbs={true}
                 />
 
