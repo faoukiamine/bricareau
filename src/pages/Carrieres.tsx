@@ -246,7 +246,7 @@ export default function Carrieres() {
                         <div className="md:col-span-10 md:col-start-2 lg:col-span-6 lg:col-start-7 space-y-8 lg:space-y-10 text-center lg:text-left md:px-0 lg:pl-12">
 
                             <h2 className="text-[50px] leading-[55px] font-sans font-bold text-white mb-6 tracking-tight">
-                                Rejoignez <br /><span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">l'aventure.</span>
+                                Rejoignez <br className="md:hidden lg:block" /><span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">l'aventure.</span>
                             </h2>
                             <p className="text-slate-300 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                                 Vous ne trouvez pas de poste correspondant à votre profil mais vous partagez notre vision de l'excellence ? Envoyez-nous votre candidature spontanée.

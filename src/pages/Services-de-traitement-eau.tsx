@@ -244,7 +244,7 @@ const ServicesTraitementEau = () => {
                             >
                                 <CarouselContent className="-ml-8">
                                     {/* Card 001: Mise en service - Navy Style */}
-                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
+                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
                                         <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="space-y-0 relative z-10 flex flex-col h-full">
                                                 <div className="h-20"></div>
@@ -275,7 +275,7 @@ const ServicesTraitementEau = () => {
                                     </CarouselItem>
 
                                     {/* Card 002: Entretien préventif - Royal Blue Style */}
-                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
+                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
                                         <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="space-y-0 relative z-10 flex flex-col h-full">
                                                 <div className="h-20"></div>
@@ -306,7 +306,7 @@ const ServicesTraitementEau = () => {
                                     </CarouselItem>
 
                                     {/* Card 003: Dépannage - Navy Patterned */}
-                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
+                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
                                         <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="absolute inset-0 opacity-10 mix-blend-overlay">
                                                 <div className="w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
@@ -340,7 +340,7 @@ const ServicesTraitementEau = () => {
                                     </CarouselItem>
 
                                     {/* Card 004: Analyses d'eau - Royal Blue Style */}
-                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
+                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
                                         <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="space-y-0 relative z-10 flex flex-col h-full">
                                                 <div className="h-20"></div>
@@ -372,8 +372,8 @@ const ServicesTraitementEau = () => {
                                 </CarouselContent>
                                 <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 pointer-events-none">
                                     <div className="container mx-auto relative h-full">
-                                        <CarouselPrevious className="pointer-events-auto absolute -left-12 lg:-left-20 h-14 w-14 bg-white/90 backdrop-blur-md text-blue-600 border-none shadow-2xl hover:bg-blue-600 hover:text-white transition-all duration-300" />
-                                        <CarouselNext className="pointer-events-auto absolute -right-12 lg:-right-20 h-14 w-14 bg-white/90 backdrop-blur-md text-blue-600 border-none shadow-2xl hover:bg-blue-600 hover:text-white transition-all duration-300" />
+                                        <CarouselPrevious className="pointer-events-auto absolute -left-12 lg:-left-20 h-14 w-14 bg-[#18448F] text-white border-none shadow-2xl hover:bg-[#123675] hover:text-white transition-all duration-300" />
+                                        <CarouselNext className="pointer-events-auto absolute -right-12 lg:-right-20 h-14 w-14 bg-[#18448F] text-white border-none shadow-2xl hover:bg-[#123675] hover:text-white transition-all duration-300" />
                                     </div>
                                 </div>
                             </Carousel>

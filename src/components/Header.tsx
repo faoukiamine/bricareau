@@ -21,6 +21,8 @@ const Header = () => {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>("RÉSIDENTIEL");
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [activeMobileAccordion, setActiveMobileAccordion] = useState<string | null>(null);
+  const [activeMobileSubAccordion, setActiveMobileSubAccordion] = useState<string | null>(null);
   const location = useLocation();
   const navigate = useNavigate();
   const headerRef = useRef<HTMLElement>(null);
@@ -182,13 +184,34 @@ const Header = () => {
               </div>
             </div>
 
-            {/* Mobile Toggle */}
-            <button 
-                className={cn("lg:hidden p-2 transition-colors", isScrolled ? "text-white" : "text-[#18448F]")} 
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-                {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-            </button>
+            {/* Mobile Actions & Toggle */}
+            <div className="flex items-center gap-1 lg:hidden">
+                {isMenuOpen && (
+                    <>
+                        <button 
+                            className={cn("p-2 transition-colors", isScrolled ? "text-white" : "text-[#18448F]")}
+                            onClick={() => {
+                                setIsMenuOpen(false);
+                                // Optional logic for search
+                            }}
+                        >
+                            <Search className="w-6 h-6" />
+                        </button>
+                        <a 
+                            href="tel:18552649328" 
+                            className={cn("p-2 transition-colors", isScrolled ? "text-white" : "text-[#18448F]")}
+                        >
+                            <Phone className="w-6 h-6" />
+                        </a>
+                    </>
+                )}
+                <button 
+                    className={cn("p-2 transition-colors", isScrolled ? "text-white" : "text-[#18448F]")} 
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
+                    {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+                </button>
+            </div>
           </div>
         </div>
 
@@ -458,50 +481,121 @@ const Header = () => {
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-            <div className="lg:hidden fixed inset-0 top-20 bg-white z-[100] overflow-y-auto animate-in slide-in-from-right duration-300">
-                <div className="p-6 space-y-8">
-                    {mainNavMenuItems.map((item) => (
-                        <div key={item.name} className="space-y-4">
-                            {item.href ? (
-                                <NavLink 
-                                    to={item.href}
-                                    className="text-xs font-black text-[#0052ff] hover:text-[#0052ff]/80 uppercase tracking-widest block py-2"
-                                    onClick={() => setIsMenuOpen(false)}
+            <div className="lg:hidden fixed inset-0 top-20 bg-white z-[100] overflow-y-auto animate-in slide-in-from-right duration-300 flex flex-col">
+                <div className="p-6 flex flex-col min-h-full">
+                    {/* Top Button */}
+                    <Button 
+                        className="w-[50%] mx-auto h-12 bg-[#2a64f6] hover:bg-[#1c4bce] text-white rounded-full font-medium"
+                        onClick={() => {
+                            setIsMenuOpen(false);
+                            navigate("/contact-form");
+                        }}
+                    >
+                        Contactez-nous
+                    </Button>
+
+                    {/* Accordion List */}
+                    <div className="flex-1 mt-6">
+                        {mainNavMenuItems.map((item) => (
+                            <div key={item.name} className="border-b border-gray-200">
+                                <button
+                                    className="w-full flex items-center justify-between py-5 text-left"
+                                    onClick={() => setActiveMobileAccordion(activeMobileAccordion === item.name ? null : item.name)}
                                 >
-                                    {item.name}
-                                </NavLink>
-                            ) : (
-                                <div className="text-xs font-black text-slate-400 uppercase tracking-widest">{item.name}</div>
-                            )}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {(item.megamenuCards || item.items || item.megamenuGroups?.flatMap(g => g.items.map(i => ({ name: i.title, href: i.href }))))?.map((sub: any, i) => (
-                                    <NavLink 
-                                        key={i} 
-                                        to={sub.href} 
-                                        className="text-sm font-bold text-slate-800 hover:text-[#0052ff] flex items-center justify-between group"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        <span>{sub.title || sub.name}</span>
-                                        <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
-                                    </NavLink>
-                                ))}
+                                    <span className="text-[17px] font-semibold text-gray-900">{item.name}</span>
+                                    <ChevronDown className={cn("w-5 h-5 text-gray-500 transition-transform duration-300", activeMobileAccordion === item.name && "rotate-180")} />
+                                </button>
+                                
+                                <div className={cn("overflow-hidden transition-all duration-300", activeMobileAccordion === item.name ? "max-h-[1200px] pb-5" : "max-h-0")}>
+                                    <div className="flex flex-col gap-6 pl-4 pt-2">
+                                        {/* For megamenuCards (like Ce que nous faisons) */}
+                                        {item.megamenuCards?.map((card, idx) => (
+                                            <div key={idx} className="space-y-0">
+                                                <div className="w-full flex items-center justify-between py-3">
+                                                    {card.href ? (
+                                                        <NavLink
+                                                            to={card.href}
+                                                            className="text-[11px] font-black text-slate-800 uppercase tracking-widest hover:text-[#2a64f6] flex-1"
+                                                            onClick={() => setIsMenuOpen(false)}
+                                                        >
+                                                            {card.title}
+                                                        </NavLink>
+                                                    ) : (
+                                                        <span className="text-[11px] font-black text-slate-800 uppercase tracking-widest flex-1">{card.title}</span>
+                                                    )}
+                                                    <button 
+                                                        className="p-1 -mr-1"
+                                                        onClick={() => setActiveMobileSubAccordion(activeMobileSubAccordion === card.title ? null : card.title)}
+                                                    >
+                                                        <ChevronDown className={cn("w-4 h-4 text-gray-500 transition-transform duration-300", activeMobileSubAccordion === card.title && "rotate-180")} />
+                                                    </button>
+                                                </div>
+                                                
+                                                <div className={cn("overflow-hidden transition-all duration-300", activeMobileSubAccordion === card.title ? "max-h-[800px] pb-3" : "max-h-0")}>
+                                                    <div className="flex flex-col gap-2 pl-3">
+                                                        {card.links?.map((link, lIdx) => (
+                                                            <NavLink 
+                                                                key={lIdx} 
+                                                                to={link.href} 
+                                                                className="text-[14px] text-gray-600 hover:text-[#2a64f6] py-1 font-medium block"
+                                                                onClick={() => setIsMenuOpen(false)}
+                                                            >
+                                                                {link.title}
+                                                            </NavLink>
+                                                        ))}
+                                                        {(!card.links || card.links.length === 0) && card.href && (
+                                                            <NavLink 
+                                                                to={card.href} 
+                                                                className="text-[14px] text-gray-600 hover:text-[#2a64f6] py-1 font-medium block"
+                                                                onClick={() => setIsMenuOpen(false)}
+                                                            >
+                                                                {card.title}
+                                                            </NavLink>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+
+                                        {/* For megamenuGroups (like Qui sommes-nous ? and Ressources) */}
+                                        {item.megamenuGroups && item.megamenuGroups.length > 0 && (
+                                            <div className="flex flex-col gap-2">
+                                                {item.megamenuGroups.flatMap(g => g.items).map((subItem, idx) => (
+                                                    <NavLink 
+                                                        key={idx} 
+                                                        to={subItem.href} 
+                                                        className="text-[15px] text-gray-600 hover:text-[#2a64f6] py-1 font-medium block"
+                                                        onClick={() => setIsMenuOpen(false)}
+                                                    >
+                                                        {subItem.title}
+                                                    </NavLink>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                        {/* For simple items */}
+                                        {item.items?.map((subItem, idx) => (
+                                            <NavLink 
+                                                key={idx} 
+                                                to={subItem.href} 
+                                                className="text-[15px] text-gray-600 hover:text-[#2a64f6] py-1 font-medium block"
+                                                onClick={() => setIsMenuOpen(false)}
+                                            >
+                                                {subItem.name}
+                                            </NavLink>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                    <div className="pt-8 border-t border-gray-100 space-y-6">
-                        <ProMaxButton 
-                            variant="primary"
-                            className="w-full h-14 text-[11px]"
-                            onClick={() => {
-                                setIsMenuOpen(false);
-                                navigate("/consultation");
-                            }}
-                        >
-                            Nous contacter
-                        </ProMaxButton>
-                        <a href="tel:18552649328" className="flex items-center justify-center gap-2 font-black text-slate-800 py-4">
-                            <Phone className="w-5 h-5 text-[#0052ff]" strokeWidth={2.5} />
-                            (855) 264-9328
+                        ))}
+                    </div>
+
+                    {/* Footer Links */}
+                    <div className="pt-8 mt-auto space-y-6">
+                        {/* Phone */}
+                        <a href="tel:18552649328" className="flex items-center justify-center gap-3 text-[#2a64f6] font-medium text-[15px] pt-2 pb-8">
+                            <Phone className="w-5 h-5" />
+                            Appelez le 1-855-264-9328
                         </a>
                     </div>
                 </div>

@@ -271,20 +271,20 @@ const WhyChooseUs = () => {
                             {/* Navigation Arrows (Tablet only) */}
                             <button 
                                 onClick={() => scrollCarousel('left')}
-                                className="hidden md:flex lg:hidden absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl border border-slate-200 items-center justify-center z-10 text-[#18448F] hover:bg-slate-50 transition-colors"
+                                className="hidden md:flex lg:hidden absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-[#18448F] hover:bg-[#123675] rounded-full shadow-xl border-none items-center justify-center z-10 text-white transition-colors"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                             </button>
                             <button 
                                 onClick={() => scrollCarousel('right')}
-                                className="hidden md:flex lg:hidden absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl border border-slate-200 items-center justify-center z-10 text-[#18448F] hover:bg-slate-50 transition-colors"
+                                className="hidden md:flex lg:hidden absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-[#18448F] hover:bg-[#123675] rounded-full shadow-xl border-none items-center justify-center z-10 text-white transition-colors"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                             </button>
 
                             <div 
                                 ref={carouselRef}
-                                className="flex flex-col md:flex-row md:items-stretch lg:grid grid-cols-1 lg:grid-cols-3 gap-8 md:overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-hide pb-8 lg:pb-0"
+                                className="flex flex-col md:flex-row md:items-stretch lg:grid grid-cols-1 lg:grid-cols-3 gap-8 md:overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-hide pb-8 lg:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
                             >
                                 {/* Pilier 01 */}
                                 <div className="md:min-w-[60vw] lg:min-w-0 snap-center group flex flex-col gap-8 items-start p-10 lg:p-12 border border-slate-200/60 hover:bg-slate-50/50 transition-colors duration-500 rounded-3xl h-auto md:h-auto lg:h-full self-stretch">
@@ -403,7 +403,7 @@ const WhyChooseUs = () => {
                                     lineHeight: '52px'
                                 }}
                             >
-                                <span className="text-[#8CC63F]" style={{ fontWeight: 700 }}>L'Excellence</span> <br /><span>n'attend pas.</span>
+                                <span className="text-[#8CC63F]" style={{ fontWeight: 700 }}>L'Excellence</span> <br className="md:hidden lg:block" /><span>n'attend pas.</span>
                             </h2>
                             <p className="text-slate-300 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                                 Passez à l'étape supérieure et ne faites plus aucun compromis sur la qualité de votre eau. Échangez avec nos spécialistes d'eau pour analyser vos besoins et entamer votre transition vers une eau filtrée, pure et saine.

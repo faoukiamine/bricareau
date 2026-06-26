@@ -189,6 +189,19 @@ const OurProcess = () => {
                                             </h3>
                                             <p className="text-[#18448F] font-light italic text-xl">{step.subtitle}</p>
                                         </div>
+
+                                        {/* Mobile/Tablet Image */}
+                                        <div className="lg:hidden w-full aspect-square md:aspect-video relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl group my-8">
+                                            {step.gallery ? (
+                                                <ImageGallery images={step.gallery} />
+                                            ) : (
+                                                <>
+                                                    <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
+                                                    <img src={step.image} alt={step.title} className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                                </>
+                                            )}
+                                        </div>
+
                                         <p className="text-slate-500 text-lg leading-relaxed font-light">
                                             {step.desc}
                                         </p>
@@ -201,7 +214,7 @@ const OurProcess = () => {
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                                    <div className="hidden lg:block lg:w-1/2 w-full aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                         {step.gallery ? (
                                             <ImageGallery images={step.gallery} />
                                         ) : (
