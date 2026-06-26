@@ -485,7 +485,7 @@ const Header = () => {
                 <div className="p-6 flex flex-col min-h-full">
                     {/* Top Button */}
                     <Button 
-                        className="w-[50%] mx-auto h-12 bg-[#2a64f6] hover:bg-[#1c4bce] text-white rounded-full font-medium"
+                        className="w-[50%] mx-auto h-12 bg-[#2a64f6] hover:bg-[#1c4bce] border-[#2a64f6] hover:border-[#1c4bce] text-white rounded-full font-medium"
                         onClick={() => {
                             setIsMenuOpen(false);
                             navigate("/contact-form");
