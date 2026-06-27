@@ -33,7 +33,7 @@ const Sustainability = () => {
 
     return (
         <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden">
-            <Header />
+            <Header forceWhite={true} />
 
             <main>
                 {/* 1. CUSTOM HERO SECTION */}
@@ -48,7 +48,7 @@ const Sustainability = () => {
                         {/* Mobile Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/50 to-transparent z-10 md:hidden"></div>
                         {/* Tablet Vertical Filter (Progressive) */}
-                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,white_50%,rgba(255,255,255,0.9)_75%,rgba(255,255,255,0.3)_90%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_left_center,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.5)_70%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
                         {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
                         

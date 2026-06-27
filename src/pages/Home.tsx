@@ -179,7 +179,7 @@ const Home1 = () => {
                     {/* Mobile Gradient */}
                     <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-transparent z-10 md:hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_15%)]"></div>
                     {/* Tablet Vertical Filter (Progressive) */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.7)_65%,transparent_100%)] z-10 hidden md:block lg:hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%)]"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_left_center,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.5)_70%,transparent_100%)] z-10 hidden md:block lg:hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%)]"></div>
                     {/* Desktop Gradient */}
                     <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.95)_35%,rgba(255,255,255,0.7)_60%,transparent_100%)] z-10 hidden lg:block [mask-image:linear-gradient(to_bottom,transparent_0%,black_25%)]"></div>
                     
