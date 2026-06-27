@@ -131,11 +131,11 @@ const OurProcess = () => {
                     <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
                         {/* Mobile Gradient (Style Residentiel/Home1) */}
                         {/* Mobile Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/50 to-transparent z-10 md:hidden"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-transparent z-10 md:hidden"></div>
                         {/* Tablet Vertical Filter (Progressive) */}
-                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.7)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
                         {/* Desktop Gradient */}
-                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.7)_65%,transparent_100%)] z-10 hidden lg:block"></div>
                         
                         {/* Image Container */}
                         <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
@@ -149,11 +149,11 @@ const OurProcess = () => {
 
                     <div className="container mx-auto px-6 relative z-30">
                         <div className="max-w-3xl flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
-                            <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
-                                Notre savoir-faire d'expert <br/> <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">pour une eau absolument parfaite.</span>
+                            <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight drop-shadow-sm">
+                                Notre savoir-faire d'expert <br/> <span className="text-[#8CC63F] font-sans font-bold">pour une eau absolument parfaite.</span>
                             </h1>
                             
-                            <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
+                            <p className="text-slate-800 font-light text-lg sm:text-xl leading-relaxed max-w-xl mb-12 drop-shadow-sm">
                                 Découvrir un processus rigoureux en quatre étapes. De l'analyse de la qualité de l'eau à l'entretien et suivi régulier, nous ne laissons aucune place au hasard pour garantir la perfection de votre eau.
                             </p>
 

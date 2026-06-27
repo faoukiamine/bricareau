@@ -65,13 +65,12 @@ const WhyChooseUs = () => {
                         </div>
                     </div>
                     <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
-                        {/* Mobile Gradient (Style Residentiel/Home1) */}
                         {/* Mobile Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/50 to-transparent z-10 md:hidden"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-transparent z-10 md:hidden"></div>
                         {/* Tablet Vertical Filter (Progressive) */}
-                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.7)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
                         {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
-                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_50%,rgba(255,255,255,0)_90%)] z-10 hidden lg:block"></div>
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.7)_65%,transparent_100%)] z-10 hidden lg:block"></div>
                         
                         {/* Image Container */}
                         <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
@@ -89,12 +88,12 @@ const WhyChooseUs = () => {
                                 La Référence Québécoise
                             </div>
 
-                            <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
+                            <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight drop-shadow-sm">
                                 25 ans d'excellence,<br />
-                                <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm italic">votre eau est notre métier.</span>
+                                <span className="text-[#8CC63F] font-sans font-bold italic">votre eau est notre métier.</span>
                             </h1>
                             
-                            <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
+                            <p className="text-slate-800 font-light text-lg sm:text-xl leading-relaxed max-w-xl mb-12 drop-shadow-sm">
                                 Forts de 25 années d'expertise dans le traitement de l'eau, nous concevons des systèmes de filtration d'eau répondant aux standards de qualité les plus exigeants. Notre savoir-faire technique assure à votre foyer ou votre entreprise une eau pure, saine et sécuritaire en tout temps.
                             </p>
 

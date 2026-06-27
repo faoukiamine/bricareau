@@ -145,7 +145,7 @@ const Bureau = () => {
                                     <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
                                 </div>
                                 {/* Floating Badge */}
-                                <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl shadow-xl animate-float hidden md:block border border-slate-50">
+                                <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-xl animate-float hidden md:block border border-slate-50">
                                     <div className="flex items-center gap-4">
                                         <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center">
                                             <Leaf className="w-6 h-6 text-[#8CC63F]" />

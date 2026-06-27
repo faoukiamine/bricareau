@@ -177,11 +177,11 @@ const Home1 = () => {
                 <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
                     {/* Mobile Gradient (Style Residentiel) */}
                     {/* Mobile Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/50 to-transparent z-10 md:hidden"></div>
-                        {/* Tablet Vertical Filter (Progressive) */}
-                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-transparent z-10 md:hidden"></div>
+                    {/* Tablet Vertical Filter (Progressive) */}
+                    <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.7)_65%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
                     {/* Desktop Gradient */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_12.5%,rgba(255,255,255,0)_100%)] z-10 hidden lg:block"></div>
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.95)_35%,rgba(255,255,255,0.7)_60%,transparent_100%)] z-10 hidden lg:block"></div>
                     
                     {/* Container d'image sur toute la largeur */}
                     <div className="absolute right-0 top-0 w-full h-full">
@@ -230,22 +230,22 @@ const Home1 = () => {
 
                         </div>
                         
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x divide-slate-200">
-                            <div className="sm:pr-10">
-                                <div className="text-3xl font-bold text-[#18448F] mb-2">25+</div>
-                                <div className="text-xs text-slate-500 uppercase tracking-widest leading-relaxed">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x divide-slate-200/50 bg-white/40 backdrop-blur-md p-6 sm:p-8 rounded-3xl shadow-xl border border-white/50 w-fit">
+                            <div className="sm:pr-8">
+                                <div className="text-3xl font-bold text-[#18448F] mb-2 drop-shadow-sm">25+</div>
+                                <div className="text-xs text-slate-800 font-bold uppercase tracking-widest leading-relaxed drop-shadow-sm">
                                     Années d'expertise<br/> en traitement d'eau
                                 </div>
                             </div>
-                            <div className="sm:px-10">
-                                <div className="text-3xl font-bold text-[#18448F] mb-2">4</div>
-                                <div className="text-xs text-slate-500 uppercase tracking-widest leading-relaxed">
+                            <div className="sm:px-8">
+                                <div className="text-3xl font-bold text-[#18448F] mb-2 drop-shadow-sm">4</div>
+                                <div className="text-xs text-slate-800 font-bold uppercase tracking-widest leading-relaxed drop-shadow-sm">
                                     Régions desservies<br/> autour de Montréal
                                 </div>
                             </div>
-                            <div className="sm:pl-10">
-                                <div className="text-3xl font-bold text-[#18448F] mb-2">100%</div>
-                                <div className="text-xs text-slate-500 uppercase tracking-widest leading-relaxed">
+                            <div className="sm:pl-8">
+                                <div className="text-3xl font-bold text-[#18448F] mb-2 drop-shadow-sm">100%</div>
+                                <div className="text-xs text-slate-800 font-bold uppercase tracking-widest leading-relaxed drop-shadow-sm">
                                     Solutions adaptées,<br/> jamais génériques
                                 </div>
                             </div>

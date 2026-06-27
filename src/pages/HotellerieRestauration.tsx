@@ -189,7 +189,7 @@ const HotellerieRestauration = () => {
                                     desc: "Protégez vos investissements onéreux et garantissez une verrerie étincelante, sans la moindre trace.",
                                     img: TechnicalRoomHotelImg,
                                     link: "/adoucisseurs-eau-commerciaux",
-                                    className: "lg:row-span-2 min-h-[400px]",
+                                    className: "lg:row-span-2",
                                     imgClass: "object-cover"
                                 },
                                 {
