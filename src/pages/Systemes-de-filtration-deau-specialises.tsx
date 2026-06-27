@@ -40,6 +40,7 @@ import waterTestingImg1 from "@/assets/342800.jpg";
 import waterTasteImg from "@/assets/water-taste.jpg";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
+import waterCoolerImg from "@/assets/Fontaines d'eau.webp";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
@@ -261,14 +262,85 @@ const B = () => {
         <div className="min-h-screen bg-background text-slate-900 font-sans">
              <Header />
              <main>
-                <Hero 
-                    image={heroFiltration}
-                    highlightedTitle={<span className="font-bold not-italic">Protégez votre santé</span>}
-                    mainTitle={<> avec <span className="text-[#8CC63F] font-bold not-italic">une filtration d'eau d'excellence.</span></>}
-                    subtitle="Ne laissez plus les contaminants couler de vos robinets. Nos systèmes de filtration d'eau avancés constituent un bouclier durable pour votre maison, vous garantissant une eau d'une pureté irréprochable pour toute votre famille au Canada."
-                    showPhone={false}
-                    showBreadcrumbs={true}
-                />
+                <section className="relative bg-white overflow-hidden min-h-[85vh] md:min-h-screen lg:h-auto lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="on-light" />
+                        </div>
+                    </div>
+                    
+                    <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/50 to-transparent z-10 md:hidden"></div>
+                        {/* Tablet Vertical Filter (Progressive) */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                        {/* Desktop Gradient */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_25%,rgba(255,255,255,0)_75%)] z-10 hidden lg:block"></div>
+                        
+                        <div className="absolute right-0 top-0 w-full h-full lg:w-[80%]">
+                            <img 
+                                src={heroFiltration} 
+                                className="absolute inset-0 w-full h-full object-cover object-bottom md:object-[65%_center] lg:object-center"
+                                alt="Systèmes de filtration d'eau spécialisés Bricareau" 
+                            />
+                        </div>
+                    </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-0 hidden lg:block"></div>
+                    
+                    <div className="container relative z-10 mx-auto px-4 md:px-6 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-24 pb-12 lg:pt-0 lg:pb-0">
+                        <div className="max-w-3xl flex flex-col justify-center text-left">
+                            <div className="space-y-6 md:mb-8 lg:space-y-6 lg:mb-0">
+                                {/* Title: Mobile/Desktop style vs Tablet style */}
+                                <h1 
+                                    className="mb-6 animate-in fade-in slide-in-from-left duration-1000 max-w-[680px]"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontStyle: 'normal'
+                                    }}
+                                >
+                                    {/* Mobile & Desktop Version */}
+                                    <span className="md:hidden lg:block text-[32px] lg:text-[50px] leading-[1.1]">
+                                        <span className="italic font-light text-[#18448F] block"><span className="font-bold not-italic">Protégez votre santé</span></span>
+                                        <span className="font-bold text-[#18448F] block">avec <span className="text-[#8CC63F] font-bold not-italic">une filtration d'eau d'excellence.</span></span>
+                                    </span>
+                                    
+                                    {/* Tablet Version (Residentiel Style) */}
+                                    <span className="hidden md:block lg:hidden text-[50px] leading-[55px] font-sans font-bold tracking-tight">
+                                        <span className="text-[#18448F]">Protégez votre santé</span><br/>
+                                        <span className="text-[#18448F]">avec</span> <span className="text-[#8CC63F] font-bold not-italic">une filtration d'eau d'excellence.</span>
+                                    </span>
+                                </h1>
+                                
+                                <p className="animate-in fade-in slide-in-from-left duration-1000 delay-100 text-justify lg:text-left max-w-[680px] text-slate-500 md:text-slate-600 text-[15px] md:text-xl lg:text-lg md:font-normal lg:font-normal leading-relaxed md:max-w-xl lg:max-w-[680px]">
+                                    Ne laissez plus les contaminants couler de vos robinets. Nos systèmes de filtration d'eau avancés constituent un bouclier durable pour votre maison, vous garantissant une eau d'une pureté irréprochable pour toute votre famille au Canada.
+                                </p>
+                            </div>
+                            
+                            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-8 md:gap-6 lg:gap-8 pt-6 md:pt-0 lg:pt-6 md:mb-16 lg:mb-0 animate-in fade-in slide-in-from-left duration-1000 delay-200 w-full sm:w-auto">
+                                {/* Mobile & Desktop Button */}
+                                <div className="md:hidden lg:block w-full sm:w-fit">
+                                    <ProMaxButton asChild className="w-full sm:w-fit">
+                                        <a href="/consultation" className="inline-flex items-center justify-center gap-2">
+                                            Planifier une consultation gratuite
+                                            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+                                        </a>
+                                    </ProMaxButton>
+                                </div>
+                                
+                                {/* Tablet Button (Residentiel Style) */}
+                                <div className="hidden md:block lg:hidden relative inline-block w-full sm:w-auto group mt-8">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <button
+                                        className="relative flex items-center justify-center w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
+                                        onClick={() => window.location.href = "/consultation"}
+                                    >
+                                        Planifier une consultation gratuite
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* 2. The Problem Section */}
                 <section id="problemes-eau" className="py-24 bg-white relative overflow-hidden">
@@ -611,7 +683,7 @@ const B = () => {
                                 className="rounded-full px-8 py-6 text-sm font-bold border-slate-200 text-[#18448F] hover:bg-slate-50 transition-all hover:scale-105"
                                 onClick={() => setShowAllProducts(!showAllProducts)}
                             >
-                                {showAllProducts ? "Voir moins de filtres" : "Voir tous les filtres"}
+                                {showAllProducts ? "Voir moins de filtres" : "Voir tous les filtres d'eau"}
                             </Button>
                         </div>
 
@@ -761,7 +833,7 @@ const B = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                             {/* Card Stack Side (Left - Interactive) */}
                             <div className="lg:col-span-7 relative h-[450px] md:h-[600px] lg:h-[700px] flex items-center justify-center mt-24 lg:mt-0 mb-16 lg:mb-0 -mx-6 lg:mx-0">
-                                <div className="relative w-full lg:max-w-[450px] aspect-square md:aspect-video lg:aspect-[3/4] group">
+                                <div className="relative w-full md:max-w-[450px] lg:max-w-[450px] aspect-square md:aspect-[3/4] lg:aspect-[3/4] group">
 
                                     {cardStack.map((cardIdx, position) => {
                                         const card = cardData[cardIdx];
@@ -773,8 +845,15 @@ const B = () => {
                                             >
                                                 <div className="w-full h-full rounded-none lg:rounded-[1.8rem] overflow-hidden relative group">
                                                     <img src={card.img} alt={card.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                                                    {/* Mobile & Desktop Overlay */}
+                                                    <div className="md:hidden lg:flex absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity items-end p-8">
                                                         <p className="text-white font-bold text-xl">{card.title}</p>
+                                                    </div>
+                                                    
+                                                    {/* Tablet Vertical Overlay (Always visible on tablet since text column is hidden) */}
+                                                    <div className="hidden md:flex lg:hidden absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex-col justify-end p-8 pb-12 transition-opacity rounded-[1.8rem]">
+                                                        <h3 className="text-white font-bold text-2xl mb-3">{card.title}</h3>
+                                                        <p className="text-white/90 text-sm leading-relaxed">{card.desc}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -784,7 +863,7 @@ const B = () => {
                             </div>
 
                             {/* Text Content Side (Vertical Column) */}
-                            <div className="lg:col-span-5 space-y-16">
+                            <div className="md:hidden lg:block lg:col-span-5 space-y-16">
                                 {cardData.map((feature, idx) => {
                                     const isTop = cardStack[3] === feature.id; // Check if this feature's card is on top (index 3 now)
                                     return (
@@ -986,7 +1065,7 @@ const B = () => {
                              </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="flex overflow-x-auto lg:grid lg:grid-cols-4 gap-6 md:gap-8 snap-x snap-mandatory no-scrollbar pb-8 -mx-4 px-4 md:-mx-6 md:px-6 lg:mx-0 lg:px-0">
                             {[
                                 {
                                     name: "Adoucisseurs d'eau",
@@ -998,19 +1077,25 @@ const B = () => {
                                     name: "Systèmes de désinfection UV",
                                     desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
                                     img: uvSystemImg2,
-                                    link: "/systemes-de-desinfection-UV"
+                                    link: "/systemes-de-desinfection-uv"
                                 },
                                 {
                                     name: "Stations d'eau potable",
                                     desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
                                     img: drinkingWaterImg,
                                     link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
+                                },
+                                {
+                                    name: "Fontaines d'eau",
+                                    desc: "Une eau fraîche et pure à volonté, idéale pour la maison ou le bureau avec un design élégant.",
+                                    img: waterCoolerImg,
+                                    link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
                                 }
 
                             ].map((prod, i) => (
                                 <div
                                     key={i}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer shrink-0 snap-center w-[85%] md:w-[38%] lg:w-auto"
                                     onClick={() => window.location.href = prod.link}
                                 >
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">

@@ -58,7 +58,7 @@ const WaterDiagnosis = () => {
                      alt="Expert Bricareau effectuant une analyse d'eau à domicile pour un diagnostic personnalisé" title="Systèmes d'eau sur mesure par Bricareau" />
                     
                     {/* Glassmorphism Badge */}
-                    <div className="absolute bottom-8 left-8 right-8 md:right-auto md:w-80 bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-xl border border-white/50 z-20">
+                    <div className="absolute bottom-8 left-8 right-8 md:left-auto md:right-8 lg:left-8 lg:right-auto md:w-80 bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-xl border border-white/50 z-20">
                         <div className="flex items-center gap-4">
                             <div className="flex -space-x-3">
                                 {[1, 2, 3].map((i) => (

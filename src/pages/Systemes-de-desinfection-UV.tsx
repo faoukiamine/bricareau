@@ -767,19 +767,19 @@ const DesinfectionUV = () => {
                                     name: "Systèmes de filtration d'eau spécialisés",
                                     desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques de votre eau de puits.",
                                     img: specialFiltersImg,
-                                    link: "/Filtres-deau"
+                                    link: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
                                 },
                                 {
                                     name: "Adoucisseurs d'eau",
                                     desc: "Éliminez le calcaire pour une peau douce, un linge éclatant et une protection durable de vos installations.",
                                     img: waterSoftenerImg,
-                                    link: "/adoucisseurs-eau-de-puits"
+                                    link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
                                 },
                                 {
                                     name: "Stations d'eau potable",
                                     desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
                                     img: drinkingWaterImg,
-                                    link: "/systeme-de-filtration-deau-potable"
+                                    link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
                                 }
                             ].map((prod, i) => (
                                 <div
@@ -820,19 +820,19 @@ const DesinfectionUV = () => {
                                             name: "Systèmes de filtration d'eau spécialisés",
                                             desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques.",
                                             img: specialFiltersImg,
-                                            link: "/Filtres-deau"
+                                            link: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
                                         },
                                         {
                                             name: "Adoucisseurs d'eau",
                                             desc: "Éliminez le calcaire pour une peau douce et un linge éclatant.",
                                             img: waterSoftenerImg,
-                                            link: "/adoucisseurs-eau-de-puits"
+                                            link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
                                         },
                                         {
                                             name: "Stations d'eau potable",
                                             desc: "Une eau de qualité minérale directement à votre évier.",
                                             img: drinkingWaterImg,
-                                            link: "/systeme-de-filtration-deau-potable"
+                                            link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
                                         }
                                     ].map((prod, i) => (
                                         <CarouselItem key={i} className="pl-4 basis-[80%] md:basis-[45%]">

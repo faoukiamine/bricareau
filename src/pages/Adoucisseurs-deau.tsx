@@ -325,14 +325,85 @@ const A = () => {
         <div className="min-h-screen bg-background font-sans text-slate-900">
             <Header />
             <main>
-                <Hero 
-                    image={heroBath}
-                    highlightedTitle={<span className="font-bold not-italic">Finis le calcaire et l'eau dure :</span>}
-                    mainTitle={<>offrez-vous <span className="text-[#8CC63F]">le confort d'une eau douce.</span></>}
-                    subtitle="Redécouvrez l'expérience d'une eau soyeuse qui préserve votre peau, vos cheveux et vos investissements. Une technologie de pointe pour une protection durable de votre foyer."
-                    showPhone={false}
-                    showBreadcrumbs={true}
-                />
+                <section className="relative bg-white overflow-hidden min-h-[85vh] md:min-h-screen lg:h-auto lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="on-light" />
+                        </div>
+                    </div>
+                    
+                    <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/50 to-transparent z-10 md:hidden"></div>
+                        {/* Tablet Vertical Filter (Progressive) */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                        {/* Desktop Gradient */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_25%,rgba(255,255,255,0)_75%)] z-10 hidden lg:block"></div>
+                        
+                        <div className="absolute right-0 top-0 w-full h-full lg:w-[80%]">
+                            <img 
+                                src={heroBath} 
+                                className="absolute inset-0 w-full h-full object-cover object-bottom md:object-[30%_center] lg:object-center"
+                                alt="Solutions expertes en traitement d'eau résidentiel Bricareau" 
+                            />
+                        </div>
+                    </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-0 hidden lg:block"></div>
+                    
+                    <div className="container relative z-10 mx-auto px-4 md:px-6 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-24 pb-12 lg:pt-0 lg:pb-0">
+                        <div className="max-w-3xl flex flex-col justify-center text-left">
+                            <div className="space-y-6 md:mb-8 lg:space-y-6 lg:mb-0">
+                                {/* Title: Mobile/Desktop style vs Tablet style */}
+                                <h1 
+                                    className="mb-6 animate-in fade-in slide-in-from-left duration-1000 max-w-[680px]"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontStyle: 'normal'
+                                    }}
+                                >
+                                    {/* Mobile & Desktop Version */}
+                                    <span className="md:hidden lg:block text-[32px] lg:text-[50px] leading-[1.1]">
+                                        <span className="italic font-light text-[#18448F] block"><span className="font-bold not-italic">Finis le calcaire et l'eau dure :</span></span>
+                                        <span className="font-bold text-[#18448F] block">offrez-vous <span className="text-[#8CC63F]">le confort d'une eau douce.</span></span>
+                                    </span>
+                                    
+                                    {/* Tablet Version (Residentiel Style) */}
+                                    <span className="hidden md:block lg:hidden text-[50px] leading-[55px] font-sans font-bold tracking-tight">
+                                        <span className="text-[#18448F]">Finis le calcaire et l'eau dure :</span><br/>
+                                        <span className="text-[#18448F]">offrez-vous</span> <span className="text-[#8CC63F]">le confort d'une eau douce.</span>
+                                    </span>
+                                </h1>
+                                
+                                <p className="animate-in fade-in slide-in-from-left duration-1000 delay-100 text-justify lg:text-left max-w-[680px] text-slate-500 md:text-slate-600 text-[15px] md:text-xl lg:text-lg md:font-normal lg:font-normal leading-relaxed md:max-w-xl lg:max-w-[680px]">
+                                    Redécouvrez l'expérience d'une eau soyeuse qui préserve votre peau, vos cheveux et vos investissements. Une technologie de pointe pour une protection durable de votre foyer.
+                                </p>
+                            </div>
+                            
+                            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-8 md:gap-6 lg:gap-8 pt-6 md:pt-0 lg:pt-6 md:mb-16 lg:mb-0 animate-in fade-in slide-in-from-left duration-1000 delay-200 w-full sm:w-auto">
+                                {/* Mobile & Desktop Button */}
+                                <div className="md:hidden lg:block w-full sm:w-fit">
+                                    <ProMaxButton asChild className="w-full sm:w-fit">
+                                        <a href="/consultation" className="inline-flex items-center justify-center gap-2">
+                                            Planifier une consultation gratuite
+                                            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+                                        </a>
+                                    </ProMaxButton>
+                                </div>
+                                
+                                {/* Tablet Button (Residentiel Style) */}
+                                <div className="hidden md:block lg:hidden relative inline-block w-full sm:w-auto group mt-8">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <button
+                                        className="relative flex items-center justify-center w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
+                                        onClick={() => window.location.href = "/consultation"}
+                                    >
+                                        Planifier une consultation gratuite
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* AEO TARGET PARAGRAPH (Featured Snippets & Voice Search) */}
                 {/* 2. Diagnostic Impact - Bento Grid */}
@@ -600,6 +671,19 @@ const A = () => {
 
                      {/* Full-width container for the slider */}
                      <div className="w-full relative z-0 mb-0 pb-0 overflow-visible mt-12 lg:mt-0">
+                         {/* Title Block for Tablet (md only) */}
+                         <div className="hidden md:block lg:hidden text-center max-w-3xl mx-auto px-6 mb-16 mt-8">
+                             <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+                                 LE PARCOURS BRICAREAU
+                             </span>
+                             <h2 className="heading-pro-max text-center mb-4 text-[#18448F]">
+                                 <span className="font-bold not-italic">Une transition fluide 360° vers une <span className="text-[#8CC63F]">eau douce d'exception.</span></span>
+                             </h2>
+                             <p className="body-pro-max text-center max-w-3xl mx-auto">
+                                 Le Parcours Bricareau : une expertise d'élite, depuis votre première analyse jusqu'à  la douceur éternelle de votre eau.
+                             </p>
+                         </div>
+
                          {/* Left Side: Circular Slider */}
                          <div className="w-full lg:w-1/2 lg:absolute lg:left-0 lg:top-[-215px] xl:top-[-340px] 2xl:top-[-385px] relative flex justify-center lg:justify-start z-0 pointer-events-none">
                                 {/* Translated left to create a semi-circle effect stuck to the edge */}
@@ -676,8 +760,8 @@ const A = () => {
                             <div className="container mx-auto px-6 relative z-10 pointer-events-none">
                                 <div className="w-full lg:w-1/2 lg:ml-auto space-y-6 lg:space-y-8 lg:pl-8 lg:pr-12 xl:pr-24 max-w-3xl mt-12 lg:mt-0 pointer-events-auto">
                                     
-                                    {/* Title Block */}
-                                    <div className="text-center lg:text-left mb-0">
+                                    {/* Title Block - Hidden on Tablet (md) since it's moved above */}
+                                    <div className="text-center lg:text-left mb-0 md:hidden lg:block">
                                         <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-4">
                                             LE PARCOURS BRICAREAU
                                         </span>
