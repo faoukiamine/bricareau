@@ -151,7 +151,7 @@ const TraitementEauVille = () => {
                                     desc: "Protégez vos électroménagers et profitez d'un linge plus doux et d'une peau moins asséchée.",
                                     img: softenerImg,
                                     link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire",
-                                    className: "lg:row-span-2 min-h-[400px]",
+                                    className: "lg:row-span-2",
                                     imgClass: "object-cover"
                                 },
                                 {
@@ -204,7 +204,7 @@ const TraitementEauVille = () => {
                                     subtitle: "DIAGNOSTIC",
                                     desc: "Analyse professionnelle pour comprendre et résoudre vos problèmes d'eau.",
                                     img: waterTestImg,
-                                    link: "/tests-eau",
+                                    link: "/Analyses-et-Tests-d-eau",
                                     className: "lg:col-span-1",
                                     imgClass: "object-cover"
                                 }
@@ -283,7 +283,8 @@ const TraitementEauVille = () => {
                         <div className="space-y-32">
                             {/* Pilier 1 : Image Left, Text Right */}
                             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-24">
-                                <div className="flex lg:hidden items-center gap-6 w-full">
+                                {/* Titre Mobile (caché sur tablette et desktop) */}
+                                <div className="flex md:hidden items-center gap-6 w-full">
                                     <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
                                         <Wallet className="w-8 h-8 text-blue-600" />
                                     </div>
@@ -291,8 +292,18 @@ const TraitementEauVille = () => {
                                 </div>
                                 <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                     <img src={economiesImg} className="absolute inset-0 w-full h-full object-cover" alt="Économies - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
+                                    {/* Titre Tablette (superposé) */}
+                                    <div className="hidden md:flex lg:hidden absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex-col justify-end p-8">
+                                        <div className="flex items-center gap-4 mb-2">
+                                            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
+                                                <Wallet className="w-6 h-6 text-white" />
+                                            </div>
+                                            <h3 className="text-3xl font-medium tracking-tight text-white"><span className="underline decoration-2 underline-offset-8">Des</span> économies durables.</h3>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
+                                    {/* Titre Desktop (caché sur mobile et tablette) */}
                                     <div className="hidden lg:flex items-center gap-6">
                                         <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
                                             <Wallet className="w-8 h-8 text-blue-600" />
@@ -301,7 +312,7 @@ const TraitementEauVille = () => {
                                     </div>
                                     <div className="space-y-6 text-lg text-slate-500 font-light leading-relaxed">
                                         <div className="flex items-start gap-4">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] mt-3 shrink-0" />
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-3 shrink-0" />
                                             <p>Réduisez l'utilisation de savons et détergents jusqu'à 50% grâce à une eau adoucie.</p>
                                         </div>
                                         <div className="flex items-start gap-4">
@@ -314,7 +325,8 @@ const TraitementEauVille = () => {
 
                             {/* Pilier 2 : Text Left, Image Right */}
                             <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-24">
-                                <div className="flex lg:hidden items-center gap-6 w-full">
+                                {/* Titre Mobile (caché sur tablette et desktop) */}
+                                <div className="flex md:hidden items-center gap-6 w-full">
                                     <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
                                         <Heart className="w-8 h-8 text-blue-600" />
                                     </div>
@@ -322,8 +334,18 @@ const TraitementEauVille = () => {
                                 </div>
                                 <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                     <img src={santeImg} className="absolute inset-0 w-full h-full object-cover" alt="Santé - filtration Bricareau" title="Filtration Bricareau par Bricareau" />
+                                    {/* Titre Tablette (superposé) */}
+                                    <div className="hidden md:flex lg:hidden absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex-col justify-end p-8">
+                                        <div className="flex items-center gap-4 mb-2">
+                                            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
+                                                <Heart className="w-6 h-6 text-white" />
+                                            </div>
+                                            <h3 className="text-3xl font-medium tracking-tight text-white"><span className="underline decoration-2 underline-offset-8">San</span>té et bien-être.</h3>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
+                                    {/* Titre Desktop (caché sur mobile et tablette) */}
                                     <div className="hidden lg:flex items-center gap-6">
                                         <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
                                             <Heart className="w-8 h-8 text-blue-600" />
@@ -345,7 +367,8 @@ const TraitementEauVille = () => {
 
                             {/* Pilier 3 : Image Left, Text Right */}
                             <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-24">
-                                <div className="flex lg:hidden items-center gap-6 w-full">
+                                {/* Titre Mobile (caché sur tablette et desktop) */}
+                                <div className="flex md:hidden items-center gap-6 w-full">
                                     <div className="w-16 h-16 rounded-full bg-[#8CC63F]/10 flex items-center justify-center shrink-0">
                                         <Leaf className="w-8 h-8 text-[#8CC63F]" />
                                     </div>
@@ -353,8 +376,18 @@ const TraitementEauVille = () => {
                                 </div>
                                 <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                     <img src={ecologyImg} className="absolute inset-0 w-full h-full object-cover" alt="Écologie - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
+                                    {/* Titre Tablette (superposé) */}
+                                    <div className="hidden md:flex lg:hidden absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex-col justify-end p-8">
+                                        <div className="flex items-center gap-4 mb-2">
+                                            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
+                                                <Leaf className="w-6 h-6 text-white" />
+                                            </div>
+                                            <h3 className="text-3xl font-medium tracking-tight text-white"><span className="underline decoration-2 underline-offset-8">Un </span>choix écologique.</h3>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
+                                    {/* Titre Desktop (caché sur mobile et tablette) */}
                                     <div className="hidden lg:flex items-center gap-6">
                                         <div className="w-16 h-16 rounded-full bg-[#8CC63F]/10 flex items-center justify-center shrink-0">
                                             <Leaf className="w-8 h-8 text-[#8CC63F]" />

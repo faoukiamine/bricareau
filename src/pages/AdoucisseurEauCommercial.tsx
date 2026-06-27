@@ -574,7 +574,7 @@ En restauration et en hôtellerie, chaque détail compte. Assurez la conformité
                                     asChild
                                     variant="primary"
                                 >
-                                    <a href="/tests-eau">Demander une analyse d'eau</a>
+                                    <a href="/Analyses-et-Tests-d-eau">Demander une analyse d'eau</a>
                                 </ProMaxButton>
                             </div>
                         </div>
