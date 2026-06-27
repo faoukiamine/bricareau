@@ -14,7 +14,11 @@ import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { mainNavMenuItems, type MenuItem } from "@/data/navigation";
 import { searchSite, type SearchResult } from "@/data/searchData";
 
-const Header = () => {
+interface HeaderProps {
+  forceWhite?: boolean;
+}
+
+const Header = ({ forceWhite = false }: HeaderProps = {}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMegamenu, setActiveMegamenu] = useState<string | null>(null);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -123,8 +127,8 @@ const Header = () => {
                     className={cn(
                         "text-[13px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors",
                         (activeMegamenu === item.name || activeDropdown === item.name) 
-                            ? (isScrolled ? "text-white/70" : "text-[#18448F]/70")
-                            : (isScrolled ? "text-white hover:text-white/80" : "text-[#18448F] hover:text-[#18448F]/80")
+                            ? ((isScrolled || forceWhite) ? "text-white/70" : "text-[#18448F]/70")
+                            : ((isScrolled || forceWhite) ? "text-white hover:text-white/80" : "text-[#18448F] hover:text-[#18448F]/80")
                     )}
                     onClick={() => {
                         if (item.href) {
@@ -159,23 +163,23 @@ const Header = () => {
 
             {/* Right Utilities (Desktop) */}
             <div className="hidden lg:flex items-center gap-8">
-              <a href="tel:18552649328" className={cn("text-[13px] font-bold flex items-center gap-2 group transition-colors", isScrolled ? "text-white" : "text-[#18448F]")}>
-                <div className={cn("w-8 h-8 rounded-full flex items-center justify-center transition-colors", isScrolled ? "bg-white/10 group-hover:bg-white/20" : "bg-[#18448F]/10 group-hover:bg-[#18448F]/20")}>
-                    <Phone className={cn("w-4 h-4", isScrolled ? "text-white" : "text-[#18448F]")} strokeWidth={2.5} />
+              <a href="tel:18552649328" className={cn("text-[13px] font-bold flex items-center gap-2 group transition-colors", (isScrolled || forceWhite) ? "text-white" : "text-[#18448F]")}>
+                <div className={cn("w-8 h-8 rounded-full flex items-center justify-center transition-colors", (isScrolled || forceWhite) ? "bg-white/10 group-hover:bg-white/20" : "bg-[#18448F]/10 group-hover:bg-[#18448F]/20")}>
+                    <Phone className={cn("w-4 h-4", (isScrolled || forceWhite) ? "text-white" : "text-[#18448F]")} strokeWidth={2.5} />
                 </div>
                 (855) 264-9328
               </a>
               
               <div className="flex items-center gap-6">
                 <ProMaxButton 
-                    variant={isScrolled ? "outline-white" : "outline"} 
+                    variant={(isScrolled || forceWhite) ? "outline-white" : "outline"} 
                     className="px-8 h-12 text-[10px]"
                     onClick={() => navigate("/consultation")}
                 >
                     Nous contacter
                 </ProMaxButton>
                 <ProMaxButton 
-                    variant={isScrolled ? "white" : "primary"} 
+                    variant={(isScrolled || forceWhite) ? "white" : "primary"} 
                     className="px-8 h-12 text-[10px]"
                     onClick={() => navigate("/contact-form")}
                 >
@@ -189,7 +193,7 @@ const Header = () => {
                 {isMenuOpen && (
                     <>
                         <button 
-                            className={cn("p-2 transition-colors", isScrolled ? "text-white" : "text-[#18448F]")}
+                            className={cn("p-2 transition-colors", (isScrolled || forceWhite) ? "text-white" : "text-[#18448F]")}
                             onClick={() => {
                                 setIsMenuOpen(false);
                                 // Optional logic for search
@@ -199,14 +203,14 @@ const Header = () => {
                         </button>
                         <a 
                             href="tel:18552649328" 
-                            className={cn("p-2 transition-colors", isScrolled ? "text-white" : "text-[#18448F]")}
+                            className={cn("p-2 transition-colors", (isScrolled || forceWhite) ? "text-white" : "text-[#18448F]")}
                         >
                             <Phone className="w-6 h-6" />
                         </a>
                     </>
                 )}
                 <button 
-                    className={cn("p-2 transition-colors", isScrolled ? "text-white" : "text-[#18448F]")} 
+                    className={cn("p-2 transition-colors", (isScrolled || forceWhite) ? "text-white" : "text-[#18448F]")} 
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}

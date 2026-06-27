@@ -170,7 +170,7 @@ const Home1 = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            <Header />
+            <Header forceWhite={currentSlide === 0 || currentSlide === 2} />
             <h1 className="sr-only">Traitement d'eau résidentiel et commercial au Québec | Bricareau</h1>
 
             <section className="relative bg-white overflow-hidden min-h-[85vh] md:h-[100vh] lg:h-auto lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
@@ -230,20 +230,20 @@ const Home1 = () => {
 
                         </div>
                         
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x divide-slate-200/40 bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl shadow-xl border border-white/40 w-fit">
-                            <div className="sm:pr-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-[#18448F]/20 bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl shadow-xl border border-white/40 w-fit">
+                            <div className="pb-6 sm:pb-0 sm:pr-8">
                                 <div className="text-3xl font-bold text-[#18448F] mb-2 drop-shadow-sm">25+</div>
                                 <div className="text-xs text-slate-800 font-bold uppercase tracking-widest leading-relaxed drop-shadow-sm">
                                     Années d'expertise<br/> en traitement d'eau
                                 </div>
                             </div>
-                            <div className="sm:px-8">
+                            <div className="py-6 sm:py-0 sm:px-8">
                                 <div className="text-3xl font-bold text-[#18448F] mb-2 drop-shadow-sm">4</div>
                                 <div className="text-xs text-slate-800 font-bold uppercase tracking-widest leading-relaxed drop-shadow-sm">
                                     Régions desservies<br/> autour de Montréal
                                 </div>
                             </div>
-                            <div className="sm:pl-8">
+                            <div className="pt-6 sm:pt-0 sm:pl-8">
                                 <div className="text-3xl font-bold text-[#18448F] mb-2 drop-shadow-sm">100%</div>
                                 <div className="text-xs text-slate-800 font-bold uppercase tracking-widest leading-relaxed drop-shadow-sm">
                                     Solutions adaptées,<br/> jamais génériques
