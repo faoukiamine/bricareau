@@ -177,11 +177,11 @@ const Home1 = () => {
                 <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
                     {/* Mobile Gradient (Style Residentiel) */}
                     {/* Mobile Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-transparent z-10 md:hidden"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-transparent z-10 md:hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_15%)]"></div>
                     {/* Tablet Vertical Filter (Progressive) */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.7)_65%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                    <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.7)_65%,transparent_100%)] z-10 hidden md:block lg:hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%)]"></div>
                     {/* Desktop Gradient */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.95)_35%,rgba(255,255,255,0.7)_60%,transparent_100%)] z-10 hidden lg:block"></div>
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.95)_35%,rgba(255,255,255,0.7)_60%,transparent_100%)] z-10 hidden lg:block [mask-image:linear-gradient(to_bottom,transparent_0%,black_25%)]"></div>
                     
                     {/* Container d'image sur toute la largeur */}
                     <div className="absolute right-0 top-0 w-full h-full">
