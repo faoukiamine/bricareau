@@ -33,7 +33,7 @@ const Sustainability = () => {
 
     return (
         <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden">
-            <Header forceWhite={true} />
+            <Header forceWhiteMobileOnly={true} />
 
             <main>
                 {/* 1. CUSTOM HERO SECTION */}

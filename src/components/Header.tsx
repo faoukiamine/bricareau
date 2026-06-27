@@ -16,9 +16,10 @@ import { searchSite, type SearchResult } from "@/data/searchData";
 
 interface HeaderProps {
   forceWhite?: boolean;
+  forceWhiteMobileOnly?: boolean;
 }
 
-const Header = ({ forceWhite = false }: HeaderProps = {}) => {
+const Header = ({ forceWhite = false, forceWhiteMobileOnly = false }: HeaderProps = {}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMegamenu, setActiveMegamenu] = useState<string | null>(null);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -83,14 +84,22 @@ const Header = ({ forceWhite = false }: HeaderProps = {}) => {
   };
 
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(typeof window !== 'undefined' ? window.innerWidth >= 1024 : true);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+  const shouldBeWhite = forceWhite || (forceWhiteMobileOnly && !isDesktop);
 
   return (
     <>
@@ -127,8 +136,8 @@ const Header = ({ forceWhite = false }: HeaderProps = {}) => {
                     className={cn(
                         "text-[13px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors",
                         (activeMegamenu === item.name || activeDropdown === item.name) 
-                            ? ((isScrolled || forceWhite) ? "text-white/70" : "text-[#18448F]/70")
-                            : ((isScrolled || forceWhite) ? "text-white hover:text-white/80" : "text-[#18448F] hover:text-[#18448F]/80")
+                            ? ((isScrolled || shouldBeWhite) ? "text-white/70" : "text-[#18448F]/70")
+                            : ((isScrolled || shouldBeWhite) ? "text-white hover:text-white/80" : "text-[#18448F] hover:text-[#18448F]/80")
                     )}
                     onClick={() => {
                         if (item.href) {
@@ -163,23 +172,23 @@ const Header = ({ forceWhite = false }: HeaderProps = {}) => {
 
             {/* Right Utilities (Desktop) */}
             <div className="hidden lg:flex items-center gap-8">
-              <a href="tel:18552649328" className={cn("text-[13px] font-bold flex items-center gap-2 group transition-colors", (isScrolled || forceWhite) ? "text-white" : "text-[#18448F]")}>
-                <div className={cn("w-8 h-8 rounded-full flex items-center justify-center transition-colors", (isScrolled || forceWhite) ? "bg-white/10 group-hover:bg-white/20" : "bg-[#18448F]/10 group-hover:bg-[#18448F]/20")}>
-                    <Phone className={cn("w-4 h-4", (isScrolled || forceWhite) ? "text-white" : "text-[#18448F]")} strokeWidth={2.5} />
+              <a href="tel:18552649328" className={cn("text-[13px] font-bold flex items-center gap-2 group transition-colors", (isScrolled || shouldBeWhite) ? "text-white" : "text-[#18448F]")}>
+                <div className={cn("w-8 h-8 rounded-full flex items-center justify-center transition-colors", (isScrolled || shouldBeWhite) ? "bg-white/10 group-hover:bg-white/20" : "bg-[#18448F]/10 group-hover:bg-[#18448F]/20")}>
+                    <Phone className={cn("w-4 h-4", (isScrolled || shouldBeWhite) ? "text-white" : "text-[#18448F]")} strokeWidth={2.5} />
                 </div>
                 (855) 264-9328
               </a>
               
               <div className="flex items-center gap-6">
                 <ProMaxButton 
-                    variant={(isScrolled || forceWhite) ? "outline-white" : "outline"} 
+                    variant={(isScrolled || shouldBeWhite) ? "outline-white" : "outline"} 
                     className="px-8 h-12 text-[10px]"
                     onClick={() => navigate("/consultation")}
                 >
                     Nous contacter
                 </ProMaxButton>
                 <ProMaxButton 
-                    variant={(isScrolled || forceWhite) ? "white" : "primary"} 
+                    variant={(isScrolled || shouldBeWhite) ? "white" : "primary"} 
                     className="px-8 h-12 text-[10px]"
                     onClick={() => navigate("/contact-form")}
                 >
@@ -193,7 +202,7 @@ const Header = ({ forceWhite = false }: HeaderProps = {}) => {
                 {isMenuOpen && (
                     <>
                         <button 
-                            className={cn("p-2 transition-colors", (isScrolled || forceWhite) ? "text-white" : "text-[#18448F]")}
+                            className={cn("p-2 transition-colors", (isScrolled || shouldBeWhite) ? "text-white" : "text-[#18448F]")}
                             onClick={() => {
                                 setIsMenuOpen(false);
                                 // Optional logic for search
@@ -203,14 +212,14 @@ const Header = ({ forceWhite = false }: HeaderProps = {}) => {
                         </button>
                         <a 
                             href="tel:18552649328" 
-                            className={cn("p-2 transition-colors", (isScrolled || forceWhite) ? "text-white" : "text-[#18448F]")}
+                            className={cn("p-2 transition-colors", (isScrolled || shouldBeWhite) ? "text-white" : "text-[#18448F]")}
                         >
                             <Phone className="w-6 h-6" />
                         </a>
                     </>
                 )}
                 <button 
-                    className={cn("p-2 transition-colors", (isScrolled || forceWhite) ? "text-white" : "text-[#18448F]")} 
+                    className={cn("p-2 transition-colors", (isScrolled || shouldBeWhite) ? "text-white" : "text-[#18448F]")} 
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
