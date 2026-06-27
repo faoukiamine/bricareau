@@ -230,7 +230,7 @@ const Home1 = () => {
 
                         </div>
                         
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x divide-slate-200/50 bg-white/40 backdrop-blur-md p-6 sm:p-8 rounded-3xl shadow-xl border border-white/50 w-fit">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x divide-slate-200/40 bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl shadow-xl border border-white/40 w-fit">
                             <div className="sm:pr-8">
                                 <div className="text-3xl font-bold text-[#18448F] mb-2 drop-shadow-sm">25+</div>
                                 <div className="text-xs text-slate-800 font-bold uppercase tracking-widest leading-relaxed drop-shadow-sm">
