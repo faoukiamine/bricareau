@@ -46,9 +46,11 @@ const Bureau = () => {
             <main>
                 {/* 1. HERO SECTION */}
                 <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
-                    <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
+                    <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
                         {/* Mobile Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 md:hidden"></div>
+                        {/* Tablet Vertical Filter (Progressive) */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
                         {/* Desktop Gradient: fade over the text area */}
                         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-[50%]"></div>
                         
@@ -340,3 +342,10 @@ const Bureau = () => {
 };
 
 export default Bureau;
+
+
+
+
+
+
+

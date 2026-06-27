@@ -90,7 +90,7 @@ const Entreprises = () => {
 
       <main>
         {/* 1. Modern Hero Section with Video/Image Overlay */}
-        <section className="relative min-h-[85vh] flex items-center pt-24 overflow-hidden">
+        <section className="relative min-h-[85vh] md:h-[100vh] lg:h-auto lg:min-h-[85vh] flex items-center pt-24 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
               src={heroImage} 
@@ -98,6 +98,7 @@ const Entreprises = () => {
              alt="Solutions Hydratation Business Bricareau" title="Fontaine à eau bureau par Bricareau" />
             <div className="absolute inset-0 bg-blue-900/20 mix-blend-multiply" />
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+            {/* Tablet Vertical Filter (Progressive) */}`n                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
           </div>
 
           <div className="container mx-auto px-6 relative z-10">
@@ -460,3 +461,11 @@ const Entreprises = () => {
 };
 
 export default Entreprises;
+
+
+
+
+
+
+
+

@@ -47,7 +47,7 @@ const Hero = ({
   homeVariant = false,
 }: HeroProps) => {
   return (
-    <section className={cn("relative bg-white overflow-hidden min-h-[85vh] lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200", className)}>
+    <section className={cn("relative bg-white overflow-hidden min-h-[85vh] md:h-[100vh] lg:h-auto lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200", className)}>
       {showBreadcrumbs && (
         <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
           <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
@@ -57,7 +57,11 @@ const Hero = ({
       )}
 
       {/* 1. Image Section */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      <div className="absolute inset-0 w-full h-full z-0 opacity-40 md:opacity-100">
+        {/* Mobile Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/50 to-transparent z-10 md:hidden"></div>
+        {/* Tablet Vertical Filter (Progressive) */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
         {/* Desktop Gradient: 1/4 solid white, fading to transparent */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_25%,rgba(255,255,255,0)_75%)] z-10 hidden lg:block"></div>
         

@@ -173,10 +173,13 @@ const Home1 = () => {
             <Header />
             <h1 className="sr-only">Traitement d'eau résidentiel et commercial au Québec | Bricareau</h1>
 
-            <section className="relative bg-white overflow-hidden min-h-[85vh] md:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
-                <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
+            <section className="relative bg-white overflow-hidden min-h-[85vh] md:h-[100vh] lg:h-auto lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
                     {/* Mobile Gradient (Style Residentiel) */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
+                    {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/50 to-transparent z-10 md:hidden"></div>
+                        {/* Tablet Vertical Filter (Progressive) */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
                     {/* Desktop Gradient */}
                     <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_12.5%,rgba(255,255,255,0)_100%)] z-10 hidden lg:block"></div>
                     
@@ -631,3 +634,12 @@ const Home1 = () => {
 };
 
 export default Home1;
+
+
+
+
+
+
+
+
+

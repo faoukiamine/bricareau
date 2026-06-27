@@ -88,7 +88,7 @@ const FiltreEauMachineCafe = () => {
 
             <main>
                 {/* 1. HERO SECTION (MIMICKING HOTELLERIERESTAURATION STYLE) */}
-                <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-white">
+                <section className="relative min-h-[90vh] md:h-[100vh] lg:h-auto lg:min-h-[90vh] flex items-center overflow-hidden bg-white">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="on-light" />
@@ -284,3 +284,11 @@ const FiltreEauMachineCafe = () => {
 };
 
 export default FiltreEauMachineCafe;
+
+
+
+
+
+
+
+

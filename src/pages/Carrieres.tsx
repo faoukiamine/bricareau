@@ -47,15 +47,18 @@ export default function Carrieres() {
 
             <main>
                 {/* 1. CUSTOM HERO SECTION */}
-                <section className="relative bg-white overflow-hidden min-h-[85vh] md:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                <section className="relative bg-white overflow-hidden min-h-[85vh] md:h-[100vh] lg:h-auto lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-6 pointer-events-auto">
                             <GlobalBreadcrumbs />
                         </div>
                     </div>
-                    <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
+                    <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
                         {/* Mobile Gradient (Style Residentiel/Home1) */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/50 to-transparent z-10 md:hidden"></div>
+                        {/* Tablet Vertical Filter (Progressive) */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
                         {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
                         
@@ -264,3 +267,12 @@ export default function Carrieres() {
         </div>
     );
 };
+
+
+
+
+
+
+
+
+
