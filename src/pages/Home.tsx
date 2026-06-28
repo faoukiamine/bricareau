@@ -38,7 +38,7 @@ import { allTestimonials } from "@/data/testimonials";
 // Assets
 import heroImg from "@/assets/family-preparing-dinner-together.jpg";
 import partnerImg from "@/assets/skids-sur-mesure.jpg";
-import resImg from "@/assets/woman-and-kid-drink-glass-water.jpg";
+import resImg from "@/assets/2148.png";
 import comImg from "@/assets/bureau-megamenu.jpg";
 import officeSlideImg from "@/assets/2148496250.jpg";
 import industrialSlideImg from "@/assets/43.jpg";
@@ -169,19 +169,18 @@ const Home1 = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white max-w-[100vw] overflow-x-hidden">
             <Header forceWhite={currentSlide === 0 || currentSlide === 2} />
             <h1 className="sr-only">Traitement d'eau résidentiel et commercial au Québec | Bricareau</h1>
 
             <section className="relative bg-white overflow-hidden min-h-[85vh] md:h-[100vh] lg:h-auto lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
                 <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
-                    {/* Mobile Gradient (Style Residentiel) */}
                     {/* Mobile Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-transparent z-10 md:hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_15%)]"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-transparent z-10 md:hidden"></div>
                     {/* Tablet Vertical Filter (Progressive) */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_left_center,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.5)_70%,transparent_100%)] z-10 hidden md:block lg:hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%)]"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_left_center,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.5)_70%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
                     {/* Desktop Gradient */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.95)_35%,rgba(255,255,255,0.7)_60%,transparent_100%)] z-10 hidden lg:block [mask-image:linear-gradient(to_bottom,transparent_0%,black_25%)]"></div>
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.7)_65%,transparent_100%)] z-10 hidden lg:block"></div>
                     
                     {/* Container d'image sur toute la largeur */}
                     <div className="absolute right-0 top-0 w-full h-full">
@@ -198,7 +197,7 @@ const Home1 = () => {
                 <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20 transition-all duration-1000"></div>
                 
                 <div className="container mx-auto px-6 relative z-30">
-                    <div className="max-w-3xl flex flex-col justify-center">
+                    <div className="max-w-3xl md:w-[75%] lg:w-full flex flex-col justify-center">
                         <div className="grid mb-8">
                             {slides.map((slide, index) => (
                                 <div 

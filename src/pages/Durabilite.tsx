@@ -32,7 +32,7 @@ const Sustainability = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden">
+        <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden max-w-[100vw]">
             <Header forceWhiteMobileOnly={true} />
 
             <main>
@@ -63,7 +63,7 @@ const Sustainability = () => {
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
 
                     <div className="container mx-auto px-6 relative z-30">
-                        <div className="max-w-3xl flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
+                        <div className="max-w-3xl md:w-[75%] lg:w-full flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
 
                             <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
                                 L'engagement durable <br className="hidden md:block lg:hidden" /><span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">pour vous et l'environnement.</span>

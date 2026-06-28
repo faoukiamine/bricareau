@@ -75,6 +75,8 @@ import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import fountainImg from "@/assets/Fontaines d'eau.webp";
+import fountainCardImg from "@/assets/distributeur-3-removebg-preview.png";
 import personShieldSvg from "@/assets/person_shield.svg";
 import resetWrenchSvg from "@/assets/reset_wrench.svg";
 import uvSpectrumAbstractImg from "@/assets/uv-spectrum-abstract.png";
@@ -181,15 +183,48 @@ const DesinfectionUV = () => {
         <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
             <main>
-                <Hero 
-                    image={heroImg}
-                    highlightedTitle={<span className="font-bold not-italic">Systèmes de désinfection UV,</span>}
-                    mainTitle={<span className="text-[#8CC63F] font-bold not-italic">zéro produit chimique, 100% de protection.</span>}
-                    subtitle="Éliminez 99,99% des bactéries, virus et kystes de votre eau de puits ou municipale sans aucun additif chimique. Assurez une pureté microbiologique totale pour la sécurité de votre famille à chaque robinet."
-                    showPhone={false}
-                    showBreadcrumbs={true}
-                    singleLineTitle={false}
-                />
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                        <div className="container mx-auto px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs />
+                        </div>
+                    </div>
+                    <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 md:hidden"></div>
+                        {/* Tablet Vertical Filter (Progressive) */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                        {/* Desktop Gradient: fade over the text area */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-[50%]"></div>
+                        
+                        <div className="absolute right-0 top-0 w-full h-full lg:w-[65%]">
+                            {/* Inner gradient to blend the hard edge on desktop */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
+                            <img 
+                                src={heroImg} 
+                                className="absolute inset-0 w-full h-full object-cover object-center lg:object-center"
+                                alt="Systèmes de désinfection UV" 
+                                title="Systèmes d'eau sur mesure par Bricareau" 
+                            />
+                        </div>
+                    </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
+                    
+                    <div className="container mx-auto px-6 relative z-30">
+                        <div className="max-w-3xl flex flex-col justify-center">
+                            <div className="mb-8">
+                                <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight drop-shadow-sm">
+                                    <span className="text-[#18448F]">Systèmes de désinfection UV,</span><br className="md:hidden lg:block"/>
+                                    <span className="text-[#8CC63F]">zéro produit chimique, 100% de protection.</span>
+                                </h1>
+                                
+                                <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
+                                    Éliminez 99,99% des bactéries, virus et kystes de votre eau de puits ou municipale sans aucun additif chimique. Assurez une pureté microbiologique totale pour la sécurité de votre famille à chaque robinet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* 2.5. Symptom Diagnostic Grid - UV Focused */}
                 <section className="py-24 bg-white relative overflow-hidden">
@@ -381,13 +416,13 @@ const DesinfectionUV = () => {
                                 <h2 className="text-3xl lg:text-5xl font-bold text-white leading-tight">
                                     Qu'est-ce qu'un <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-400 italic font-bold">système de désinfection UV ?</span>
                                 </h2>
-                                <div className="text-white text-[20px] leading-[28px] font-light font-sans max-w-6xl flex flex-col items-center space-y-8">
-                                    <p>
+                                <div className="text-white text-[20px] leading-[28px] font-medium font-sans max-w-6xl flex flex-col items-center space-y-8 drop-shadow-md">
+                                    <p className="text-white">
                                         Un système de désinfection UV utilise la lumière ultraviolette (UV-C) pour détruire 99,99 % des micro-organismes nocifs présents dans l'eau. C'est la méthode la plus efficace et écologique pour éliminer les bactéries, les virus et les parasites sans ajouter de produits chimiques à votre eau.
                                     </p>
 
                                     {/* Compact Pathogens Horizontal List */}
-                                    <div className="flex flex-wrap justify-center gap-3 w-full max-w-6xl">
+                                    <div className="flex flex-row items-center justify-start md:justify-center gap-2 lg:gap-3 w-full max-w-6xl overflow-x-auto no-scrollbar py-2 px-4 lg:px-0">
                                         {[
                                             { name: "E. Coli", level: "99.99%" },
                                             { name: "Giardia", level: "99.99%" },
@@ -396,14 +431,14 @@ const DesinfectionUV = () => {
                                             { name: "Hépatite A", level: "99.99%" },
                                             { name: "Cryptosporidium", level: "99.99%" }
                                         ].map((p, i) => (
-                                            <div key={i} className="flex items-center gap-2 px-4 py-2 group transition-all duration-300">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+                                            <div key={i} className="flex items-center gap-2 px-2 lg:px-4 py-2 group transition-all duration-300 shrink-0 whitespace-nowrap">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0" />
                                                 <span className="text-[11px] font-bold text-white group-hover:text-emerald-400 transition-colors uppercase tracking-wider">{p.name}</span>
                                             </div>
                                         ))}
                                     </div>
 
-                                    <p>
+                                    <p className="text-white">
                                         Votre eau peut sembler cristalline tout en abritant des micro-organismes nocifs. Nos rayons UV-C ciblent le cœur des contaminants pour les rendre inoffensifs en une fraction de seconde, sans produits chimiques.
                                     </p>
                                 </div>
@@ -833,6 +868,12 @@ const DesinfectionUV = () => {
                                             desc: "Une eau de qualité minérale directement à votre évier.",
                                             img: drinkingWaterImg,
                                             link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
+                                        },
+                                        {
+                                            name: "Fontaines d'eau",
+                                            desc: "Eau fraîche, tempérée ou pétillante, avec un design intégré.",
+                                            img: fountainCardImg,
+                                            link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
                                         }
                                     ].map((prod, i) => (
                                         <CarouselItem key={i} className="pl-4 basis-[80%] md:basis-[45%]">

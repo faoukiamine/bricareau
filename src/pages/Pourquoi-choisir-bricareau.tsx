@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden">
+        <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden max-w-[100vw]">
             <Header />
 
             <main>
@@ -83,7 +83,7 @@ const WhyChooseUs = () => {
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
 
                     <div className="container mx-auto px-6 relative z-30">
-                        <div className="max-w-3xl flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
+                        <div className="max-w-3xl md:w-[75%] lg:w-full flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
                             <div className="inline-block py-1.5 px-4 bg-slate-50 rounded-full text-[#18448F] font-bold tracking-[0.2em] uppercase text-xs mb-8 w-fit border border-slate-200 shadow-sm">
                                 La Référence Québécoise
                             </div>
@@ -107,7 +107,7 @@ const WhyChooseUs = () => {
                 </section>
 
                 {/* 2. NOTRE HISTOIRE: Elevated Timeline */}
-                <section className="py-32 bg-[#F8FAFC] relative" id="notre-histoire">
+                <section className="py-32 bg-[#F8FAFC] relative overflow-hidden" id="notre-histoire">
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-24 space-y-6">
@@ -261,7 +261,7 @@ const WhyChooseUs = () => {
 
 
                 {/* 5. POURQUOI NOUS SOMMES LA RÉFÉRENCE: 3D Bento Grid */}
-                <section className="py-32 bg-white relative" id="pourquoi-reference">
+                <section className="py-32 bg-white relative overflow-hidden" id="pourquoi-reference">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-24 space-y-4">
                             <h2 className="text-3xl lg:text-5xl font-bold text-[#18448F] leading-tight">
@@ -333,7 +333,7 @@ const WhyChooseUs = () => {
 
                 {/* 5.5 NOTRE EXPERT (GEO / E-E-A-T) - Section masquée à la demande de l'utilisateur */}
                 {false && (
-                    <section className="py-24 bg-slate-50 border-t border-slate-200" id="notre-expert">
+                    <section className="py-24 bg-slate-50 border-t border-slate-200 overflow-hidden" id="notre-expert">
                         <div className="container mx-auto px-6 max-w-6xl">
                             <div className="flex flex-col lg:flex-row items-center gap-16">
                                 <div className="lg:w-1/3 relative">

@@ -171,17 +171,60 @@ const C = () => {
     <div className="min-h-screen bg-background text-slate-900 font-sans">
        <Header />
        <main>
-                <Hero 
-                    image={heroDrink}
-                    highlightedTitle={<><span className="text-[#18448F] font-bold not-italic">Prêt à découvrir</span> <span className="text-[#8CC63F] font-bold not-italic">l'excellence de l'eau pure</span></>}
-                    mainTitle={<><span className="text-[#18448F] font-bold not-italic">directement sous votre évier ?</span></>}
-                    subtitle="Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration d'eau sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille."
-                    ctaText="Planifier une consultation gratuite"
-                    ctaLink="/consultation"
-                    showPhone={false}
-                    showBreadcrumbs={true}
-                    singleLineTitle={true}
-                />
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                        <div className="container mx-auto px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs />
+                        </div>
+                    </div>
+                    <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 md:hidden"></div>
+                        {/* Tablet Vertical Filter (Progressive) */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                        {/* Desktop Gradient: fade over the text area */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-[50%]"></div>
+                        
+                        <div className="absolute right-0 top-0 w-full h-full lg:w-[65%]">
+                            {/* Inner gradient to blend the hard edge on desktop */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
+                            <img 
+                                src={heroDrink} 
+                                className="absolute inset-0 w-full h-full object-cover object-center lg:object-center"
+                                alt="Stations d'eau potables sous l'évier" 
+                                title="Filtration d'eau par Bricareau" 
+                            />
+                        </div>
+                    </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
+                    
+                    <div className="container mx-auto px-6 relative z-30">
+                        <div className="max-w-3xl flex flex-col justify-center">
+                            <div className="mb-8">
+                                <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight drop-shadow-sm">
+                                    <span className="text-[#18448F]">Prêt à découvrir</span> <span className="text-[#8CC63F]">l'excellence de l'eau pure</span> <br className="md:hidden lg:block"/>
+                                    <span className="text-[#18448F]">directement sous votre évier ?</span>
+                                </h1>
+                                
+                                <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
+                                    Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration d'eau sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille.
+                                </p>
+                            </div>
+                            
+                            <div className="flex flex-col sm:flex-row items-start gap-6 mb-16">
+                                <div className="relative inline-block w-full sm:w-auto group">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <button
+                                        className="relative flex items-center justify-center w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
+                                        onClick={() => navigate("/consultation")}
+                                    >
+                                        Planifier une consultation gratuite
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* 3. Menaces Invisibles - Symptom-Logic Bento Grid */}
         <section className="relative py-32 bg-white overflow-hidden">

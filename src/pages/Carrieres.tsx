@@ -42,7 +42,7 @@ export default function Carrieres() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden">
+        <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden max-w-[100vw]">
             <Header />
 
             <main>
@@ -72,7 +72,7 @@ export default function Carrieres() {
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
 
                     <div className="container mx-auto px-6 relative z-30">
-                        <div className="max-w-3xl flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
+                        <div className="max-w-3xl md:w-[75%] lg:w-full flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
 
                             <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-8 w-fit">Rejoignez-nous</span>
                             
@@ -187,7 +187,7 @@ export default function Carrieres() {
                 </section>
 
                 {/* NOS OFFRES - Added a clean section for job postings */}
-                <section className="py-24 bg-white border-t border-slate-200">
+                <section className="py-24 bg-white border-t border-slate-200 overflow-hidden">
                      <div className="container mx-auto px-6">
                         <div className="max-w-3xl mx-auto text-center mb-16">
                             <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-6">Emplois</span>

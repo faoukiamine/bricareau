@@ -58,6 +58,8 @@ import ecoImpactImg4 from "@/assets/2116.jpg";
 import ecoImpactImg5 from "@/assets/2114.png";
 import ecoImpactImg6 from "@/assets/2112.png";
 import ecoImpactImg7 from "@/assets/2117.jpg";
+import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
+import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import { useNavigate } from "react-router-dom";
 import { heroImg as healthwaterImg } from "./Blog pages/Eau-du-puits-au-quebec-quand-installer-un-systeme-dosmose-inverse";
 import { heroImg as drinkpurewaterImg } from "./Blog pages/Comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles";
@@ -209,9 +211,11 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
             </div>
 
             {/* Card Info */}
-            <div className="space-y-3 flex-grow">
-                <h4 className="text-xl font-bold text-slate-900">{item.title}</h4>
-                <p className="text-slate-500 text-sm font-light leading-relaxed text-justify line-clamp-6">
+            <div className="flex-grow flex flex-col">
+                <div className="min-h-[60px] mb-3">
+                    <h4 className="text-xl font-bold text-slate-900 line-clamp-2">{item.title}</h4>
+                </div>
+                <p className="text-slate-500 text-sm font-light leading-relaxed text-justify line-clamp-6 flex-grow">
                     {item.desc}
                 </p>
             </div>
@@ -249,7 +253,7 @@ const Fontaines = () => {
             title: "Osmose inverse : la technologie derrière une eau 100 % pure",
             img: rowaterImg,
             link: "/osmose-inverse-la-technologie-derriere-une-eau-100-pure"
-        },
+        }
     ];
 
     const scrollResources = (direction: 'left' | 'right') => {
@@ -290,55 +294,44 @@ const Fontaines = () => {
             <Header />
             <main>
                 {/* 1. IMMERSIVE HERO - INDEX STYLE */}
-                <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-white">
-                    {/* Image Section - Overlay on all screens */}
-                    <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden" />
-                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block" />
-                        <img 
-                            src={heroFountains}
-                            className="absolute inset-0 w-full h-full object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-[3s] ease-out"
-                         alt="Fontaines d'eau Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
-                        {/* Floating Trust Row - Mobile/Tablet Only */}
-                        <div className="absolute bottom-4 left-4 right-4 z-20 lg:hidden">
-                            <div className="grid grid-cols-3 gap-2">
-                                {[
-                                    { label: "Technologie", val: "Filtration Double", icon: <Zap className="w-4 h-4" /> },
-                                    { label: "Pureté", val: "Certifié NSF/ANSI", icon: <Award className="w-4 h-4" /> },
-                                    { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-4 h-4" /> }
-                                ].map((item, i) => (
-                                    <div key={i} className="group bg-white/90 backdrop-blur-md p-2 rounded-xl border border-white/50 shadow-lg flex flex-col items-center text-center gap-1.5 transition-all duration-500 hover:scale-105">
-                                        <div className={`w-10 h-10 bg-[#18448F]/10 rounded-full flex items-center justify-center text-[#18448F] shadow-sm shrink-0 transition-all duration-500 ${item.label === 'Éco-Conçu' ? 'group-hover:bg-[#8CC63F] group-hover:text-white' : 'group-hover:bg-[#18448F] group-hover:text-white'}`}>
-                                            {item.icon}
-                                        </div>
-                                        <div className="min-w-0">
-                                            <p className="text-[7.5px] font-black text-slate-400 uppercase tracking-tight leading-none mb-1">{item.label}</p>
-                                            <p className="text-[9px] font-bold text-[#18448F] leading-tight break-words">{item.val}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Breadcrumbs - Hidden on Mobile, Absolute on Desktop */}
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="light" />
+                            <GlobalBreadcrumbs />
                         </div>
                     </div>
+                    <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 md:hidden"></div>
+                        {/* Tablet Vertical Filter */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                        {/* Desktop Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-[50%]"></div>
+                        
+                        <div className="absolute right-0 top-0 w-full h-full lg:w-[65%]">
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
+                            <img 
+                                src={heroFountains} 
+                                className="absolute inset-0 w-full h-full object-cover object-center lg:object-center"
+                                alt="Fontaines d'eau Bricareau" title="Systèmes d'eau sur mesure par Bricareau"
+                            />
+                        </div>
+                    </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
 
                     {/* Content Section */}
-                    <div className="container relative z-10 mx-auto px-6 py-12 lg:py-0 h-full flex items-center">
-                        <div className="max-w-4xl text-left space-y-8 animate-in fade-in slide-in-from-left duration-1000">
-                            <h1 className="heading-pro-max font-sans font-bold not-italic text-[#18448F] mb-6 text-left max-w-4xl">
-                                Nos fontaines d'eau, <span className="text-blue-600">l'art de</span><br className="hidden md:block"/> <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">l'eau pure.</span>
-                            </h1>
-
-                            <p className="body-pro-max text-slate-600 max-w-xl text-justify lg:text-left">
-                                Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Un design élégant allié à une pureté absolue pour votre maison ou votre bureau.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-6 pt-4">
+                    <div className="container relative z-30 mx-auto px-6">
+                        <div className="max-w-3xl flex flex-col justify-center">
+                            <div className="mb-8">
+                                <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight drop-shadow-sm">
+                                    <span className="text-[#18448F]">Nos fontaines d'eau,</span> <br className="md:hidden lg:block"/>
+                                    <span className="text-blue-600">l'art de</span> <span className="text-[#8CC63F]">l'eau pure fraîche.</span>
+                                </h1>
+                                <p className="body-pro-max text-slate-600 text-justify lg:text-left mt-6 max-w-xl">
+                                    Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Un design élégant allié à une pureté absolue pour votre maison ou votre bureau.
+                                </p>
+                            </div>
+                            <div className="flex flex-col sm:flex-row gap-6 pt-4 mb-8">
                                 <div className="relative inline-block group">
                                     <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                     <Button asChild className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none">
@@ -348,11 +341,10 @@ const Fontaines = () => {
                                         </a>
                                     </Button>
                                 </div>
-
                             </div>
 
-                            {/* Aligned Trust Row Section - Desktop Only */}
-                            <div className="pt-8 w-full lg:w-auto hidden lg:block">
+                            {/* Trust Row Section - Now under the button for all screens */}
+                            <div className="w-full max-w-2xl">
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                     {[
                                         { label: "Technologie", val: "Filtration Double", icon: <Zap className="w-5 h-5" /> },
@@ -371,6 +363,7 @@ const Fontaines = () => {
                                     ))}
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </section>
@@ -577,8 +570,8 @@ const Fontaines = () => {
                         </div>
 
                         {/* Right Side: Results & Eco-Bilan Container */}
-                        <div className="w-full lg:w-1/2 flex items-center bg-slate-50/10 justify-start">
-                            <div className="w-full max-w-[700px] px-6 sm:px-12 lg:px-16 xl:px-24 py-20 lg:py-0">
+                        <div className="w-full lg:w-1/2 flex items-center bg-slate-50/10 justify-center lg:justify-start">
+                            <div className="w-full max-w-[700px] px-6 sm:px-12 lg:px-16 xl:px-24 py-20 lg:py-0 mx-auto lg:mx-0">
                                 <ImpactCalculator />
                             </div>
                         </div>
@@ -794,6 +787,80 @@ const Fontaines = () => {
                             </div>
                         </div>
                     </div>
+                    </div>
+                </section>
+
+                {/* Associated Products Section */}
+                <section className="bg-white py-24 border-t border-slate-100">
+                    <div className="container mx-auto px-4">
+                        <div className="text-center mb-16">
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="font-bold text-[#18448F] block text-center">Découvrir les produits associés</span>
+                            </h2>
+                             <p className="body-pro-max text-gray-500 text-center mx-auto">
+                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
+                             </p>
+                        </div>
+
+                        <div 
+                            className="flex overflow-x-auto lg:grid lg:grid-cols-4 gap-6 md:gap-8 snap-x snap-mandatory no-scrollbar pb-8 -mx-4 px-4 md:-mx-6 md:px-6 lg:mx-0 lg:px-0"
+                        >
+                            {[
+                                {
+                                    name: "Adoucisseurs d'eau",
+                                    desc: "Éliminez le calcaire pour une peau douce, un linge éclatant et une protection durable de vos installations.",
+                                    img: waterSoftenerImg,
+                                    link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
+                                },
+                                {
+                                    name: "Systèmes de désinfection UV",
+                                    desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
+                                    img: uvSystemImg2,
+                                    link: "/systemes-de-desinfection-uv"
+                                },
+                                {
+                                    name: "Stations d'eau potable",
+                                    desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
+                                    img: solutionsEauImg,
+                                    link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
+                                },
+                                {
+                                    name: "Fontaines d'eau",
+                                    desc: "Une eau fraîche et pure à volonté, idéale pour la maison ou le bureau avec un design élégant.",
+                                    img: distributeur3,
+                                    link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
+                                }
+
+                            ].map((prod, i) => (
+                                <div
+                                    key={i}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer shrink-0 snap-center w-[85%] md:w-[38%] lg:w-auto"
+                                    onClick={() => window.location.href = prod.link}
+                                >
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                        <img
+                                            src={prod.img}
+                                            alt={`${prod.name} - Solution Bricareau pour une eau pure et sans calcaire partout`}
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                        />
+                                    </div>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-[#18448F] transition-colors">
+                                        <h3 className="card-title text-center group-hover:text-[#18448F] transition-colors duration-500">
+                                            {prod.name}
+                                        </h3>
+                                         <p className="body-pro-max text-slate-500 text-justify">
+                                             {prod.desc}
+                                         </p>
+                                        <div
+                                            className="inline-flex items-center gap-2 text-[#18448F] font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                        >
+                                            <span></span>
+                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </section>
 
