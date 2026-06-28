@@ -38,7 +38,7 @@ import { allTestimonials } from "@/data/testimonials";
 // Assets
 import heroImg from "@/assets/family-preparing-dinner-together.jpg";
 import partnerImg from "@/assets/skids-sur-mesure.jpg";
-import resImg from "@/assets/552.jpg";
+import resImg from "@/assets/woman-and-kid-drink-glass-water.jpg";
 import comImg from "@/assets/bureau-megamenu.jpg";
 import officeSlideImg from "@/assets/2148496250.jpg";
 import industrialSlideImg from "@/assets/43.jpg";
