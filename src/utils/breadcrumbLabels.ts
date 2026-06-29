@@ -46,7 +46,7 @@ export const breadcrumbLabels: Record<string, string> = {
     // Nouvelles routes liées au mégamenu
     "adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire": "Adoucisseurs d'eau résidentiels",
     "Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison": "Filtres d'eau spécialisés",
-    "filtres-d-eau-de-remplacement": "Filtres de remplacement",
+    "filtres-d-eau-de-remplacement": "Filtres d'eau de remplacement",
     "Stations-d-eau-potables-sous-l-evier-de-la-cuisine": "Systèmes de filtration d'eau sous-évier",
     "fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche": "Fontaines et refroidisseurs d'eau",
     "filtration-hotels-restaurants": "Filtration d'eau",

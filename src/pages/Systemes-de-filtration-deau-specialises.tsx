@@ -39,8 +39,8 @@ import process1 from "@/assets/2148563485.jpg";
 import waterTestingImg1 from "@/assets/342800.jpg";
 import waterTasteImg from "@/assets/water-taste.jpg";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
-import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
-import waterCoolerImg from "@/assets/Fontaines d'eau.webp";
+import drinkingWaterImg from "@/assets/PX500_2.webp";
+import waterCoolerImg from "@/assets/distributeur-4-removebg-preview.png";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
@@ -1054,77 +1054,7 @@ const B = () => {
                 />
 
                 {/* 8. Associated Products Section */}
-                <section className="bg-white py-24">
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-16">
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-[#18448F] block text-center">Découvrir les produits associés</span>
-                            </h2>
-                             <p className="body-pro-max text-gray-500 text-center mx-auto">
-                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
-                             </p>
-                        </div>
-
-                        <div className="flex overflow-x-auto lg:grid lg:grid-cols-4 gap-6 md:gap-8 snap-x snap-mandatory no-scrollbar pb-8 -mx-4 px-4 md:-mx-6 md:px-6 lg:mx-0 lg:px-0">
-                            {[
-                                {
-                                    name: "Adoucisseurs d'eau",
-                                    desc: "Éliminez le calcaire pour une peau douce, un linge éclatant et une protection durable de vos installations.",
-                                    img: waterSoftenerImg,
-                                    link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
-                                },
-                                {
-                                    name: "Systèmes de désinfection UV",
-                                    desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
-                                    img: uvSystemImg2,
-                                    link: "/systemes-de-desinfection-uv"
-                                },
-                                {
-                                    name: "Stations d'eau potable",
-                                    desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
-                                    img: drinkingWaterImg,
-                                    link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
-                                },
-                                {
-                                    name: "Fontaines d'eau",
-                                    desc: "Une eau fraîche et pure à volonté, idéale pour la maison ou le bureau avec un design élégant.",
-                                    img: waterCoolerImg,
-                                    link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
-                                }
-
-                            ].map((prod, i) => (
-                                <div
-                                    key={i}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer shrink-0 snap-center w-[85%] md:w-[38%] lg:w-auto"
-                                    onClick={() => window.location.href = prod.link}
-                                >
-                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
-                                        <img
-                                            src={prod.img}
-                                            alt={`${prod.name} - Solution Bricareau pour une eau pure et sans calcaire partout`}
-                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
-                                        />
-                                    </div>
-                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-[#18448F] transition-colors">
-                                        <h3 className="card-title text-center group-hover:text-[#18448F] transition-colors duration-500">
-                                            {prod.name}
-                                        </h3>
-                                         <p className="body-pro-max text-slate-500 text-justify">
-                                             {prod.desc}
-                                         </p>
-                                        <div
-                                            className="inline-flex items-center gap-2 text-[#18448F] font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{}}
-                                        >
-                                            <span></span>
-                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                
 
                 {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
                 <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
@@ -1214,7 +1144,79 @@ const B = () => {
                 </section>
 
                 {/* 11. Resources Section */}
-                <section className="py-24 bg-gray-50">
+                <section className="bg-white py-24">
+                    <div className="container mx-auto px-4">
+                        <div className="text-center mb-16">
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="font-bold text-[#18448F] block text-center">Découvrir les produits associés</span>
+                            </h2>
+                             <p className="body-pro-max text-gray-500 text-center mx-auto">
+                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
+                             </p>
+                        </div>
+
+                        <div className="flex overflow-x-auto lg:grid lg:grid-cols-4 gap-6 md:gap-8 snap-x snap-mandatory no-scrollbar pb-8 -mx-4 px-4 md:-mx-6 md:px-6 lg:mx-0 lg:px-0">
+                            {[
+                                {
+                                    name: "Adoucisseurs d'eau",
+                                    desc: "Éliminez le calcaire pour une peau douce, un linge éclatant et une protection durable de vos installations.",
+                                    img: waterSoftenerImg,
+                                    link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
+                                },
+                                {
+                                    name: "Systèmes de désinfection UV",
+                                    desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
+                                    img: uvSystemImg2,
+                                    link: "/systemes-de-desinfection-uv"
+                                },
+                                {
+                                    name: "Stations d'eau potable",
+                                    desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
+                                    img: drinkingWaterImg,
+                                    link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
+                                },
+                                {
+                                    name: "Fontaines d'eau",
+                                    desc: "Une eau fraîche et pure à volonté, idéale pour la maison ou le bureau avec un design élégant.",
+                                    img: waterCoolerImg,
+                                    link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
+                                }
+
+                            ].map((prod, i) => (
+                                <div
+                                    key={i}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer shrink-0 snap-center w-[85%] md:w-[38%] lg:w-auto"
+                                    onClick={() => window.location.href = prod.link}
+                                >
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                        <img
+                                            src={prod.img}
+                                            alt={`${prod.name} - Solution Bricareau pour une eau pure et sans calcaire partout`}
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                        />
+                                    </div>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-[#18448F] transition-colors">
+                                        <h3 className="card-title text-center group-hover:text-[#18448F] transition-colors duration-500">
+                                            {prod.name}
+                                        </h3>
+                                         <p className="body-pro-max text-slate-500 text-justify">
+                                             {prod.desc}
+                                         </p>
+                                        <div
+                                            className="inline-flex items-center gap-2 text-[#18448F] font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                            style={{}}
+                                        >
+                                            <span></span>
+                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+<section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
@@ -1231,7 +1233,7 @@ const B = () => {
                             {resources.map((art, i) => (
                                 <div
                                     key={i}
-                                    className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    className="min-w-[70vw] md:min-w-[38vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
                                     onClick={() => navigate(art.path)}
                                 >
                                     <div className="h-56 overflow-hidden">
@@ -1256,29 +1258,6 @@ const B = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows for carousel - Mobile/Tablet ONLY */}
-                        <div className="lg:hidden flex items-center justify-center gap-4 mt-6 relative z-30">
-                            <Button 
-                                size="icon" 
-                                className="w-12 h-12 rounded-full bg-[#18448F] text-white hover:bg-[#18448F]/90 transition-all shadow-md shadow-blue-100"
-                                onClick={() => scrollResources('left')}
-                            >
-                                <ChevronLeft className="h-6 w-6" />
-                            </Button>
-                            <Button 
-                                size="icon" 
-                                className="w-12 h-12 rounded-full bg-[#18448F] text-white hover:bg-[#18448F]/90 transition-all shadow-md shadow-blue-100"
-                                onClick={() => scrollResources('right')}
-                            >
-                                <ChevronRight className="h-6 w-6" />
-                            </Button>
-
-                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
-                                <span className="text-[#18448F]">{resourceIndex}</span>
-                                <span className="mx-1 text-slate-300">/</span>
-                                <span className="text-slate-400">{resources.length}</span>
-                            </div>
-                        </div>
                     </div>
                 </section>
 

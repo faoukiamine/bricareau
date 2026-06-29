@@ -63,6 +63,9 @@ import diagnosticStepImg from "@/assets/step-diagnostic.png";
 import customStepImg from "@/assets/step-custom.png";
 import installationStepImg from "@/assets/step-installation.png";
 import serenityStepImg from "@/assets/step-serenity.png";
+import fountainCardImg from "@/assets/distributeur-3-removebg-preview.png";
+import uvSystemImg from "@/assets/500x500_V-Arros-15-IHS-10_straight-1-300x300.jpg";
+import tripleStageFilterImg from "@/assets/Triple Stage Filter.jpg";
 
 import {
     ArrowRight,
@@ -977,6 +980,8 @@ const A = () => {
                     }
                 />
 
+                
+
                 {/* 7.Water Testing Section (Redesigned for Mobile) */}
                 <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
@@ -1120,7 +1125,80 @@ const A = () => {
                 </section>
 
                 {/* 12. Resources Section */}
-                <section className="py-24 bg-gray-50">
+                {/* Section Associated Products */}
+                <section className="bg-white py-24">
+                    <div className="container mx-auto px-4">
+                        <div className="text-center mb-16">
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="font-bold text-[#18448F] block text-center">Découvrir les produits associés.</span>
+                            </h2>
+                             <p className="body-pro-max text-gray-500 text-center mx-auto">
+                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
+                             </p>
+                        </div>
+
+                        <div 
+                            className="flex overflow-x-auto lg:grid lg:grid-cols-4 gap-6 md:gap-8 snap-x snap-mandatory no-scrollbar pb-8 -mx-4 px-4 md:-mx-6 md:px-6 lg:mx-0 lg:px-0"
+                        >
+                            {[
+                                {
+                                    name: "Filtres d'eau spécialisés",
+                                    desc: "Des solutions ciblées pour traiter le fer, le manganèse, le soufre, les tanins et l'acidité pour une eau parfaite.",
+                                    img: specializedFiltersImg,
+                                    link: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
+                                },
+                                {
+                                    name: "Systèmes de filtration d'eau sous évier",
+                                    desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
+                                    img: tripleStageFilterImg,
+                                    link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
+                                },
+                                {
+                                    name: "Systèmes de désinfection UV",
+                                    desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
+                                    img: uvSystemImg,
+                                    link: "/systemes-de-desinfection-uv"
+                                },
+                                {
+                                    name: "Fontaines d'eau",
+                                    desc: "Eau fraîche, tempérée ou pétillante, avec un design intégré.",
+                                    img: fountainCardImg,
+                                    link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
+                                }
+                            ].map((prod, i) => (
+                                <div
+                                    key={i}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer shrink-0 snap-center w-[85%] md:w-[38%] lg:w-auto"
+                                    onClick={() => window.location.href = prod.link}
+                                >
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                        <img
+                                            src={prod.img}
+                                            alt={`${prod.name} - Solution Bricareau`}
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                        />
+                                    </div>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-[#18448F] transition-colors">
+                                        <h3 className="card-title text-center group-hover:text-[#18448F] transition-colors duration-500">
+                                            {prod.name}
+                                        </h3>
+                                         <p className="body-pro-max text-slate-500 text-justify">
+                                             {prod.desc}
+                                         </p>
+                                        <div
+                                            className="inline-flex items-center gap-2 text-[#18448F] font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                        >
+                                            <span></span>
+                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+<section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
@@ -1136,7 +1214,7 @@ const A = () => {
                             {resources.map((art, i) => (
                                 <div
                                     key={i}
-                                    className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
+                                    className="min-w-[70vw] md:min-w-[38vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
                                     onClick={() => navigate(art.link)}
                                 >
                                     <div className="h-56 overflow-hidden">
@@ -1159,27 +1237,6 @@ const A = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows for carousel - Mobile/Tablet ONLY */}
-                        <div className="lg:hidden flex items-center justify-center gap-4 mt-6 relative z-30">
-                            <Button 
-                                size="icon" 
-                                onClick={() => scrollResources('left')}
-                            >
-                                <ChevronLeft className="h-6 w-6" />
-                            </Button>
-                            <Button 
-                                size="icon" 
-                                onClick={() => scrollResources('right')}
-                            >
-                                <ChevronRight className="h-6 w-6" />
-                            </Button>
-
-                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
-                                <span className="text-blue-600">{resourceIndex}</span>
-                                <span className="mx-1 text-slate-300">/</span>
-                                <span className="text-slate-400">{resources.length}</span>
-                            </div>
-                        </div>
                     </div>
                 </section>
             </main>

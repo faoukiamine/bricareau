@@ -76,7 +76,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/filtres-d-eau-de-remplacement" className="text-white/80 hover:text-white transition-colors">
-                  Filtres de remplacement
+                  Filtres d'eau de remplacement
                 </a>
               </li>
               <li>

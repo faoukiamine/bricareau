@@ -888,7 +888,7 @@ const Filtration = () => {
                             {resources.map((art, i) => (
                                 <div
                                     key={i}
-                                    className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    className="min-w-[70vw] md:min-w-[38vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
                                     onClick={() => navigate(art.link)}
                                 >
                                     <div className="h-56 overflow-hidden">
@@ -913,31 +913,6 @@ const Filtration = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows and numbering for carousel - Mobile/Tablet ONLY */}
-                        <div className="lg:hidden flex items-center justify-center relative mt-6">
-                            <div className="flex items-center gap-4">
-                                <Button 
-                                    size="icon" 
-                                    className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
-                                    onClick={() => scrollResources('left')}
-                                >
-                                    <ChevronLeft className="h-6 w-6" />
-                                </Button>
-                                <Button 
-                                    size="icon" 
-                                    className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
-                                    onClick={() => scrollResources('right')}
-                                >
-                                    <ChevronRight className="h-6 w-6" />
-                                </Button>
-                            </div>
-                            
-                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
-                                <span className="text-blue-600">{resourceIndex}</span>
-                                <span className="mx-1 text-slate-300">/</span>
-                                <span className="text-slate-400">{resources.length}</span>
-                            </div>
-                        </div>
                     </div>
                 </section>
 

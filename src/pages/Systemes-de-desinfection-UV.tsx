@@ -784,127 +784,7 @@ const DesinfectionUV = () => {
                     }
                 />
                 {/* 8. Section Associated Products */}
-                <section className="bg-white py-24">
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-16">
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-[#18448F] block text-center">Découvrir les produits associés.</span>
-                            </h2>
-                            <p className="body-pro-max text-gray-500 max-w-2xl mx-auto text-center">
-                                Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
-                            </p>
-                        </div>
-
-                        {/* Desktop Grid (lg+) */}
-                        <div className="hidden lg:grid grid-cols-3 gap-8">
-                            {[
-                                {
-                                    name: "Systèmes de filtration d'eau spécialisés",
-                                    desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques de votre eau de puits.",
-                                    img: specialFiltersImg,
-                                    link: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
-                                },
-                                {
-                                    name: "Adoucisseurs d'eau",
-                                    desc: "Éliminez le calcaire pour une peau douce, un linge éclatant et une protection durable de vos installations.",
-                                    img: waterSoftenerImg,
-                                    link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
-                                },
-                                {
-                                    name: "Stations d'eau potable",
-                                    desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
-                                    img: drinkingWaterImg,
-                                    link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
-                                }
-                            ].map((prod, i) => (
-                                <div
-                                    key={i}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = prod.link}
-                                >
-                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
-                                        <img
-                                            src={prod.img}
-                                            alt={`${prod.name} - Solution Bricareau`}
-                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
-                                        />
-                                    </div>
-                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3 className="card-title group-hover:text-blue-600 transition-colors text-center">{prod.name}</h3>
-                                        <p className="body-pro-max text-slate-500 flex-grow text-left lg:text-justify">{prod.desc}</p>
-                                        <div className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end">
-                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Mobile/Tablet Carousel (under lg) */}
-                        <div className="lg:hidden">
-                            <Carousel
-                                opts={{
-                                    align: "start",
-                                    loop: false
-                                }}
-                                className="w-full"
-                            >
-                                <CarouselContent className="-ml-4 pb-8">
-                                    {[
-                                        {
-                                            name: "Systèmes de filtration d'eau spécialisés",
-                                            desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques.",
-                                            img: specialFiltersImg,
-                                            link: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
-                                        },
-                                        {
-                                            name: "Adoucisseurs d'eau",
-                                            desc: "Éliminez le calcaire pour une peau douce et un linge éclatant.",
-                                            img: waterSoftenerImg,
-                                            link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
-                                        },
-                                        {
-                                            name: "Stations d'eau potable",
-                                            desc: "Une eau de qualité minérale directement à votre évier.",
-                                            img: drinkingWaterImg,
-                                            link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
-                                        },
-                                        {
-                                            name: "Fontaines d'eau",
-                                            desc: "Eau fraîche, tempérée ou pétillante, avec un design intégré.",
-                                            img: fountainCardImg,
-                                            link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
-                                        }
-                                    ].map((prod, i) => (
-                                        <CarouselItem key={i} className="pl-4 basis-[80%] md:basis-[45%]">
-                                            <div
-                                                className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col h-full cursor-pointer"
-                                                onClick={() => window.location.href = prod.link}
-                                            >
-                                                <div className="relative h-64 overflow-hidden bg-slate-50 flex items-center justify-center p-8">
-                                                    <img
-                                                        src={prod.img}
-                                                        alt={prod.name}
-                                                        className="max-h-full object-contain mix-blend-multiply"
-                                                    />
-                                                </div>
-                                                <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent transition-all">
-                                                    <h3 className="card-title text-[#18448F]">{prod.name}</h3>
-                                                    <p className="body-pro-max text-slate-500 flex-grow">{prod.desc}</p>
-                                                    <div className="self-end">
-                                                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
-                                                            <ArrowRight className="h-5 w-5" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </CarouselItem>
-                                    ))}
-                                </CarouselContent>
-                            </Carousel>
-                        </div>
-                    </div>
-                </section>
+                
 
 
                 {/* 9. FAQ Section */}
@@ -1072,7 +952,135 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 10. Resources Section */}
-                <section className="py-24 bg-gray-50">
+                <section className="bg-white py-24">
+                    <div className="container mx-auto px-4">
+                        <div className="text-center mb-16">
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="font-bold text-[#18448F] block text-center">Découvrir les produits associés.</span>
+                            </h2>
+                            <p className="body-pro-max text-gray-500 max-w-2xl mx-auto text-center">
+                                Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
+                            </p>
+                        </div>
+
+                        {/* Desktop Grid (lg+) */}
+                        <div className="hidden lg:grid grid-cols-4 gap-8">
+                            {[
+                                {
+                                    name: "Systèmes de filtration d'eau spécialisés",
+                                    desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques de votre eau de puits.",
+                                    img: specialFiltersImg,
+                                    link: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
+                                },
+                                {
+                                    name: "Adoucisseurs d'eau",
+                                    desc: "Éliminez le calcaire pour une peau douce, un linge éclatant et une protection durable de vos installations.",
+                                    img: waterSoftenerImg,
+                                    link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
+                                },
+                                {
+                                    name: "Stations d'eau potable",
+                                    desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
+                                    img: drinkingWaterImg,
+                                    link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
+                                },
+                                {
+                                    name: "Fontaines d'eau",
+                                    desc: "Eau fraîche, tempérée ou pétillante, avec un design intégré.",
+                                    img: fountainCardImg,
+                                    link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
+                                }
+                            ].map((prod, i) => (
+                                <div
+                                    key={i}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    onClick={() => window.location.href = prod.link}
+                                >
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                        <img
+                                            src={prod.img}
+                                            alt={`${prod.name} - Solution Bricareau`}
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                        />
+                                    </div>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                        <h3 className="card-title group-hover:text-blue-600 transition-colors text-center">{prod.name}</h3>
+                                        <p className="body-pro-max text-slate-500 flex-grow text-left lg:text-justify">{prod.desc}</p>
+                                        <div className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end">
+                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Mobile/Tablet Carousel (under lg) */}
+                        <div className="lg:hidden">
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                    loop: false
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent className="-ml-4 pb-8">
+                                    {[
+                                        {
+                                            name: "Systèmes de filtration d'eau spécialisés",
+                                            desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques.",
+                                            img: specialFiltersImg,
+                                            link: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
+                                        },
+                                        {
+                                            name: "Adoucisseurs d'eau",
+                                            desc: "Éliminez le calcaire pour une peau douce et un linge éclatant.",
+                                            img: waterSoftenerImg,
+                                            link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
+                                        },
+                                        {
+                                            name: "Stations d'eau potable",
+                                            desc: "Une eau de qualité minérale directement à votre évier.",
+                                            img: drinkingWaterImg,
+                                            link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
+                                        },
+                                        {
+                                            name: "Fontaines d'eau",
+                                            desc: "Eau fraîche, tempérée ou pétillante, avec un design intégré.",
+                                            img: fountainCardImg,
+                                            link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
+                                        }
+                                    ].map((prod, i) => (
+                                        <CarouselItem key={i} className="pl-4 basis-[80%] md:basis-[45%]">
+                                            <div
+                                                className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col h-full cursor-pointer"
+                                                onClick={() => window.location.href = prod.link}
+                                            >
+                                                <div className="relative h-64 overflow-hidden bg-slate-50 flex items-center justify-center p-8">
+                                                    <img
+                                                        src={prod.img}
+                                                        alt={prod.name}
+                                                        className="max-h-full object-contain mix-blend-multiply"
+                                                    />
+                                                </div>
+                                                <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent transition-all">
+                                                    <h3 className="card-title text-[#18448F]">{prod.name}</h3>
+                                                    <p className="body-pro-max text-slate-500 flex-grow">{prod.desc}</p>
+                                                    <div className="self-end">
+                                                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                                                            <ArrowRight className="h-5 w-5" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                            </Carousel>
+                        </div>
+                    </div>
+                </section>
+
+<section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
@@ -1088,7 +1096,7 @@ const DesinfectionUV = () => {
                             {resources.map((art, i) => (
                                 <div
                                     key={i}
-                                    className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
+                                    className="min-w-[70vw] md:min-w-[38vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
                                     onClick={() => navigate(art.path)}
                                 >
                                     <div className="h-56 overflow-hidden">
@@ -1106,29 +1114,6 @@ const DesinfectionUV = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows and numbering for carousel - Mobile/Tablet ONLY */}
-                        <div className="lg:hidden flex items-center justify-center relative mt-6">
-                            <div className="flex items-center gap-4">
-                                <Button 
-                                    size="icon" 
-                                    onClick={() => scrollResources('left')}
-                                >
-                                    <ChevronLeft className="h-6 w-6" />
-                                </Button>
-                                <Button 
-                                    size="icon" 
-                                    onClick={() => scrollResources('right')}
-                                >
-                                    <ChevronRight className="h-6 w-6" />
-                                </Button>
-                            </div>
-                            
-                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
-                                <span className="text-blue-600">{resourceIndex}</span>
-                                <span className="mx-1 text-slate-300">/</span>
-                                <span className="text-slate-400">{resources.length}</span>
-                            </div>
-                        </div>
                     </div>
                 </section>
 

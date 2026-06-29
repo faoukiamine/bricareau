@@ -690,7 +690,7 @@ En restauration et en hôtellerie, chaque détail compte. Assurez la conformité
                             {resources.map((art, i) => (
                                 <div
                                     key={i}
-                                    className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
+                                    className="min-w-[70vw] md:min-w-[38vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
                                     onClick={() => navigate(art.link)}
                                 >
                                     <div className="h-56 overflow-hidden">
@@ -713,27 +713,6 @@ En restauration et en hôtellerie, chaque détail compte. Assurez la conformité
                             ))}
                         </div>
 
-                        {/* Navigation arrows for carousel - Mobile/Tablet ONLY */}
-                        <div className="lg:hidden flex items-center justify-center gap-4 mt-6 relative z-30">
-                            <Button 
-                                size="icon" 
-                                onClick={() => scrollResources('left')}
-                            >
-                                <ChevronLeft className="h-6 w-6" />
-                            </Button>
-                            <Button 
-                                size="icon" 
-                                onClick={() => scrollResources('right')}
-                            >
-                                <ChevronRight className="h-6 w-6" />
-                            </Button>
-
-                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
-                                <span className="text-blue-600">{resourceIndex}</span>
-                                <span className="mx-1 text-slate-300">/</span>
-                                <span className="text-slate-400">{resources.length}</span>
-                            </div>
-                        </div>
                     </div>
                 </section>
             </main>

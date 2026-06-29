@@ -60,6 +60,9 @@ import ecoImpactImg6 from "@/assets/2112.png";
 import ecoImpactImg7 from "@/assets/2117.jpg";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
+import uvSystemImg from "@/assets/500x500_V-Arros-15-IHS-10_straight-1-300x300.jpg";
+import specializedFiltersImg from "@/assets/Filtres_specialises_transparent.png";
+import tripleStageFilterImg from "@/assets/Triple Stage Filter.jpg";
 import { useNavigate } from "react-router-dom";
 import { heroImg as healthwaterImg } from "./Blog pages/Eau-du-puits-au-quebec-quand-installer-un-systeme-dosmose-inverse";
 import { heroImg as drinkpurewaterImg } from "./Blog pages/Comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles";
@@ -642,7 +645,7 @@ const Fontaines = () => {
                             {/* Image 4: Center Bottom */}
                             <div className="sm:col-span-1 md:col-span-3 md:row-span-1 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[250px] md:min-h-0">
                                 <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                                <img src={ecoImpactImg2} className="w-full h-full object-cover object-right group-hover:scale-105 transition-transform duration-700"  alt="Art de vivre Bricareau" title="Filtration Bricareau par Bricareau" />
+                                <img src={ecoImpactImg2} className="w-full h-full object-cover object-center md:object-[30%_center] group-hover:scale-105 transition-transform duration-700"  alt="Art de vivre Bricareau" title="Filtration Bricareau par Bricareau" />
                             </div>
 
                             {/* Image 5: Right Bottom */}
@@ -653,6 +656,8 @@ const Fontaines = () => {
                         </div>
                     </div>
                 </section>
+                {/* Associated Products Section */}
+                
 
 
 
@@ -790,7 +795,8 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* Associated Products Section */}
+
+                {/* 7. Resources Section */}
                 <section className="bg-white py-24 border-t border-slate-100">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
@@ -807,28 +813,28 @@ const Fontaines = () => {
                         >
                             {[
                                 {
+                                    name: "Filtres d'eau spécialisés",
+                                    desc: "Des solutions ciblées pour traiter le fer, le manganèse, le soufre, les tanins et l'acidité pour une eau parfaite.",
+                                    img: specializedFiltersImg,
+                                    link: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison"
+                                },
+                                {
                                     name: "Adoucisseurs d'eau",
                                     desc: "Éliminez le calcaire pour une peau douce, un linge éclatant et une protection durable de vos installations.",
                                     img: waterSoftenerImg,
                                     link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
                                 },
                                 {
-                                    name: "Systèmes de désinfection UV",
-                                    desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
-                                    img: uvSystemImg2,
-                                    link: "/systemes-de-desinfection-uv"
-                                },
-                                {
-                                    name: "Stations d'eau potable",
+                                    name: "Systèmes de filtration d'eau sous évier",
                                     desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
-                                    img: solutionsEauImg,
+                                    img: tripleStageFilterImg,
                                     link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine"
                                 },
                                 {
-                                    name: "Fontaines d'eau",
-                                    desc: "Une eau fraîche et pure à volonté, idéale pour la maison ou le bureau avec un design élégant.",
-                                    img: distributeur3,
-                                    link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche"
+                                    name: "Systèmes de désinfection UV",
+                                    desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
+                                    img: uvSystemImg,
+                                    link: "/systemes-de-desinfection-uv"
                                 }
 
                             ].map((prod, i) => (
@@ -864,8 +870,7 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* 7. Resources Section */}
-                <section className="py-24 bg-white border-t border-slate-100">
+<section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
@@ -881,7 +886,7 @@ const Fontaines = () => {
                             {resources.map((art, i) => (
                                 <div
                                     key={i}
-                                    className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    className="min-w-[70vw] md:min-w-[38vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
                                     onClick={() => navigate(art.link || "#")}
                                 >
                                     <div className="h-56 overflow-hidden">
@@ -906,29 +911,6 @@ const Fontaines = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows and numbering for carousel - Mobile/Tablet ONLY */}
-                        <div className="lg:hidden flex items-center justify-center relative mt-6">
-                            <div className="flex items-center gap-4">
-                                <Button 
-                                    size="icon" 
-                                    onClick={() => scrollResources('left')}
-                                >
-                                    <ChevronLeft className="h-6 w-6" />
-                                </Button>
-                                <Button 
-                                    size="icon" 
-                                    onClick={() => scrollResources('right')}
-                                >
-                                    <ChevronRight className="h-6 w-6" />
-                                </Button>
-                            </div>
-                            
-                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
-                                <span className="text-blue-600">{resourceIndex}</span>
-                                <span className="mx-1 text-slate-300">/</span>
-                                <span className="text-slate-400">{resources.length}</span>
-                            </div>
-                        </div>
                     </div>
                 </section>
             </main>

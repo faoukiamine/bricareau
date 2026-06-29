@@ -19,15 +19,15 @@ import woundFilterImg from "@/assets/String Wound Cartridge Filters.png";
 
 const FiltresDeRemplacement = () => {
     useEffect(() => {
-        document.title = "Filtres de remplacement d'eau au Québec | Cartouches et Médias | Bricareau";
+        document.title = "Filtres d'eau de remplacement au Québec | Cartouches et Médias | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Large sélection de filtres de remplacement au Québec : sédiments, charbon actif, membrane osmose inverse et cartouches anti-calcaire. Maintenez la pureté de votre eau.");
+            metaDesc.setAttribute("content", "Large sélection de filtres d'eau de remplacement au Québec : sédiments, charbon actif, membrane osmose inverse et cartouches anti-calcaire. Maintenez la pureté de votre eau.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Filtres de remplacement d'eau | Cartouches Haute Performance | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Filtres d'eau de remplacement | Cartouches Haute Performance | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
         if (ogDesc) ogDesc.setAttribute("content", "Trouvez les cartouches et filtres compatibles avec votre système de traitement d'eau. Qualité supérieure pour une filtration durable.");
         const ogUrl = document.querySelector('meta[property="og:url"]');
@@ -88,7 +88,7 @@ const FiltresDeRemplacement = () => {
                     image={heroFiltersImg}
                     highlightedTitle={<span className="font-bold text-[#18448F]">Cartouches filtrantes</span>}
                     mainTitle={<span className="font-bold text-[#18448F]">de remplacement</span>}
-                    subtitle="Trouvez facilement le filtre d'eau de remplacement idéal pour votre système de filtration résidentiel, commercial ou industriel."
+                    subtitle="Trouvez facilement le filtre d'eau de remplacement idéal pour votre système de filtration d'eau résidentiel, commercial ou industriel."
                     ctaText="Trouver mon filtre"
                     ctaLink="#solutions-catalog"
                     showPhone={false}
@@ -102,7 +102,7 @@ const FiltresDeRemplacement = () => {
                     {/* Centered Title */}
                     <div className="container mx-auto px-6 max-w-7xl text-center mb-20">
                         <h2 className="mb-8 heading-pro-max text-center">
-                            <span className="font-bold not-italic text-[#18448F] block">Filtres de remplacement :</span>
+                            <span className="font-bold not-italic text-[#18448F] block">Filtres d'eau de remplacement :</span>
                             <span className="font-bold text-[#18448F] block text-center"><span className="text-[#8CC63F]">La pureté préservée</span>, jour après jour.</span>
                         </h2>
                         <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed">
