@@ -543,13 +543,13 @@ const FontainesDeauModernes = () => {
                             {/* Scroll Track - Starts flush to screen's left edge */}
                             <div 
                                 id="fountain-slider-track"
-                                className="flex gap-6 overflow-x-auto scroll-smooth pb-6 snap-x snap-mandatory no-scrollbar lg:justify-center"
+                                className="flex gap-6 overflow-x-auto scroll-smooth pb-6 snap-x snap-mandatory no-scrollbar"
                                 style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                             >
                                 {[
                                     {
                                         title: "Ice",
-                                        desc: "La fontaine Bricareau Ice avec machine à glaçons intégrée vous propose de l'eau filtrée et des glaçons purs au gré de vos envies. Son système de filtration en 5 étapes offre une barrière de protection totale et vous rafraîchit en continu. Cette plateforme d'hydratation tout-en-un s'intègre aussi bien dans les réceptions que dans les cafétérias.",
+                                        desc: "Nous modernisons l'hydratation au bureau. La fontaine sans bouteille Ice offre une source inépuisable d'eau pure et savoureuse. Elle se raccorde facilement à une conduite d'eau froide et élimine les contaminants grâce à un puissant système de double filtration. Elle propose de l'eau chaude, froide et tempérée, ainsi qu'une fonction d'auto-nettoyage à l'ozone pour une purification durable.",
                                         img: countertopFountainImg3
                                     },
                                     {

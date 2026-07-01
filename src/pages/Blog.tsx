@@ -6,6 +6,7 @@ import { ArrowRight, ChevronRight, Droplets, Waves, Search, SlidersHorizontal, C
 import { NavLink } from "react-router-dom";
 import { categories } from "@/data/blogCategories";
 import React, { useState, useEffect } from "react";
+import { BlogCard } from "@/components/BlogCard";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 
 import blogHero from "@/assets/139709.jpg";
@@ -71,15 +72,21 @@ const Blog = () => {
 
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
-                    <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
+                <section className="relative bg-white overflow-hidden h-[100vh] flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 md:hidden"></div>
+                        {/* Tablet Vertical Filter (Progressive) */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                        {/* Desktop Gradient: fade over the text area */}
                         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-[50%]"></div>
+                        
                         <div className="absolute right-0 top-0 w-full h-full lg:w-[65%]">
+                            {/* Inner gradient to blend the hard edge on desktop */}
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
                             <img 
                                 src={blogHero} 
-                                className="absolute inset-0 w-full h-full object-cover object-center lg:object-right"
+                                className="absolute inset-0 w-full h-full object-cover object-[80%_center] lg:object-right"
                              alt="Articles et Ressources Bricareau - Conseils d'experts en traitement d'eau" title="Systèmes d'eau sur mesure par Bricareau" />
                         </div>
                     </div>
@@ -94,9 +101,9 @@ const Blog = () => {
                     <div className="container mx-auto px-6 relative z-30">
                         <div className="max-w-3xl flex flex-col justify-center">
                             <div className="mb-8">
-                                <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight">
-                                    <span className="text-[#18448F]">Articles &</span><br/>
-                                    <span className="text-[#8CC63F]">Ressources</span>
+                                <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight text-[#18448F]">
+                                    Articles &<br/>
+                                    Ressources
                                 </h1>
                                 
                                 <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">

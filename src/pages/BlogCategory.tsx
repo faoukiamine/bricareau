@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Clock, ArrowRight } from "lucide-react";
 import { categories } from "@/data/blogCategories";
-import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
+
 
 const BlogCategory = () => {
     const { categoryId } = useParams();
@@ -34,16 +34,12 @@ const BlogCategory = () => {
         <div className="min-h-screen bg-slate-50">
             <Header />
 
-            <main className="relative lg:h-[600px] flex flex-col lg:items-center overflow-hidden bg-white pt-20 lg:pt-0">
-                <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                    <div className="container mx-auto px-6 max-w-7xl pointer-events-auto text-left">
-                        <GlobalBreadcrumbs variant="light" />
-                    </div>
-                </div>
+            <main className="relative h-[100vh] flex flex-col lg:items-center overflow-hidden bg-white pt-20 lg:pt-0">
+
 
                 <div className="container mx-auto px-6 h-full flex items-center">
                     <div className="max-w-3xl py-12 lg:py-0 w-full text-left">
-                        <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+                        <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight text-[#18448F]">
     {category.title}
 </h1>
                         <div className="w-24 h-1.5 bg-blue-600 rounded-full mb-6"></div>

@@ -52,6 +52,7 @@ export const breadcrumbLabels: Record<string, string> = {
     "filtration-hotels-restaurants": "Filtration d'eau",
     "solutions-brasseries": "Solutions pour Brasseries",
     "filtres-eau-machine-cafe": "Filtres pour Machines à Café",
+    "contaminants-de-l-eau": "Contaminants de l'eau",
     "fontaines-et-refroidisseurs-d-eau-modernes-pour-entreprises": "Fontaines d'eau modernes",
     "systemes-de-filtration-d-eau-centralises": "Systèmes de traitement d'eau centralisés",
     "adoucisseurs-eau-commerciaux": "Adoucisseurs d'eau commerciaux",

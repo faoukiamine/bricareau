@@ -245,8 +245,8 @@ const ServicesTraitementEau = () => {
                                 <CarouselContent className="-ml-8">
                                     {/* Card 001: Mise en service - Navy Style */}
                                     <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
-                                        <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
-                                            <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                        <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                            <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
                                                 <div className="h-20"></div>
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
                                                     <img 
@@ -254,7 +254,7 @@ const ServicesTraitementEau = () => {
                                                         className="w-full h-full object-cover object-[50%_30%]"
                                                      alt="Expertise technique certifiée Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                                                 </div>
-                                                <div className="space-y-6 pt-8">
+                                                <div className="space-y-6 pt-8 mt-auto">
                                                     <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
                                                         Mise en service certifiée
                                                     </h3>
@@ -276,10 +276,10 @@ const ServicesTraitementEau = () => {
 
                                     {/* Card 002: Entretien préventif - Royal Blue Style */}
                                     <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
-                                        <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
-                                            <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                        <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                            <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
                                                 <div className="h-20"></div>
-                                                <div className="space-y-6">
+                                                <div className="space-y-6 pb-8">
                                                     <h3 className="text-3xl font-bold text-white leading-[1.1]">
                                                         Entretien préventif durable
                                                     </h3>
@@ -295,7 +295,7 @@ const ServicesTraitementEau = () => {
                                                         ))}
                                                     </ul>
                                                 </div>
-                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-24 relative">
+                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-auto shrink-0 relative">
                                                     <img 
                                                         src={entretienPreventifImg} 
                                                         className="w-full h-full object-cover"
@@ -307,11 +307,11 @@ const ServicesTraitementEau = () => {
 
                                     {/* Card 003: Dépannage - Navy Patterned */}
                                     <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
-                                        <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                        <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="absolute inset-0 opacity-10 mix-blend-overlay">
                                                 <div className="w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
                                             </div>
-                                            <div className="relative z-10 space-y-0 flex flex-col h-full">
+                                            <div className="relative z-10 space-y-0 flex flex-col flex-1 w-full">
                                                 <div className="h-20"></div>
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
                                                     <img 
@@ -319,7 +319,7 @@ const ServicesTraitementEau = () => {
                                                         className="w-full h-full object-cover"
                                                      alt="Dépannage expert Bricareau" title="Filtration Bricareau par Bricareau" />
                                                 </div>
-                                                <div className="space-y-6 pt-8">
+                                                <div className="space-y-6 pt-8 mt-auto">
                                                     <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
                                                         Dépannage expert 24/7
                                                     </h3>
@@ -341,10 +341,10 @@ const ServicesTraitementEau = () => {
 
                                     {/* Card 004: Analyses d'eau - Royal Blue Style */}
                                     <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
-                                        <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
-                                            <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                        <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                            <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
                                                 <div className="h-20"></div>
-                                                <div className="space-y-6">
+                                                <div className="space-y-6 pb-8">
                                                     <h3 className="text-3xl font-bold text-white leading-[1.1]">
                                                         Analyses d'eau expertes
                                                     </h3>
@@ -360,7 +360,7 @@ const ServicesTraitementEau = () => {
                                                         ))}
                                                     </ul>
                                                 </div>
-                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-12 relative">
+                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-auto shrink-0 relative">
                                                     <img 
                                                         src={labTestImg} 
                                                         className="w-full h-full object-cover"

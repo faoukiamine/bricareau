@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { categories } from "@/data/blogCategories";
-import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { NavLink } from "react-router-dom";
 
 interface BlogLayoutProps {
@@ -146,88 +145,35 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
 
             <div className="flex-grow">
                 {/* Hero Section - Split Layout */}
-                <div className="w-full min-h-[450px] lg:h-[700px] relative flex flex-col lg:flex-row overflow-hidden bg-white lg:bg-[#1a3a5c]">
-                    <div className="absolute top-[100px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="dark" />
+                <div className="w-full h-[100vh] relative flex flex-col lg:flex-row overflow-hidden bg-white lg:bg-[#1a3a5c]">
+
+                    {/* Image and Gradients */}
+                    <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100 z-[1]">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 md:hidden"></div>
+                        {/* Tablet Vertical Filter (Progressive) */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.8)_25%,rgba(255,255,255,0.4)_60%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
+                        {/* Desktop Gradient: fade over the text area */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-[50%]"></div>
+                        
+                        <div className="absolute right-0 top-0 w-full h-full lg:w-[65%]">
+                            {/* Inner gradient to blend the hard edge on desktop */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
+                            <img 
+                                src={headerImage} 
+                                className="absolute inset-0 w-full h-full object-cover object-[80%_center] lg:object-right"
+                                alt={title}
+                            />
                         </div>
                     </div>
-                    {/* Background image - right side */}
-                    <div className="absolute right-0 top-0 z-[1] hidden h-full w-3/5 lg:block">
-                        <img
-                            src={headerImage}
-                            alt={title}
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-
-                    {/* SVG overlay */}
-                    <div className="absolute inset-0 z-[2] hidden lg:block">
-                        <svg
-                            className="w-full h-full"
-                            viewBox="0 0 640 290"
-                            preserveAspectRatio="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <defs>
-                                <linearGradient id="gradPanel" x1="0" y1="0" x2="1" y2="1">
-                                    <stop offset="0%" stopColor="#0c2340" />
-                                    <stop offset="50%" stopColor="#1a3a5c" />
-                                    <stop offset="100%" stopColor="#2563a0" />
-                                </linearGradient>
-                                <linearGradient id="gradPetal" x1="0" y1="0" x2="1" y2="1">
-                                    <stop offset="0%" stopColor="#1a3a5c" />
-                                    <stop offset="100%" stopColor="#3b82c4" />
-                                </linearGradient>
-                                <linearGradient id="gradAccent" x1="0" y1="0" x2="1" y2="1">
-                                    <stop offset="0%" stopColor="#163050" />
-                                    <stop offset="100%" stopColor="#0c2340" />
-                                </linearGradient>
-                                <linearGradient id="gradCorner" x1="0" y1="0" x2="0" y2="1">
-                                    <stop offset="0%" stopColor="#1a3a5c" />
-                                    <stop offset="100%" stopColor="#3b82c4" stopOpacity="0.4" />
-                                </linearGradient>
-                            </defs>
-                            <path
-                                d="M269.7 85.95C260.8 58.45 254.75 29.7 251.75 0H0v290.5h287.25c-23.65-32.95-37.6-73.35-37.6-117 0-31.4 7.2-61.1 20.05-87.55Z"
-                                fill="url(#gradPanel)"
-                            />
-                            <path
-                                d="M269.7 85.95c-12.85 26.45-20.05 56.15-20.05 87.55 0 43.65 13.95 84.05 37.6 117h128.2C347.85 239.45 296.3 168.3 269.7 85.95Z"
-                                fill="url(#gradPetal)"
-                            />
-                            <path
-                                d="M349.35 0h-97.6c3 29.7 9.05 58.45 17.95 85.95C287.15 50 315 20.05 349.35 0Z"
-                                fill="url(#gradAccent)"
-                            />
-                            <path
-                                d="M640 107.15V0h-88.45c40.9 23.85 72.55 61.8 88.45 107.15Z"
-                                fill="url(#gradCorner)"
-                                opacity="0.4"
-                            />
-                            <path
-                                d="M640 290.5v-50.65c-6.4 18.2-15.3 35.25-26.35 50.65H640Z"
-                                fill="url(#gradCorner)"
-                                opacity="0.3"
-                            />
-                        </svg>
-                    </div>
-
-                    {/* Mobile image - top side */}
-                    <div className="lg:hidden relative h-[250px] sm:h-[350px] w-full">
-                        <img
-                            src={headerImage}
-                            alt={title}
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-[2]"></div>
 
                     <div className="relative lg:absolute lg:inset-0 z-10 flex items-center bg-white lg:bg-transparent py-12 lg:py-0 h-full">
                         <div className="container mx-auto px-4 md:px-6 w-full">
                             <div className="max-w-xl">
 
                                 <h1
-                                    className="italic text-slate-900 lg:text-white leading-tight mb-6 tracking-tight"
+                                    className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight text-[#18448F]"
                                 >
                                     {title}
                                 </h1>

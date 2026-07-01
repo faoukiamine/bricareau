@@ -170,7 +170,7 @@ const Home1 = () => {
 
     return (
         <div className="min-h-screen bg-white max-w-[100vw] overflow-x-hidden">
-            <Header forceWhite={currentSlide === 0 || currentSlide === 2} />
+            <Header />
             <h1 className="sr-only">Traitement d'eau résidentiel et commercial au Québec | Bricareau</h1>
 
             <section className="relative bg-white overflow-hidden min-h-[85vh] md:h-[100vh] lg:h-auto lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
@@ -180,7 +180,7 @@ const Home1 = () => {
                     {/* Tablet Vertical Filter (Progressive) */}
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_left_center,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.5)_70%,transparent_100%)] z-10 hidden md:block lg:hidden"></div>
                     {/* Desktop Gradient */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.95)_40%,rgba(255,255,255,0.7)_65%,transparent_100%)] z-10 hidden lg:block"></div>
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.5)_50%,transparent_100%)] z-10 hidden lg:block"></div>
                     
                     {/* Container d'image sur toute la largeur */}
                     <div className="absolute right-0 top-0 w-full h-full">
