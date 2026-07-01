@@ -35,13 +35,15 @@ import protectionConduitsImg from "@/assets/70609919.jpg";
 import conformiteSanitaireImg from "@/assets/initial.jpg";
 import economiesEnergieImg from "@/assets/2149281314.jpg";
 import beerImg from "@/assets/2149757160.jpg";
-import technicianInspectionImg from "@/assets/10271.jpg";
+import technicianInspectionImg from "@/assets/2151615016.jpg";
 import reverseOsmosisSkidImg from "@/assets/144d1310-23fc-4cbd-92df-81d17d7a393c.jpg";
 import uvSystemKillBacteriaImg from "@/assets/UV system installation to kill bacteria.png";
 import filtrationSkidImg from "@/assets/7kbp.png";
 import skid0454Img from "@/assets/0454.jpg";
 import brewerySingleImg from "@/assets/5879.png";
 import breweryBgDetailImg from "@/assets/2150573920.jpg";
+import industrialSoftenerImg from "@/assets/2158.jpg";
+import multimediaFiltersImg from "@/assets/water-softener-plant.jpg";
 
 const SolutionsBrasseries = () => {
 
@@ -204,70 +206,135 @@ const SolutionsBrasseries = () => {
                                 <span className="font-bold not-italic text-[#18448F] block">Optimiser & sécuriser</span>
                                 <span className="font-bold not-italic text-[#18448F] block text-center">vos opérations de <span className="text-[#8CC63F]">brassage.</span></span>
                             </h2>
+                            <p className="body-pro-max max-w-3xl mx-auto text-slate-500">
+                                L'eau représente jusqu'à 95 % de votre bière. Sa qualité et sa constance sont fondamentales. Nous concevons des solutions de traitement sur mesure pour garantir la pureté de votre eau de brassage, optimiser l'efficacité de vos équipements et assurer la répétabilité parfaite de vos recettes.
+                            </p>
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                             
-                            {/* Block 1: Osmosis & Mineral Profiling */}
-                            <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow justify-between">
-                                <div className="space-y-4">
-                                    <span className="inline-block px-3 py-1 bg-[#18448F] text-white rounded-full text-[9px] font-black uppercase tracking-wider">
-                                        Répétabilité des Recettes
-                                    </span>
-                                    <h3 className="text-3xl font-bold text-slate-900 leading-tight">
-                                        Systèmes d'osmose inverse
-                                    </h3>
-                                    <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">
-                                        Générez une eau de base parfaitement pure grâce à nos systèmes d'osmose inverse, puis réintroduisez avec précision les sels minéraux spécifiques à chaque style de bière, de la Pilsner traditionnelle à la NEIPA moderne.
-                                    </p>
+                            {/* Block New 1: Adoucisseurs */}
+                            <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[600px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
+                                    <div className="h-16">
+                                        <span className="inline-block px-3 py-1 bg-white/20 text-white rounded-full text-[9px] font-black uppercase tracking-wider">
+                                            Dureté & Tartre
+                                        </span>
+                                    </div>
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                        <img 
+                                            src={industrialSoftenerImg} 
+                                            className="w-full h-full object-cover object-[50%_20%] scale-125" 
+                                         alt="Adoucisseur d'eau industriel Bricareau" title="Adoucissement d'eau pour brasseries" />
+                                    </div>
+                                    <div className="space-y-6 pt-8 mt-auto">
+                                        <h3 className="text-3xl font-medium text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                            Adoucisseurs d'eau industriels
+                                        </h3>
+                                        <p className="text-white/70 text-sm leading-relaxed text-justify">
+                                            Nos systèmes entièrement automatiques protègent vos équipements de brassage contre l'entartrage et optimisent l'extraction des houblons, sans aucune intervention manuelle. Améliorez l'efficacité de vos bouilloires et prolongez la durée de vie de vos CIP.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
-                                    <img 
-                                        src={uvSystemKillBacteriaImg} 
-                                        className="w-full h-full object-cover" 
-                                     alt="Équipement d'osmose inverse industriel de haute technologie conçu par Bricareau" title="Traitement d'eau Québec par Bricareau" />
+                            </div>
+
+                            {/* Block New 2: Multimedia & Carbon */}
+                            <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[600px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
+                                    <div className="h-16">
+                                        <span className="inline-block px-3 py-1 bg-white/20 text-white rounded-full text-[9px] font-black uppercase tracking-wider">
+                                            Chlore & Sédiments
+                                        </span>
+                                    </div>
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                        <img 
+                                            src={multimediaFiltersImg} 
+                                            className="w-full h-full object-cover object-top" 
+                                         alt="Filtres industriels multimédia et charbon actif" title="Filtration au charbon actif" />
+                                    </div>
+                                    <div className="space-y-6 pt-8 mt-auto">
+                                        <h3 className="text-3xl font-medium text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                            Filtres automatiques & Charbon actif
+                                        </h3>
+                                        <p className="text-white/70 text-sm leading-relaxed text-justify">
+                                            Équipés de vannes de lavage à contre-courant automatiques, nos filtres éliminent le chlore, les chloramines et les COV en toute autonomie. Assurez la pureté aromatique de vos bières et évitez les faux goûts sans vous soucier de l'entretien.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Block 1: Osmosis & Mineral Profiling */}
+                            <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[600px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
+                                    <div className="h-16">
+                                        <span className="inline-block px-3 py-1 bg-white/20 text-white rounded-full text-[9px] font-black uppercase tracking-wider">
+                                            Répétabilité des Recettes
+                                        </span>
+                                    </div>
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                        <img 
+                                            src={uvSystemKillBacteriaImg} 
+                                            className="w-full h-full object-cover object-top" 
+                                         alt="Équipement d'osmose inverse industriel de haute technologie conçu par Bricareau" title="Traitement d'eau Québec par Bricareau" />
+                                    </div>
+                                    <div className="space-y-6 pt-8 mt-auto">
+                                        <h3 className="text-3xl font-medium text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                            Systèmes d'osmose inverse
+                                        </h3>
+                                        <p className="text-white/70 text-sm leading-relaxed text-justify">
+                                            Générez une eau de base parfaitement pure grâce à nos systèmes d'osmose inverse, puis réintroduisez avec précision les sels minéraux spécifiques à chaque style de bière, de la Pilsner traditionnelle à la NEIPA moderne.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Block 2: Brewery Custom Skids */}
-                            <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow justify-between">
-                                <div className="space-y-4">
-                                    <span className="inline-block px-3 py-1 bg-[#18448F] text-white rounded-full text-[9px] font-black uppercase tracking-wider">
-                                        Ingénierie & Intégration CIP
-                                    </span>
-                                    <h3 className="text-3xl font-bold text-slate-900 leading-tight">
-                                        Skids de Filtration sur mesure & CIP
-                                    </h3>
-                                    <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">
-                                        Nous concevons des stations de traitement compactes qui s'intègrent directement à vos conduites et systèmes de nettoyage en place (CIP). Optimisez l'encombrement au sol tout en réduisant la consommation d'eau et de produits chimiques.
-                                    </p>
-                                </div>
-                                <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
-                                    <img 
-                                        src={skid0454Img} 
-                                        className="w-full h-full object-cover" 
-                                     alt="Station modulaire de filtration et skid de traitement pour microbrasseries" title="Filtration Bricareau par Bricareau" />
+                            <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[600px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
+                                    <div className="h-16">
+                                        <span className="inline-block px-3 py-1 bg-white/20 text-white rounded-full text-[9px] font-black uppercase tracking-wider">
+                                            Ingénierie & Intégration CIP
+                                        </span>
+                                    </div>
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                        <img 
+                                            src={skid0454Img} 
+                                            className="w-full h-full object-cover object-top" 
+                                         alt="Station modulaire de filtration et skid de traitement pour microbrasseries" title="Filtration Bricareau par Bricareau" />
+                                    </div>
+                                    <div className="space-y-6 pt-8 mt-auto">
+                                        <h3 className="text-3xl font-medium text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                            Skids de Filtration sur mesure & CIP
+                                        </h3>
+                                        <p className="text-white/70 text-sm leading-relaxed text-justify">
+                                            Nous concevons des stations de traitement compactes qui s'intègrent directement à vos conduites et systèmes de nettoyage en place (CIP). Optimisez l'encombrement au sol tout en réduisant la consommation d'eau et de produits chimiques.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Block 3: Audits & 24/7 Support */}
-                            <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow justify-between">
-                                <div className="space-y-4">
-                                    <span className="inline-block px-3 py-1 bg-[#18448F] text-white rounded-full text-[9px] font-black uppercase tracking-wider">
-                                        Disponibilité & Stabilité
-                                    </span>
-                                    <h3 className="text-3xl font-bold text-slate-900 leading-tight">
-                                        Audits de Qualité & Support 24/7
-                                    </h3>
-                                    <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">
-                                        Notre équipe technique et nos ingénieurs experts interviennent en urgence 24/7 pour veiller à la constance de votre eau. De plus, nos contrats d'entretien préventif garantissent la disponibilité permanente de vos lignes de production.
-                                    </p>
-                                </div>
-                                <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
-                                    <img 
-                                        src={technicianInspectionImg} 
-                                        className="w-full h-full object-cover" 
-                                     alt="Technicien Bricareau effectuant la maintenance préventive d'une station de traitement" title="Traitement d'eau Québec par Bricareau" />
+                            <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[600px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
+                                    <div className="h-16">
+                                        <span className="inline-block px-3 py-1 bg-white/20 text-white rounded-full text-[9px] font-black uppercase tracking-wider">
+                                            Disponibilité & Stabilité
+                                        </span>
+                                    </div>
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                        <img 
+                                            src={technicianInspectionImg} 
+                                            className="w-full h-full object-cover object-top" 
+                                         alt="Technicien Bricareau effectuant la maintenance préventive d'une station de traitement" title="Traitement d'eau Québec par Bricareau" />
+                                    </div>
+                                    <div className="space-y-6 pt-8 mt-auto">
+                                        <h3 className="text-3xl font-medium text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                            Audits de Qualité & Support 24/7
+                                        </h3>
+                                        <p className="text-white/70 text-sm leading-relaxed text-justify">
+                                            Notre équipe technique et nos ingénieurs experts interviennent en urgence 24/7 pour veiller à la constance de votre eau. De plus, nos contrats d'entretien préventif garantissent la disponibilité permanente de vos lignes de production.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -348,19 +415,19 @@ const SolutionsBrasseries = () => {
                 <section className="py-32 bg-white">
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-6">
-                            <div className="space-y-4">
-                                <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-widest">
-                                    CAS DE RÉUSSITE BRASSICOLE
-                                </span>
+                            <div className="text-left">
                                 <h2 className="mb-8 heading-pro-max text-left">
-                                    <span className="italic font-light text-[#18448F] block">Ressources connexes</span>
-                                    <span className="font-bold text-[#18448F] block text-left">& Études de cas.</span>
+                                    <span className="font-bold text-[#18448F] block text-left">Ressources</span>
                                 </h2>
+                                <div className="w-24 h-1 bg-blue-600"></div>
                             </div>
                             <div>
-                                <Button variant="outline" className="rounded-full border-slate-300 text-slate-700 hover:bg-slate-100" asChild>
-                                    <NavLink to="/blog">Toutes les ressources &nbsp;<ArrowRight className="w-4 h-4" /></NavLink>
-                                </Button>
+                                <ProMaxButton asChild>
+                                    <NavLink to="/blog" className="inline-flex items-center justify-center gap-2 group">
+                                        Toutes les ressources
+                                        <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+                                    </NavLink>
+                                </ProMaxButton>
                             </div>
                         </div>
 
