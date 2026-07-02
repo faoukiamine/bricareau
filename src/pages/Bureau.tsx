@@ -23,7 +23,7 @@ import WaterDiagnosis from "@/components/water_diagnosis";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 // Assets
-import heroImg from "@/assets/Hero-Entreprise.jpg";
+import heroImg from "@/assets/15878.png";
 import drinkWaterImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
 import centralSystemImg from "@/assets/LZS8WSSP-PF.webp";
 import pauseEauImg from "@/assets/Pause-eau.jpg";

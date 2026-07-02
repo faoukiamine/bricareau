@@ -105,8 +105,7 @@ export default function Carrieres() {
                     <div className="relative z-10 container mx-auto px-6 text-center">
                         <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-10 shadow-sm">Notre Mission de l'employeur</span>
                         <h2 className="heading-pro-max font-bold text-[#18448F] mb-12">
-                            L'excellence par <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">l'humain.</span>
+                            L'excellence par <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">l'humain.</span>
                         </h2>
                         <div className="text-slate-700 text-xl md:text-3xl font-light leading-relaxed max-w-4xl mx-auto space-y-6">
                             <p>
