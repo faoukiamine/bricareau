@@ -80,8 +80,8 @@ const HotellerieRestauration = () => {
                             {/* Inner gradient to blend the hard edge on desktop */}
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
                             <img 
-                                src={heroImg} 
-                                className="absolute inset-0 w-full h-full object-cover object-center lg:object-right"
+                                src={hospitalityImg2} 
+                                className="absolute inset-0 w-full h-full object-cover object-center lg:object-[30%_50%]"
                              alt="Horeca Excellence - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                         </div>
                     </div>
@@ -147,7 +147,7 @@ const HotellerieRestauration = () => {
                                 <div className="aspect-[4/3] w-full max-w-2xl mx-auto relative group overflow-hidden rounded-2xl">
                                     <div className="absolute inset-0 bg-slate-100 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 rounded-2xl" />
                                     <img 
-                                        src={hospitalityImg2} 
+                                        src={heroImg} 
                                         className="absolute inset-0 w-full h-full object-cover object-[center_30%] z-10 transition-transform duration-700 group-hover:scale-105 rounded-2xl"
                                      alt="Service d'excellence - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                                 </div>
