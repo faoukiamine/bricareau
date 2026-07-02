@@ -610,7 +610,7 @@ const B = () => {
                                     Qu'est-ce qu'un <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-400 italic font-bold">système de filtration d'eau spécialisé ?</span>
                                 </h2>
                                 <p className="text-blue-100/70 text-lg leading-relaxed font-light">
-                                    Un système de filtration d'eau spécialisé est une solution de traitement conçue pour éliminer les contaminants spécifiques aux eaux souterraines et à l'eau municipale, tels que le chlore, le fer, le soufre (odeur d'œufs pourris), le manganèse, les tanins et l'arsenic. Il garantit une eau pure et sécuritaire pour toute la maison.
+                                    Un système de filtration d'eau spécialisé est une solution de traitement d'eau conçue pour éliminer les contaminants spécifiques aux eaux souterraines et à l'eau municipale, tels que le chlore, le fer, le soufre (odeur d'œufs pourris), le manganèse, les tanins et l'arsenic. Il garantit une eau pure et sécuritaire pour toute la maison.
                                 </p>
                             </div>
 
