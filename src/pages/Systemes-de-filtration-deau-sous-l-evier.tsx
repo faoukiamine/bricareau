@@ -254,8 +254,8 @@ const C = () => {
                 Le chlore n'est que la pointe de l'iceberg. Votre eau municipale peut abriter des micro-polluants invisibles qui s'accumulent silencieusement dans votre organisme.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-              {[
+            <div className="flex lg:grid lg:grid-cols-2 gap-6 lg:gap-12 overflow-x-auto lg:overflow-x-visible snap-x snap-mandatory lg:snap-none no-scrollbar px-4 lg:px-0 max-w-5xl mx-auto pb-12 lg:pb-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+              {Array(20).fill([
                 { 
                   title: "PFAS 'Polluants Éternels'", 
                   threat: "Hautement Persistant", 
@@ -288,8 +288,8 @@ const C = () => {
                   badge: "Protection Enfant",
                   icon: <Activity className="w-5 h-5 text-amber-500" />
                 }
-              ].map((item, i) => (
-                <div key={i} className="group relative bg-[#F8FAFC] rounded-[2.5rem] p-4 border border-slate-100/50 hover:bg-white transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(30,58,138,0.1)] overflow-hidden">
+              ]).flat().map((item, i) => (
+                <div key={i} className={`w-[85vw] md:w-[50vw] lg:w-auto shrink-0 snap-center lg:snap-none group relative bg-[#F8FAFC] rounded-[2.5rem] p-4 border border-slate-100/50 hover:bg-white transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(30,58,138,0.1)] overflow-hidden ${i >= 4 ? 'lg:hidden' : ''}`}>
                   <div className="relative h-64 overflow-hidden rounded-[2rem] mb-8">
                     <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

@@ -214,8 +214,10 @@ const DesinfectionUV = () => {
                         <div className="max-w-3xl flex flex-col justify-center">
                             <div className="mb-8">
                                 <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight drop-shadow-sm">
-                                    <span className="text-[#18448F]">Systèmes de désinfection UV,</span><br className="md:hidden lg:block"/>
-                                    <span className="text-[#8CC63F]">zéro produit chimique, 100% de protection.</span>
+                                    <span className="text-[#18448F]">Systèmes de désinfection UV,</span><br />
+                                    <span className="text-[#8CC63F]">zéro produit chimique,</span>
+                                    <br className="hidden md:block lg:hidden" />
+                                    <span className="text-[#8CC63F]"> 100% de protection.</span>
                                 </h1>
                                 
                                 <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
