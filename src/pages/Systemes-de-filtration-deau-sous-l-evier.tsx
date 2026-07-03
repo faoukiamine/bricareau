@@ -211,8 +211,12 @@ const C = () => {
                         <div className="max-w-3xl flex flex-col justify-center">
                             <div className="mb-8">
                                 <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight drop-shadow-sm">
-                                    <span className="text-[#18448F]">Prêt à découvrir</span> <span className="text-[#8CC63F]">l'excellence de l'eau pure</span> <br className="md:hidden"/>
-                                    <span className="text-[#18448F]">directement sous votre évier ?</span>
+                                    <span className="text-[#18448F]">Prêt à découvrir</span> <span className="text-[#8CC63F]">l'excellence</span>
+                                    <br className="hidden md:block lg:hidden" />
+                                    <span className="text-[#8CC63F]"> de l'eau pure</span> <br className="md:hidden"/>
+                                    <span className="text-[#18448F]"> directement</span>
+                                    <br className="hidden md:block lg:hidden" />
+                                    <span className="text-[#18448F]"> sous votre évier ?</span>
                                 </h1>
                                 
                                 <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
@@ -545,7 +549,7 @@ const C = () => {
                                 ].map((product, i) => (
                                     <div
                                         key={i}
-                                        className="w-[320px] md:w-[350px] lg:w-[calc((100%-4.5rem)/3.33)] shrink-0 group bg-white rounded-[3rem] p-8 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_45px_100px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 flex flex-col snap-start cursor-pointer"
+                                        className="w-[80vw] md:w-[50vw] lg:w-[calc((100%-4.5rem)/3.33)] shrink-0 group bg-white rounded-[3rem] p-8 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_45px_100px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 flex flex-col snap-center cursor-pointer"
                                         onClick={() => navigate("/contact")}
                                     >
                                         <div className="w-full aspect-square bg-slate-50/50 rounded-[2.5rem] mb-8 overflow-hidden relative p-8 flex items-center justify-center">
@@ -1186,21 +1190,7 @@ const C = () => {
       </main >
       <Footer />
 
-      <ProMaxButton
-        asChild
-        variant="white"
-        className="rounded-[2.5rem] h-16 px-8 shadow-2xl transition-all border-none"
-        style={{ backdropFilter: "blur(20px)" }}
-      >
-        <a href="/consultation" className="flex items-center gap-4">
-          <span className="font-black text-[10px] uppercase tracking-[0.2em] text-[#18448F] whitespace-nowrap text-left leading-relaxed">
-            Réservez votre <br />consultation gratuite
-          </span>
-          <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-700 shadow-lg shadow-blue-200">
-            <ArrowRight className="w-5 h-5" />
-          </div>
-        </a>
-      </ProMaxButton>
+
     </div >
   );
 };

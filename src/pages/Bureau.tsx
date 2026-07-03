@@ -59,7 +59,7 @@ const Bureau = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
                             <img 
                                 src={heroImg} 
-                                className="absolute inset-0 w-full h-full object-cover object-center lg:object-right"
+                                className="absolute inset-0 w-full h-full object-cover object-center md:object-[75%_50%] lg:object-right"
                              alt="Solutions Bureaux & Corporatives" title="Fontaine à eau bureau par Bricareau" />
                         </div>
                     </div>

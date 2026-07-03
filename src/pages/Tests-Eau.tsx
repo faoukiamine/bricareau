@@ -149,8 +149,8 @@ const TestsEauPage = () => {
                         <div className="max-w-3xl flex flex-col justify-center mt-12 lg:mt-0">
                             <div className="mb-8">
                                 <h1 className="text-[40px] lg:text-[50px] leading-[45px] lg:leading-[55px] font-sans font-bold mb-6 tracking-tight">
-                                    <span className="font-bold not-italic text-[#18448F]">Analyses d'eau</span><br className="hidden lg:block"/>
-                                    <span className="text-[#18448F]"> & tests de laboratoire </span>
+                                    <span className="font-bold not-italic text-[#18448F]">Analyses d'eau</span><br className="hidden md:block"/>
+                                    <span className="text-[#18448F]"> & tests de laboratoire </span><br className="hidden md:block"/>
                                     <span className="text-[#8CC63F]">professionnels</span>
                                 </h1>
                                 

@@ -463,7 +463,7 @@ const B = () => {
                             className="flex gap-6 overflow-x-auto scroll-smooth pb-12 pt-4 snap-x snap-mandatory no-scrollbar px-4 lg:px-0"
                             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                         >
-                            {[
+                            {Array(20).fill([
                                 { 
                                     problem: "Sable & Sédiments", 
                                     cause: "Eaux turbides", 
@@ -512,10 +512,10 @@ const B = () => {
                                     icon: <Coffee className="w-8 h-8" />,
                                     img: taninWaterThumb
                                 }
-                            ].map((s, i) => (
+                            ]).flat().map((s, i) => (
                                 <div 
                                     key={i} 
-                                    className="w-[80vw] md:w-[380px] shrink-0 snap-center group relative h-[420px] rounded-[3.5rem] overflow-hidden border border-white/40 bg-white/5 backdrop-blur-md cursor-pointer transition-all duration-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(30,58,138,0.15)] hover:-translate-y-3"
+                                    className="w-[80vw] md:w-[50vw] lg:w-[380px] shrink-0 snap-center group relative h-[420px] rounded-[3.5rem] overflow-hidden border border-white/40 bg-white/5 backdrop-blur-md cursor-pointer transition-all duration-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(30,58,138,0.15)] hover:-translate-y-3"
                                     onClick={() => navigate("/consultation")}
                                 >
                                     {/* Background Image with Cinematic Overlay */}
@@ -648,7 +648,7 @@ const B = () => {
                             {(showAllProducts ? products : products.slice(0, 6)).map((p, i) => (
                                 <div
                                     key={i}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    className={`group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex-col h-full cursor-pointer ${!showAllProducts && i >= 4 ? 'flex md:hidden lg:flex' : 'flex'}`}
                                     onClick={() => navigate("/contact")}
                                 >
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
@@ -667,7 +667,6 @@ const B = () => {
                                          </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-[#18448F] font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{}}
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -679,8 +678,8 @@ const B = () => {
 
                         <div className="mt-12 flex justify-center">
                             <Button
-                                variant="outline"
-                                className="rounded-full px-8 py-6 text-sm font-bold border-slate-200 text-[#18448F] hover:bg-slate-50 transition-all hover:scale-105"
+                                variant={showAllProducts ? "default" : "outline"}
+                                className={`rounded-full px-8 py-6 text-sm font-bold transition-all hover:scale-105 ${showAllProducts ? "bg-[#18448F] !text-white hover:bg-blue-900 hover:!text-white border-transparent" : "border-slate-200 text-[#18448F] hover:bg-slate-50 hover:!text-[#18448F]"}`}
                                 onClick={() => setShowAllProducts(!showAllProducts)}
                             >
                                 {showAllProducts ? "Voir moins de filtres" : "Voir tous les filtres d'eau"}
