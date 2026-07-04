@@ -20,6 +20,7 @@ interface HeroProps {
   singleLineTitle?: boolean;
   gradualOpacity75?: boolean;
   className?: string;
+  paragraphClassName?: string;
   imagePosition?: string;
   liveStatus?: boolean;
   customCTA?: React.ReactNode;
@@ -41,6 +42,7 @@ const Hero = ({
   singleLineTitle = false,
   gradualOpacity75 = true,
   className,
+  paragraphClassName,
   imagePosition = "object-right",
   liveStatus = false,
   customCTA,
@@ -118,7 +120,8 @@ const Hero = ({
             <p 
               className={cn(
                 "animate-in fade-in slide-in-from-left duration-1000 delay-100 text-justify lg:text-left",
-                homeVariant ? "max-w-[680px] text-lg md:text-xl font-light text-slate-600 leading-relaxed" : "max-w-[680px] text-slate-500 text-[15px] md:text-lg leading-relaxed"
+                homeVariant ? "max-w-[680px] text-lg md:text-xl font-light text-slate-600 leading-relaxed" : "max-w-[680px] text-slate-500 text-[15px] md:text-lg leading-relaxed",
+                paragraphClassName
               )}
             >
               {subtitle}

@@ -94,7 +94,8 @@ const FiltrationHotelsRestaurants = () => {
             <main>
                 {/* HERO SECTION */}
                 <Hero 
-                    className="min-h-0 justify-start lg:min-h-[100vh] lg:justify-center"
+                    className="min-h-screen justify-center pb-16 md:pb-0 lg:pb-16"
+                    paragraphClassName="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl"
                     image={heroImage}
                     highlightedTitle={<span className="font-bold not-italic text-[#8CC63F]">L'excellence de l'eau </span>}
                     mainTitle="au service de la gastronomie."

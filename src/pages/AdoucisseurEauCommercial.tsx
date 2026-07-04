@@ -231,9 +231,10 @@ const AdoucisseurEauCommercial = () => {
             <Header />
             <main>
                 <Hero 
+                    paragraphClassName="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl"
                     image={heroImg}
                     highlightedTitle={<span className="font-bold not-italic text-[#8CC63F]">L'excellence de l'eau douce, </span>}
-                    mainTitle="la signature de prestige des Hôtels & Restaurants."
+                    mainTitle={<>la signature de prestige des <br className="hidden md:block lg:hidden" />Hôtels &amp; Restaurants.</>}
                     subtitle="Sublimez votre service et protégez vos équipements professionnels grâce à nos adoucisseurs d'eau commerciaux haut de gamme. Notre expertise en traitement de l'eau et protection anticalcaire est spécialement conçue pour les standards des hôtels et des restaurants, garantissant une expérience client inégalée."
                     showPhone={false}
                     showBreadcrumbs={true}

@@ -85,6 +85,7 @@ const FiltresDeRemplacement = () => {
             <Header />
             <main>
                 <Hero 
+                    paragraphClassName="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl"
                     image={heroFiltersImg}
                     highlightedTitle={<span className="font-bold text-[#18448F]">Cartouches filtrantes</span>}
                     mainTitle={<span className="font-bold text-[#18448F]">de remplacement</span>}

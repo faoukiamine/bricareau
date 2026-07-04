@@ -67,7 +67,7 @@ const HotellerieRestauration = () => {
 
             <main>
                 {/* 1. HERO SECTION */}
-                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 md:pb-0 lg:pt-28 lg:pb-16 border-b border-slate-200">
                     <div className="absolute inset-0 w-full h-full opacity-40 md:opacity-100">
                         {/* Mobile Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 md:hidden"></div>
@@ -81,7 +81,7 @@ const HotellerieRestauration = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
                             <img 
                                 src={hospitalityImg2} 
-                                className="absolute inset-0 w-full h-full object-cover object-center lg:object-[30%_50%]"
+                                className="absolute inset-0 w-full h-full object-cover object-center md:object-[30%_50%] lg:object-[30%_50%]"
                              alt="Horeca Excellence - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                         </div>
                     </div>
@@ -144,11 +144,11 @@ const HotellerieRestauration = () => {
                                 </p>
                             </div>
                             <div className="w-full lg:w-1/2 relative mt-8 lg:mt-0">
-                                <div className="aspect-[4/3] w-full max-w-2xl mx-auto relative group overflow-hidden rounded-2xl">
-                                    <div className="absolute inset-0 bg-slate-100 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 rounded-2xl" />
+                                <div className="aspect-[4/3] w-[calc(100%+3rem)] -mx-6 lg:mx-auto lg:w-full max-w-none lg:max-w-2xl relative group overflow-hidden rounded-none lg:rounded-2xl">
+                                    <div className="absolute inset-0 bg-slate-100 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 rounded-2xl hidden lg:block" />
                                     <img 
                                         src={heroImg} 
-                                        className="absolute inset-0 w-full h-full object-cover object-[center_30%] z-10 transition-transform duration-700 group-hover:scale-105 rounded-2xl"
+                                        className="absolute inset-0 w-full h-full object-cover object-[center_30%] z-10 transition-transform duration-700 group-hover:scale-105 rounded-none lg:rounded-2xl"
                                      alt="Service d'excellence - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                                 </div>
                             </div>

@@ -26,6 +26,11 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem
+} from "@/components/ui/carousel";
 
 
 // Assets
@@ -58,7 +63,8 @@ const SolutionsBrasseries = () => {
             <main>
                 {/* Hero Section */}
                 <Hero 
-                    className="min-h-0 justify-start lg:min-h-[100vh] lg:justify-center"
+                    className="min-h-screen justify-center pb-16 md:pb-0 lg:pb-16"
+                    paragraphClassName="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl"
                     image={heroImg}
                     highlightedTitle={<span className="font-bold not-italic text-[#18448F]">L'effervescence <span className="text-[#8CC63F]">de l'eau pure</span></span>}
                     mainTitle="pour votre brasserie."
@@ -211,9 +217,17 @@ const SolutionsBrasseries = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <Carousel 
+                            opts={{
+                                align: "start",
+                                loop: true,
+                            }}
+                            className="w-full"
+                        >
+                            <CarouselContent className="-ml-8">
                             
                             {/* Block New 1: Adoucisseurs */}
+                            <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
                             <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[600px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                 <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
                                     <div className="h-16">
@@ -237,8 +251,10 @@ const SolutionsBrasseries = () => {
                                     </div>
                                 </div>
                             </div>
+                            </CarouselItem>
 
-                            {/* Block New 2: Multimedia & Carbon */}
+                            {/* Block 2: Multimedia & Carbon */}
+                            <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
                             <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[600px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                 <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
                                     <div className="h-16">
@@ -262,8 +278,10 @@ const SolutionsBrasseries = () => {
                                     </div>
                                 </div>
                             </div>
+                            </CarouselItem>
 
                             {/* Block 1: Osmosis & Mineral Profiling */}
+                            <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
                             <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[600px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                 <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
                                     <div className="h-16">
@@ -287,8 +305,10 @@ const SolutionsBrasseries = () => {
                                     </div>
                                 </div>
                             </div>
+                            </CarouselItem>
 
                             {/* Block 2: Brewery Custom Skids */}
+                            <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
                             <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[600px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                 <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
                                     <div className="h-16">
@@ -312,8 +332,10 @@ const SolutionsBrasseries = () => {
                                     </div>
                                 </div>
                             </div>
+                            </CarouselItem>
 
                             {/* Block 3: Audits & 24/7 Support */}
+                            <CarouselItem className="pl-8 md:basis-1/2 lg:basis-[30%]">
                             <div className="group block relative bg-[#18448F] rounded-[2.5rem] p-10 h-auto min-h-[600px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                 <div className="space-y-0 relative z-10 flex flex-col flex-1 w-full">
                                     <div className="h-16">
@@ -337,8 +359,10 @@ const SolutionsBrasseries = () => {
                                     </div>
                                 </div>
                             </div>
+                            </CarouselItem>
 
-                        </div>
+                            </CarouselContent>
+                        </Carousel>
                     </div>
                 </section>
 
