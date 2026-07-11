@@ -1,4 +1,4 @@
-﻿
+
 export interface Testimonial {
     name: string;
     rating: number;
@@ -566,6 +566,23 @@ export const allTestimonials: Testimonial[] = [
         text: "Excellent produit. Plus de soucis de contamination microbiologique. L'installation a été faite de manière très professionnelle.",
         paths: [
             "/systemes-de-desinfection-uv"
+        ]
+    },
+    {
+        name: "A.Zaki",
+        rating: 5,
+        text: "Je suis extrêmement satisfait du service d’installation de mon filtre d’eau à domicile. L’équipe a été ponctuelle, professionnelle et très compétente. L’installation s’est déroulée rapidement et proprement, avec des explications claires sur le fonctionnement du système. Depuis, la qualité de l’eau est nettement améliorée. Je recommande vivement ce service à tous ceux qui cherchent une solution fiable pour une eau plus saine à la maison.",
+        paths: [
+            "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison",
+            "/filtration"
+        ]
+    },
+    {
+        name: "W.Philipi",
+        rating: 5,
+        text: "Direct et honnête, du devis initial à l'installation de l'équipement, en passant par le suivi et le service après-vente. Bricareau ne vous décevra pas.",
+        paths: [
+            "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire"
         ]
     }
 ];
