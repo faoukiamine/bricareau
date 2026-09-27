@@ -81,7 +81,7 @@ const Hero = ({
       <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-0 hidden lg:block"></div>
 
       {/* 2. Content Section */}
-      <div className="container relative z-10 mx-auto px-4 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-24 pb-12 lg:pt-0 lg:pb-0">
+      <div className="container relative z-10 mx-auto px-4 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-24 pb-12 md:pt-0 md:pb-0 lg:pt-0 lg:pb-0">
         <div className="max-w-3xl space-y-8 text-left">
           <div className="space-y-6">
             {badge && (

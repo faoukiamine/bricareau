@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { 
     Menu, X, Phone, Mail, MapPin, 
     ChevronDown, ArrowRight, Search, 
-    ArrowUpRight, ChevronRight
+    ArrowUpRight, ChevronRight,
+    Facebook, Twitter, Youtube, Instagram
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -604,12 +605,52 @@ const Header = ({ forceWhite = false, forceWhiteMobileOnly = false }: HeaderProp
                     </div>
 
                     {/* Footer Links */}
-                    <div className="pt-8 mt-auto space-y-6">
+                    <div className="pt-8 mt-auto space-y-4">
                         {/* Phone */}
-                        <a href="tel:18552649328" className="flex items-center justify-center gap-3 text-[#2a64f6] font-medium text-[15px] pt-2 pb-8">
+                        <a href="tel:18552649328" className="flex items-center justify-center gap-3 text-[#2a64f6] font-medium text-[15px] pt-2">
                             <Phone className="w-5 h-5" />
                             Appelez le 1-855-264-9328
                         </a>
+
+                        {/* Social Networks */}
+                        <div className="flex items-center justify-center gap-4 pb-8">
+                            <a
+                                href="https://www.facebook.com/bricareauwaterspecialist"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-[#18448F]/10 hover:bg-[#18448F]/20 text-[#18448F] flex items-center justify-center transition-colors"
+                                aria-label="Facebook"
+                            >
+                                <Facebook className="h-5 w-5" />
+                            </a>
+                            <a
+                                href="https://x.com/Bricareau"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-[#18448F]/10 hover:bg-[#18448F]/20 text-[#18448F] flex items-center justify-center transition-colors"
+                                aria-label="Twitter"
+                            >
+                                <Twitter className="h-5 w-5" />
+                            </a>
+                            <a
+                                href="http://www.youtube.com/bricareau"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-[#18448F]/10 hover:bg-[#18448F]/20 text-[#18448F] flex items-center justify-center transition-colors"
+                                aria-label="Youtube"
+                            >
+                                <Youtube className="h-5 w-5" />
+                            </a>
+                            <a
+                                href="http://www.instagram.com/bricareau"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-[#18448F]/10 hover:bg-[#18448F]/20 text-[#18448F] flex items-center justify-center transition-colors"
+                                aria-label="Instagram"
+                            >
+                                <Instagram className="h-5 w-5" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
