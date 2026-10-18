@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 import { faqCategories } from "@/data/faqs";
 import React, { useState, useEffect } from "react";
 import faqHero from "@/assets/Foire aux Questions.jpg";
+import ctaBg from "@/assets/12345.jpg";
 
 const FAQCard = ({ item }: { item: { q: string, a: string } }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -239,10 +240,17 @@ const FAQ = () => {
                 </section>
 
                 {/* 3. PREMIUM CTA SECTION */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
-                    {/* Animated background elements */}
-                    <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/10 to-transparent skew-x-12 translate-x-1/4" />
-                    <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-white/10 to-transparent -skew-x-12 -translate-x-1/4" />
+                <section className="relative py-32 flex items-center overflow-hidden bg-slate-900">
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0">
+                        <img 
+                            src={ctaBg} 
+                            alt="Besoin d'assistance - Traitement d'eau Bricareau" 
+                            title="Vous n'avez pas trouvé la réponse à votre question ? Bricareau"
+                            className="w-full h-full object-cover object-center" 
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-900/60 to-slate-900/95" />
+                    </div>
                     
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-5xl mx-auto text-center space-y-12">
