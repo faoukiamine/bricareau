@@ -387,16 +387,17 @@ const SolutionsBrasseries = () => {
                 </div>
 
                 {/* SECTION 7: PREMIUM CTA SECTION */}
-                <section className="py-32 bg-[#18448F] relative overflow-hidden text-center">
-                    <div className="absolute inset-0 bg-radial-gradient opacity-20" />
-                    
-                    {/* Background Image with Overlay */}
-                    <div className="absolute inset-0 z-0 opacity-40">
+                <section className="py-32 bg-slate-950 relative overflow-hidden text-center">
+                    {/* Background Image with Overlay (Natural Warm Beer Colors, No Blue Filter) */}
+                    <div className="absolute inset-0 z-0">
                         <img
                             src={beerImg}
-                            className="w-full h-full object-cover grayscale brightness-110"
-                         alt="Technicien inspectant les systèmes de filtration de la brasserie - Solution Bricareau" title="Filtration Bricareau par Bricareau" />
-                        <div className="absolute inset-0 bg-[#18448F]/30 backdrop-blur-sm" />
+                            className="w-full h-full object-cover object-center"
+                            alt="Bières artisanales de qualité - Solution brassicole Bricareau" 
+                            title="Filtration d'eau pour brasseries par Bricareau" 
+                        />
+                        <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-[0.5px]" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/80" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
