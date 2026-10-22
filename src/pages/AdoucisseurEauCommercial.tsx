@@ -674,8 +674,8 @@ En restauration et en hôtellerie, chaque détail compte. Assurez la conformité
                     </div>
                 </section>
 
-                {/* 12. Resources Section */}
-                <section className="py-24 bg-gray-50">
+                {/* 12. Resources Section - masquée sur le front-end (ordinateur, tablette, mobile) */}
+                <section className="hidden py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">

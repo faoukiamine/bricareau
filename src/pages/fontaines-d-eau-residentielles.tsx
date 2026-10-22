@@ -870,7 +870,8 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-<section className="py-24 bg-white border-t border-slate-100">
+{/* Section Ressources - masquée sur le front-end (ordinateur, tablette, mobile) */}
+<section className="hidden py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">

@@ -438,8 +438,8 @@ const SolutionsBrasseries = () => {
                     </div>
                 </section>
 
-                {/* SECTION 6: RELATED RESOURCES / CASE STUDIES */}
-                <section className="py-32 bg-white">
+                {/* SECTION 6: RELATED RESOURCES / CASE STUDIES - masquée sur le front-end (ordinateur, tablette, mobile) */}
+                <section className="hidden py-32 bg-white">
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-6">
                             <div className="text-left">

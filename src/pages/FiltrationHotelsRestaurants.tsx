@@ -568,8 +568,8 @@ const FiltrationHotelsRestaurants = () => {
 
             
 
-                {/* RESSOURCES CONNEXES */}
-                <section className="py-24 bg-slate-50 border-t border-slate-100">
+                {/* RESSOURCES CONNEXES - masquée sur le front-end (ordinateur, tablette, mobile) */}
+                <section className="hidden py-24 bg-slate-50 border-t border-slate-100">
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="mb-12">
                             <h2 className="heading-pro-max">
