@@ -23,7 +23,7 @@ import ecologyImg from "@/assets/108894.jpg";
 
 // Villes cibles SEO (Toutes les régions du Québec)
 const villesApprouvees = [
-    "rive-nord", "rive-sud", "laurentides", "lanaudiere", "monteregie", "estrie", "outaouais", "mauricie", "gaspesie", "cote-nord", "montréal", "laval", "longueuil", "brossard", "saint-lambert", "verdun", "lasalle", "lachine", "anjou", "montreal-nord", "saint-leonard", "cote-saint-luc", "saint-laurent", "dollard-des-ormeaux", "pierrefonds", "pointe-claire", "kirkland", "beaconsfield", "dorval", "lachine", "baie-d-urfe", "ile-perrot", "pincourt", "sainte-anne-de-bellevue", "senneville", "ile-bizard", "mont-royal", "westmount", "outremont", "cote-des-neiges", "ahuntsic-cartierville", "blainville", "boisbriand", "bois-des-filion", "deux-montagnes", "lorraine", "mirabel", "rosemere", "sainte-therese", "saint-eustache", "terrebonne", "mascouche", "repentigny", "l-assomption", "lavaltrie", "epiphanie", "joliette", "rawdon", "saint-jerome", "sainte-agathe-des-monts", "sainte-adele", "sainte-sophie", "mont-tremblant", "saint-sauveur", "lachute", "argenteuil", "saint-bruno-de-montarville", "saint-hubert", "greenfield-park", "boucherville", "varennes", "sainte-julie", "mcmasterville", "beloeil", "saint-basile-le-grand", "chambly", "carignan", "chateauguay", "salaberry-de-valleyfield", "vaudreuil-dorion", "beauharnois", "sorel-tracy", "saint-jean-sur-richelieu", "granby", "saint-hyacinthe", "huntingdon", "candiac", "saint-constant", "saint-philippe", "saint-remi", "saint-michel", "saint-bruno-montarville", "le-vieux-longueuil", "saint-mathieu", "delson", "sainte-catherine", "kahnawake", "saint-lazare", "beauharnois", "mercier", "les-cedres", "notre-dame-de-l-ile-perrot", "quebec", "levis", "sainte-foy", "beauport", "charlesbourg", "loretteville", "l-ancienne-lorette", "sillery", "cap-rouge", "val-belair", "donnacona", "saint-raymond", "portneuf", "sherbrooke", "magog", "lac-megantic", "coaticook", "windsor", "asbestos", "val-des-sources", "bromptonville", "waterville", "gatineau", "hull", "aylmer", "buckingham", "masson-angers", "cantley", "chelsea", "pontiac", "maniwaki", "saguenay", "chicoutimi", "jonquiere", "la-baie", "alma", "saint-felicien", "roberval", "dolbeau-mistassini", "metabetchouan-lac-a-la-croix", "trois-rivieres", "shawinigan", "grand-mere", "la-tuque", "drummondville", "victoriaville", "plessisville", "becancour", "nicolet", "rimouski", "riviere-du-loup", "matane", "amqui", "mont-joli", "temiscouata-sur-le-lac", "pohenegamook", "cabano", "gaspe", "perce", "chandler", "new-carlisle", "bonaventure", "sainte-anne-des-monts", "murdochville", "les-iles-de-la-madeleine", "cap-aux-meules", "sept-iles", "baie-comeau", "port-cartier", "havre-saint-pierre", "natashquan", "forestville", "tadoussac", "rouyn-noranda", "val-d-or", "amos", "la-sarre", "malartic", "senneterre", "ville-marie", "chibougamau", "chapais", "lebel-sur-quevillon", "matagami", "radisson", "chisasibi", "kuujjuaq", "sainte-marthe-sur-le-lac", "pointe-calumet", "saint-joseph-du-lac", "oka", "saint-benoit", "saint-augustin", "saint-colomban", "sainte-anne-des-plaines", "sainte-anne-de-bellevue", "saint-janvier", "saint-lin-laurentides", "prevost", "piedmont", "sainte-anne-des-lacs", "sainte-julie", "fabreville", "laval-sur-le-lac", "sainte-dorothee", "lachenaie", "charlemagne", "saint-canut", "vercheres", "saint-sulpice", "contrecoeur", "sainte-julienne", "saint-calixte", "sorel-tracy", "lanoraie", "berthierville", "saint-hippolyte"
+    "rive-nord", "rive-sud", "laurentides", "lanaudiere", "monteregie", "estrie", "outaouais", "mauricie", "gaspesie", "cote-nord", "montreal", "laval", "longueuil", "brossard", "saint-lambert", "verdun", "lasalle", "lachine", "anjou", "montreal-nord", "saint-leonard", "cote-saint-luc", "saint-laurent", "dollard-des-ormeaux", "pierrefonds", "pointe-claire", "kirkland", "beaconsfield", "dorval", "lachine", "baie-d-urfe", "ile-perrot", "pincourt", "sainte-anne-de-bellevue", "senneville", "ile-bizard", "mont-royal", "westmount", "outremont", "cote-des-neiges", "ahuntsic-cartierville", "blainville", "boisbriand", "bois-des-filion", "deux-montagnes", "lorraine", "mirabel", "rosemere", "sainte-therese", "saint-eustache", "terrebonne", "mascouche", "repentigny", "l-assomption", "lavaltrie", "epiphanie", "joliette", "rawdon", "saint-jerome", "sainte-agathe-des-monts", "sainte-adele", "sainte-sophie", "mont-tremblant", "saint-sauveur", "lachute", "argenteuil", "saint-bruno-de-montarville", "saint-hubert", "greenfield-park", "boucherville", "varennes", "sainte-julie", "mcmasterville", "beloeil", "saint-basile-le-grand", "chambly", "carignan", "chateauguay", "salaberry-de-valleyfield", "vaudreuil-dorion", "beauharnois", "sorel-tracy", "saint-jean-sur-richelieu", "granby", "saint-hyacinthe", "huntingdon", "candiac", "saint-constant", "saint-philippe", "saint-remi", "saint-michel", "saint-bruno-montarville", "le-vieux-longueuil", "saint-mathieu", "delson", "sainte-catherine", "kahnawake", "saint-lazare", "beauharnois", "mercier", "les-cedres", "notre-dame-de-l-ile-perrot", "quebec", "levis", "sainte-foy", "beauport", "charlesbourg", "loretteville", "l-ancienne-lorette", "sillery", "cap-rouge", "val-belair", "donnacona", "saint-raymond", "portneuf", "sherbrooke", "magog", "lac-megantic", "coaticook", "windsor", "asbestos", "val-des-sources", "bromptonville", "waterville", "gatineau", "hull", "aylmer", "buckingham", "masson-angers", "cantley", "chelsea", "pontiac", "maniwaki", "saguenay", "chicoutimi", "jonquiere", "la-baie", "alma", "saint-felicien", "roberval", "dolbeau-mistassini", "metabetchouan-lac-a-la-croix", "trois-rivieres", "shawinigan", "grand-mere", "la-tuque", "drummondville", "victoriaville", "plessisville", "becancour", "nicolet", "rimouski", "riviere-du-loup", "matane", "amqui", "mont-joli", "temiscouata-sur-le-lac", "pohenegamook", "cabano", "gaspe", "perce", "chandler", "new-carlisle", "bonaventure", "sainte-anne-des-monts", "murdochville", "les-iles-de-la-madeleine", "cap-aux-meules", "sept-iles", "baie-comeau", "port-cartier", "havre-saint-pierre", "natashquan", "forestville", "tadoussac", "rouyn-noranda", "val-d-or", "amos", "la-sarre", "malartic", "senneterre", "ville-marie", "chibougamau", "chapais", "lebel-sur-quevillon", "matagami", "radisson", "chisasibi", "kuujjuaq", "sainte-marthe-sur-le-lac", "pointe-calumet", "saint-joseph-du-lac", "oka", "saint-benoit", "saint-augustin", "saint-colomban", "sainte-anne-des-plaines", "sainte-anne-de-bellevue", "saint-janvier", "saint-lin-laurentides", "prevost", "piedmont", "sainte-anne-des-lacs", "sainte-julie", "fabreville", "laval-sur-le-lac", "sainte-dorothee", "lachenaie", "charlemagne", "saint-canut", "vercheres", "saint-sulpice", "contrecoeur", "sainte-julienne", "saint-calixte", "sorel-tracy", "lanoraie", "berthierville", "saint-hippolyte"
 ];
 
 const removeAccents = (str: string) => {
@@ -34,11 +34,96 @@ const formatVilleName = (ville: string) => {
     return ville.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 };
 
+// Table de correspondance slug (sans accents) → nom d'affichage avec accents
+const villeDisplayNames: Record<string, string> = {
+    "montreal": "Montréal",
+    "montreal-nord": "Montréal-Nord",
+    "quebec": "Québec",
+    "levis": "Lévis",
+    "sainte-foy": "Sainte-Foy",
+    "sainte-hereset": "Sainte-Thérèse",
+    "sainte-adele": "Sainte-Adèle",
+    "sainte-sophie": "Sainte-Sophie",
+    "sainte-julie": "Sainte-Julie",
+    "sainte-agathe-des-monts": "Sainte-Agathe-des-Monts",
+    "sainte-anne-de-bellevue": "Sainte-Anne-de-Bellevue",
+    "sainte-anne-des-monts": "Sainte-Anne-des-Monts",
+    "sainte-anne-des-plaines": "Sainte-Anne-des-Plaines",
+    "sainte-anne-des-lacs": "Sainte-Anne-des-Lacs",
+    "sainte-catherine": "Sainte-Catherine",
+    "sainte-dorothee": "Sainte-Dorothée",
+    "sainte-marthe-sur-le-lac": "Sainte-Marthe-sur-le-Lac",
+    "sainte-julienne": "Sainte-Julienne",
+    "saint-jerome": "Saint-Jérôme",
+    "saint-felicien": "Saint-Félicien",
+    "saint-eustache": "Saint-Eustache",
+    "saint-hyacinthe": "Saint-Hyacinthe",
+    "saint-jean-sur-richelieu": "Saint-Jean-sur-Richelieu",
+    "saint-lin-laurentides": "Saint-Lin-Laurentides",
+    "saint-basile-le-grand": "Saint-Basile-le-Grand",
+    "saint-bruno-de-montarville": "Saint-Bruno-de-Montarville",
+    "saint-joseph-du-lac": "Saint-Joseph-du-Lac",
+    "l-assomption": "L'Assomption",
+    "l-ancienne-lorette": "L'Ancienne-Lorette",
+    "notre-dame-de-l-ile-perrot": "Notre-Dame-de-l'Île-Perrot",
+    "ile-perrot": "Île-Perrot",
+    "ile-bizard": "Île-Bizard",
+    "les-iles-de-la-madeleine": "Les Îles-de-la-Madeleine",
+    "epiphanie": "Épiphanie",
+    "chateauguay": "Châteauguay",
+    "trois-rivieres": "Trois-Rivières",
+    "riviere-du-loup": "Rivière-du-Loup",
+    "jonquiere": "Jonquière",
+    "la-baie": "La Baie",
+    "metabetchouan-lac-a-la-croix": "Métabetchouan-Lac-à-la-Croix",
+    "temiscouata-sur-le-lac": "Témiscouata-sur-le-Lac",
+    "grand-mere": "Grand-Mère",
+    "la-tuque": "La Tuque",
+    "becancour": "Bécancour",
+    "sept-iles": "Sept-Îles",
+    "havre-saint-pierre": "Havre-Saint-Pierre",
+    "val-d-or": "Val-d'Or",
+    "val-belair": "Val-Bélair",
+    "val-des-sources": "Val-des-Sources",
+    "salaberry-de-valleyfield": "Salaberry-de-Valleyfield",
+    "rosemere": "Rosemère",
+    "prevost": "Prévost",
+    "vercheres": "Verchères",
+    "baie-d-urfe": "Baie-d'Urfé",
+    "baie-comeau": "Baie-Comeau",
+    "le-vieux-longueuil": "Le Vieux-Longueuil",
+    "laval-sur-le-lac": "Laval-sur-le-Lac",
+    "lachenaie": "Lachenaie",
+    "lac-megantic": "Lac-Mégantic",
+    "pointe-calumet": "Pointe-Calumet",
+    "mont-tremblant": "Mont-Tremblant",
+    "mont-royal": "Mont-Royal",
+    "mont-joli": "Mont-Joli",
+    "cap-rouge": "Cap-Rouge",
+    "cap-aux-meules": "Cap-aux-Meules",
+    "cote-saint-luc": "Côte-Saint-Luc",
+    "cote-des-neiges": "Côte-des-Neiges",
+    "cote-nord": "Côte-Nord",
+    "rouyn-noranda": "Rouyn-Noranda",
+    "lebel-sur-quevillon": "Lebel-sur-Quévillon",
+    "ahuntsic-cartierville": "Ahuntsic-Cartierville",
+    "dollard-des-ormeaux": "Dollard-des-Ormeaux",
+    "greenfield-park": "Greenfield Park",
+    "bois-des-filion": "Bois-des-Filion",
+    "deux-montagnes": "Deux-Montagnes",
+    "vaudreuil-dorion": "Vaudreuil-Dorion",
+    "amqui": "Amqui",
+    "pohenegamook": "Pohénégamook",
+};
+
 const TraitementEauVille = () => {
     const { ville } = useParams<{ ville: string }>();
     const navigate = useNavigate();
     const normalizedVille = ville ? removeAccents(ville.toLowerCase().trim()).replace(/%20| |'/g, '-') : '';
-    const villeFormatted = normalizedVille ? formatVilleName(normalizedVille) : '';
+    // villeFormatted : utilise la table de correspondance si dispo, sinon formate le slug
+    const villeFormatted = normalizedVille
+        ? (villeDisplayNames[normalizedVille] ?? formatVilleName(normalizedVille))
+        : '';
 
     useEffect(() => {
         if (villeFormatted) {
