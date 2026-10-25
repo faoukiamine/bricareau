@@ -41,7 +41,7 @@ const villeDisplayNames: Record<string, string> = {
     "quebec": "Québec",
     "levis": "Lévis",
     "sainte-foy": "Sainte-Foy",
-    "sainte-hereset": "Sainte-Thérèse",
+    "sainte-therese": "Sainte-Thérèse",
     "sainte-adele": "Sainte-Adèle",
     "sainte-sophie": "Sainte-Sophie",
     "sainte-julie": "Sainte-Julie",
