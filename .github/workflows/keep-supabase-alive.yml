@@ -1,0 +1,32 @@
+name: Keep Supabase Alive
+
+on:
+  schedule:
+    # Toutes les 4 jours à 08h00 UTC (évite la mise en pause après 7 jours d'inactivité)
+    - cron: '0 8 */4 * *'
+  workflow_dispatch: # Permet aussi de lancer manuellement depuis GitHub
+
+jobs:
+  ping-supabase:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase REST API
+        run: |
+          echo "🔄 Pinging Supabase pour éviter la mise en pause..."
+
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            "${{ secrets.VITE_SUPABASE_URL }}/rest/v1/" \
+            -H "apikey: ${{ secrets.VITE_SUPABASE_ANON_KEY }}" \
+            -H "Authorization: Bearer ${{ secrets.VITE_SUPABASE_ANON_KEY }}")
+
+          echo "📡 Code de réponse HTTP : $RESPONSE"
+
+          if [ "$RESPONSE" -ge 200 ] && [ "$RESPONSE" -lt 500 ]; then
+            echo "✅ Supabase est actif et répond correctement."
+          else
+            echo "⚠️ Réponse inattendue : $RESPONSE"
+            exit 1
+          fi
+
+      - name: Log timestamp
+        run: echo "✅ Ping effectué le $(date '+%Y-%m-%d à %H:%M UTC')"
