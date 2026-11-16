@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/faq",
+	"title": "Questions fréquentes",
+	"category": "bricareau",
+	"icon": "editor-help",
+	"description": "Accordéon de questions/réponses avec bouton « Voir toutes les questions ».",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "pill"
+		},
+		"title": {
+			"type": "string",
+			"default": "_Pour vous éclairer_\nQuestions fréquentes"
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"headerAlign": {
+			"type": "string",
+			"enum": [
+				"center",
+				"left"
+			],
+			"default": "left"
+		},
+		"headerBar": {
+			"type": "boolean",
+			"default": true
+		},
+		"visibleCount": {
+			"type": "number",
+			"default": 6
+		},
+		"moreText": {
+			"type": "string",
+			"default": "Voir toutes les questions"
+		},
+		"lessText": {
+			"type": "string",
+			"default": "Voir moins de questions"
+		},
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"question": "",
+					"answer": ""
+				}
+			]
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

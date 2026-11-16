@@ -1,0 +1,91 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/savings-calculator",
+	"title": "Simulateur d'économies",
+	"category": "bricareau",
+	"icon": "calculator",
+	"description": "Photo avec texte et simulateur de bouteilles évitées / économies.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "pill"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"headerAlign": {
+			"type": "string",
+			"enum": [
+				"center",
+				"left"
+			],
+			"default": "center"
+		},
+		"headerBar": {
+			"type": "boolean",
+			"default": false
+		},
+		"image": {
+			"type": "object",
+			"default": {}
+		},
+		"imageBadge": {
+			"type": "string",
+			"default": "Expérience Premium"
+		},
+		"imageTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"imageText": {
+			"type": "string",
+			"default": ""
+		},
+		"calcTitle": {
+			"type": "string",
+			"default": "Eco-Bilan"
+		},
+		"calcSubtitle": {
+			"type": "string",
+			"default": "Simulateur d'économie"
+		},
+		"adultBottles": {
+			"type": "number",
+			"default": 4
+		},
+		"childBottles": {
+			"type": "number",
+			"default": 2
+		},
+		"bottlePrice": {
+			"type": "string",
+			"default": "0.35"
+		},
+		"note": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

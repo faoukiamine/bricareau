@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/statement",
+	"title": "Déclaration (vision, mission…)",
+	"category": "bricareau",
+	"icon": "megaphone",
+	"description": "Grand texte centré sur fond sombre, bleu clair ou blanc, avec engagements optionnels.",
+	"supports": { "html": false, "anchor": true },
+	"attributes": {
+		"theme": { "type": "string", "enum": [ "dark", "light", "white" ], "default": "dark" },
+		"titleStyle": { "type": "string", "enum": [ "bold", "editorial" ], "default": "bold" },
+		"label": { "type": "string", "default": "" },
+		"labelStyle": { "type": "string", "default": "pill" },
+		"title": { "type": "string", "default": "" },
+		"accentStyle": { "type": "string", "default": "gradient" },
+		"text": { "type": "string", "default": "" },
+		"textSize": { "type": "string", "enum": [ "large", "medium" ], "default": "large" },
+		"items": { "type": "array", "default": [] }
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

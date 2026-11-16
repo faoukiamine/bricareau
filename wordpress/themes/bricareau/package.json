@@ -1,0 +1,18 @@
+{
+	"name": "bricareau-theme",
+	"version": "1.0.2",
+	"private": true,
+	"scripts": {
+		"build": "npm run build:blocks && npm run build:css",
+		"build:blocks": "wp-scripts build --webpack-src-dir=src/blocks --output-path=build/blocks --webpack-copy-php",
+		"build:css": "tailwindcss -i src/css/main.css -o build/style.css --minify",
+		"start": "concurrently -n blocks,css \"wp-scripts start --webpack-src-dir=src/blocks --output-path=build/blocks --webpack-copy-php\" \"tailwindcss -i src/css/main.css -o build/style.css --watch\"",
+		"lint:js": "wp-scripts lint-js src"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.0.0",
+		"concurrently": "^9.0.0",
+		"tailwindcss": "^3.4.17",
+		"tailwindcss-animate": "^1.0.7"
+	}
+}

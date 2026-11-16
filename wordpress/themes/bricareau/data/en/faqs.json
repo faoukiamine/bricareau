@@ -1,0 +1,684 @@
+[
+	{
+		"id": "adoucissement",
+		"title": "Water softening",
+		"items": [
+			{
+				"q": "What is a water softener?",
+				"a": "A water softener is a filtration system that removes calcium and magnesium, the minerals responsible for water hardness, through a process called ion exchange."
+			},
+			{
+				"q": "What are the benefits of softened water?",
+				"a": "Softened water makes skin and hair softer, prevents scale deposits in pipes, extends the life of your appliances and reduces your use of soap and detergent by up to 50%."
+			},
+			{
+				"q": "Is softened water safe to drink?",
+				"a": "Yes, softened water is perfectly safe to drink. The softening process adds a tiny amount of sodium, far less than what is naturally found in a slice of white bread."
+			},
+			{
+				"q": "How do I know if my water is hard?",
+				"a": "Signs include white spots on dishes, scale build-up on faucets, dry skin after showering and needing too much soap to get a lather."
+			},
+			{
+				"q": "How often should I add salt?",
+				"a": "For an average family, you usually need to check and add salt once a month. It is recommended to keep the brine tank at least one-third full."
+			},
+			{
+				"q": "What type of salt should I use?",
+				"a": "We recommend high-purity salt pellets (at least 99% pure). They prevent residue build-up in the brine tank and ensure optimal performance."
+			},
+			{
+				"q": "Does a water softener remove iron?",
+				"a": "A softener can remove small amounts of ferrous (clear-water) iron. However, for water with a high iron content, we recommend a specialized filtration system upstream."
+			},
+			{
+				"q": "How long does a Bricareau softener last?",
+				"a": "Thanks to our robust design and professional installation, our softening systems last 15 to 20 years on average with minimal maintenance."
+			},
+			{
+				"q": "Does the installation take up a lot of space?",
+				"a": "Our modern models are designed to be compact. They are usually installed near the main water inlet, often in a basement, garage or utility closet."
+			},
+			{
+				"q": "Does a softener waste a lot of water?",
+				"a": "No. Our high-efficiency systems use smart technology that calculates exactly when regeneration is needed, saving water and salt."
+			},
+			{
+				"q": "Can a softener be installed on well water?",
+				"a": "Absolutely. In fact, well owners are our most frequent clients, because groundwater is naturally loaded with hardness minerals."
+			},
+			{
+				"q": "What is softener regeneration?",
+				"a": "Regeneration is the automatic cleaning cycle in which the unit uses a brine solution to rinse the minerals collected on the resin, making it ready to soften water again."
+			},
+			{
+				"q": "Does a softener need professional maintenance?",
+				"a": "We recommend a yearly check by one of our technicians to optimize the settings, clean the internal components and keep your water at its best."
+			},
+			{
+				"q": "Is softened water better for clothes?",
+				"a": "Yes. Hardness minerals make fabric fibres rough and dull. Softened water keeps your clothes softer, brighter and longer-lasting."
+			},
+			{
+				"q": "What warranty does Bricareau offer?",
+				"a": "Bricareau offers one of the strongest warranties on the market, covering the resin tank, the control head and the internal components for complete peace of mind."
+			},
+			{
+				"q": "Why install a softener if the city already treats the water?",
+				"a": "Municipal water is treated to be drinkable, not to be soft. It often contains a lot of scale-forming minerals that damage your appliances, dull your fixtures and dry out your skin."
+			},
+			{
+				"q": "Does softened water taste salty?",
+				"a": "No. The amount of sodium exchanged for the hardness minerals is tiny and most people cannot taste it. It is far less salt than in a single slice of white bread."
+			},
+			{
+				"q": "Does a softener remove chlorine from city water?",
+				"a": "A standard softener only removes hardness. For chlorine, we recommend our hybrid models (such as the Serenity series with carbon), which also filter chlorine and bad odours."
+			},
+			{
+				"q": "How much salt does a softener use per year?",
+				"a": "It depends on your water use and the initial hardness, but on average, for a family of four, our high-efficiency models use about 6 to 8 bags of salt per year."
+			},
+			{
+				"q": "Will a softener increase my water bill?",
+				"a": "Very little. Regeneration uses a negligible amount of water compared to your total consumption. On the other hand, it protects your water heater and makes it more efficient, lowering your energy bill."
+			},
+			{
+				"q": "Can I drink softened water?",
+				"a": "Yes, it is perfectly safe to drink. However, for people on a strict low-sodium diet or for the purest taste (tea, coffee), we recommend adding an under-sink reverse osmosis system."
+			},
+			{
+				"q": "Can I install the softener myself?",
+				"a": "It is possible for an experienced DIYer, but we strongly recommend professional installation to ensure the right hardness setting, watertight connections and compliance with local plumbing codes."
+			},
+			{
+				"q": "How long does a Bricareau water softener last?",
+				"a": "With minimal maintenance, our systems are designed to last 15 to 20 years. The high-quality resin inside can last more than 15 years before it needs replacing."
+			},
+			{
+				"q": "Is a softener noisy?",
+				"a": "It runs silently most of the time. You will only hear a slight sound of water during regeneration, which is usually scheduled at night (for example at 2 a.m.) so it does not disturb you."
+			},
+			{
+				"q": "Is softened water good for plants?",
+				"a": "It is better to water indoor plants with unsoftened water, because sodium can build up in the potting soil. We often install a bypass tap for outdoor watering."
+			},
+			{
+				"q": "What happens during a power outage?",
+				"a": "Our electronic valves keep their programming in memory for 48 hours or more. Once power is back, the softener resumes its normal cycle without losing your settings."
+			},
+			{
+				"q": "Do I need a specific type of salt?",
+				"a": "We recommend high-purity salt pellets to avoid insoluble residue in the brine tank. Some salts also contain resin cleaners to keep the system efficient."
+			},
+			{
+				"q": "How do I know my softener is working properly?",
+				"a": "You will notice the difference right away: your soap will lather much more, your skin will feel softer after a shower and no new scale marks will appear on your shower walls."
+			},
+			{
+				"q": "Is a softener compatible with a septic tank?",
+				"a": "Yes, absolutely. The regeneration water is harmless and does not affect the biological process of a properly sized standard septic tank."
+			},
+			{
+				"q": "Does a softener reduce water pressure?",
+				"a": "No. Our systems are designed for high flow, so they cause no noticeable pressure loss in your home, even when you shower and run the washing machine at the same time."
+			}
+		]
+	},
+	{
+		"id": "eau-de-puits",
+		"title": "Well water treatment",
+		"items": [
+			{
+				"q": "Why does my well water smell like rotten eggs?",
+				"a": "This smell is caused by hydrogen sulphide gas. Bricareau installs oxidation systems or specialized carbon filters that completely remove this smell for fresh, odourless water."
+			},
+			{
+				"q": "Is iron in well water dangerous?",
+				"a": "Iron is not harmful to health, but it causes stubborn rust stains, clogs pipes and gives a metallic taste. Our high-performance iron filters remove these problems without chemicals."
+			},
+			{
+				"q": "How often should I have my well water tested?",
+				"a": "It is strongly recommended to test your water at least once a year for bacteria and nitrates, and every two years for in-depth physico-chemical parameters."
+			},
+			{
+				"q": "What are the solutions for removing bacteria?",
+				"a": "The most reliable solution is ultraviolet (UV) disinfection. It destroys 99.9% of viruses and bacteria (such as E. coli) without changing the taste or chemical composition of your water."
+			},
+			{
+				"q": "Why are there blue or green stains on my fixtures?",
+				"a": "This indicates acidic water (low pH) that corrodes your copper pipes. A pH neutralizer is essential to protect your plumbing and avoid costly leaks over time."
+			},
+			{
+				"q": "Can a water softener remove all the iron?",
+				"a": "A softener removes 'clear' (dissolved) iron, but for 'red' (oxidized) iron or high concentrations, a dedicated iron filter is needed upstream to avoid damaging the softener resin."
+			},
+			{
+				"q": "What is manganese and how do I get rid of it?",
+				"a": "Manganese causes black stains and oily deposits. Our specialized filtration systems use oxidizing media that capture manganese effectively, leaving your water clear."
+			},
+			{
+				"q": "Why is my well water cloudy or sandy?",
+				"a": "It is often due to sediment or turbidity. A sediment filter or a multimedia filtration system at the main inlet will clarify the water and protect all your appliances."
+			},
+			{
+				"q": "If my water looks clear, do I still need a filter?",
+				"a": "Yes, because many contaminants such as lead, arsenic, nitrates or bacteria are invisible, tasteless and odourless. Only a water analysis can confirm its true purity."
+			},
+			{
+				"q": "How long does a well water treatment system last?",
+				"a": "With regular maintenance, our Bricareau systems last 15 to 25 years on average. Our components are selected for their durability against the toughest well water."
+			},
+			{
+				"q": "What are the benefits of a whole-house system?",
+				"a": "You protect all your plumbing, extend the life of your appliances (water heater, dishwasher) and enjoy pure water at every tap, for drinking, cooking and showering."
+			},
+			{
+				"q": "Does water treatment affect the pressure in the house?",
+				"a": "Our experts size your system according to your peak flow to ensure optimal filtration with no noticeable pressure loss, even when several fixtures run at once."
+			},
+			{
+				"q": "Is well water naturally hard?",
+				"a": "In most cases, yes. As it travels through the ground, water dissolves calcium and magnesium. A softener is often the basis of any treatment to prevent scale build-up."
+			},
+			{
+				"q": "Can you remove tannins (yellowish water)?",
+				"a": "Yes. Tannins come from decomposing organic matter in the soil. We use specific anion exchange systems that remove this 'tea' colour from your water."
+			},
+			{
+				"q": "What is the difference between a sediment filter and a carbon filter?",
+				"a": "A sediment filter removes physical particles (sand, soil), while activated carbon removes chemicals, tastes and odours through molecular adsorption."
+			},
+			{
+				"q": "Why is a softener almost essential for well water?",
+				"a": "Groundwater is naturally rich in minerals such as calcium and magnesium. Without a softener, this high hardness quickly builds up scale that damages your pipes, water heater and appliances."
+			},
+			{
+				"q": "Can the softener remove the iron in my well water?",
+				"a": "Yes, our specialized softeners can remove small amounts of dissolved (clear-water) iron. However, for high concentrations or oxidized iron, we recommend a dedicated iron filter upstream to protect the system."
+			},
+			{
+				"q": "What is the difference between a municipal softener and a well model?",
+				"a": "Well models are designed to handle much more variable and often higher hardness levels, as well as the frequent presence of iron and manganese, which municipal models (focused on chlorine) do not treat."
+			},
+			{
+				"q": "How does the softener handle sediment or sand from the well?",
+				"a": "A softener is not a sediment filter. For well water, you must install a sediment pre-filter (5 to 20 microns) before the softener so particles do not clog the control valve and the resin."
+			},
+			{
+				"q": "Does a softener make my well water safe to drink?",
+				"a": "No. A softener improves the appearance and physico-chemical quality of the water (scale, iron). For microbiological safety (bacteria), you must install a UV disinfection system."
+			},
+			{
+				"q": "How often should I check the salt with well water?",
+				"a": "Because well water is often harder, salt use can be higher. We recommend checking the brine tank once a month and keeping it at least one-third full."
+			},
+			{
+				"q": "Which type of salt is recommended for well owners?",
+				"a": "We strongly recommend high-purity salt pellets with an 'iron fighter' additive. It helps clean the resin and prevents fouling from ferrous iron."
+			},
+			{
+				"q": "Can a softener remove the rotten egg smell?",
+				"a": "No. This smell is caused by hydrogen sulphide gas. Although a softener can capture a tiny amount of sulphur, a carbon filter or an air-oxidation system is needed to remove the smell completely."
+			},
+			{
+				"q": "Does well water shorten the life of the softener?",
+				"a": "If the water is very high in iron or sediment without pre-treatment, the resin can wear out faster. With yearly maintenance and the right setup by our experts, our systems last 15 to 20 years."
+			},
+			{
+				"q": "Why is my well water still yellowish after the softener?",
+				"a": "If hardness is removed but the water stays yellow, it is probably tannins (organic matter). A standard softener does not treat tannins; a specific anion exchange system is required."
+			},
+			{
+				"q": "Can the softener be installed in a well or outdoors?",
+				"a": "No. The electronic control unit and the brine tank must be protected from frost and the weather. The ideal location is a basement, a heated garage or an insulated utility closet."
+			},
+			{
+				"q": "How much water does a Bricareau softener use to regenerate?",
+				"a": "Our high-efficiency models calculate the exact consumption and use between 30 and 60 gallons per regeneration cycle, less than one person uses in a day, which spares your well."
+			},
+			{
+				"q": "Is the salt discharge harmful to my septic tank?",
+				"a": "Studies show that the brine discharged by a modern softener does not damage septic tanks. On the contrary, the calcium released can sometimes help keep the leach field porous."
+			},
+			{
+				"q": "Do I need to adjust my well pump pressure for the softener?",
+				"a": "Our systems work with the standard pressure of well tanks (often 30-50 psi or 40-60 psi). No major adjustment is needed as long as your pump delivers a steady flow."
+			},
+			{
+				"q": "What warranty does Bricareau offer for well water applications?",
+				"a": "We offer the same premium warranty: 10 years on the resin tank and the control head, a sign of our confidence in the durability of our equipment against difficult water."
+			},
+			{
+				"q": "How do I get rid of the rotten egg smell in my water?",
+				"a": "This smell comes from hydrogen sulphide gas. Our Outdoor HE system and our air-oxidation filters are designed to neutralize this gas without chemicals, leaving your water fresh and odourless."
+			},
+			{
+				"q": "My water leaves rust stains. Which filter should I choose?",
+				"a": "Orange stains mean there is iron in your water. The Bricareau Iron-Cleer system is our best-performing solution. It oxidizes and captures ferric and ferrous iron, protecting your sinks and laundry."
+			},
+			{
+				"q": "Is arsenic in water dangerous?",
+				"a": "Yes, arsenic is an odourless, colourless contaminant linked to serious health problems. Our Select Plus system uses a certified specific media to reduce arsenic to safe levels according to public health standards."
+			},
+			{
+				"q": "Why are my copper fixtures turning green?",
+				"a": "It is a sign of acidic water (low pH) eating away at your pipes. The Medallist series has a neutralizer that raises the water's pH, protecting your plumbing and preventing leaks."
+			},
+			{
+				"q": "What are tannins and how are they treated?",
+				"a": "Tannins come from organic matter and give water a yellowish or brownish colour (tea-coloured water). The Select Plus Connect system uses a specific anion exchange resin to remove this colour and clarify the water."
+			},
+			{
+				"q": "My water tastes of chlorine, even though I have a well?",
+				"a": "If you use a chlorination system for disinfection, excess chlorine can be unpleasant. Our HE Municipal system and our activated carbon filters remove chlorine taste and odour for healthier water."
+			},
+			{
+				"q": "What is the difference between iron and manganese?",
+				"a": "Iron causes rust stains, while manganese produces black stains and oily deposits. Our Gold Series is specially designed to treat both heavy metals at the same time."
+			},
+			{
+				"q": "Is a sediment filter enough for cloudy water?",
+				"a": "A sediment filter removes physical particles (sand, soil). However, if the cloudiness comes from microscopic particles, a multimedia filter or a Bricareau HE Connect system will be more effective."
+			},
+			{
+				"q": "Do specialized filters need a lot of maintenance?",
+				"a": "Most of our systems are fully automatic and run periodic cleaning cycles. Annual professional maintenance is recommended to optimize performance and longevity."
+			},
+			{
+				"q": "How long do filter media last?",
+				"a": "Depending on your water quality and consumption, specialized filter media (such as for iron or sulphur) usually last 5 to 10 years before they need replacing."
+			},
+			{
+				"q": "Can one system solve all my problems?",
+				"a": "Some combined systems can treat several minerals, but for complex cases (iron + arsenic + acidity), a combination of two specialized units is often the most durable and effective solution."
+			},
+			{
+				"q": "Can I drink the water after iron filtration?",
+				"a": "Yes. Iron filtration improves not only the look of the water but also its taste. For complete purity, we often recommend adding a reverse osmosis system at the point of use."
+			},
+			{
+				"q": "How do I know which system suits my well?",
+				"a": "A complete water analysis is the essential first step. It lets us measure the exact level of each contaminant and configure the Bricareau system that fits your needs perfectly."
+			},
+			{
+				"q": "Does the filtration system affect water pressure?",
+				"a": "Our systems are sized to maintain optimal flow. With our high-performance control valves, pressure loss is negligible even when several fixtures run at once."
+			},
+			{
+				"q": "Are Bricareau systems covered by a warranty?",
+				"a": "Absolutely. Bricareau offers one of the best warranties in the industry on tanks, valves and electronics, for peace of mind for many years."
+			}
+		]
+	},
+	{
+		"id": "filtration-maison",
+		"title": "Whole-house filtration",
+		"items": [
+			{
+				"q": "Why install a whole-house water filter with city water?",
+				"a": "Even though city water is treated, it can contain chlorine, disinfection by-products, sediment and sometimes traces of heavy metals. A whole-house filtration system removes these contaminants at the source, protecting your health and your appliances."
+			},
+			{
+				"q": "How do I get rid of the chlorine taste and smell in my city water?",
+				"a": "The ChlorStop filter uses high-quality activated carbon to effectively remove chlorine and its by-products. You get fresh, natural-tasting water at every tap, without the unpleasant swimming-pool smell."
+			},
+			{
+				"q": "My city water leaves white deposits. What should I do?",
+				"a": "These deposits are caused by dissolved minerals (calcium, magnesium). The Vortex filter removes sediment and particles, while a water softener specifically treats hardness to protect your appliances and plumbing."
+			},
+			{
+				"q": "Do city water filters protect against emerging contaminants?",
+				"a": "Yes, our activated carbon filtration systems effectively reduce emerging contaminants such as pharmaceuticals, pesticides and microplastics that can end up in city water."
+			},
+			{
+				"q": "What is the difference between a point-of-entry and a point-of-use filter?",
+				"a": "A point-of-entry (whole-house) filter treats all the water entering your home, protecting every tap and appliance. A point-of-use (under-sink) filter only treats the water of one specific faucet."
+			},
+			{
+				"q": "How often should I change my filter cartridges?",
+				"a": "For city water, activated carbon cartridges are usually changed every 6 to 12 months depending on your consumption. Sediment filters may need replacing every 3 to 6 months. Our systems alert you automatically."
+			},
+			{
+				"q": "Does a whole-house water filter reduce water pressure?",
+				"a": "Our systems are designed to maintain optimal pressure. With proper sizing and regular maintenance, pressure loss is minimal (usually less than 5 psi) and unnoticeable in daily use."
+			},
+			{
+				"q": "Do filters remove beneficial minerals from the water?",
+				"a": "No. Our activated carbon filters specifically target chlorine, organic compounds and contaminants, while keeping essential minerals such as calcium and magnesium that are good for your health."
+			},
+			{
+				"q": "Can I install a whole-house filtration system myself?",
+				"a": "Some experienced DIYers can install one, but we recommend professional installation to ensure optimal operation, avoid leaks and validate the warranty. Our certified technicians install to code."
+			},
+			{
+				"q": "Do city water filters need electricity?",
+				"a": "Most of our mechanical filters (activated carbon, sediment) work without electricity, using only water pressure. Only some advanced systems with electronic monitoring or UV need a power supply."
+			},
+			{
+				"q": "How do I know my filter is working properly?",
+				"a": "Our modern systems include visual or electronic indicators that monitor cartridge life and flow. You will also notice better taste, smell and clarity in your water."
+			},
+			{
+				"q": "Does a whole-house water filter protect against bacteria?",
+				"a": "City water is already disinfected. However, if you want extra protection against bacteria, we recommend adding a UV system to your filter for an ultimate safety barrier."
+			},
+			{
+				"q": "What does a filtration system cost to maintain each year?",
+				"a": "For city water, plan on $150 to $400 per year for cartridge replacements, depending on the model and your consumption. It is a small investment compared to the benefits for your health and your appliances."
+			},
+			{
+				"q": "Do filters remove fluoride from city water?",
+				"a": "Standard activated carbon filters partially reduce fluoride. For complete removal, a point-of-use reverse osmosis system is more effective. Ask our experts for the best solution for your needs."
+			},
+			{
+				"q": "What warranty do you offer on your filtration systems?",
+				"a": "Bricareau offers a complete warranty: 10 years on tanks and structural components, 5 years on control valves and 1 year on electronic parts. Our outstanding after-sales service ensures your peace of mind."
+			},
+			{
+				"q": "What is the difference between the Bricareau HE and a standard filter?",
+				"a": "The Bricareau HE (High Efficiency) uses smart sensors and patented technology to cut salt and water use by up to 46% compared with a traditional filter."
+			},
+			{
+				"q": "Is there a charge for the mobile app?",
+				"a": "The Bricareau Connect app is included with all HE Connect models. It lets you track your consumption and receive alerts at no extra cost."
+			},
+			{
+				"q": "How often do the filters need replacing?",
+				"a": "It depends on the quality of your incoming water. On average, yearly maintenance is recommended to check the resin and replace the pre-filters if needed."
+			},
+			{
+				"q": "Does the HE system also filter chlorine?",
+				"a": "Yes, we can configure your HE system with specific filter media to remove chlorine, tastes and odours, in addition to softening the water."
+			}
+		]
+	},
+	{
+		"id": "filtration-potable",
+		"title": "Drinking water & reverse osmosis",
+		"items": [
+			{
+				"q": "How does reverse osmosis work?",
+				"a": "Reverse osmosis pushes water through a microscopic semi-permeable membrane to remove dissolved impurities, chlorine and heavy minerals, producing exceptionally pure water."
+			},
+			{
+				"q": "What is the difference between a softener and a filter?",
+				"a": "A softener specifically removes scale (calcium and magnesium), while a filtration system removes contaminants, chlorine, odours and sediment to improve water quality."
+			},
+			{
+				"q": "How often should under-sink filters be changed?",
+				"a": "For an under-sink system, standard cartridges are usually changed every 6 to 12 months. The reverse osmosis membrane can last 2 to 3 years depending on your incoming water quality."
+			},
+			{
+				"q": "Do under-sink filters remove bacteria?",
+				"a": "Reverse osmosis systems and some specialized ultrafiltration filters are extremely effective against microscopic particles, but for complete bacteriological protection, we recommend adding a UV system."
+			},
+			{
+				"q": "Does installing an under-sink filter reduce water pressure?",
+				"a": "Our modern systems are designed to minimize the impact on pressure. Reverse osmosis systems often use a storage tank to guarantee a steady flow at your dedicated faucet."
+			},
+			{
+				"q": "Why choose a specialized filter for iron or sulphur?",
+				"a": "Standard filters cannot treat high concentrations of iron (yellow/red stains) or sulphur (rotten egg smell). Our specialized filters use specific media to neutralize these problems at the source."
+			},
+			{
+				"q": "Can an under-sink filter be connected to the fridge?",
+				"a": "Absolutely. It is very common to connect the outlet of your filtration system to your fridge's water dispenser and ice maker for crystal-clear ice."
+			},
+			{
+				"q": "How much space does an under-sink filtration system take?",
+				"a": "Our compact systems usually take up less than 25% of the space under the sink, leaving plenty of room for your usual household items."
+			},
+			{
+				"q": "Is filtered water better for cooking?",
+				"a": "Yes. Removing chlorine and impurities greatly enhances the natural flavours of your food, coffee and tea, while preventing scale in your coffee makers and kettles."
+			},
+			{
+				"q": "Is the filtration system noisy?",
+				"a": "No, filtration systems are completely silent. Only the regeneration of some central filters can make a slight sound of flowing water, usually scheduled at night."
+			},
+			{
+				"q": "Do filters remove lead and heavy metals?",
+				"a": "Yes, our reverse osmosis systems and specialized cartridges are certified to drastically reduce lead, copper and other heavy metals often found in old pipes."
+			},
+			{
+				"q": "How do I know which specialized filter to choose?",
+				"a": "The best way is a water analysis. Depending on whether you have iron, manganese, tannins or chlorine, our experts will recommend the right filter media."
+			},
+			{
+				"q": "What warranty comes with Bricareau filtration systems?",
+				"a": "We offer complete warranties of up to 10 years on the tank structure and solid warranties on control components and faucets."
+			},
+			{
+				"q": "Does an under-sink filter need electricity?",
+				"a": "Most standard filtration and reverse osmosis systems work with water pressure alone. Only some high-performance models with a booster pump need an electrical outlet."
+			},
+			{
+				"q": "Can I install the system myself?",
+				"a": "It is possible for DIYers, but we recommend installation by our certified technicians to ensure a perfect seal and validate your Bricareau warranty."
+			},
+			{
+				"q": "What is an under-sink reverse osmosis system?",
+				"a": "It is a compact water purification system installed right under your kitchen sink. It uses multi-stage filtration technology, including a semi-permeable membrane, to deliver exceptionally pure water to a dedicated faucet."
+			},
+			{
+				"q": "What are the main benefits of a reverse osmosis system?",
+				"a": "The main benefit is removing 99% of contaminants (lead, chlorine, fluoride, arsenic, nitrates, etc.). It greatly improves the taste, smell and safety of your drinking and cooking water, and you no longer need to buy bottled water."
+			},
+			{
+				"q": "Is it hard to install under a kitchen sink?",
+				"a": "A handy DIYer can do it, but we recommend professional installation by our certified Bricareau technicians. It ensures a perfect seal, a code-compliant drain connection and optimal tank pressure."
+			},
+			{
+				"q": "How much space does the system take in my cabinet?",
+				"a": "Our modern systems are designed to be compact. The filtration unit is usually about 15-18 inches high, and the storage tank takes up about as much space as a large first-aid basket. There is usually enough room left for your household products."
+			},
+			{
+				"q": "Does reverse osmosis remove essential minerals?",
+				"a": "Reverse osmosis is so effective that it removes almost everything, including minerals. That is why our premium systems include a remineralization cartridge that adds back calcium and magnesium, balancing the pH for healthier alkaline water."
+			},
+			{
+				"q": "Does the system need a separate faucet?",
+				"a": "Yes, most installations include a small designer faucet dedicated to purified water. This preserves your filters: regular water for dishes, purified water only for drinking and cooking. '3-in-1' faucets are also available as an option."
+			},
+			{
+				"q": "How often do the filters need replacing?",
+				"a": "Pre-filters (sediment and carbon) usually need changing every 6 to 12 months to protect the membrane. The reverse osmosis membrane itself usually lasts 2 to 4 years, depending on your consumption and water hardness."
+			},
+			{
+				"q": "Can the system be connected to a fridge or ice maker?",
+				"a": "Absolutely! We can install a branch line to supply your fridge with purified water. You get crystal-clear ice and fresh purified water straight from your door dispenser."
+			},
+			{
+				"q": "Is reverse osmosis water better than bottled water?",
+				"a": "In most cases, yes. Home reverse osmosis water is often fresher and carries less risk of contamination from plastic bottles. It is also a far more eco-friendly and economical long-term solution."
+			},
+			{
+				"q": "What is the difference between a simple carbon filter and reverse osmosis?",
+				"a": "A simple carbon filter mainly reduces chlorine taste and odours. Reverse osmosis goes much further, removing dissolved solids, heavy metals, viruses and bacteria that carbon alone cannot stop."
+			},
+			{
+				"q": "Is the system noisy when running?",
+				"a": "It is practically silent. You may hear a slight hiss or a very faint gurgle while it fills the tank or flushes impurities, but it stops as soon as the tank is full."
+			},
+			{
+				"q": "How do I know my filters need changing?",
+				"a": "A noticeable drop in flow at the dedicated faucet or a subtle change in taste are signs. At Bricareau, we also run conductivity (TDS) tests during maintenance visits to measure the membrane's efficiency precisely."
+			},
+			{
+				"q": "Does reverse osmosis remove scale?",
+				"a": "Yes, it is extremely effective at removing hardness minerals (calcium/magnesium). However, if your water is very hard, we recommend a softener upstream so the reverse osmosis membrane does not clog too quickly."
+			},
+			{
+				"q": "Does the system waste a lot of water?",
+				"a": "Reverse osmosis needs a flow of water to rinse impurities off the membrane (reject water). Our recent systems are optimized to be very efficient, with much lower reject ratios than the older models of the 1990s."
+			},
+			{
+				"q": "What is the overall lifespan of the system?",
+				"a": "With regular maintenance and planned filter changes, a Bricareau-quality reverse osmosis system can easily last 15 to 20 years. It is a lasting investment in your family's health."
+			},
+			{
+				"q": "What are the benefits of an under-sink filtration system?",
+				"a": "It delivers bottle-quality water straight from your tap, removes chlorine taste and odour, removes heavy metals and drastically cuts your spending and your plastic footprint."
+			},
+			{
+				"q": "Which water problems can this system solve?",
+				"a": "It is particularly effective against chlorine, sediment, lead, mercury, pesticide residues and microplastics, ensuring healthy water for drinking and cooking."
+			},
+			{
+				"q": "What is the difference between a standard filter and reverse osmosis?",
+				"a": "A standard filter mainly reduces chlorine and sediment. Reverse osmosis goes further, removing up to 99% of all dissolved contaminants through an ultra-fine semi-permeable membrane."
+			},
+			{
+				"q": "Does the system take up a lot of space under the sink?",
+				"a": "Our modern systems are very compact. They usually use less than 25% of your under-sink cabinet, leaving room for your other household items."
+			},
+			{
+				"q": "Can I use it for my fridge and ice maker?",
+				"a": "Absolutely! We can connect your filtration system to your fridge so you enjoy fresh water and crystal-clear ice with no unpleasant taste."
+			}
+		]
+	},
+	{
+		"id": "desinfection-uv",
+		"title": "UV disinfection",
+		"items": [
+			{
+				"q": "What is a UV disinfection system?",
+				"a": "It is a device that uses ultraviolet light (UV-C) to neutralize harmful micro-organisms in water. By penetrating the DNA of bacteria and viruses, UV rays stop them from reproducing and causing disease."
+			},
+			{
+				"q": "Which contaminants is UV effective against?",
+				"a": "UV systems eliminate 99.99% of micro-organisms, including bacteria such as E. coli, viruses, and chlorine-resistant parasites such as Giardia and Cryptosporidium."
+			},
+			{
+				"q": "Does well water always need a UV system?",
+				"a": "Wells are vulnerable to surface water seeping in after heavy rain or snowmelt. A UV system provides a permanent safety barrier against sudden changes in your water's microbiological quality."
+			},
+			{
+				"q": "What are the advantages of UV over chlorine?",
+				"a": "UV needs no chemicals, does not change the taste or smell of water and creates no toxic by-products. It is the most eco-friendly and healthiest disinfection method."
+			},
+			{
+				"q": "Why do I need a UV system if I have a softener?",
+				"a": "A softener removes minerals (scale), but not bacteria or viruses. The UV system is the final protection that ensures the water you drink contains no living micro-organisms."
+			},
+			{
+				"q": "How often should the UV lamp be changed?",
+				"a": "The UV lamp must be replaced every 12 months (about 9,000 hours). Even if it still lights up, its germicidal intensity drops sharply after a year and no longer guarantees disinfection."
+			},
+			{
+				"q": "What is the quartz sleeve and how is it maintained?",
+				"a": "The quartz sleeve is the clear tube that protects the lamp from the water. It must be cleaned regularly to stay clear. If it gets scaled or cloudy (from hard water), UV rays can no longer pass through to disinfect the water."
+			},
+			{
+				"q": "Is pre-filtration needed before UV?",
+				"a": "Yes, it is crucial to install a 5-micron sediment filter upstream. Suspended particles can create shadows where bacteria 'hide' from the UV light."
+			},
+			{
+				"q": "Does the UV system work during a power outage?",
+				"a": "No, the lamp turns off without electricity. During an outage, do not drink the water unless you boil it. Our systems often include alarms that warn you when the lamp stops."
+			},
+			{
+				"q": "Does UV use a lot of electricity?",
+				"a": "No, a standard residential system uses about as much energy as a 40 to 60 watt light bulb. It is a very economical solution for 24/7 protection."
+			},
+			{
+				"q": "Can a UV system be installed on a city water supply?",
+				"a": "Even though city water is treated, old infrastructure or water main breaks can let bacteria in. A home UV system is extra insurance for your peace of mind."
+			},
+			{
+				"q": "How do I know my UV system is working properly?",
+				"a": "Our smart controllers show the number of days left before the lamp change and sound a visual and audible alarm if the lamp or system fails."
+			},
+			{
+				"q": "Does the heat of the lamp affect the water?",
+				"a": "If water does not flow for several hours, the water inside the stainless steel chamber can get lukewarm. Just let the water run for a few seconds to get cool water again."
+			},
+			{
+				"q": "What warranty comes with Bricareau UV systems?",
+				"a": "Our systems carry a robust warranty on the stainless steel treatment chamber (often 10 years) and on the electrical and electronic components."
+			},
+			{
+				"q": "Should I have my water tested after installation?",
+				"a": "Yes, we always recommend a professional bacteriological test after installation and initial disinfection of the plumbing, to confirm the whole home network is safe."
+			}
+		]
+	},
+	{
+		"id": "analyses-eau",
+		"title": "Water analysis",
+		"items": [
+			{
+				"q": "What is a physico-chemical water analysis?",
+				"a": "A physico-chemical analysis measures non-living parameters such as hardness, pH, iron, manganese, nitrates and dissolved solids. It shows how your water looks and tastes and how it affects your plumbing."
+			},
+			{
+				"q": "What is a microbiological analysis?",
+				"a": "This analysis looks for living organisms such as coliform bacteria and E. coli. These micro-organisms can cause immediate health problems, and their absence is essential for water to be declared safe to drink."
+			},
+			{
+				"q": "Why test water that looks clear and has no smell?",
+				"a": "Several dangerous contaminants, such as arsenic, lead or nitrates, have no colour, smell or taste. Only a professional laboratory analysis can confirm that your water is truly safe."
+			},
+			{
+				"q": "How often should I have my well water tested?",
+				"a": "Québec health authorities recommend testing the microbiological quality of your well water at least twice a year (spring and fall) and doing a complete physico-chemical analysis every two years."
+			},
+			{
+				"q": "Which parameters matter most in Québec?",
+				"a": "For residential wells, the priorities are bacteria, nitrates, iron, manganese, hardness and, in some regions, arsenic and radon."
+			},
+			{
+				"q": "How should I take the sample for the laboratory?",
+				"a": "For a microbiological test, use a sterile bottle supplied by the laboratory and follow a careful tap disinfection procedure so the results are not skewed."
+			},
+			{
+				"q": "What is the difference between a home test and a laboratory analysis?",
+				"a": "A home test gives instant results on minerals and hardness. An accredited laboratory analysis is needed to certify microbiological safety and detect complex chemical contaminants."
+			},
+			{
+				"q": "What does total coliforms in my report mean?",
+				"a": "It means your well is vulnerable to surface water seeping in. Not all coliforms cause disease, but their presence suggests that disinfection treatment is needed."
+			},
+			{
+				"q": "Can acidic water damage my home?",
+				"a": "Absolutely. A pH below 6.5 is considered corrosive. It can attack your copper pipes, causing pinhole leaks and releasing heavy metals into your drinking water."
+			},
+			{
+				"q": "What if the results say my water is not safe to drink?",
+				"a": "Don't panic. Our experts will review your report and recommend the right system (UV for bacteria, softener for hardness or a specialized filter) to make your water perfectly safe."
+			}
+		]
+	},
+	{
+		"id": "consultation",
+		"title": "Consultation & process",
+		"items": [
+			{
+				"q": "How long does the phone consultation last?",
+				"a": "The consultation usually lasts 15 to 30 minutes, depending on your questions and how complex your situation is."
+			},
+			{
+				"q": "Is the consultation really free of any obligation?",
+				"a": "Absolutely. Our first goal is to inform you and assess your needs. You are completely free to decide what to do after the call."
+			},
+			{
+				"q": "What information should I prepare before the call?",
+				"a": "It helps to know whether you're on city water or a well, how many people live in the home, and which water problems you've noticed (taste, odour, scale, etc.)."
+			},
+			{
+				"q": "Will a technician need to come to my home?",
+				"a": "In most cases, we can do an excellent pre-assessment by phone. If a more detailed water analysis or a plumbing check is needed, we can schedule a visit."
+			},
+			{
+				"q": "Will I be talking to a high-pressure salesperson?",
+				"a": "No. At Bricareau, you'll speak with a technical advisor. Our approach is educational and consultative, with no sales pressure."
+			},
+			{
+				"q": "Can I reschedule or cancel my phone appointment?",
+				"a": "Yes, of course. If something comes up, just email or call us to reschedule at a time that suits you."
+			}
+		]
+	}
+]

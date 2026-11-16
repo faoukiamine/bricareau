@@ -35,3 +35,6 @@ dist-ssr
 
 # Misc
 README.md
+
+# WordPress theme (separate project)
+wordpress

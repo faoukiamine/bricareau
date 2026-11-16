@@ -1,0 +1,67 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/plan-cards",
+	"title": "Forfaits / trousses",
+	"category": "bricareau",
+	"icon": "money-alt",
+	"description": "Cartes de forfaits avec liste d'éléments et carte recommandée.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "pill"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"headerAlign": {
+			"type": "string",
+			"enum": [
+				"center",
+				"left"
+			],
+			"default": "center"
+		},
+		"headerBar": {
+			"type": "boolean",
+			"default": false
+		},
+		"featuredLabel": {
+			"type": "string",
+			"default": "Recommandé"
+		},
+		"plans": {
+			"type": "array",
+			"default": [
+				{
+					"subtitle": "",
+					"title": "",
+					"text": "",
+					"items": "",
+					"featured": false,
+					"note": ""
+				}
+			]
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/dark-feature",
+	"title": "Section sombre + encart",
+	"category": "bricareau",
+	"icon": "shield",
+	"description": "Fond sombre illustré, titre, puces en pastilles, bouton et encart mis en avant.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"chips": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaText": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"image": {
+			"type": "object",
+			"default": {}
+		},
+		"cardIcon": {
+			"type": "string",
+			"default": "shield-check"
+		},
+		"cardTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"cardText": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

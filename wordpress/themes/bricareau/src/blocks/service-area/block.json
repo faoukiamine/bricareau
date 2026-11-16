@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/service-area",
+	"title": "Territoire desservi",
+	"category": "bricareau",
+	"icon": "location-alt",
+	"description": "Liste des régions desservies sur fond de carte.",
+	"supports": { "html": false, "anchor": true },
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Territoire" },
+		"title": { "type": "string", "default": "" },
+		"intro": { "type": "string", "default": "" },
+		"regions": {
+			"type": "array",
+			"default": [ { "name": "", "description": "" } ]
+		},
+		"backgroundImage": { "type": "object", "default": {} }
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,214 @@
+[
+	{
+		"name": "Cartouches filtrantes",
+		"items": [
+			{
+				"name": "Filtres à sédiments",
+				"image": "Polypropylene.svg"
+			},
+			{
+				"name": "Filtres a papier plissé",
+				"image": "Pleated Water Filters.png"
+			},
+			{
+				"name": "Filtres à charbon actif granulé",
+				"image": "gac water filters.png"
+			},
+			{
+				"name": "Filtres à charbon actif en bloc",
+				"image": "cbc water filters.png"
+			},
+			{
+				"name": "Filtres anti calcaire",
+				"image": "Water Softening Filters.png"
+			},
+			{
+				"name": "Filtres de déionisation",
+				"image": "deionized water filters.png"
+			},
+			{
+				"name": "Filtres inline",
+				"image": "inline water filters.png"
+			}
+		]
+	},
+	{
+		"name": "Boitiers de filtration",
+		"items": [
+			{
+				"name": "Boitier de filtration Standard 10 & 20",
+				"image": "Standard housing.png"
+			},
+			{
+				"name": "Boitier de filtration Big Blue 10 & 20",
+				"image": "Big Blue Water Filter.png"
+			}
+		]
+	},
+	{
+		"name": "RO housings & Membranes d'osmose inverse",
+		"items": [
+			{
+				"name": "FRP RO housings",
+				"image": "RO-Housings.jpg"
+			},
+			{
+				"name": "Stainless Steel RO housings",
+				"image": "SS-Membrane-Housing.webp"
+			},
+			{
+				"name": "Membranes d'osmose inverse résidentielles",
+				"image": "Residential Membranes.png"
+			},
+			{
+				"name": "Membranes d'osmose inverse commerciales & industrielles",
+				"image": "Commercial & industrial RO-Membranes.png"
+			}
+		]
+	},
+	{
+		"name": "Résines et Média de filtration",
+		"items": [
+			{
+				"name": "Résine d'adoucissement Standard (sac 28,3 litres)"
+			},
+			{
+				"name": "Résine d'adoucissement Fine Mesh (sac 28,3 litres)"
+			},
+			{
+				"name": "Résine d'adoucissement Haute Efficacité (sac 28,3 litres)"
+			},
+			{
+				"name": "Résine de décoloration pour les tanins (sac 28,3 litres)"
+			},
+			{
+				"name": "Sel en pastilles (sac 18,1 kg)",
+				"image": "Windsor Pellet Salt.png"
+			},
+			{
+				"name": "Sel en cristaux (sac 20 Kg)",
+				"image": "Sifto Crystal Plus 20kg Water Softener Salt.png"
+			},
+			{
+				"name": "Katalox-Light (sac 25 litres)",
+				"image": "Katalox Light Media.jpg"
+			},
+			{
+				"name": "Charbon actif (sac 25 litres)",
+				"image": "activated_carbon.jpg"
+			},
+			{
+				"name": "Charbon actif catalytique (sac 25 litres)",
+				"image": "Centaur_Catalytic_Carbon.webp"
+			},
+			{
+				"name": "Birm (sac 25 litres)",
+				"image": "Birm_Media.jpg"
+			},
+			{
+				"name": "Green-Sand",
+				"image": "greensand-plus.webp"
+			},
+			{
+				"name": "Calcite",
+				"image": "calcite.webp"
+			},
+			{
+				"name": "Filter-Ag",
+				"image": "Filter-Ag.webp"
+			},
+			{
+				"name": "Next-Sand",
+				"image": "Nextsand.webp"
+			}
+		]
+	},
+	{
+		"name": "Vannes de contrôle et raccords",
+		"items": [
+			{
+				"name": "Valve de contrôle électronique Calendrier",
+				"image": "clack-water-softener.webp"
+			},
+			{
+				"name": "Valve de contrôle électronique avec Meter",
+				"image": "WS1_CI_Valve_Left_side_view.webp"
+			},
+			{
+				"name": "Valve de contrôle électronique duplex avec Meter",
+				"image": "clack-ws1 twin alternating valve.jpg"
+			},
+			{
+				"name": "Valve de dérivation",
+				"image": "Clack by-pass V3006.webp"
+			},
+			{
+				"name": "Mixing Valve",
+				"image": "Clack mixing valve.webp"
+			},
+			{
+				"name": "Kit de raccordement V3007",
+				"image": "Clack V3007.jpg"
+			},
+			{
+				"name": "Kit de raccordement V3007-01",
+				"image": "Clack V3007-01.jpg"
+			},
+			{
+				"name": "Kit de raccordement V3007-05",
+				"image": "Clack V3007-05.jpg"
+			},
+			{
+				"name": "Kit de raccordement V3007-12",
+				"image": "Clack V3007-12.jpg"
+			}
+		]
+	},
+	{
+		"name": "Robinets pour osmoseur",
+		"items": [
+			{
+				"name": "Robinet pour osmoseur avec finition chromé",
+				"image": "Chrome RO faucet.jpg"
+			},
+			{
+				"name": "Robinet pour osmoseur avec finition noir",
+				"image": "Black RO Faucet.jpg"
+			},
+			{
+				"name": "Robinet pour osmoseur avec finition Nickel satiné",
+				"image": "Brush Nickel RO Faucet.jpg"
+			}
+		]
+	},
+	{
+		"name": "Nettoyants de résines",
+		"items": [
+			{
+				"name": "Rust Out (nettoyant pour le fer)",
+				"image": "Rust Out.jpg"
+			},
+			{
+				"name": "Res-Care (nettoyant pour résine)",
+				"image": "Res-Care.png"
+			}
+		]
+	},
+	{
+		"name": "Accessoires des systèmes UV",
+		"items": [
+			{
+				"name": "Lampes UV",
+				"image": "uv lamps.webp"
+			},
+			{
+				"name": "Tubes au Quartz",
+				"image": "uv-quartz-sleeves.webp"
+			},
+			{
+				"name": "Ballasts",
+				"image": "Ballast UV.webp"
+			}
+		]
+	}
+]

@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/feature-rows",
+	"title": "Rangées image + texte alternées",
+	"category": "bricareau",
+	"icon": "align-left",
+	"description": "Titre de section puis rangées alternées (étapes numérotées, piliers avec icône, valeurs).",
+	"supports": { "html": false, "anchor": true },
+	"attributes": {
+		"variant": { "type": "string", "enum": [ "numbered", "icon", "values" ], "default": "numbered" },
+		"background": { "type": "string", "enum": [ "light", "white", "glow" ], "default": "light" },
+		"firstImageSide": { "type": "string", "enum": [ "right", "left" ], "default": "right" },
+		"label": { "type": "string", "default": "" },
+		"labelStyle": { "type": "string", "default": "pill" },
+		"title": { "type": "string", "default": "" },
+		"accentStyle": { "type": "string", "default": "green" },
+		"intro": { "type": "string", "default": "" },
+		"rows": {
+			"type": "array",
+			"default": [ { "title": "", "subtitle": "", "text": "", "bullets": "", "image": {}, "gallery": [], "icon": "", "color": "navy" } ]
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

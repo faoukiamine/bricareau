@@ -1,0 +1,60 @@
+/* Rendez-vous calendar (admin page, see assets/admin/appointments.js). */
+.bricareau-cal { --line: #dcdcde; --muted: #646970; --today: #f0f6fc; --conflict: #d63638; margin-top: 16px; }
+.bricareau-cal__toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+.bricareau-cal__nav { display: flex; align-items: center; gap: 6px; }
+.bricareau-cal__nav .button[aria-label] { font-size: 18px; line-height: 1; min-width: 36px; }
+.bricareau-cal__views { display: flex; gap: 6px; }
+.bricareau-cal__title { margin: 0 0 0 10px; font-size: 18px; text-transform: capitalize; }
+.bricareau-cal__legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 12px 0; color: var(--muted); }
+.bricareau-cal__legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; background: var(--event, transparent); vertical-align: -1px; }
+.bricareau-cal__legend .is-conflict::before { background: transparent; box-shadow: inset 0 0 0 2px var(--conflict); }
+.bricareau-cal__legend .is-unread { font-weight: 600; }
+.bricareau-cal__legend .is-unread::before { display: none; }
+.bricareau-cal__empty { padding: 12px 14px; background: #fff; border: 1px solid var(--line); }
+.bricareau-cal__body { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 16px; align-items: start; }
+@media (max-width: 960px) { .bricareau-cal__body { grid-template-columns: minmax(0, 1fr); } }
+
+.bricareau-cal__grid, .bricareau-cal__week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); background: var(--line); gap: 1px; border: 1px solid var(--line); }
+.bricareau-cal__week { grid-template-columns: 72px repeat(7, minmax(0, 1fr)); }
+.bricareau-cal__dow { background: #f6f7f7; padding: 8px; font-weight: 600; text-transform: capitalize; }
+.bricareau-cal__dow.is-today { background: var(--today); color: #18448F; }
+.bricareau-cal__day { background: #fff; min-height: 104px; padding: 6px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.bricareau-cal__day.is-outside { background: #fafafa; }
+.bricareau-cal__day.is-outside .bricareau-cal__date { color: #a7aaad; }
+.bricareau-cal__day.is-today { background: var(--today); }
+.bricareau-cal__day.is-today .bricareau-cal__date { background: #18448F; color: #fff; padding: 0 7px; }
+.bricareau-cal__date { align-self: flex-start; font-weight: 600; font-variant-numeric: tabular-nums; border: 0; background: none; padding: 0 4px; border-radius: 999px; cursor: pointer; color: inherit; font-size: 13px; }
+.bricareau-cal__date:hover, .bricareau-cal__date:focus-visible { background: #f0f0f1; outline: none; }
+.bricareau-cal__hour { background: #f6f7f7; padding: 8px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bricareau-cal__slot { background: #fff; min-height: 38px; padding: 4px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+
+.bricareau-cal__event { display: flex; gap: 6px; align-items: baseline; width: 100%; min-width: 0; text-align: left; border: 0; border-left: 3px solid var(--event); border-radius: 3px; background: color-mix(in srgb, var(--event) 10%, #fff); color: #1d2327; padding: 3px 6px; font-size: 12px; line-height: 1.4; cursor: pointer; }
+.bricareau-cal__event:hover, .bricareau-cal__event:focus-visible { background: color-mix(in srgb, var(--event) 18%, #fff); outline: none; box-shadow: 0 0 0 1px var(--event); }
+.bricareau-cal__event.is-selected { box-shadow: 0 0 0 2px var(--event); }
+.bricareau-cal__event.is-unread { font-weight: 600; }
+.bricareau-cal__event.is-conflict { box-shadow: inset 0 0 0 2px var(--conflict); }
+.bricareau-cal__time { flex: none; font-variant-numeric: tabular-nums; color: var(--event); font-weight: 600; }
+.bricareau-cal__name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bricareau-cal__more { border: 0; background: none; color: #2271b1; padding: 0 2px; text-align: left; cursor: pointer; font-size: 12px; }
+
+.bricareau-cal__panel { background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--event, var(--line)); padding: 14px 16px; position: sticky; top: 46px; }
+.bricareau-cal__panel.is-empty { color: var(--muted); }
+.bricareau-cal__panel h2 { margin: 4px 0; font-size: 17px; }
+.bricareau-cal__kind { margin: 0; color: var(--event); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: 11px; }
+.bricareau-cal__when { margin: 0 0 10px; font-weight: 600; }
+.bricareau-cal__warning { margin: 0 0 10px; color: var(--conflict); }
+.bricareau-cal__panel dl { margin: 0 0 12px; }
+.bricareau-cal__row { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 8px; padding: 5px 0; border-bottom: 1px solid #f0f0f1; }
+.bricareau-cal__row dt { color: var(--muted); }
+.bricareau-cal__row dd { margin: 0; overflow-wrap: anywhere; }
+
+.bricareau-cal__day-view { display: grid; grid-template-columns: 72px minmax(0, 1fr); background: var(--line); gap: 1px; border: 1px solid var(--line); }
+.bricareau-cal__day-view .bricareau-cal__slot { min-height: 44px; flex-direction: row; flex-wrap: wrap; gap: 6px; }
+.bricareau-cal__card { display: flex; flex-direction: column; gap: 2px; min-width: 220px; flex: 1 1 220px; text-align: left; border: 0; border-left: 4px solid var(--event); border-radius: 4px; background: color-mix(in srgb, var(--event) 10%, #fff); color: #1d2327; padding: 8px 10px; cursor: pointer; }
+.bricareau-cal__card:hover, .bricareau-cal__card:focus-visible { background: color-mix(in srgb, var(--event) 18%, #fff); outline: none; box-shadow: 0 0 0 1px var(--event); }
+.bricareau-cal__card.is-selected { box-shadow: 0 0 0 2px var(--event); }
+.bricareau-cal__card.is-conflict { box-shadow: inset 0 0 0 2px var(--conflict); }
+.bricareau-cal__card.is-unread .bricareau-cal__card-name { font-weight: 700; }
+.bricareau-cal__card-name { font-size: 14px; font-weight: 600; }
+.bricareau-cal__card-meta { color: var(--muted); font-size: 12px; }
+.bricareau-cal__card-warning { color: var(--conflict); font-size: 12px; }

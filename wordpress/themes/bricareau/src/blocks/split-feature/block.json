@@ -1,0 +1,86 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/split-feature",
+	"title": "Section image + texte",
+	"category": "bricareau",
+	"icon": "align-pull-left",
+	"description": "Section en deux colonnes : texte avec bouton, image avec encart superposé.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"body": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaText": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaArrow": {
+			"type": "boolean",
+			"default": true
+		},
+		"image": {
+			"type": "object",
+			"default": {}
+		},
+		"imageTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"imagePosition": {
+			"type": "string",
+			"enum": [
+				"left",
+				"right"
+			],
+			"default": "right"
+		},
+		"background": {
+			"type": "string",
+			"enum": [
+				"light",
+				"white"
+			],
+			"default": "light"
+		},
+		"cardIcon": {
+			"type": "string",
+			"default": "droplets"
+		},
+		"cardTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"cardText": {
+			"type": "string",
+			"default": ""
+		},
+		"cardMirrored": {
+			"type": "boolean",
+			"default": false
+		},
+		"bullets": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

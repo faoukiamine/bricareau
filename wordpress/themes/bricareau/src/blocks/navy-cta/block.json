@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/navy-cta",
+	"title": "Appel à l'action bleu",
+	"category": "bricareau",
+	"icon": "phone",
+	"description": "Bandeau bleu avec titre, boutons « Parlez à un expert » / consultation et photos d'experts.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"image": {
+			"type": "object",
+			"default": {}
+		},
+		"phoneText": {
+			"type": "string",
+			"default": "Parlez à un expert"
+		},
+		"ctaText": {
+			"type": "string",
+			"default": "Planifiez une consultation"
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": "/consultation"
+		},
+		"avatars": {
+			"type": "array",
+			"default": []
+		},
+		"rating": {
+			"type": "string",
+			"default": "4.9/5"
+		},
+		"caption": {
+			"type": "string",
+			"default": "Rejoignez plus de **1,500 familles** satisfaites au Québec cette année."
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/image-gallery",
+	"title": "Galerie mosaïque",
+	"category": "bricareau",
+	"icon": "format-gallery",
+	"description": "Mosaïque de 4 photos avec titre et texte à côté.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "pill"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"headerAlign": {
+			"type": "string",
+			"enum": [
+				"center",
+				"left"
+			],
+			"default": "center"
+		},
+		"headerBar": {
+			"type": "boolean",
+			"default": false
+		},
+		"images": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

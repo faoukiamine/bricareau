@@ -1,0 +1,62 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/testimonials-carousel",
+	"title": "Carrousel d'avis",
+	"category": "bricareau",
+	"icon": "format-quote",
+	"description": "Titre et carrousel de cartes d'avis clients (gérés dans le menu Témoignages).",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "text"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"count": {
+			"type": "number",
+			"default": 6
+		},
+		"offset": {
+			"type": "number",
+			"default": 0
+		},
+		"framed": {
+			"type": "boolean",
+			"default": true
+		},
+		"manual": {
+			"type": "boolean",
+			"default": false
+		},
+		"selectedIds": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "number"
+			}
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

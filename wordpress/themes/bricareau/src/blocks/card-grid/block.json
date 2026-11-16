@@ -1,0 +1,81 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/card-grid",
+	"title": "Grille de cartes",
+	"category": "bricareau",
+	"icon": "screenoptions",
+	"description": "Titre de section et cartes numérotées ou colonnes avec icône.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"variant": {
+			"type": "string",
+			"enum": [
+				"numbered",
+				"icon-columns",
+				"icon-list",
+				"swiss",
+				"steps",
+				"icon-centered"
+			],
+			"default": "numbered"
+		},
+		"align": {
+			"type": "string",
+			"enum": [
+				"center",
+				"left"
+			],
+			"default": "center"
+		},
+		"background": {
+			"type": "string",
+			"enum": [
+				"white",
+				"light",
+				"glow"
+			],
+			"default": "white"
+		},
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "line"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "gradient"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"cards": {
+			"type": "array",
+			"default": [
+				{
+					"icon": "",
+					"title": "",
+					"text": ""
+				}
+			]
+		},
+		"backgroundImage": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

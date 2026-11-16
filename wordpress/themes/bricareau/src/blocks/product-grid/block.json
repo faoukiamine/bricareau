@@ -1,0 +1,132 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/product-grid",
+	"title": "Grille de produits",
+	"category": "bricareau",
+	"icon": "products",
+	"description": "Produits en grille ou en carrousel, avec caractéristiques, badges et bandeau d'aide optionnel.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "pill"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"headerAlign": {
+			"type": "string",
+			"enum": [
+				"center",
+				"left"
+			],
+			"default": "center"
+		},
+		"headerBar": {
+			"type": "boolean",
+			"default": false
+		},
+		"variant": {
+			"type": "string",
+			"enum": [
+				"feature",
+				"simple",
+				"catalog",
+				"promo"
+			],
+			"default": "simple"
+		},
+		"background": {
+			"type": "string",
+			"enum": [
+				"white",
+				"light"
+			],
+			"default": "white"
+		},
+		"linkText": {
+			"type": "string",
+			"default": ""
+		},
+		"recommendedLabel": {
+			"type": "string",
+			"default": "Le choix des experts"
+		},
+		"footerLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"footerText": {
+			"type": "string",
+			"default": ""
+		},
+		"products": {
+			"type": "array",
+			"default": [
+				{
+					"name": "",
+					"text": "",
+					"features": "",
+					"image": {},
+					"url": "",
+					"badge": "",
+					"color": "blue",
+					"recommended": false
+				}
+			]
+		},
+		"bannerTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"bannerText": {
+			"type": "string",
+			"default": ""
+		},
+		"bannerButton": {
+			"type": "string",
+			"default": ""
+		},
+		"bannerUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaText": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaButton": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

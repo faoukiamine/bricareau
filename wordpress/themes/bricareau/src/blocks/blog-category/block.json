@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/blog-category",
+	"title": "Articles d’une catégorie",
+	"category": "bricareau",
+	"icon": "category",
+	"description": "Bannière et grille des articles de la catégorie affichée.",
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"inserter": false
+	},
+	"attributes": {},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

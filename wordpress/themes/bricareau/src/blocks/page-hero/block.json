@@ -1,0 +1,100 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/page-hero",
+	"title": "Bannière de page",
+	"category": "bricareau",
+	"icon": "cover-image",
+	"description": "Bannière en haut de page : titre, texte, boutons et image dans un cadre arrondi.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"layout": {
+			"type": "string",
+			"enum": [
+				"fade",
+				"split",
+				"product",
+				"wash",
+				"centered"
+			],
+			"default": "fade"
+		},
+		"fadeStop": {
+			"type": "string",
+			"enum": [
+				"25",
+				"33",
+				"50"
+			],
+			"default": "33"
+		},
+		"breadcrumbs": {
+			"type": "boolean",
+			"default": true
+		},
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "pill-soft"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaText": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"image": {
+			"type": "object",
+			"default": {}
+		},
+		"phoneButton": {
+			"type": "boolean",
+			"default": false
+		},
+		"trustItems": {
+			"type": "array",
+			"default": []
+		},
+		"liveLabel": {
+			"type": "boolean",
+			"default": false
+		},
+		"rating": {
+			"type": "string",
+			"default": ""
+		},
+		"heroHeight": {
+			"type": "string",
+			"enum": [
+				"600",
+				"700",
+				"800",
+				"850"
+			],
+			"default": "800"
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

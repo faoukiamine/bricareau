@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/image-banner",
+	"title": "Bannière photo",
+	"category": "bricareau",
+	"icon": "format-image",
+	"description": "Grande photo arrondie avec dégradé bleu, surtitre, titre et texte.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": {
+			"type": "string",
+			"default": "Engagement certifié"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"image": {
+			"type": "object",
+			"default": {}
+		},
+		"overlay": {
+			"type": "string",
+			"enum": [
+				"strong",
+				"soft"
+			],
+			"default": "strong"
+		},
+		"background": {
+			"type": "string",
+			"enum": [
+				"white",
+				"none"
+			],
+			"default": "white"
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}
