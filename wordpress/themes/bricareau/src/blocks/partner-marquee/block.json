@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/partner-marquee",
+	"title": "Bandeau clients",
+	"category": "bricareau",
+	"icon": "groups",
+	"description": "Bandeau bleu défilant avec les noms des clients et partenaires.",
+	"supports": { "html": false, "anchor": true },
+	"attributes": {
+		"partners": { "type": "string", "default": "" }
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

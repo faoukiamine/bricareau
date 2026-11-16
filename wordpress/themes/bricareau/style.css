@@ -1,0 +1,14 @@
+/*
+Theme Name: Bricareau
+Theme URI: https://bricareau.com
+Author: Bricareau Water Specialist
+Description: Thème bloc sur mesure pour Bricareau, spécialiste du traitement de l'eau au Québec.
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 8.1
+Version: 1.0.2
+License: Proprietary
+Text Domain: bricareau
+*/
+
+/* Styles are compiled by Tailwind into build/style.css (see package.json). */

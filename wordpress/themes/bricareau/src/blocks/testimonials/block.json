@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/testimonials",
+	"title": "Témoignages",
+	"category": "bricareau",
+	"icon": "format-quote",
+	"description": "Chiffre clé et carrousel des témoignages (gérés dans le menu Témoignages).",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": {
+			"type": "string",
+			"default": "La Parole à Nos Clients"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"statValue": {
+			"type": "string",
+			"default": "+20 000"
+		},
+		"statLabel": {
+			"type": "string",
+			"default": "Installations réussies"
+		},
+		"statText": {
+			"type": "string",
+			"default": ""
+		},
+		"count": {
+			"type": "number",
+			"default": 8
+		},
+		"interval": {
+			"type": "number",
+			"default": 6
+		},
+		"manual": {
+			"type": "boolean",
+			"default": false
+		},
+		"selectedIds": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "number"
+			}
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/features-grid",
+	"title": "Grille d'avantages",
+	"category": "bricareau",
+	"icon": "grid-view",
+	"description": "Titre centré et grille d'avantages avec icônes.",
+	"supports": { "html": false, "anchor": true },
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "" },
+		"title": { "type": "string", "default": "" },
+		"intro": { "type": "string", "default": "" },
+		"features": {
+			"type": "array",
+			"default": [ { "icon": "shield-check", "title": "", "description": "" } ]
+		},
+		"ctaText": { "type": "string", "default": "" },
+		"ctaUrl": { "type": "string", "default": "" }
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

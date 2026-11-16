@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/water-quiz",
+	"title": "Diagnostic de l’eau",
+	"category": "bricareau",
+	"icon": "forms",
+	"description": "Questionnaire en étapes avec recommandations.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"formId": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

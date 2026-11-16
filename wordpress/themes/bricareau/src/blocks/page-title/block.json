@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/page-title",
+	"title": "Titre de page centré",
+	"category": "bricareau",
+	"icon": "heading",
+	"description": "Fil d’Ariane et titre centré, pour les pages de texte.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"subtitle": {
+			"type": "string",
+			"default": ""
+		},
+		"meta": {
+			"type": "string",
+			"default": ""
+		},
+		"note": {
+			"type": "string",
+			"default": ""
+		},
+		"titleStyle": {
+			"type": "string",
+			"enum": [
+				"editorial",
+				"solid"
+			],
+			"default": "editorial"
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

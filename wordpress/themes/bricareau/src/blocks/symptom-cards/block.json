@@ -1,0 +1,114 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/symptom-cards",
+	"title": "Cartes problèmes / symptômes",
+	"category": "bricareau",
+	"icon": "warning",
+	"description": "Grille de cartes illustrées : impacts, problèmes, diagnostics, menaces ou panneaux dépliables.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "pill"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"headerAlign": {
+			"type": "string",
+			"enum": [
+				"center",
+				"left"
+			],
+			"default": "center"
+		},
+		"headerBar": {
+			"type": "boolean",
+			"default": false
+		},
+		"variant": {
+			"type": "string",
+			"enum": [
+				"impact",
+				"problem",
+				"diagnostic",
+				"media",
+				"panels"
+			],
+			"default": "impact"
+		},
+		"columns": {
+			"type": "string",
+			"enum": [
+				"2",
+				"3",
+				"4"
+			],
+			"default": "3"
+		},
+		"metaLabel": {
+			"type": "string",
+			"default": "Impact :"
+		},
+		"solutionLabel": {
+			"type": "string",
+			"default": "Solution Bricareau"
+		},
+		"alertBadge": {
+			"type": "string",
+			"default": ""
+		},
+		"overlayLabel": {
+			"type": "string",
+			"default": "Résoudre ce problème"
+		},
+		"overlayTitle": {
+			"type": "string",
+			"default": "Expertise gratuite pour cette solution"
+		},
+		"linkText": {
+			"type": "string",
+			"default": ""
+		},
+		"defaultUrl": {
+			"type": "string",
+			"default": "/consultation"
+		},
+		"cards": {
+			"type": "array",
+			"default": [
+				{
+					"label": "",
+					"title": "",
+					"text": "",
+					"meta": "",
+					"solution": "",
+					"image": {},
+					"icon": "",
+					"color": "navy",
+					"url": ""
+				}
+			]
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

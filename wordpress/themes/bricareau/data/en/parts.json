@@ -1,0 +1,214 @@
+[
+	{
+		"name": "Filter cartridges",
+		"items": [
+			{
+				"name": "Sediment filters",
+				"image": "Polypropylene.svg"
+			},
+			{
+				"name": "Pleated paper filters",
+				"image": "Pleated Water Filters.png"
+			},
+			{
+				"name": "Granular activated carbon filters",
+				"image": "gac water filters.png"
+			},
+			{
+				"name": "Carbon block filters",
+				"image": "cbc water filters.png"
+			},
+			{
+				"name": "Anti-scale filters",
+				"image": "Water Softening Filters.png"
+			},
+			{
+				"name": "Deionization filters",
+				"image": "deionized water filters.png"
+			},
+			{
+				"name": "Inline filters",
+				"image": "inline water filters.png"
+			}
+		]
+	},
+	{
+		"name": "Filter housings",
+		"items": [
+			{
+				"name": "Standard 10 & 20 filter housing",
+				"image": "Standard housing.png"
+			},
+			{
+				"name": "Big Blue 10 & 20 filter housing",
+				"image": "Big Blue Water Filter.png"
+			}
+		]
+	},
+	{
+		"name": "RO housings & reverse osmosis membranes",
+		"items": [
+			{
+				"name": "FRP RO housings",
+				"image": "RO-Housings.jpg"
+			},
+			{
+				"name": "Stainless Steel RO housings",
+				"image": "SS-Membrane-Housing.webp"
+			},
+			{
+				"name": "Residential reverse osmosis membranes",
+				"image": "Residential Membranes.png"
+			},
+			{
+				"name": "Commercial & industrial reverse osmosis membranes",
+				"image": "Commercial & industrial RO-Membranes.png"
+			}
+		]
+	},
+	{
+		"name": "Resins and filter media",
+		"items": [
+			{
+				"name": "Standard softening resin (28.3-litre bag)"
+			},
+			{
+				"name": "Fine mesh softening resin (28.3-litre bag)"
+			},
+			{
+				"name": "High-efficiency softening resin (28.3-litre bag)"
+			},
+			{
+				"name": "Tannin decolourizing resin (28.3-litre bag)"
+			},
+			{
+				"name": "Salt pellets (18.1 kg bag)",
+				"image": "Windsor Pellet Salt.png"
+			},
+			{
+				"name": "Salt crystals (20 kg bag)",
+				"image": "Sifto Crystal Plus 20kg Water Softener Salt.png"
+			},
+			{
+				"name": "Katalox-Light (25-litre bag)",
+				"image": "Katalox Light Media.jpg"
+			},
+			{
+				"name": "Activated carbon (25-litre bag)",
+				"image": "activated_carbon.jpg"
+			},
+			{
+				"name": "Catalytic activated carbon (25-litre bag)",
+				"image": "Centaur_Catalytic_Carbon.webp"
+			},
+			{
+				"name": "Birm (25-litre bag)",
+				"image": "Birm_Media.jpg"
+			},
+			{
+				"name": "Green-Sand",
+				"image": "greensand-plus.webp"
+			},
+			{
+				"name": "Calcite",
+				"image": "calcite.webp"
+			},
+			{
+				"name": "Filter-Ag",
+				"image": "Filter-Ag.webp"
+			},
+			{
+				"name": "Next-Sand",
+				"image": "Nextsand.webp"
+			}
+		]
+	},
+	{
+		"name": "Control valves and fittings",
+		"items": [
+			{
+				"name": "Electronic control valve, time clock",
+				"image": "clack-water-softener.webp"
+			},
+			{
+				"name": "Electronic control valve with meter",
+				"image": "WS1_CI_Valve_Left_side_view.webp"
+			},
+			{
+				"name": "Duplex electronic control valve with meter",
+				"image": "clack-ws1 twin alternating valve.jpg"
+			},
+			{
+				"name": "Bypass valve",
+				"image": "Clack by-pass V3006.webp"
+			},
+			{
+				"name": "Mixing Valve",
+				"image": "Clack mixing valve.webp"
+			},
+			{
+				"name": "V3007 connection kit",
+				"image": "Clack V3007.jpg"
+			},
+			{
+				"name": "V3007-01 connection kit",
+				"image": "Clack V3007-01.jpg"
+			},
+			{
+				"name": "V3007-05 connection kit",
+				"image": "Clack V3007-05.jpg"
+			},
+			{
+				"name": "V3007-12 connection kit",
+				"image": "Clack V3007-12.jpg"
+			}
+		]
+	},
+	{
+		"name": "Reverse osmosis faucets",
+		"items": [
+			{
+				"name": "Reverse osmosis faucet, chrome finish",
+				"image": "Chrome RO faucet.jpg"
+			},
+			{
+				"name": "Reverse osmosis faucet, black finish",
+				"image": "Black RO Faucet.jpg"
+			},
+			{
+				"name": "Reverse osmosis faucet, satin nickel finish",
+				"image": "Brush Nickel RO Faucet.jpg"
+			}
+		]
+	},
+	{
+		"name": "Resin cleaners",
+		"items": [
+			{
+				"name": "Rust Out (iron cleaner)",
+				"image": "Rust Out.jpg"
+			},
+			{
+				"name": "Res-Care (resin cleaner)",
+				"image": "Res-Care.png"
+			}
+		]
+	},
+	{
+		"name": "UV system accessories",
+		"items": [
+			{
+				"name": "UV lamps",
+				"image": "uv lamps.webp"
+			},
+			{
+				"name": "Quartz sleeves",
+				"image": "uv-quartz-sleeves.webp"
+			},
+			{
+				"name": "Ballasts",
+				"image": "Ballast UV.webp"
+			}
+		]
+	}
+]

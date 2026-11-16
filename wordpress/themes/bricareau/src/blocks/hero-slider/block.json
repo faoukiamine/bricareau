@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/hero-slider",
+	"title": "Bannière diaporama",
+	"category": "bricareau",
+	"icon": "slides",
+	"description": "Grande bannière d'accueil plein écran avec diapositives, onglets, boutons et chiffres clés.",
+	"supports": { "html": false, "align": false, "anchor": true },
+	"attributes": {
+		"slides": {
+			"type": "array",
+			"default": [
+				{ "label": "Résidentiel", "title": "Une eau *saine et pure,*\npour votre foyer.", "description": "", "image": {} }
+			]
+		},
+		"ctaText": { "type": "string", "default": "Planifiez une consultation gratuite" },
+		"ctaUrl": { "type": "string", "default": "/consultation" },
+		"stats": {
+			"type": "array",
+			"default": [
+				{ "value": "25+", "label": "Années d'expertise\nen traitement d'eau" }
+			]
+		},
+		"phoneButton": { "type": "boolean", "default": true },
+		"interval": { "type": "number", "default": 6 }
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

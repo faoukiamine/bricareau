@@ -1,0 +1,71 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/image-cta",
+	"title": "Appel à l'action sur image",
+	"category": "bricareau",
+	"icon": "format-image",
+	"description": "Image pleine largeur avec titre, texte et bouton alignés à droite.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"overlay": {
+			"type": "string",
+			"enum": [
+				"dark",
+				"light",
+				"blue"
+			],
+			"default": "dark"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"titleWeight": {
+			"type": "string",
+			"enum": [
+				"bold",
+				"light"
+			],
+			"default": "bold"
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaText": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": "/consultation"
+		},
+		"image": {
+			"type": "object",
+			"default": {}
+		},
+		"layout": {
+			"type": "string",
+			"enum": [
+				"right",
+				"banner"
+			],
+			"default": "right"
+		},
+		"eyebrow": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

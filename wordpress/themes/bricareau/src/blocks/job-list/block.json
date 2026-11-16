@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/job-list",
+	"title": "Offres d'emploi",
+	"category": "bricareau",
+	"icon": "businessman",
+	"description": "Liste des postes ouverts avec bouton « Postuler ».",
+	"supports": { "html": false, "anchor": true },
+	"attributes": {
+		"label": { "type": "string", "default": "Emplois" },
+		"labelStyle": { "type": "string", "default": "pill" },
+		"title": { "type": "string", "default": "Nos offres d'emploi" },
+		"accentStyle": { "type": "string", "default": "green" },
+		"intro": { "type": "string", "default": "" },
+		"buttonText": { "type": "string", "default": "Postuler" },
+		"jobs": { "type": "array", "default": [] }
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

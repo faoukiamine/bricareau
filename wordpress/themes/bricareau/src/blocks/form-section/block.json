@@ -1,0 +1,104 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/form-section",
+	"title": "Formulaire",
+	"category": "bricareau",
+	"icon": "feedback",
+	"description": "Affiche un formulaire Fluent Forms dans une carte, avec titre.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "pill"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"headerAlign": {
+			"type": "string",
+			"enum": [
+				"center",
+				"left"
+			],
+			"default": "center"
+		},
+		"headerBar": {
+			"type": "boolean",
+			"default": false
+		},
+		"formId": {
+			"type": "string",
+			"default": ""
+		},
+		"layout": {
+			"type": "string",
+			"enum": [
+				"stacked",
+				"benefits",
+				"contact",
+				"contact-plain"
+			],
+			"default": "stacked"
+		},
+		"asideText": {
+			"type": "string",
+			"default": ""
+		},
+		"asideItems": {
+			"type": "array",
+			"default": []
+		},
+		"quote": {
+			"type": "string",
+			"default": ""
+		},
+		"quoteAuthor": {
+			"type": "string",
+			"default": ""
+		},
+		"quoteRole": {
+			"type": "string",
+			"default": ""
+		},
+		"panelTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"panelText": {
+			"type": "string",
+			"default": ""
+		},
+		"panelButtonText": {
+			"type": "string",
+			"default": ""
+		},
+		"panelButtonUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"watermark": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

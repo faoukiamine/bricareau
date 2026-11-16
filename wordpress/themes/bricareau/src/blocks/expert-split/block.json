@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/expert-split",
+	"title": "Appel à l'action image 50/50",
+	"category": "bricareau",
+	"icon": "id",
+	"description": "Moitié image (avec badge flottant), moitié texte et bouton.",
+	"supports": { "html": false, "anchor": true },
+	"attributes": {
+		"title": { "type": "string", "default": "" },
+		"accentStyle": { "type": "string", "default": "green" },
+		"text": { "type": "string", "default": "" },
+		"ctaText": { "type": "string", "default": "" },
+		"ctaUrl": { "type": "string", "default": "" },
+		"image": { "type": "object", "default": {} },
+		"imageSide": { "type": "string", "enum": [ "left", "right" ], "default": "left" },
+		"badge": { "type": "string", "enum": [ "stat", "social", "none" ], "default": "stat" },
+		"badgeValue": { "type": "string", "default": "" },
+		"badgeText": { "type": "string", "default": "" },
+		"badgeSubtext": { "type": "string", "default": "" }
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

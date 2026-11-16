@@ -1,0 +1,436 @@
+/* Base styles ported from the React site's src/index.css. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		overflow-x: hidden;
+	}
+
+	body {
+		@apply bg-white text-slate-900 font-sans;
+		overflow-x: hidden;
+	}
+
+	* {
+		@apply border-slate-200;
+	}
+
+	p {
+		@apply text-[16px] md:text-[18px] lg:text-[20px] leading-snug font-light text-slate-600;
+	}
+
+	h1 {
+		@apply text-[32px] md:text-[48px] lg:text-[64px] leading-[1.1] font-bold tracking-tighter;
+	}
+
+	h2 {
+		@apply text-[28px] md:text-[36px] lg:text-[48px] leading-tight lg:leading-[52px] font-bold tracking-tight;
+	}
+
+	h3 {
+		@apply text-[22px] md:text-[28px] lg:text-[32px] leading-[1.3] font-semibold tracking-tight;
+	}
+
+	h4 {
+		@apply text-[18px] md:text-[22px] lg:text-[26px] leading-[1.4] font-medium;
+	}
+
+	h5 {
+		@apply text-[16px] md:text-[18px] lg:text-[22px] leading-[1.5] font-medium;
+	}
+}
+
+@layer utilities {
+	.heading-pro-max {
+		@apply text-[28px] md:text-[36px] lg:text-[48px] leading-tight lg:leading-[52px] tracking-tight;
+	}
+
+	@keyframes marquee {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(-50%); }
+	}
+
+	.animate-marquee {
+		animation: marquee 30s linear infinite;
+	}
+
+	@keyframes logo-light-up {
+		0%, 10%, 100% { color: rgba(191, 219, 254, 0.5); text-shadow: none; }
+		5% { color: white; text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); }
+	}
+
+	.animate-logo-light-up {
+		animation: logo-light-up 30s linear infinite;
+	}
+}
+
+/* Block-theme glue: the post content holds full-width sections, no WP spacing. */
+.bricareau-main > .wp-block-post-content > * {
+	margin-block: 0;
+	max-width: none;
+}
+
+/* In the editor, sections use the full canvas width like on the site. */
+.editor-styles-wrapper .is-root-container > [data-type^="bricareau/"] {
+	max-width: none;
+	margin-block: 0;
+}
+
+/* In the editor the header must not be fixed over the canvas. */
+.editor-styles-wrapper .bricareau-header {
+	position: relative !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.animate-marquee,
+	.animate-logo-light-up {
+		animation: none;
+	}
+}
+
+/* Keep the fixed header below the admin toolbar when logged in. */
+.admin-bar .bricareau-header {
+	top: 46px;
+}
+
+@media (min-width: 783px) {
+	.admin-bar .bricareau-header {
+		top: 32px;
+	}
+}
+
+/* Expanding panels (symptom-cards "panels"): first panel open until another is hovered. */
+@media (min-width: 1024px) {
+	.bricareau-panels .bricareau-panel {
+		flex: 1 1 0%;
+		overflow-wrap: anywhere;
+		transition: flex 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	.bricareau-panels .bricareau-panel:first-child,
+	.bricareau-panels:hover .bricareau-panel:hover {
+		flex: 3 1 0%;
+	}
+
+	.bricareau-panels:hover .bricareau-panel:first-child:not(:hover) {
+		flex: 1 1 0%;
+	}
+
+	.bricareau-panels .bricareau-panel-reveal {
+		opacity: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: opacity 0.7s, max-height 0.7s;
+	}
+
+	.bricareau-panels .bricareau-panel:first-child .bricareau-panel-reveal,
+	.bricareau-panels:hover .bricareau-panel:hover .bricareau-panel-reveal {
+		opacity: 1;
+		max-height: 12rem;
+	}
+
+	.bricareau-panels:hover .bricareau-panel:first-child:not(:hover) .bricareau-panel-reveal {
+		opacity: 0;
+		max-height: 0;
+	}
+}
+
+/* Fluent Forms inside the "Formulaire" block, styled like the React forms. */
+.bricareau-form .ff-el-group {
+	margin-bottom: 1.25rem;
+}
+
+.bricareau-form .ff-el-input--label label {
+	font-weight: 700;
+	color: #0f172a;
+	font-size: 0.9rem;
+}
+
+.bricareau-form .ff-el-form-control {
+	height: 3rem;
+	border: 0;
+	border-radius: 0.5rem;
+	background: #f9fafb;
+	padding: 0 0.875rem;
+}
+
+.bricareau-form textarea.ff-el-form-control {
+	height: auto;
+	padding: 0.75rem 0.875rem;
+}
+
+.bricareau-form .ff-el-form-control:focus {
+	outline: 2px solid #18448f33;
+	background: #fff;
+}
+
+.bricareau-form .ff-btn-submit,
+.bricareau-form .ff-btn-next,
+.bricareau-form .ff-btn-prev {
+	border-radius: 2rem !important;
+	padding: 0.9rem 2rem !important;
+	font-weight: 900 !important;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 11px !important;
+}
+
+.bricareau-form .ff-btn-submit,
+.bricareau-form .ff-btn-next {
+	background: #18448f !important;
+	color: #fff !important;
+	border: 1px solid #18448f !important;
+}
+
+.bricareau-form .ff-btn-prev {
+	background: #fff !important;
+	color: #18448f !important;
+	border: 1px solid #e2e8f0 !important;
+}
+
+.bricareau-form .ff-el-section-break {
+	margin-top: 1.5rem;
+}
+
+.bricareau-form .ff-el-section-title {
+	color: #18448f;
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+
+.bricareau-form .ff-el-tc a {
+	text-decoration: underline;
+}
+
+.bricareau-form input[type="checkbox"],
+.bricareau-form input[type="radio"] {
+	accent-color: #18448f;
+}
+
+.bricareau-form .ff-el-form-check label {
+	font-size: 0.95rem;
+}
+
+/* Article text (post content in core blocks), as styled in the React articles. */
+.bricareau-article-body > * + * {
+	margin-top: 1.5rem;
+}
+
+.bricareau-article-body h2 {
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+	color: #000;
+	scroll-margin-top: 6rem;
+}
+
+.bricareau-article-body > h2:first-child {
+	margin-top: 4rem;
+}
+
+.bricareau-article-body h3,
+.bricareau-article-body h4 {
+	margin-top: 2.5rem;
+	color: #0f172a;
+}
+
+.bricareau-article-body p,
+.bricareau-article-body li {
+	color: #374151;
+	text-align: justify;
+}
+
+.bricareau-article-body a,
+.bricareau-prose a {
+	color: #18448f;
+	text-decoration: underline;
+}
+
+.bricareau-article-body ul,
+.bricareau-prose ul {
+	list-style: disc;
+	padding-left: 2rem;
+}
+
+.bricareau-article-body ol,
+.bricareau-prose ol {
+	list-style: decimal;
+	padding-left: 2rem;
+}
+
+/* Long text pages (legal), like the React pages. */
+.wp-block-group.bricareau-prose {
+	max-width: 56rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2.5rem 1rem 3rem;
+	color: #1a3a5a;
+	font-size: 15px;
+	line-height: 1.625;
+}
+
+.bricareau-prose::before {
+	content: "";
+	display: block;
+	border-top: 1px solid #e5e7eb;
+	padding-top: 2rem;
+}
+
+.bricareau-prose h2,
+.bricareau-prose h3 {
+	margin: 1.5rem 0 1rem;
+	color: #1a5a8a;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	font-weight: 700;
+	letter-spacing: normal;
+}
+
+.bricareau-prose p {
+	margin-bottom: 1rem;
+}
+
+.bricareau-prose li {
+	margin-bottom: 0.25rem;
+}
+
+.bricareau-prose ul,
+.bricareau-prose ol {
+	margin-bottom: 1rem;
+}
+
+.bricareau-prose hr {
+	margin: 2rem 0;
+	border-color: #f3f4f6;
+}
+
+/* Breadcrumbs over the dark article hero. */
+.bricareau-breadcrumbs-dark nav a,
+.bricareau-breadcrumbs-dark nav span {
+	color: rgb(255 255 255 / 0.85);
+}
+
+/* Dropdowns match the text fields. */
+.bricareau-form select.ff-el-form-control {
+	height: 3rem !important;
+	line-height: 1.25;
+	padding: 0 0.875rem !important;
+}
+
+/* Appointment times as a grid of buttons, like the React forms. */
+.bricareau-form .ff-el-input--content:has(input[name="appointment_time"]) {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+	gap: 0.5rem;
+}
+
+.bricareau-form .ff-el-form-check:has(input[name="appointment_time"]) {
+	margin: 0;
+}
+
+.bricareau-form .ff-el-form-check:has(input[name="appointment_time"]) label {
+	display: block;
+	margin: 0;
+	padding: 0.75rem 0.5rem;
+	border: 1px solid #e2e8f0;
+	border-radius: 0.5rem;
+	text-align: center;
+	font-weight: 600;
+	color: #334155;
+	cursor: pointer;
+}
+
+.bricareau-form .ff-el-form-check:has(input[name="appointment_time"]) input {
+	position: absolute;
+	opacity: 0;
+}
+
+.bricareau-form .ff-el-form-check:has(input[name="appointment_time"]:checked) label {
+	background: #18448f;
+	border-color: #18448f;
+	color: #fff;
+}
+
+.bricareau-form .ff-el-form-check:has(input[name="appointment_time"]:focus-visible) label {
+	outline: 2px solid #18448f;
+	outline-offset: 2px;
+}
+
+/* Footer newsletter (Fluent Forms): one email field with a round icon button. */
+.bricareau-newsletter form {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+}
+
+.bricareau-newsletter fieldset {
+	display: contents;
+}
+
+.bricareau-newsletter .ff-el-group:not(.ff_submit_btn_wrapper) {
+	flex: 1;
+	margin: 0;
+}
+
+.bricareau-newsletter .ff-el-input--label {
+	display: none;
+}
+
+.bricareau-newsletter .ff-el-form-control {
+	height: 3rem;
+	border-radius: 0.5rem;
+	padding: 0 0.75rem;
+	font-size: 0.875rem;
+	color: #fff;
+	background: rgb(255 255 255 / 0.2);
+	border: 1px solid rgb(255 255 255 / 0.3);
+}
+
+.bricareau-newsletter .ff-el-form-control::placeholder {
+	color: rgb(255 255 255 / 0.6);
+}
+
+.bricareau-newsletter .ff_submit_btn_wrapper {
+	margin: 0;
+}
+
+.bricareau-newsletter .ff-btn-submit {
+	width: 3rem;
+	height: 3rem;
+	padding: 0;
+	border-radius: 9999px;
+	font-size: 0;
+	background-color: #fff !important;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%2318448F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='4' width='20' height='16' rx='2'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E") !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2);
+}
+
+.bricareau-newsletter .error,
+.bricareau-newsletter .text-danger {
+	color: #fecaca;
+	font-size: 12px;
+}
+
+.bricareau-newsletter .ff-message-success {
+	color: #8cc63f;
+	font-size: 12px;
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+	background: transparent;
+}
+
+/* Header over a dark hero (hero-slider): scrolled colours, still transparent at the top. */
+[data-bricareau-header].is-on-dark .bricareau-header {
+	background-color: transparent !important; /* this file's plain rules compile before Tailwind's utilities */
+	box-shadow: none !important;
+	padding-top: 0.75rem !important;
+	padding-bottom: 0.75rem !important;
+}
+[data-bricareau-header].is-on-dark .bricareau-header-spacer {
+	height: 0 !important;
+}

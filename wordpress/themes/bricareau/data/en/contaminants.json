@@ -1,0 +1,734 @@
+{
+	"glossary": [
+		{
+			"category": "Metals and heavy metals",
+			"icon": "Beaker",
+			"items": [
+				{
+					"name": "Lead",
+					"desc": "Often leaches from old pipes and solder. Toxic even at low doses, and particularly dangerous for children's neurological development."
+				},
+				{
+					"name": "Arsenic",
+					"desc": "Naturally present in some rocks, it can contaminate well water. It is a known carcinogen with serious long-term health effects."
+				},
+				{
+					"name": "Mercury",
+					"desc": "A highly toxic heavy metal, often from industrial discharges or natural processes. Can cause serious damage to the nervous system and kidneys."
+				},
+				{
+					"name": "Iron and manganese",
+					"desc": "Very common in wells. Although of little danger to health, they cause stubborn stains (rust, black), cloudy water and an unpleasant metallic taste."
+				},
+				{
+					"name": "Copper",
+					"desc": "Usually comes from the corrosion of copper pipes. Can cause gastrointestinal problems and damage the liver at high doses."
+				},
+				{
+					"name": "Barium",
+					"desc": "A natural element sometimes found in groundwater. Prolonged exposure can lead to cardiovascular problems and higher blood pressure."
+				},
+				{
+					"name": "Aluminum",
+					"desc": "Sometimes present after municipal treatment. Although mostly removed, traces can remain."
+				},
+				{
+					"name": "Zinc",
+					"desc": "Often comes from the corrosion of galvanized pipes. It mainly affects the appearance and taste of water."
+				},
+				{
+					"name": "Cadmium",
+					"desc": "Gets in through the corrosion of galvanized pipes or industrial discharges. It builds up in the body and is very toxic to the kidneys."
+				},
+				{
+					"name": "Chromium (total and chromium VI)",
+					"desc": "Comes from industrial discharges (metallurgy, tanneries). Hexavalent chromium (VI) is highly carcinogenic."
+				},
+				{
+					"name": "Selenium",
+					"desc": "A natural element or from mining/agricultural discharges. Useful in traces, but toxic to the nervous system and circulation at high doses."
+				},
+				{
+					"name": "Strontium",
+					"desc": "A natural mineral. At high concentrations, it can build up in bones and interfere with bone development, especially in children."
+				},
+				{
+					"name": "Antimony",
+					"desc": "Used in alloys and flame retardants. Prolonged exposure can affect the heart and the gastrointestinal tract."
+				}
+			]
+		},
+		{
+			"category": "Micro-organisms and pathogens",
+			"icon": "Bug",
+			"items": [
+				{
+					"name": "E. coli and fecal coliforms",
+					"desc": "Indicate recent fecal contamination. They cause severe gastrointestinal illness and require immediate action (boiling, UV treatment)."
+				},
+				{
+					"name": "Total coliforms",
+					"desc": "Bacteria naturally present in the environment. Their presence indicates that the system is vulnerable to pathogens."
+				},
+				{
+					"name": "Giardia and Cryptosporidium",
+					"desc": "Chlorine-resistant microscopic parasites, often found in surface water. They cause serious intestinal illness."
+				},
+				{
+					"name": "Iron and sulphur bacteria",
+					"desc": "Non-pathogenic bacteria that create slimy sludge in plumbing and can produce foul odours."
+				},
+				{
+					"name": "Cyanobacteria (blue-green algae)",
+					"desc": "They thrive in lakes and rivers in summer and produce toxins that are dangerous for the liver and the nervous system."
+				},
+				{
+					"name": "Enteric viruses",
+					"desc": "Include viruses such as hepatitis A and norovirus. Extremely small, they require disinfection or ultra-fine filtration."
+				}
+			]
+		},
+		{
+			"category": "Disinfectants and by-products",
+			"icon": "ShieldAlert",
+			"items": [
+				{
+					"name": "Chlorine and chloramines",
+					"desc": "Used by municipalities to disinfect water. They can give water an unpleasant taste and smell, and dry out skin and hair."
+				},
+				{
+					"name": "Trihalomethanes (THMs)",
+					"desc": "Carcinogenic by-products formed when chlorine reacts with organic matter."
+				},
+				{
+					"name": "Haloacetic acids (HAAs)",
+					"desc": "Another class of chlorination by-products. Toxic to the liver and kidneys and potentially carcinogenic."
+				},
+				{
+					"name": "Chlorite and chlorate",
+					"desc": "By-products formed when chlorine dioxide is used as a disinfectant."
+				},
+				{
+					"name": "Bromate",
+					"desc": "A carcinogenic by-product generated when water is disinfected with ozone."
+				},
+				{
+					"name": "N-Nitrosodimethylamine (NDMA)",
+					"desc": "Forms during water treatment (often with chloramines). Highly carcinogenic."
+				}
+			]
+		},
+		{
+			"category": "Industrial chemicals and VOCs",
+			"icon": "Factory",
+			"items": [
+				{
+					"name": "PFAS (\"forever chemicals\")",
+					"desc": "Perfluoroalkyl substances used in many industrial products. They build up in the environment and the body, causing various cancers."
+				},
+				{
+					"name": "Benzene, toluene, ethylbenzene, xylenes (BTEX)",
+					"desc": "Industrial solvents and petroleum components, often linked to leaking underground tanks. Neurotoxic and carcinogenic."
+				},
+				{
+					"name": "Tetrachloroethylene and trichloroethylene",
+					"desc": "Dry-cleaning and degreasing solvents. Common groundwater contaminants and probable carcinogens."
+				},
+				{
+					"name": "1,4-Dioxane",
+					"desc": "An industrial stabilizing solvent, extremely mobile in groundwater. A potential carcinogen."
+				},
+				{
+					"name": "Vinyl chloride",
+					"desc": "A component of PVC plastics that can leach from old pipes. Highly carcinogenic."
+				},
+				{
+					"name": "Formaldehyde",
+					"desc": "An industrial product or oxidation by-product. Highly irritating and carcinogenic."
+				},
+				{
+					"name": "Cyanide",
+					"desc": "Mainly from industrial discharges (mining, metallurgy). Extremely toxic in the short term."
+				},
+				{
+					"name": "Asbestos",
+					"desc": "Leached by the erosion of old asbestos-cement water mains. Ingestion is linked to polyps and digestive cancers."
+				}
+			]
+		},
+		{
+			"category": "Pesticides and herbicides",
+			"icon": "Leaf",
+			"items": [
+				{
+					"name": "Atrazine and glyphosate",
+					"desc": "Widely used agricultural herbicides carried by runoff. Potential endocrine disruptors."
+				},
+				{
+					"name": "2,4-D, MCPA, dicamba",
+					"desc": "Common selective herbicides. Long-term exposure can damage the liver and kidneys."
+				},
+				{
+					"name": "Chlorpyrifos, malathion, dimethoate",
+					"desc": "Neurotoxic organophosphate insecticides that can contaminate wells in farming areas."
+				},
+				{
+					"name": "Pentachlorophenol",
+					"desc": "A historical fungicide used to treat wood (utility poles). Highly toxic and carcinogenic."
+				},
+				{
+					"name": "Diquat",
+					"desc": "An aquatic herbicide used to control algae. Can cause eye and kidney damage."
+				}
+			]
+		},
+		{
+			"category": "Natural minerals and radiological",
+			"icon": "Radiation",
+			"items": [
+				{
+					"name": "Scale (water hardness)",
+					"desc": "Made of calcium and magnesium. It poses no health risk, but scales up water heaters, destroys appliances and clogs pipes."
+				},
+				{
+					"name": "Nitrates and nitrites",
+					"desc": "Often come from agricultural fertilizers or faulty septic tanks. Very dangerous for infants (blue baby syndrome)."
+				},
+				{
+					"name": "Hydrogen sulphide (H2S)",
+					"desc": "A dissolved gas that gives water a strong rotten egg smell. Corrosive to plumbing."
+				},
+				{
+					"name": "Sodium",
+					"desc": "Often added by traditional salt-based water softeners or naturally present. Something to watch for people on a low-sodium diet."
+				},
+				{
+					"name": "Sulphates",
+					"desc": "Give water a bitter taste and can have a temporary laxative effect on people who are not used to them."
+				},
+				{
+					"name": "Uranium and radon",
+					"desc": "Radioactive elements naturally present in Canadian bedrock (the Canadian Shield). They carry long-term risks of cancer or kidney damage."
+				},
+				{
+					"name": "Radium-226 and radium-228",
+					"desc": "Radioactive isotopes from the decay of uranium/thorium. They increase the risk of bone cancer."
+				},
+				{
+					"name": "Lead-210",
+					"desc": "An element of the radioactive decay chain, toxic through its radiological emissions."
+				}
+			]
+		}
+	],
+	"micro": [
+		{
+			"contaminant": "Total coliforms (2020)",
+			"recommandation": "MAC of none detectable per 100 mL in water leaving a treatment plant and in non-disinfected groundwater leaving the well",
+			"sources": "Human and animal feces; naturally present in water, soil and vegetation",
+			"sante": "Total coliforms are not used as indicators of potential health effects from pathogenic micro-organisms; they are used as a tool to determine the effectiveness of the water treatment system and to indicate changes in water quality in the distribution system."
+		},
+		{
+			"contaminant": "Escherichia coli (E. coli) (2020)",
+			"recommandation": "MAC: none detectable per 100 mL",
+			"sources": "Human and animal feces",
+			"sante": "E. coli is an indicator of fecal contamination used as a tool to verify drinking water quality. Its detection indicates recent fecal contamination and that micro-organisms capable of causing gastrointestinal illness may also be present. Pathogens in human and animal feces pose the greatest immediate danger to public health."
+		},
+		{
+			"contaminant": "Enteric protozoa: Giardia and Cryptosporidium (2019) Water Talk - Enteric protozoa (Giardia and Cryptosporidium) in drinking water",
+			"recommandation": "Treatment goal: removal and/or inactivation of at least 3 log of cysts and oocysts",
+			"sources": "Human and animal feces",
+			"sante": "Giardia and Cryptosporidium are generally associated with gastrointestinal illness (nausea, vomiting, diarrhea). Less common health effects vary. Giardia infections can include long-lasting gastrointestinal upset, malaise and malabsorption. In immunodeficient individuals, Cryptosporidium infections can have effects outside the gastrointestinal tract, including in the lungs, middle ear and pancreas."
+		},
+		{
+			"contaminant": "Turbidity (2012)",
+			"recommandation": "Treatment limits for water from individual filters or units: conventional or direct filtration: ≤ 0.3 NTU; slow sand or diatomaceous earth filtration: ≤ 1.0 NTU; membrane filtration: ≤ 0.1 NTU",
+			"sources": "Naturally occurring particles: inorganic matter (clay, silt, metal precipitates); organic matter (decomposed plant and animal debris, micro-organisms)",
+			"sante": "Particles can harbour micro-organisms, shielding them from disinfection, and trap heavy metals and biocides; high or changing turbidity in filtered water can indicate a problem in the treatment process and a possible increased risk of pathogens in the treated water."
+		},
+		{
+			"contaminant": "Enteric viruses (2019) Water Talk - Enteric viruses in drinking water",
+			"recommandation": "Treatment goal: reduction (removal or inactivation) of at least 4 log",
+			"sources": "Human feces",
+			"sante": "Generally associated with gastrointestinal illness (nausea, vomiting, diarrhea); less common health effects can include respiratory symptoms, central nervous system infections, liver infections and muscular syndromes."
+		}
+	],
+	"chimiques": [
+		{
+			"type": "P",
+			"contaminant": "(4-Chloro-2-methylphenoxy) acetic acid (MCPA) (2022)",
+			"cma": "0.35",
+			"oe": "None"
+		},
+		{
+			"type": "P",
+			"contaminant": "2,4-Dichlorophenoxyacetic acid (2,4-D) (2022)",
+			"cma": "0.1",
+			"oe": "None"
+		},
+		{
+			"type": "DBP",
+			"contaminant": "Haloacetic acids - total (HAAs) (2008)",
+			"cma": "0.08 ALARA",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Nitrilotriacetic acid (NTA) (1990)",
+			"cma": "0.4",
+			"oe": "None"
+		},
+		{
+			"type": "T",
+			"contaminant": "Aluminum (2021) Water Talk: Aluminum in drinking water",
+			"cma": "2.9",
+			"oe": "OG: 0.1"
+		},
+		{
+			"type": "I",
+			"contaminant": "Asbestos (1989, 2005) Asbestos in drinking water",
+			"cma": "None",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Ammonia (2013)",
+			"cma": "None",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Antimony (2024) Water Talk: Antimony in drinking water",
+			"cma": "0.006",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Silver (1986, 2005)",
+			"cma": "None",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Arsenic (2006) Arsenic in drinking water",
+			"cma": "0.010 ALARA",
+			"oe": "None"
+		},
+		{
+			"type": "P",
+			"contaminant": "Atrazine (1993)",
+			"cma": "0.005",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Barium (2020) Water Talk - Barium in drinking water",
+			"cma": "2.0",
+			"oe": ""
+		},
+		{
+			"type": "O",
+			"contaminant": "Benzene (2009)",
+			"cma": "0.005",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "Benzo[a]pyrene (2016)",
+			"cma": "0.000 04",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Boron (2023)",
+			"cma": "5",
+			"oe": "None"
+		},
+		{
+			"type": "DBP",
+			"contaminant": "Bromate (2018)",
+			"cma": "0.01",
+			"oe": "None"
+		},
+		{
+			"type": "P",
+			"contaminant": "Bromoxynil (2022)",
+			"cma": "0.03",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Cadmium (2020) Cadmium in drinking water: an update",
+			"cma": "0.007",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Calcium (2025) (In: Operational parameters)",
+			"cma": "None",
+			"oe": "None"
+		},
+		{
+			"type": "D",
+			"contaminant": "Chloramines (2020) Water Talk - Chloramines in drinking water",
+			"cma": "None",
+			"oe": "None"
+		},
+		{
+			"type": "DBP",
+			"contaminant": "Chlorate (2008)",
+			"cma": "1",
+			"oe": "None"
+		},
+		{
+			"type": "D",
+			"contaminant": "Chlorine (2009)",
+			"cma": "None",
+			"oe": ""
+		},
+		{
+			"type": "DBP",
+			"contaminant": "Chlorite (2008)",
+			"cma": "1",
+			"oe": "None"
+		},
+		{
+			"type": "P",
+			"contaminant": "Chlorpyrifos (1986)",
+			"cma": "0.09",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Chloride (2025) (In: Operational parameters)",
+			"cma": "None",
+			"oe": "AO: ≤ 250"
+		},
+		{
+			"type": "O",
+			"contaminant": "Vinyl chloride (2013)",
+			"cma": "0.002 ALARA",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Chromium (2018)",
+			"cma": "0.05",
+			"oe": "None"
+		},
+		{
+			"type": "T",
+			"contaminant": "Colour (1979, 2005)",
+			"cma": "None",
+			"oe": "AO: ≤ 15 TCU"
+		},
+		{
+			"type": "I",
+			"contaminant": "Copper (2019) Water Talk - Copper in drinking water",
+			"cma": "2",
+			"oe": "AO: 1"
+		},
+		{
+			"type": "I",
+			"contaminant": "Cyanide (1979, 1991)",
+			"cma": "0.2",
+			"oe": "None"
+		},
+		{
+			"type": "P",
+			"contaminant": "Dicamba (2022)",
+			"cma": "0.11",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "1,4-Dichlorobenzene (1987)",
+			"cma": "0.005",
+			"oe": "AO: ≤ 0.001"
+		},
+		{
+			"type": "O",
+			"contaminant": "1,2-Dichloroethane (2014)",
+			"cma": "0.005",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "Dichloromethane (2011)",
+			"cma": "0.05",
+			"oe": "None"
+		},
+		{
+			"type": "P",
+			"contaminant": "Dimethoate and omethoate (2022)",
+			"cma": "0.02",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "1,4-Dioxane (2021) Water Talk - 1,4-Dioxane in drinking water",
+			"cma": "0.050",
+			"oe": "None"
+		},
+		{
+			"type": "D",
+			"contaminant": "Chlorine dioxide (2008)",
+			"cma": "None",
+			"oe": "None"
+		},
+		{
+			"type": "P",
+			"contaminant": "Diquat (2022)",
+			"cma": "0.05",
+			"oe": "None"
+		},
+		{
+			"type": "T",
+			"contaminant": "Hardness (2025) (In: Operational parameters)",
+			"cma": "None",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "Methyl tertiary-butyl ether (MTBE) (2006)",
+			"cma": "None",
+			"oe": "AO: ≤ 0.015"
+		},
+		{
+			"type": "O",
+			"contaminant": "Ethylbenzene (2014)",
+			"cma": "0.14",
+			"oe": "AO: ≤ 0.0016"
+		},
+		{
+			"type": "I",
+			"contaminant": "Iron (2024)",
+			"cma": "None",
+			"oe": "AO: ≤ 0.1"
+		},
+		{
+			"type": "I",
+			"contaminant": "Fluoride (2010)",
+			"cma": "1.5",
+			"oe": "None"
+		},
+		{
+			"type": "DBP",
+			"contaminant": "Formaldehyde (1997)",
+			"cma": "None",
+			"oe": "None"
+		},
+		{
+			"type": "P",
+			"contaminant": "Glyphosate (1987, 2005)",
+			"cma": "0.28",
+			"oe": "None"
+		},
+		{
+			"type": "A",
+			"contaminant": "Taste (1979, 2005)",
+			"cma": "None",
+			"oe": "Inoffensive (no unpleasant taste)"
+		},
+		{
+			"type": "I",
+			"contaminant": "Magnesium (2025) (In: Operational parameters)",
+			"cma": "None",
+			"oe": "None"
+		},
+		{
+			"type": "P",
+			"contaminant": "Malathion (2023)",
+			"cma": "0.29",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Manganese (2019) Water Talk - Manganese in drinking water",
+			"cma": "0.12",
+			"oe": "AO: ≤ 0.02"
+		},
+		{
+			"type": "A",
+			"contaminant": "Total dissolved solids (TDS) (2025) (In: Operational parameters)",
+			"cma": "None",
+			"oe": "AO: ≤ 500"
+		},
+		{
+			"type": "I",
+			"contaminant": "Mercury (1986)",
+			"cma": "0.001",
+			"oe": "None"
+		},
+		{
+			"type": "P",
+			"contaminant": "Metribuzin (2021)",
+			"cma": "0.08",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Nitrate (2013)",
+			"cma": "45 as nitrate; 10 as nitrogen",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Nitrite (2013)",
+			"cma": "3 as nitrite; 1 as nitrogen",
+			"oe": "None"
+		},
+		{
+			"type": "DBP",
+			"contaminant": "N-Nitrosodimethylamine (NDMA) (2010)",
+			"cma": "0.000 04",
+			"oe": "None"
+		},
+		{
+			"type": "A",
+			"contaminant": "Odour (1979, 2005)",
+			"cma": "None",
+			"oe": "Inoffensive (no unpleasant odour)"
+		},
+		{
+			"type": "O",
+			"contaminant": "Pentachlorophenol (1987, 2005)",
+			"cma": "0.06",
+			"oe": "AO: ≤ 0.03"
+		},
+		{
+			"type": "T",
+			"contaminant": "pH (2015)",
+			"cma": "None",
+			"oe": "7.0-10.5"
+		},
+		{
+			"type": "I",
+			"contaminant": "Lead (2019) Water Talk - Lead in drinking water",
+			"cma": "0.005 ALARA",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Selenium (2014)",
+			"cma": "0.05",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Sodium (1979)",
+			"cma": "None",
+			"oe": "AO: ≤ 200"
+		},
+		{
+			"type": "I",
+			"contaminant": "Strontium (2019) Water Talk - Strontium in drinking water",
+			"cma": "7.0",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "Per- and polyfluoroalkyl substances (PFAS) (2024) Water Talk: PFAS in drinking water",
+			"cma": "None",
+			"oe": "Objective: 0.00003 ALARA"
+		},
+		{
+			"type": "I",
+			"contaminant": "Sulphate (2025) (In: Operational parameters)",
+			"cma": "None",
+			"oe": "AO: ≤ 500"
+		},
+		{
+			"type": "I",
+			"contaminant": "Sulphide (1992)",
+			"cma": "None",
+			"oe": "AO: ≤ 0.05"
+		},
+		{
+			"type": "I",
+			"contaminant": "Hydrogen sulphide (2025) (In: Operational parameters)",
+			"cma": "None",
+			"oe": "AO: ≤ 0.05"
+		},
+		{
+			"type": "O",
+			"contaminant": "Tetrachloroethylene (2015)",
+			"cma": "0.01",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "Carbon tetrachloride (2010)",
+			"cma": "0.002",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "Toluene (2014)",
+			"cma": "0.06",
+			"oe": "AO: 0.024"
+		},
+		{
+			"type": "O",
+			"contaminant": "Cyanobacterial toxins - Microcystin-LR (2017)",
+			"cma": "0.0015",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "Trichloroethylene (2005)",
+			"cma": "0.005",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "2,4,6-Trichlorophenol (1987, 2005)",
+			"cma": "0.005",
+			"oe": "AO: ≤ 0.002"
+		},
+		{
+			"type": "DBP",
+			"contaminant": "Trihalomethanes (THMs) (2006)",
+			"cma": "0.1",
+			"oe": "None"
+		},
+		{
+			"type": "I",
+			"contaminant": "Uranium (2019) Water Talk: Uranium in drinking water",
+			"cma": "0.02",
+			"oe": "None"
+		},
+		{
+			"type": "O",
+			"contaminant": "Xylenes (total) (2014)",
+			"cma": "0.09",
+			"oe": "AO: 0.02"
+		},
+		{
+			"type": "I",
+			"contaminant": "Zinc (1979, 2005)",
+			"cma": "None",
+			"oe": "AO: ≤ 5.0"
+		}
+	],
+	"radio": [
+		{
+			"contaminant": "Lead-210 (2025)",
+			"recommandation": "0.2",
+			"sources": "Naturally occurring (uranium decay chain)",
+			"sante": "From a health perspective, the main goal of measures to manage public exposure to ionizing radiation is to reduce the attributable cancer risk."
+		},
+		{
+			"contaminant": "Radium-226 (2025)",
+			"recommandation": "0.5",
+			"sources": "Naturally occurring (uranium decay chain)",
+			"sante": "From a health perspective, the main goal of measures to manage public exposure to ionizing radiation is to reduce the attributable cancer risk."
+		},
+		{
+			"contaminant": "Radium-228 (2025)",
+			"recommandation": "0.2",
+			"sources": "Naturally occurring (thorium decay chain)",
+			"sante": "From a health perspective, the main goal of measures to manage public exposure to ionizing radiation is to reduce the attributable cancer risk."
+		}
+	]
+}

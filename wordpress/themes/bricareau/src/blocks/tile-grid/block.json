@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/tile-grid",
+	"title": "Mosaïque de liens",
+	"category": "bricareau",
+	"icon": "layout",
+	"description": "Titre de section et grandes tuiles cliquables avec image (solutions, produits).",
+	"supports": { "html": false, "anchor": true },
+	"attributes": {
+		"variant": { "type": "string", "enum": [ "dark", "light" ], "default": "dark" },
+		"textStyle": { "type": "string", "enum": [ "caps", "plain" ], "default": "caps" },
+		"align": { "type": "string", "enum": [ "center", "left" ], "default": "center" },
+		"label": { "type": "string", "default": "" },
+		"labelStyle": { "type": "string", "default": "line" },
+		"title": { "type": "string", "default": "" },
+		"accentStyle": { "type": "string", "default": "green" },
+		"intro": { "type": "string", "default": "" },
+		"tiles": { "type": "array", "default": [ { "label": "", "title": "", "text": "", "url": "", "image": {}, "size": "normal", "fit": "cover" } ] }
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

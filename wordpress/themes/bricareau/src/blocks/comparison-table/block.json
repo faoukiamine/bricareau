@@ -1,0 +1,91 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/comparison-table",
+	"title": "Tableau comparatif",
+	"category": "bricareau",
+	"icon": "editor-table",
+	"description": "Tableau comparant plusieurs modèles ; une colonne à la fois sur mobile.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "pill"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"headerAlign": {
+			"type": "string",
+			"enum": [
+				"center",
+				"left"
+			],
+			"default": "left"
+		},
+		"headerBar": {
+			"type": "boolean",
+			"default": true
+		},
+		"background": {
+			"type": "string",
+			"enum": [
+				"white",
+				"light"
+			],
+			"default": "white"
+		},
+		"firstColumnLabel": {
+			"type": "string",
+			"default": "Critères techniques"
+		},
+		"valueStyle": {
+			"type": "string",
+			"enum": [
+				"plain",
+				"pill"
+			],
+			"default": "pill"
+		},
+		"columns": {
+			"type": "array",
+			"default": [
+				{
+					"name": "",
+					"image": {},
+					"badge": "",
+					"color": "navy"
+				}
+			]
+		},
+		"rows": {
+			"type": "array",
+			"default": [
+				{
+					"label": "",
+					"values": ""
+				}
+			]
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

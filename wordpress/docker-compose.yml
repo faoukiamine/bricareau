@@ -1,0 +1,47 @@
+# Local WordPress for developing the Bricareau theme.
+#   docker compose up -d                       -> http://localhost:8888
+#   docker compose run --rm wpcli <command>    -> WP-CLI (e.g. `wp bricareau seed`)
+services:
+  db:
+    image: mariadb:11.4
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: wordpress
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:7.1-php8.3-apache
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "8888:80"
+    environment: &wp_env
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: "1"
+      WORDPRESS_CONFIG_EXTRA: |
+    volumes: &wp_volumes
+      - wp_data:/var/www/html
+      - ./themes/bricareau:/var/www/html/wp-content/themes/bricareau
+      # Images of the React site, read by `wp bricareau seed`.
+      - ../src/assets:/srv/bricareau-assets:ro
+
+  wpcli:
+    image: wordpress:cli-php8.3
+    profiles: ["cli"]
+    user: "33:33"
+    depends_on:
+      - db
+    environment: *wp_env
+    volumes: *wp_volumes
+
+volumes:
+  db_data:
+  wp_data:

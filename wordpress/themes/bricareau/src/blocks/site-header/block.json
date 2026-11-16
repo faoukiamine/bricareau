@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/site-header",
+	"title": "En-tête Bricareau",
+	"category": "bricareau",
+	"icon": "menu",
+	"description": "En-tête du site avec méga-menu, téléphone et boutons d'action.",
+	"supports": { "html": false, "multiple": false, "reusable": false },
+	"attributes": {},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

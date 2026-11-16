@@ -1,0 +1,82 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/intro-split",
+	"title": "Introduction texte + image",
+	"category": "bricareau",
+	"icon": "columns",
+	"description": "Texte d'introduction à gauche, image à droite, avec petits atouts et badge optionnels.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "line"
+		},
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"image": {
+			"type": "object",
+			"default": {}
+		},
+		"imageStyle": {
+			"type": "string",
+			"enum": [
+				"offset",
+				"rounded"
+			],
+			"default": "offset"
+		},
+		"features": {
+			"type": "array",
+			"default": []
+		},
+		"badgeIcon": {
+			"type": "string",
+			"default": ""
+		},
+		"badgeLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"badgeTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"layout": {
+			"type": "string",
+			"enum": [
+				"text-left",
+				"image-left"
+			],
+			"default": "text-left"
+		},
+		"ctaText": {
+			"type": "string",
+			"default": ""
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

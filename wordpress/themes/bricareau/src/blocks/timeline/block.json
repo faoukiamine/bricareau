@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/timeline",
+	"title": "Ligne du temps",
+	"category": "bricareau",
+	"icon": "backup",
+	"description": "Étapes d'une histoire, de part et d'autre d'une ligne verticale.",
+	"supports": { "html": false, "anchor": true },
+	"attributes": {
+		"label": { "type": "string", "default": "" },
+		"labelStyle": { "type": "string", "default": "pill-outline" },
+		"title": { "type": "string", "default": "" },
+		"accentStyle": { "type": "string", "default": "gradient" },
+		"intro": { "type": "string", "default": "" },
+		"items": { "type": "array", "default": [ { "label": "", "title": "", "text": "" } ] }
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

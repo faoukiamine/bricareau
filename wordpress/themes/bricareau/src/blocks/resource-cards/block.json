@@ -1,0 +1,84 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bricareau/resource-cards",
+	"title": "Ressources (articles)",
+	"category": "bricareau",
+	"icon": "media-document",
+	"description": "Cartes d'articles du blog liés à la page.",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelStyle": {
+			"type": "string",
+			"default": "pill"
+		},
+		"title": {
+			"type": "string",
+			"default": "Ressources"
+		},
+		"accentStyle": {
+			"type": "string",
+			"default": "green"
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		},
+		"headerAlign": {
+			"type": "string",
+			"enum": [
+				"center",
+				"left"
+			],
+			"default": "left"
+		},
+		"headerBar": {
+			"type": "boolean",
+			"default": true
+		},
+		"background": {
+			"type": "string",
+			"enum": [
+				"white",
+				"light"
+			],
+			"default": "light"
+		},
+		"linkText": {
+			"type": "string",
+			"default": "Lire"
+		},
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"title": "",
+					"image": {},
+					"url": ""
+				}
+			]
+		},
+		"variant": {
+			"type": "string",
+			"enum": [
+				"articles",
+				"contact"
+			],
+			"default": "articles"
+		},
+		"watermark": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "bricareau",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"layout": {
+			"contentSize": "768px",
+			"wideSize": "1280px"
+		},
+		"color": {
+			"defaultPalette": false,
+			"palette": [
+				{ "slug": "navy", "name": "Bleu Bricareau", "color": "#18448F" },
+				{ "slug": "green", "name": "Vert Bricareau", "color": "#8CC63F" },
+				{ "slug": "light", "name": "Gris clair", "color": "#F8FAFC" },
+				{ "slug": "slate", "name": "Ardoise", "color": "#475569" },
+				{ "slug": "white", "name": "Blanc", "color": "#FFFFFF" }
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"slug": "sans",
+					"name": "Système",
+					"fontFamily": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--white)",
+			"text": "#0f172a"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--sans)"
+		},
+		"spacing": {
+			"blockGap": "0"
+		}
+	},
+	"templateParts": [
+		{ "name": "header", "title": "En-tête", "area": "header" },
+		{ "name": "footer", "title": "Pied de page", "area": "footer" }
+	]
+}
