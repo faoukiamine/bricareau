@@ -13,6 +13,7 @@ registerServerBlock( metadata, [
 				options: [
 					{ label: 'Tuiles sombres (3 colonnes)', value: 'dark' },
 					{ label: 'Grandes tuiles claires (2 colonnes)', value: 'light' },
+					{ label: 'Cartes uniformes (4 colonnes, glisser sur mobile)', value: 'cards' },
 				],
 			},
 			{
@@ -36,6 +37,17 @@ registerServerBlock( metadata, [
 		],
 	},
 	{
+		title: "Carte d'appel (style cartes)",
+		fields: [
+			{ key: 'ctaLabel', label: 'Petit libellé' },
+			{ key: 'ctaTitle', label: 'Titre', help: 'Vide = pas de carte.' },
+			{ key: 'ctaText', label: 'Texte', type: 'textarea' },
+			{ key: 'ctaButton', label: 'Texte du bouton' },
+			{ key: 'ctaShort', label: 'Bouton sur mobile', help: 'Remplace la carte sur téléphone. Vide = texte du bouton.' },
+			{ key: 'ctaUrl', label: 'Lien', type: 'url' },
+		],
+	},
+	{
 		title: 'Tuiles',
 		list: {
 			key: 'tiles',
@@ -44,7 +56,7 @@ registerServerBlock( metadata, [
 			fields: [
 				{ key: 'label', label: 'Petit libellé (ex. ZÉRO CALCAIRE)' },
 				{ key: 'title', label: 'Titre', type: 'textarea', help: 'Entrée = retour à la ligne.' },
-				{ key: 'text', label: 'Texte (apparaît au survol)', type: 'textarea' },
+				{ key: 'text', label: 'Texte (au survol sur les tuiles sombres)', type: 'textarea' },
 				{ key: 'url', label: 'Lien', type: 'url' },
 				{ key: 'image', label: 'Image', type: 'image', focal: true },
 				{

@@ -142,6 +142,24 @@ wp bricareau seed --only=en/articles          # articles anglais (--force pour l
 Sans WP-CLI (hébergeur sans SSH) : Outils > Articles anglais > « Importer les articles anglais » fait la même chose
 que `--only=en/articles` (les articles déjà présents sont gardés) et remplit les champs Yoast vides.
 
+## Pages par ville (`/traitement-eau/<ville>/`)
+
+Une seule page WordPress, « Traitement d'eau à {ville} » (slug `traitement-eau`, importée par
+`wp bricareau seed --only=traitement-eau`), sert de modèle à toutes les villes : `{ville}` dans ses blocs,
+son titre et sa description Yoast devient le nom de la ville. Les villes qui ont une page sont listées dans
+`inc/cities.php` (`bricareau_cities()`) ; une autre ville donne une 404, et `/traitement-eau/Saint-Jérôme/`
+redirige vers `/traitement-eau/saint-jerome/`. Yoast liste les villes dans `villes-sitemap.xml`.
+
+En anglais, sa traduction Polylang « Water treatment in {ville} » (slug `water-treatment`,
+`wp bricareau seed --only=en/traitement-eau`) donne `/en/water-treatment/<ville>/`. Le sélecteur FR / EN et
+les liens hreflang mènent à la même ville dans l'autre langue ; le sitemap des villes liste les deux langues.
+
+`/traitement-eau/` seul redirige (302, sans cache) vers la ville du visiteur, trouvée par le serveur à partir
+de son adresse IP : en-tête de ville de Cloudflare (« Add visitor location headers ») ou du module GeoIP s'il
+existe, sinon ipinfo.io (réponse gardée une semaine par IP). Hors Québec ou ville non listée : Montréal
+(`BRICAREAU_DEFAULT_CITY`). Pour dépasser le petit quota anonyme d'ipinfo.io, ajouter un jeton gratuit dans
+`wp-config.php` : `define( 'BRICAREAU_IPINFO_TOKEN', '…' );`.
+
 ## Performance et cache
 
 Le thème allège déjà chaque page (`inc/performance.php`) : pas de script emoji, jQuery chargé en bas de page

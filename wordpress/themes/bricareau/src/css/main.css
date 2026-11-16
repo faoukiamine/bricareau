@@ -65,6 +65,15 @@
 	.animate-logo-light-up {
 		animation: logo-light-up 30s linear infinite;
 	}
+
+	/* Swipe rows: scrollable without a visible scrollbar. */
+	.scrollbar-none {
+		scrollbar-width: none;
+	}
+
+	.scrollbar-none::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 /* Block-theme glue: the post content holds full-width sections, no WP spacing. */

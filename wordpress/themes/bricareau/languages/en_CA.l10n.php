@@ -6,6 +6,8 @@ return array(
 	'language'     => 'en_CA',
 	'plural-forms' => 'nplurals=2; plural=(n != 1);',
 	'messages'     => array(
+		'Découvrir' => 'Learn more',
+		'%d solutions · glissez pour voir' => '%d solutions · swipe to see more',
 		'%d sur 5' => '%d out of 5',
 		'%d éléments' => '%d items',
 		'1 à 2' => '1 to 2',

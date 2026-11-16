@@ -8,7 +8,13 @@
 	"description": "Titre de section et grandes tuiles cliquables avec image (solutions, produits).",
 	"supports": { "html": false, "anchor": true },
 	"attributes": {
-		"variant": { "type": "string", "enum": [ "dark", "light" ], "default": "dark" },
+		"variant": { "type": "string", "enum": [ "dark", "light", "cards" ], "default": "dark" },
+		"ctaLabel": { "type": "string", "default": "" },
+		"ctaTitle": { "type": "string", "default": "" },
+		"ctaText": { "type": "string", "default": "" },
+		"ctaButton": { "type": "string", "default": "" },
+		"ctaShort": { "type": "string", "default": "" },
+		"ctaUrl": { "type": "string", "default": "" },
 		"textStyle": { "type": "string", "enum": [ "caps", "plain" ], "default": "caps" },
 		"align": { "type": "string", "enum": [ "center", "left" ], "default": "center" },
 		"label": { "type": "string", "default": "" },
@@ -20,5 +26,6 @@
 	},
 	"textdomain": "bricareau",
 	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
 	"render": "file:./render.php"
 }

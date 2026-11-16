@@ -15,6 +15,7 @@ require_once BRICAREAU_DIR . '/inc/i18n.php';
 require_once BRICAREAU_DIR . '/inc/navigation.php';
 require_once BRICAREAU_DIR . '/inc/menus.php';
 require_once BRICAREAU_DIR . '/inc/seo.php';
+require_once BRICAREAU_DIR . '/inc/cities.php';
 require_once BRICAREAU_DIR . '/inc/testimonials.php';
 require_once BRICAREAU_DIR . '/inc/blocks.php';
 require_once BRICAREAU_DIR . '/inc/requests.php';

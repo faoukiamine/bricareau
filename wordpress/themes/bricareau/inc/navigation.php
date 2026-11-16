@@ -259,7 +259,7 @@ function bricareau_breadcrumb_trail( $post = null ) {
 		$slug = $parent['slug'];
 	}
 
-	$label   = get_post_meta( $post->ID, 'bricareau_breadcrumb_label', true ) ?: get_the_title( $post );
+	$label   = bricareau_city_text( get_post_meta( $post->ID, 'bricareau_breadcrumb_label', true ) ?: get_the_title( $post ) );
 	$trail[] = array( $label, null );
 	return $trail;
 }

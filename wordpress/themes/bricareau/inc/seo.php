@@ -40,13 +40,13 @@ add_action(
 			return;
 		}
 		$description = is_singular() ? get_post_meta( get_queried_object_id(), 'bricareau_seo_description', true ) : '';
-		$description = $description ?: BRICAREAU_DEFAULT_DESCRIPTION;
+		$description = bricareau_city_text( $description ?: BRICAREAU_DEFAULT_DESCRIPTION );
 		printf( '<meta name="description" content="%s">' . "\n", esc_attr( $description ) );
 		printf( '<meta property="og:title" content="%s">' . "\n", esc_attr( wp_get_document_title() ) );
 		printf( '<meta property="og:description" content="%s">' . "\n", esc_attr( $description ) );
 		echo '<meta property="og:type" content="website">' . "\n";
 		if ( is_singular() ) {
-			printf( '<meta property="og:url" content="%s">' . "\n", esc_url( get_permalink() ) );
+			printf( '<meta property="og:url" content="%s">' . "\n", esc_url( wp_get_canonical_url() ?: get_permalink() ) );
 		}
 	},
 	1
